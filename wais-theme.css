@@ -1,0 +1,303 @@
+/* WAIS INVEST v3 — action signal & readability override */
+:root{--sig-green:#36d399;--sig-yellow:#35c2ff;--sig-orange:#ff8a34;--sig-red:#ff667a;--sig-blue:#8b7cff;--sig-grey:#8793a8}
+.signal-legend{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px}.signal-chip,.priority-chip,.strategy-action,.signal-inline{display:inline-flex;align-items:center;border-radius:999px;padding:6px 10px;font-size:11px;font-weight:800;border:1px solid rgba(255,255,255,.12)}
+.signal-green{--sig:var(--sig-green)}.signal-yellow{--sig:var(--sig-yellow)}.signal-orange{--sig:var(--sig-orange)}.signal-red{--sig:var(--sig-red)}.signal-blue{--sig:var(--sig-blue)}.signal-grey{--sig:var(--sig-grey)}
+.signal-chip.signal-green,.signal-inline.signal-green{color:var(--sig-green);background:rgba(54,211,153,.12);border-color:rgba(54,211,153,.35)}.signal-chip.signal-yellow,.signal-inline.signal-yellow{color:var(--sig-yellow);background:rgba(247,201,72,.12);border-color:rgba(247,201,72,.35)}.signal-chip.signal-orange,.signal-inline.signal-orange{color:var(--sig-orange);background:rgba(255,159,67,.12);border-color:rgba(255,159,67,.35)}.signal-chip.signal-red,.signal-inline.signal-red{color:var(--sig-red);background:rgba(255,102,122,.12);border-color:rgba(255,102,122,.35)}.signal-chip.signal-blue,.signal-inline.signal-blue{color:var(--sig-blue);background:rgba(105,167,255,.12);border-color:rgba(105,167,255,.35)}.signal-chip.signal-grey,.signal-inline.signal-grey{color:var(--sig-grey);background:rgba(135,147,168,.12);border-color:rgba(135,147,168,.30)}
+.priority-chip{color:#c8d3e8;background:#111d31;border-color:#2c3f61}.strategy-action{margin-left:8px;color:#d9e4f6;background:#101d31;border-color:#2a4064;padding:4px 8px}.signal-card{position:relative;overflow:hidden;border-color:color-mix(in srgb,var(--sig) 45%,#223350)!important}.signal-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--sig)}.signal-card-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}.company-line{display:block;color:#8392ab;margin-top:4px}
+.watch-meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.watch-meta-grid>div{background:#101c30;border-radius:10px;padding:10px}.watch-meta-grid span{display:block;color:#71819d;font-size:10px}.watch-meta-grid strong{display:block;margin-top:4px;font-size:12px}.today-action{margin:14px 0 2px;padding:12px 14px;border-radius:12px;background:color-mix(in srgb,var(--sig) 10%,#0b1627);border:1px solid color-mix(in srgb,var(--sig) 35%,#223350)}.today-action span{display:block;color:var(--sig);font-size:10px;font-weight:800;letter-spacing:1px}.today-action strong{display:block;margin-top:5px;font-size:13px;line-height:1.5}.income-track-panel,.income-master-panel{margin-top:16px}.track-note{font-size:11px;color:#8fa0bb}.signal-metric{border-top:3px solid var(--sig)}.signal-green-soft{--sig:var(--sig-green)}.signal-yellow-soft{--sig:var(--sig-yellow)}.signal-orange-soft{--sig:var(--sig-orange)}
+.structure-subtitle{margin:4px 0 0;color:#8190aa;font-size:11px}.technical-summary-panel .research-board{grid-template-columns:repeat(3,minmax(0,1fr))}.structure-card{padding:18px!important}.structure-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.structure-head>span{font-weight:800;color:var(--sig)!important}.structure-head>b{font-size:10px;color:#9aa8be}.structure-card h3{font-size:20px;margin:10px 0 6px}.structure-value{font-size:30px;font-weight:850;letter-spacing:-.7px}.structure-move{font-size:14px;color:#d1d9e7;margin-top:3px}.structure-signal{display:inline-block;margin-top:10px;padding:5px 8px;border-radius:8px;background:color-mix(in srgb,var(--sig) 12%,#101c30);color:var(--sig);font-weight:800;font-size:11px}.market-indicators-panel #marketIndicatorsTitle{font-size:26px;line-height:1.2}.market-updated,.weekly-review-date{font-size:11px!important;line-height:1.45;color:#a7b3c8!important}.weekly-market-notes{border-top:2px solid rgba(131,164,255,.4)}.economic-calendar-panel{border-top:2px solid rgba(110,231,183,.35)}.calendar-row small{color:#6f809f}.compact-list .signal-inline{padding:4px 7px;font-size:9px}#hidden-gems .stock-card{--sig:var(--sig-blue)}
+@media(max-width:1100px){.technical-summary-panel .research-board{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:720px){.watch-meta-grid,.technical-summary-panel .research-board{grid-template-columns:1fr}.market-indicators-panel #marketIndicatorsTitle{font-size:21px}.structure-value{font-size:26px}}
+
+
+/* WAIS ACTION COLOR ACCESSIBILITY HOTFIX
+   READY = green | WATCH = cyan | WAIT = orange | DEFENSE = red | RESEARCH = violet */
+.signal-card.signal-green{box-shadow:inset 0 0 0 1px rgba(54,211,153,.34)}
+.signal-card.signal-yellow{box-shadow:inset 0 0 0 1px rgba(53,194,255,.48)}
+.signal-card.signal-orange{box-shadow:inset 0 0 0 1px rgba(255,138,52,.52)}
+.signal-card.signal-red{box-shadow:inset 0 0 0 1px rgba(255,102,122,.50)}
+.signal-card.signal-blue{box-shadow:inset 0 0 0 1px rgba(139,124,255,.42)}
+
+.signal-card.signal-yellow::after,
+.signal-card.signal-orange::after,
+.signal-card.signal-green::after,
+.signal-card.signal-red::after,
+.signal-card.signal-blue::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.06;
+  background:var(--sig);
+}
+
+.signal-chip.signal-yellow,.signal-inline.signal-yellow{
+  color:#7fddff!important;
+  background:rgba(53,194,255,.16)!important;
+  border-color:rgba(53,194,255,.70)!important;
+}
+.signal-chip.signal-orange,.signal-inline.signal-orange{
+  color:#ffb06f!important;
+  background:rgba(255,138,52,.17)!important;
+  border-color:rgba(255,138,52,.72)!important;
+}
+.signal-chip.signal-blue,.signal-inline.signal-blue{
+  color:#b7adff!important;
+  background:rgba(139,124,255,.16)!important;
+  border-color:rgba(139,124,255,.62)!important;
+}
+
+/* The Top Pick priority badge stays neutral, so action color remains the dominant cue. */
+.priority-chip{
+  color:#dbe5f6!important;
+  background:#111d31!important;
+  border-color:#53637e!important;
+}
+
+
+/* WAIS Director refinement 2026-08-10 */
+.status-text{color:var(--sig)!important}
+.income-filter-panel{margin-top:16px;border-top:2px solid rgba(53,194,255,.38)}
+.income-filter-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.income-filter-row label{font-weight:800;color:#dce6f7}
+.income-filter-row select{background:#101d31;color:#eef5ff;border:1px solid #385170;border-radius:10px;padding:9px 12px;font-weight:800}
+.yield-filter-note{font-size:11px;color:#92a3bc;line-height:1.45;flex:1;min-width:280px}
+.income-title-row{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:10px}
+.yield-hero{min-width:145px;padding:10px 12px;border-radius:12px;text-align:right;border:1px solid rgba(255,255,255,.12);background:#101c30}
+.yield-hero span{display:block;font-size:9px;letter-spacing:.8px;color:#8fa0bb;font-weight:800}
+.yield-hero strong{display:block;font-size:25px;line-height:1.05;margin-top:4px}
+.yield-hero small{display:block;font-size:9px;margin-top:5px;font-weight:800}
+.yield-hero.yield-pass{border-color:rgba(54,211,153,.60);background:rgba(54,211,153,.09)}
+.yield-hero.yield-pass strong,.yield-hero.yield-pass small{color:#66e5b3}
+.yield-hero.yield-below{border-color:rgba(255,138,52,.38)}
+.yield-hero.yield-below strong,.yield-hero.yield-below small{color:#ffb06f}
+.yield-metric-cell{outline:1px solid rgba(54,211,153,.24);background:rgba(54,211,153,.06)!important}
+.yield-metric-cell b{color:#66e5b3!important;font-size:15px!important}
+.income-empty{grid-column:1/-1;padding:24px;border:1px dashed #3c4e69;border-radius:12px;color:#9aabc3;text-align:center}
+.week-tag{display:inline-block;margin-right:7px;padding:2px 6px;border-radius:6px;background:rgba(53,194,255,.12);color:#7fddff;font-size:9px;font-style:normal}
+@media(max-width:720px){.income-title-row{flex-direction:column}.yield-hero{width:100%;text-align:left}.yield-filter-note{min-width:100%}}
+
+
+/* WAIS FINAL LOCK INCOME EMPHASIS */
+.income-risk-flag{
+  margin:10px 0 4px;
+  font-size:10px;
+  font-weight:850;
+  letter-spacing:.5px;
+  color:#9fb0c9;
+}
+.income-card .yield-hero strong{
+  font-size:28px!important;
+}
+.income-card .stock-meta>div:nth-child(3),
+.income-card .stock-meta>div:nth-child(4){
+  background:rgba(54,211,153,.06);
+  outline:1px solid rgba(54,211,153,.18);
+}
+.income-card .stock-meta>div:nth-child(3) b,
+.income-card .stock-meta>div:nth-child(4) b{
+  color:#66e5b3;
+  font-size:14px;
+}
+
+
+/* WAIS FINAL V2 — Research Library loading resilience + Risk Engine visual separation */
+.strategy-note-row{
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:12px;
+  padding:14px 4px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.strategy-note-row>span{
+  font-weight:900;
+  color:#7fddff;
+}
+.strategy-note-row p{
+  margin:0;
+  line-height:1.55;
+  color:#cbd6e8;
+}
+.strategy-note-row strong{
+  color:#f4f7fb;
+}
+.strategy-note-row .strategy-action{
+  margin-left:8px;
+  color:#7fddff!important;
+  background:rgba(53,194,255,.12)!important;
+  border-color:rgba(53,194,255,.42)!important;
+}
+
+/* Risk Engine: make all five regimes visibly different */
+.defense-grid .defense-level{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  transition:.15s ease;
+}
+.defense-grid .defense-level::before{
+  content:"";
+  position:absolute;
+  left:0; top:0; bottom:0;
+  width:5px;
+}
+.defense-grid .defense-level b{
+  position:relative;
+  z-index:1;
+}
+.defense-grid .defense-level p{
+  position:relative;
+  z-index:1;
+}
+
+.defense-grid .level-aggressive{
+  background:rgba(54,211,153,.10);
+  border-color:rgba(54,211,153,.42);
+}
+.defense-grid .level-aggressive::before{background:#36d399}
+.defense-grid .level-aggressive b{color:#63e6b6}
+
+.defense-grid .level-normal{
+  background:rgba(53,194,255,.09);
+  border-color:rgba(53,194,255,.40);
+}
+.defense-grid .level-normal::before{background:#35c2ff}
+.defense-grid .level-normal b{color:#7fddff}
+
+.defense-grid .level-cautious{
+  background:rgba(255,173,66,.11);
+  border-color:rgba(255,173,66,.48);
+}
+.defense-grid .level-cautious::before{background:#ffad42}
+.defense-grid .level-cautious b{color:#ffc36f}
+
+.defense-grid .level-defensive{
+  background:rgba(255,102,122,.11);
+  border-color:rgba(255,102,122,.52);
+}
+.defense-grid .level-defensive::before{background:#ff667a}
+.defense-grid .level-defensive b{color:#ff8c9c}
+
+.defense-grid .level-mostly-cash{
+  background:rgba(157,61,93,.20);
+  border-color:rgba(213,83,119,.68);
+  box-shadow:inset 0 0 18px rgba(124,28,58,.16);
+}
+.defense-grid .level-mostly-cash::before{background:#b63d67}
+.defense-grid .level-mostly-cash b{color:#ff9db8}
+
+/* Cautious must be orange everywhere, including risk result text */
+#riskResultMode{
+  color:#ffad42;
+  font-weight:900;
+}
+
+
+/* WAIS FINAL V3 — Income Sustainability + Hidden Gems research-stage colors */
+
+/* Hidden Gems stage badges */
+.research-stage-chip{
+  display:inline-flex;
+  align-items:center;
+  padding:5px 9px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.35px;
+  border:1px solid transparent;
+}
+.research-stage-chip.stage-research,
+.research-stage-cell.stage-research b{
+  color:#c0b7ff!important;
+}
+.research-stage-chip.stage-research{
+  background:rgba(139,124,255,.18);
+  border-color:rgba(139,124,255,.70);
+  box-shadow:0 0 0 1px rgba(139,124,255,.10),0 0 14px rgba(139,124,255,.12);
+}
+.research-stage-chip.stage-validating,
+.research-stage-cell.stage-validating b{
+  color:#7fddff!important;
+}
+.research-stage-chip.stage-validating{
+  background:rgba(53,194,255,.17);
+  border-color:rgba(53,194,255,.72);
+  box-shadow:0 0 0 1px rgba(53,194,255,.10),0 0 14px rgba(53,194,255,.12);
+}
+.research-stage-chip.stage-watchlist,
+.research-stage-cell.stage-watchlist b{
+  color:#66e5b3!important;
+}
+.research-stage-chip.stage-watchlist{
+  background:rgba(54,211,153,.16);
+  border-color:rgba(54,211,153,.72);
+  box-shadow:0 0 0 1px rgba(54,211,153,.10),0 0 14px rgba(54,211,153,.12);
+}
+.research-stage-cell{
+  outline:1px solid rgba(255,255,255,.05);
+}
+.research-stage-cell.stage-research{background:rgba(139,124,255,.055)!important}
+.research-stage-cell.stage-validating{background:rgba(53,194,255,.055)!important}
+.research-stage-cell.stage-watchlist{background:rgba(54,211,153,.055)!important}
+
+/* Income Sustainability block */
+.income-sustainability{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:4px 14px;
+  align-items:center;
+  margin:10px 0;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#101c30;
+}
+.income-sustainability>div span{
+  display:block;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.65px;
+  color:#8fa0bb;
+}
+.income-sustainability>div strong{
+  display:block;
+  margin-top:2px;
+  font-size:15px;
+}
+.income-sustainability>b{
+  font-size:18px;
+}
+.income-sustainability>small{
+  grid-column:1/-1;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.4px;
+  color:#aab8cc;
+}
+.income-sustain-high{
+  color:#66e5b3!important;
+}
+.income-sustainability.income-sustain-high{
+  background:rgba(54,211,153,.08);
+  border-color:rgba(54,211,153,.48);
+}
+.income-sustain-medium{
+  color:#7fddff!important;
+}
+.income-sustainability.income-sustain-medium{
+  background:rgba(53,194,255,.08);
+  border-color:rgba(53,194,255,.46);
+}
+.income-sustain-low{
+  color:#ffbf6b!important;
+}
+.income-sustainability.income-sustain-low{
+  background:rgba(255,173,66,.09);
+  border-color:rgba(255,173,66,.50);
+}
+.income-sustain-speculative{
+  color:#ff8c9c!important;
+}
+.income-sustainability.income-sustain-speculative{
+  background:rgba(255,102,122,.09);
+  border-color:rgba(255,102,122,.50);
+}
