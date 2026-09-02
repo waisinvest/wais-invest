@@ -86,6 +86,28 @@
   if(by.AVGO)by.AVGO.earnings='2026-09-02 · AFTER CLOSE · 17:00 ET';
   ['LITE','MU','MRVL','TSM','COHR','TSEM','RKLB'].forEach(t=>{if(by[t])by[t].earnings='NEXT DATE · NOT YET CONFIRMED';});
 
+  // Research Library must use the current System cycle, never legacy weekly notes.
+  d.weeklyMarketNotes=[
+    {title:'ACTION NOW · DEFENSE / SELECTIVE',action:'READY 1 NONE',body:'55% cash；READY 1及TECH READY維持NONE，不因日內價格變動自動升級。'},
+    {title:'OPPORTUNITY PIPELINE',action:'NVDA CANDIDATE+',body:'NVDA維持Candidate+；LITE、MU、MRVL、TSM、AVGO、COHR、TSEM、RKLB維持Candidate。'},
+    {title:'EVENT GATE',action:'AVGO 9/2 AFTER CLOSE',body:'AVGO業績及指引完成核實前，不升級AI networking／semiconductor路線。'},
+    {title:'VALIDATION RULE',action:'NO FABRICATED LEVELS',body:'Entry、Target、Trigger及Invalidation未經VERIFIED／CHECKED只顯示VALIDATING或DATA GAP。'},
+    {title:'PUBLIC DATA POLICY',action:'DELAYED · NOT REAL-TIME',body:'市場價格只作最新可取得公開snapshot，必須同時顯示source、as-of及delay狀態；決策仍由WAIS System批准。'}
+  ];
+  d.technicalSummary=[
+    {key:'SP500',name:'S&P 500',signal:'WAIT',note:'Live public snapshot只供市場脈搏；正式風險狀態仍為Sep 1 post-close DEFENSE。'},
+    {key:'NASDAQ',name:'NASDAQ Composite',signal:'WAIT',note:'日內反彈不等於READY；需等收市breadth及System重新批准。'},
+    {key:'NASDAQ100',name:'NASDAQ 100',signal:'WAIT',note:'大型科技股仍受事件與利率閘門約束。'},
+    {key:'SOX',name:'SOX',signal:'DEFENSE',note:'半導體breadth未經新收市審核前，不撤銷Sep 1防守判斷。'},
+    {key:'VIX',name:'VIX',signal:'CAUTIOUS',note:'波動率snapshot只作風險輸入，不單獨產生買入訊號。'},
+    {key:'US10Y',name:'US 10Y',signal:'DEFENSE',note:'高孳息率仍是長久期估值阻力；等收市後重新核實。'},
+    {key:'HSI',name:'Hang Seng Index',signal:'WAIT',note:'香港市場已收市資料；不由公開價格feed自行產生交易批准。'},
+    {key:'HSTECH',name:'Hang Seng TECH',signal:'WAIT',note:'香港科技股只作市場結構觀察，決策由System另行批准。'},
+    {key:'HSIF',name:'Hang Seng Futures',signal:'DATA GAP',note:'保留最後已驗證公開snapshot；automatic source unavailable，NOT current / NOT exchange real-time。'}
+  ];
+  if(by.AXTI)by.AXTI.note='Research only; extreme volatility and current valuation/technical evidence require a fresh System review before any promotion.';
+  if(by.AEHR)by.AEHR.note='Research only; earnings quality, valuation and current price structure require fresh verification before any promotion.';
+
   // Entry / Target / Trigger / Invalidation authority guard.
   // Legacy numeric values are retained only as explicitly named references so they
   // cannot render as a fresh trading signal. A value may render again only after a
