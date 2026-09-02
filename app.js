@@ -523,7 +523,7 @@ function renderWeeklyMarketNotes(){
     const rawUpdated=window.WAIS_MARKET_DATA?.lastUpdated || '';
 
     const updatedText=rawUpdated
-      ? new Date(rawUpdated).toLocaleString('en-CA')
+      ? (/^\d{4}-\d{2}-\d{2}$/.test(String(rawUpdated)) ? String(rawUpdated) : new Date(rawUpdated).toLocaleString('en-CA'))
       : 'Static verified fallback';
 
     reviewEl.textContent=`策略更新：${updatedText}`;
