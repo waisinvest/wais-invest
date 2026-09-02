@@ -21,6 +21,12 @@ SOURCE = "Yahoo Finance public chart"
 STATUS = "Latest available public snapshot; may be delayed; NOT exchange real-time"
 HEADERS = {"User-Agent": "Mozilla/5.0 WAIS-Public-Data/1.0"}
 
+PUBLIC_RESEARCH_SYMBOLS = {
+    "GNRC", "TTMI", "MP", "UUUU", "USAR", "NB", "WWR", "FEAM",
+    "KTOS", "AVAV", "RCAT", "PLTR", "RKLB", "LUNR", "LMT", "NOC",
+    "LEU", "CCJ", "OKLO", "SMR", "CEG", "VRT", "ETN", "GEV", "AMKR",
+}
+
 INDICATORS = {
     "SP500": "^GSPC",
     "NASDAQ": "^IXIC",
@@ -124,7 +130,10 @@ def update_quote(existing, symbol):
 def main():
     stocks = json.loads(STOCK_PATH.read_text(encoding="utf-8"))
     failures = []
-    for symbol, old in list((stocks.get("prices") or {}).items()):
+    stocks.setdefault("prices", {})
+    for symbol in PUBLIC_RESEARCH_SYMBOLS:
+        stocks["prices"].setdefault(symbol, {})
+    for symbol, old in list(stocks["prices"].items()):
         try:
             stocks["prices"][symbol] = update_quote(old, symbol)
         except Exception as exc:
