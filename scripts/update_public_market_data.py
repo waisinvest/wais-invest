@@ -36,11 +36,11 @@ INDICATORS = {
 def now_iso():
     return datetime.now(timezone.utc).isoformat()
 
-def fetch_chart(symbol, attempts=3):
+def fetch_chart(symbol, attempts=3, interval="5m", range_="5d", prepost=True):
     encoded = urllib.parse.quote(symbol, safe="")
     url = (
         f"https://query1.finance.yahoo.com/v8/finance/chart/{encoded}"
-        "?range=5d&interval=5m&includePrePost=true&events=div%2Csplits"
+        f"?range={range_}&interval={interval}&includePrePost={'true' if prepost else 'false'}&events=div%2Csplits"
     )
     last_error = None
     for attempt in range(attempts):
@@ -68,10 +68,38 @@ def regular_date(meta):
     ts = meta.get("regularMarketTime")
     return datetime.fromtimestamp(ts, timezone.utc).date().isoformat() if ts else None
 
+def daily_closes(symbol):
+    result, _, _ = fetch_chart(symbol, interval="1d", range_="1mo", prepost=False)
+    encoded = urllib.parse.quote(symbol, safe="")
+    url = (
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{encoded}"
+        "?range=1mo&interval=1d&includePrePost=false&events=div%2Csplits"
+    )
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=20) as response:
+        payload = json.load(response)
+    result = payload["chart"]["result"][0]
+    stamps = result.get("timestamp") or []
+    closes = (result.get("indicators", {}).get("quote") or [{}])[0].get("close") or []
+    return [(int(ts), float(px)) for ts, px in zip(stamps, closes) if px is not None]
+
 def update_quote(existing, symbol):
     meta, ts, price = fetch_chart(symbol)
-    prior = meta.get("chartPreviousClose") or meta.get("previousClose")
-    regular = meta.get("regularMarketPrice")
+    daily = daily_closes(symbol)
+    latest_day = datetime.fromtimestamp(ts, timezone.utc).date()
+    last_daily_day = datetime.fromtimestamp(daily[-1][0], timezone.utc).date() if daily else None
+    if len(daily) >= 2 and last_daily_day == latest_day:
+        prior = daily[-2][1]
+        regular = daily[-1][1]
+        regular_ts = daily[-1][0]
+    elif daily:
+        prior = daily[-1][1]
+        regular = meta.get("regularMarketPrice") or daily[-1][1]
+        regular_ts = meta.get("regularMarketTime") or daily[-1][0]
+    else:
+        prior = meta.get("chartPreviousClose") or meta.get("previousClose")
+        regular = meta.get("regularMarketPrice")
+        regular_ts = meta.get("regularMarketTime")
     change = price - float(prior) if prior not in (None, 0) else None
     pct = change / float(prior) * 100 if change is not None and prior else None
     updated = dict(existing or {})
@@ -83,7 +111,10 @@ def update_quote(existing, symbol):
         "source": SOURCE,
         "dataStatus": STATUS,
         "regularClose": round(float(regular), 6) if regular is not None else updated.get("regularClose"),
-        "regularCloseDate": regular_date(meta) or updated.get("regularCloseDate"),
+        "regularCloseDate": (
+            datetime.fromtimestamp(regular_ts, timezone.utc).date().isoformat()
+            if regular_ts else regular_date(meta) or updated.get("regularCloseDate")
+        ),
         "previousClose": round(float(prior), 6) if prior is not None else updated.get("previousClose"),
         "change": round(change, 6) if change is not None else None,
         "changePercent": round(pct, 4) if pct is not None else None,
