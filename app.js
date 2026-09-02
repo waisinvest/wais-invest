@@ -935,6 +935,20 @@ async function loadMarketIndicators() {
         change,
         changePercent
       );
+
+      const changeElement=$(elementIds.changeId);
+      const statusText=[indicator.source,indicator.asOf,indicator.dataStatus].filter(Boolean).join(' | ');
+      if(valueElement && statusText)valueElement.title=statusText;
+      if(changeElement && statusText)changeElement.title=statusText;
+      if(name==='HSIF'){
+        const label=$('hsifLabel');
+        if(label)label.textContent=`Hang Seng Futures · ${indicator.contract||'Front Month'}`;
+        if(changeElement && String(indicator.freshness||'').toUpperCase()==='SOURCE GAP'){
+          changeElement.textContent='SOURCE GAP · last verified snapshot';
+          changeElement.classList.remove('market-change-up','market-change-down','market-change-flat');
+          changeElement.classList.add('market-change-flat');
+        }
+      }
     });
 
     const updatedTime =
