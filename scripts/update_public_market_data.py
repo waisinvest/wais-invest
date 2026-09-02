@@ -69,7 +69,6 @@ def regular_date(meta):
     return datetime.fromtimestamp(ts, timezone.utc).date().isoformat() if ts else None
 
 def daily_closes(symbol):
-    result, _, _ = fetch_chart(symbol, interval="1d", range_="1mo", prepost=False)
     encoded = urllib.parse.quote(symbol, safe="")
     url = (
         f"https://query1.finance.yahoo.com/v8/finance/chart/{encoded}"
