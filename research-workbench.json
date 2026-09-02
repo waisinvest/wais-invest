@@ -1,0 +1,217 @@
+{
+  "lastUpdated": "2026-09-02T12:35:00-04:00",
+  "authority": "WAIS System approved public research output",
+  "dataStatus": "RESEARCH ONLY · NOT READY 1 · public evidence required before promotion",
+  "ready1": [],
+  "discovery": [
+    {
+      "rank": 1,
+      "ticker": "GNRC",
+      "status": "RESEARCH PRIORITY",
+      "thesis": "Data-center power backlog, grid investment and resilient demand profile.",
+      "risk": "Capacity ramp, customer concentration, valuation and execution."
+    },
+    {
+      "rank": 2,
+      "ticker": "POWL",
+      "status": "RESEARCH PRIORITY",
+      "thesis": "Grid, switchgear and data-center electrical infrastructure demand.",
+      "risk": "Cyclical orders, valuation and weak stress-day resilience."
+    },
+    {
+      "rank": 3,
+      "ticker": "TTMI",
+      "status": "RESEARCH PRIORITY",
+      "thesis": "AI networking, domestic supply-chain and defense exposure.",
+      "risk": "Acquisition, capital allocation and execution."
+    },
+    {
+      "rank": 4,
+      "ticker": "MP",
+      "status": "POLICY RESEARCH",
+      "thesis": "U.S. critical-minerals and rare-earth supply-chain policy exposure.",
+      "risk": "Commodity prices, processing ramp, policy dependency and volatility."
+    },
+    {
+      "rank": 5,
+      "ticker": "KTOS",
+      "status": "POLICY RESEARCH",
+      "thesis": "Autonomy, drones and defense modernization exposure.",
+      "risk": "Program timing, budget awards and valuation."
+    },
+    {
+      "rank": 6,
+      "ticker": "LEU",
+      "status": "POLICY RESEARCH",
+      "thesis": "Domestic nuclear-fuel and energy-security exposure.",
+      "risk": "Government contracts, supply constraints and extreme volatility."
+    },
+    {
+      "rank": 7,
+      "ticker": "RKLB",
+      "status": "POLICY RESEARCH",
+      "thesis": "Space and strategic-infrastructure optionality.",
+      "risk": "Execution, launch timing, losses and valuation."
+    },
+    {
+      "rank": 8,
+      "ticker": "VRT",
+      "status": "STRUCTURAL RESEARCH",
+      "thesis": "AI data-center power and cooling infrastructure exposure.",
+      "risk": "High expectations, capex cycle and valuation."
+    }
+  ],
+  "fundDNA": [
+    {
+      "ticker": "POWL",
+      "signal": "CHECKED",
+      "note": "Institutional participation is a supporting input, not an automatic buy signal."
+    },
+    {
+      "ticker": "TTMI",
+      "signal": "CHECKED",
+      "note": "Broad holder base supports further work; fresh sequential filings remain required."
+    },
+    {
+      "ticker": "GNRC",
+      "signal": "MIXED",
+      "note": "Institutional evidence is mixed; execution evidence carries more weight."
+    },
+    {
+      "ticker": "MP",
+      "signal": "VALIDATING",
+      "note": "Separate policy-driven flows from durable operating improvement."
+    },
+    {
+      "ticker": "KTOS",
+      "signal": "VALIDATING",
+      "note": "Require contract, backlog and valuation confirmation."
+    },
+    {
+      "ticker": "LEU",
+      "signal": "VALIDATING",
+      "note": "High policy sensitivity; position-flow evidence alone cannot approve READY."
+    }
+  ],
+  "stressTest": {
+    "benchmark": "SOXX",
+    "period": "2026-07-28 to 2026-07-29",
+    "benchmarkMovePct": -9.9,
+    "rows": [
+      {
+        "ticker": "GNRC",
+        "movePct": -1.2,
+        "grade": "A"
+      },
+      {
+        "ticker": "POWL",
+        "movePct": -15,
+        "grade": "D"
+      },
+      {
+        "ticker": "TTMI",
+        "movePct": -17.7,
+        "grade": "D"
+      }
+    ]
+  },
+  "structuralCatalysts": [
+    {
+      "bucket": "Trump / Election Policy Radar",
+      "names": [
+        "MP",
+        "UUUU",
+        "LEU",
+        "KTOS",
+        "AVAV",
+        "PLTR",
+        "RKLB"
+      ],
+      "status": "RESEARCH ONLY · seek policy-to-revenue proof; no automatic promotion",
+      "evidence": "White House critical-minerals orders; FY2026 defense autonomy, drone and space priorities."
+    },
+    {
+      "bucket": "Critical Minerals & Domestic Processing",
+      "names": [
+        "MP",
+        "UUUU",
+        "USAR",
+        "NB",
+        "WWR",
+        "FEAM"
+      ],
+      "status": "POLICY RESEARCH · HIGH VOLATILITY",
+      "evidence": "U.S. domestic sourcing, processing and defense supply-chain policy."
+    },
+    {
+      "bucket": "Defense Autonomy / Drones",
+      "names": [
+        "KTOS",
+        "AVAV",
+        "RCAT",
+        "PLTR"
+      ],
+      "status": "POLICY RESEARCH · CONTRACT VERIFICATION REQUIRED",
+      "evidence": "Defense budget priorities for autonomy, unmanned systems and counter-drone."
+    },
+    {
+      "bucket": "Space / Missile Defense",
+      "names": [
+        "RKLB",
+        "LUNR",
+        "LMT",
+        "NOC"
+      ],
+      "status": "POLICY RESEARCH · PROGRAM TIMING RISK",
+      "evidence": "Space Force and missile-defense budget priorities."
+    },
+    {
+      "bucket": "Nuclear / Secure Baseload",
+      "names": [
+        "LEU",
+        "CCJ",
+        "OKLO",
+        "SMR",
+        "CEG"
+      ],
+      "status": "STRUCTURAL RESEARCH · NOT READY",
+      "evidence": "Domestic secure-energy and advanced-nuclear policy direction."
+    },
+    {
+      "bucket": "AI Data-Center Power & Grid",
+      "names": [
+        "GNRC",
+        "POWL",
+        "VRT",
+        "ETN",
+        "GEV"
+      ],
+      "status": "STRUCTURAL PRIORITY · ENTRY VALIDATION REQUIRED",
+      "evidence": "Federal data-center permitting and large-scale energy infrastructure policy."
+    },
+    {
+      "bucket": "Domestic Electronics Supply Chain",
+      "names": [
+        "TTMI",
+        "AEHR",
+        "AMKR"
+      ],
+      "status": "RESEARCH · EARNINGS PROOF REQUIRED",
+      "evidence": "Defense and domestic manufacturing supply-chain resilience."
+    }
+  ],
+  "publicSources": [
+    {
+      "title": "White House · Defense critical-materials supply chains · 2026-07-20",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/07/securing-americas-defense-supply-chains-and-ensuring-domestic-acquisition-of-critical-materials/"
+    },
+    {
+      "title": "U.S. Defense · FY2026 autonomy and unmanned systems priorities",
+      "url": "https://www.defense.gov/News/Transcripts/Transcript/Article/4466209/"
+    },
+    {
+      "title": "White House · Data-center infrastructure permitting",
+      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-accelerates-federal-permitting-of-data-center-infrastructure/"
+    }
+  ]
+}
