@@ -248,7 +248,7 @@
     panel.className = "wais-live-system";
     panel.innerHTML = `
       <div class="wais-live-head"><div><span class="panel-kicker">WAIS LIVE SYSTEM</span><h3>Opportunity Pipeline + Event Calendar</h3></div><div class="wais-live-time">Updated ${d.lastUpdated} · after US close</div></div>
-      <div class="wais-action-banner">ACTION NOW｜${p.actionNow || "WAIT"} · READY 1: ${(p.ready1 || []).length ? "ACTIVE" : "NONE"} · Next gate: CPI 08/12 08:30 ET</div>
+      <div class="wais-action-banner">ACTION NOW｜${p.actionNow || "WAIT"} · READY 1: ${(p.ready1 || []).length ? "ACTIVE" : "NONE"} · Next gate: ${p.nextGate || "—"}</div>
       <div class="wais-pipe-grid">
         <div class="wais-pipe-col"><h4>🟢 READY 1</h4>${tickers(p.ready1)}</div>
         <div class="wais-pipe-col"><h4>🟢 CANDIDATE+</h4>${tickers(p.candidatePlus)}</div>
