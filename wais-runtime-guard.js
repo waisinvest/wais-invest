@@ -81,7 +81,7 @@
       }
       if(v)v.title=`${q.source||'Unknown source'} · ${q.asOf||'unknown time'} · ${q.dataStatus||''}`; if(c)c.title=v?.title||'';
     });
-    const stamp=data?.lastUpdated;set('marketIndicatorsUpdated',`VERIFIED DATA · ${stamp?new Date(stamp).toLocaleString('en-CA',{timeZone:'America/New_York'})+' ET':'time unavailable'}`);set('marketIndicatorsTitle','全球市場最新可確認指標');
+    const stamp=data?.lastUpdated;set('marketIndicatorsUpdated',`VERIFIED DATA · ${stamp?new Date(stamp).toLocaleString('en-CA',{timeZone:'America/New_York'})+' ET':'time unavailable'} · ${data?.dataStatus||'Latest available public snapshot; may be delayed; NOT exchange real-time'}`);set('marketIndicatorsTitle','全球市場最新可確認指標');
   }
   function exposeFreshQuotes(data){window.WAIS_RUNTIME_QUOTES=data?.prices||{};window.WAIS_RUNTIME_QUOTES_UPDATED_AT=data?.lastUpdated||null;window.dispatchEvent(new CustomEvent('wais:quotes-updated',{detail:data}));}
   function renderSystemState(){
