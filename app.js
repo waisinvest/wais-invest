@@ -961,7 +961,7 @@ async function loadMarketIndicators() {
     const hkDate=marketDates.HK||indicators.HSI?.asOf||indicators.HSTECH?.asOf||"—";
     const titleElement=$("marketIndicatorsTitle");
     if(titleElement) titleElement.textContent=`全球市場最新指標（US ${usDate}｜HK ${hkDate}）`;
-    if(updatedElement){ if(updatedTime){ const date=new Date(updatedTime);updatedElement.textContent=`資料檔更新：${date.toLocaleString("en-CA")}｜Closing / delayed data｜NOT REAL-TIME`; } else updatedElement.textContent=`US ${usDate}｜HK ${hkDate}｜NOT REAL-TIME`; }
+    if(updatedElement){ if(updatedTime){ const date=new Date(updatedTime);updatedElement.textContent=`資料檔更新：${date.toLocaleString("en-CA",{timeZone:"America/New_York"})} ET｜Closing / delayed data｜NOT exchange real-time`; } else updatedElement.textContent=`US ${usDate}｜HK ${hkDate}｜NOT REAL-TIME`; }
 
     renderTechnicalSummary();
 
