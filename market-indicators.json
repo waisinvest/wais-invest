@@ -1,0 +1,140 @@
+{
+  "lastUpdated": "2026-09-02T04:26:49.777123+00:00",
+  "marketDates": {
+    "US": "2026-09-01",
+    "HK": "2026-09-02"
+  },
+  "marketStatus": "updated",
+  "dataStatus": "Latest available intraday snapshot when available; US index previous close uses daily series; HK index previous close uses prior intraday session when available; HSI futures preserve source timestamp/session and distinguish market-closed state from stale data; NOT all feeds are direct exchange APIs",
+  "failedSymbols": [],
+  "indicators": {
+    "SP500": {
+      "symbol": "^GSPC",
+      "value": 7631.47,
+      "previousClose": 7686.1401,
+      "regularClose": 7631.4702,
+      "regularCloseDate": "2026-09-01",
+      "change": -54.6701,
+      "changePercent": -0.7113,
+      "asOf": "2026-09-01T16:45:00-04:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "NASDAQ": {
+      "symbol": "^IXIC",
+      "value": 26099.773,
+      "previousClose": 26370.8906,
+      "regularClose": 26099.7695,
+      "regularCloseDate": "2026-09-01",
+      "change": -271.1176,
+      "changePercent": -1.0281,
+      "asOf": "2026-09-01T17:15:00-04:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "NASDAQ100": {
+      "symbol": "^NDX",
+      "value": 29077.22,
+      "previousClose": 29456.9707,
+      "regularClose": 29077.2207,
+      "regularCloseDate": "2026-09-01",
+      "change": -379.7507,
+      "changePercent": -1.2892,
+      "asOf": "2026-09-01T17:15:00-04:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "DOW": {
+      "symbol": "^DJI",
+      "value": 52766.88,
+      "previousClose": 53185.8984,
+      "regularClose": 52766.8789,
+      "regularCloseDate": "2026-09-01",
+      "change": -419.0184,
+      "changePercent": -0.7878,
+      "asOf": "2026-09-01T16:45:00-04:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "SOX": {
+      "symbol": "^SOX",
+      "value": 11288.612,
+      "previousClose": 11535.0498,
+      "regularClose": 11288.6104,
+      "regularCloseDate": "2026-09-01",
+      "change": -246.4378,
+      "changePercent": -2.1364,
+      "asOf": "2026-09-01T17:15:00-04:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "VIX": {
+      "symbol": "^VIX",
+      "value": 16.33,
+      "previousClose": 14.92,
+      "regularClose": 16.34,
+      "regularCloseDate": "2026-09-01",
+      "change": 1.41,
+      "changePercent": 9.4504,
+      "asOf": "2026-09-01T16:10:00-04:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "US10Y": {
+      "symbol": "^TNX",
+      "value": 4.796,
+      "previousClose": 4.758,
+      "regularClose": 4.796,
+      "regularCloseDate": "2026-09-01",
+      "change": 0.038,
+      "changePercent": 0.7987,
+      "asOf": "2026-09-01T14:55:00-04:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "HSI": {
+      "symbol": "^HSI",
+      "value": 25087.2207,
+      "previousClose": 25329.7305,
+      "regularClose": 25087.2207,
+      "regularCloseDate": "2026-09-02",
+      "change": -242.5098,
+      "changePercent": -0.9574,
+      "asOf": "2026-09-02T12:05:00+08:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "HSTECH": {
+      "symbol": "HSTECH.HK",
+      "value": 4480.6699,
+      "previousClose": 4550.8799,
+      "regularClose": 4480.6699,
+      "regularCloseDate": "2026-09-02",
+      "change": -70.21,
+      "changePercent": -1.5428,
+      "asOf": "2026-09-02T12:05:00+08:00",
+      "source": "Yahoo Finance via yfinance",
+      "dataStatus": "Latest available 5-minute snapshot; may be delayed; NOT exchange real-time"
+    },
+    "HSIF": {
+      "symbol": "HSI-202609",
+      "contract": "202609",
+      "value": 25026.0,
+      "previousClose": 25172.0,
+      "regularClose": 25172.0,
+      "regularCloseDate": "2026-09-01",
+      "change": -146.0,
+      "changePercent": -0.58,
+      "asOf": "2026-09-02T12:26:00+08:00",
+      "source": "ET Net / HKEX market data public display",
+      "sourceUrl": "https://www.etnet.com.hk/www/eng/futures/index.php?month=202609&subtype=HSI",
+      "session": "Regular",
+      "freshness": "LIVE",
+      "ageMinutes": 0,
+      "marketOpen": true,
+      "freshnessReason": "Wall-clock freshness applies while HK futures market is open",
+      "expiryDate": "29/09/2026",
+      "dataStatus": "Regular HSI spot-month futures; Wall-clock freshness applies while HK futures market is open; source timestamp preserved; public-display source, not direct exchange API; regularClose preserves prior completed regular-session close during live trading"
+    }
+  }
+}
