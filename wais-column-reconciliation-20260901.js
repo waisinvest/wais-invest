@@ -75,6 +75,17 @@
   };
   Object.entries(currentDecisionNotes).forEach(([t,n])=>{if(by[t])by[t].note=n;});
 
+  // Time-sensitive presentation fields follow the current System decision cycle.
+  const decisionDate=String(d.lastStrategyUpdated||p.asOf||d.lastUpdated||'2026-09-01').slice(0,10);
+  d.dailyThought={
+    date:decisionDate,
+    zh:'到價只是候選，承接確認才是訊號。',
+    en:'Reaching a price level creates a candidate; confirmation creates a signal.'
+  };
+  if(by.NVDA)by.NVDA.earnings='2026-08-26 · REPORTED';
+  if(by.AVGO)by.AVGO.earnings='2026-09-02 · AFTER CLOSE · 17:00 ET';
+  ['LITE','MU','MRVL','TSM','COHR','TSEM','RKLB'].forEach(t=>{if(by[t])by[t].earnings='NEXT DATE · NOT YET CONFIRMED';});
+
   // Entry / Target / Trigger / Invalidation authority guard.
   // Legacy numeric values are retained only as explicitly named references so they
   // cannot render as a fresh trading signal. A value may render again only after a
