@@ -2,6 +2,10 @@ name: WAIS Public Data Auto Refresh
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "scripts/update_public_market_data.py"
+      - ".github/workflows/public-data-refresh.yml"
   schedule:
     # Every 30 minutes on weekdays. GitHub schedules may start a little late.
     - cron: "*/30 * * * 1-5"
