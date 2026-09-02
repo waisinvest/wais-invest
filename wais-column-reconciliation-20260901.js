@@ -46,6 +46,13 @@
       s.topPickRank=null;
       s.bucket='HIDDEN_GEM';
       s.researchStage=s.researchStage||'VALIDATING';
+    }else{
+      // Latest canonical Pipeline owns System membership. A legacy base-stock that
+      // is absent from every current bucket must not remain in the live Watchlist.
+      s.showInWatchlist=false;
+      s.topPickRank=null;
+      if(s.bucket==='WATCHLIST') s.bucket='NO_CURRENT_SETUP';
+      s.currentAction='NO CURRENT CANONICAL SETUP';
     }
   });
 
@@ -53,6 +60,20 @@
   fs.forEach(s=>{ if(Number.isFinite(Number(s.topPickRank))) s.topPickRank=null; });
   const topOrder=[...candidatePlus,...candidate].slice(0,5);
   topOrder.forEach((t,i)=>{ if(by[t]){by[t].topPickRank=i+1;by[t].showInWatchlist=true;} });
+
+  // Replace date-stale card commentary with the current canonical decision state.
+  const currentDecisionNotes={
+    NVDA:'Candidate+ only after the Sep 1 post-close audit; wait for verified price, breadth and event confirmation before any READY promotion.',
+    LITE:'Candidate only; wait for a 20D reclaim and volatility contraction before reconsidering promotion.',
+    MU:'Candidate only; Entry, Target, Trigger and Invalidation remain under current-cycle validation.',
+    MRVL:'Candidate only; retain in the AI-networking universe but require controlled price and breadth confirmation.',
+    TSM:'Candidate only; foundry thesis remains under observation while current execution levels are revalidated.',
+    AVGO:'Candidate only; Sep 2 after-close earnings is a hard event gate before any promotion.',
+    COHR:'Candidate only; require post-decline stabilization and current evidence confirmation.',
+    TSEM:'Candidate only; wait for a better verified risk/reward setup.',
+    RKLB:'Candidate only; execution and timing risk remain part of the current validation.'
+  };
+  Object.entries(currentDecisionNotes).forEach(([t,n])=>{if(by[t])by[t].note=n;});
 
   // Entry / Target / Trigger / Invalidation authority guard.
   // Legacy numeric values are retained only as explicitly named references so they
