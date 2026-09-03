@@ -15,6 +15,30 @@
   "sourceErrors": [],
   "events": [
     {
+      "dateISO": "2026-09-02",
+      "date": "09月02日",
+      "event": "AVGO Q3 FY2026 · REPORTED",
+      "time": "after close · REPORTED",
+      "referenceMonth": "Q4 total revenue guidance under market expectations",
+      "source": "Broadcom Investor Relations"
+    },
+    {
+      "dateISO": "2026-09-03",
+      "date": "09月03日",
+      "event": "美國 Productivity and Costs（修訂）",
+      "time": "08:30 ET",
+      "referenceMonth": "2026年第二季",
+      "source": "U.S. Bureau of Labor Statistics"
+    },
+    {
+      "dateISO": "2026-09-03",
+      "date": "09月03日",
+      "event": "美國 International Trade in Goods and Services",
+      "time": "08:30 ET",
+      "referenceMonth": "2026年7月",
+      "source": "U.S. Bureau of Economic Analysis / U.S. Census Bureau"
+    },
+    {
       "dateISO": "2026-09-03",
       "date": "09月03日",
       "event": "美國 Weekly Initial Jobless Claims · REPORTED 206K",
@@ -45,14 +69,6 @@
       "time": "pre-market · REPORTED",
       "referenceMonth": "Revenue $1.67B; adjusted EPS $2.11; FY guide raised",
       "source": "Ciena Investor Relations"
-    },
-    {
-      "dateISO": "2026-09-02",
-      "date": "09月02日",
-      "event": "AVGO Q3 FY2026 · REPORTED",
-      "time": "after close · REPORTED",
-      "referenceMonth": "Q4 total revenue guidance under market expectations",
-      "source": "Broadcom Investor Relations"
     },
     {
       "dateISO": "2026-09-04",
