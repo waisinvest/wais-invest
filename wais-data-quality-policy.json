@@ -1,0 +1,58 @@
+{
+  "version": "WAIS Data Quality Policy v1",
+  "authority": "WAIS System",
+  "effectiveAt": "2026-09-03T07:00:00Z",
+  "states": {
+    "LIVE": "Primary source fetched and validated in the current cycle.",
+    "LAST_KNOWN_GOOD": "Current fetch failed but a previously validated snapshot remains within its freshness window.",
+    "STALE": "A prior snapshot exists but is outside its freshness window; it cannot support promotion or execution.",
+    "DATA_GAP": "A required field or required primary source has no validated current or allowable fallback value.",
+    "NOT_APPLICABLE": "The source or field is optional, unavailable by design, or not applicable to this security; it is not counted as a DATA GAP.",
+    "IDENTITY_UNVERIFIED": "Ticker/entity mapping is not proven; block research promotion and do not request market data under that symbol."
+  },
+  "rules": {
+    "noFabrication": true,
+    "sourceFailureIsolation": true,
+    "retainLastKnownGood": true,
+    "automaticRetry": true,
+    "unresolvedRequiredGapAction": "WAIT / DATA GAP",
+    "optionalSourceFailureBlocksExecution": false,
+    "priceWorkflowMayPromoteStatus": false,
+    "waibPaused": true
+  },
+  "retry": {
+    "transientHttpAttempts": 4,
+    "backoffSeconds": [
+      2,
+      5,
+      10,
+      20
+    ],
+    "respectRetryAfter": true,
+    "scheduledResearch": "Weekdays hourly; weekends every three hours",
+    "canonicalQuotes": "Weekdays every 15 minutes"
+  },
+  "identity": {
+    "rule": "Resolve ticker to issuer using an official exchange, issuer, or regulator record before market-data ingestion.",
+    "collisionAction": "IDENTITY_UNVERIFIED",
+    "noAliasGuessing": true
+  },
+  "publicSanitisation": {
+    "allowed": [
+      "state",
+      "asOf",
+      "source class",
+      "freshness",
+      "failed symbols",
+      "failure reason"
+    ],
+    "prohibited": [
+      "proprietary weights",
+      "FABIBOT logic",
+      "unpublished research",
+      "keys",
+      "credentials",
+      "private holdings"
+    ]
+  }
+}
