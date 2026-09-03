@@ -1,7 +1,7 @@
 // WAIS INVEST SAFE loader — 2026-09-03
 // Display-only mirror of WAIS System-approved state.
 (function(){
-  const v='20260903sa3';
+  const v='20260903wais1200';
   const scripts = [
     `wais-stability-guard-v1.js?v=${v}`,
     `market-data.base.js?v=${v}`,
