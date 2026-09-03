@@ -3402,7 +3402,6 @@
       "COHR",
       "TSEM",
       "RKLB",
-      "NVDA",
       "TTMI",
       "AMBQ",
       "GNRC",
@@ -3417,6 +3416,7 @@
       "EROC",
       "ZYME",
       "AXTI",
+      "NVDA",
       "MP",
       "UUUU",
       "USAR",
@@ -3443,6 +3443,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-03T05:50:54.374979+00:00"
+    "asOf": "2026-09-03T05:53:03.650860+00:00"
   }
 }
