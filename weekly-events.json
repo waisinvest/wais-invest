@@ -1,50 +1,58 @@
 {
-  "lastUpdated": "2026-09-02T04:26:49.993234+00:00",
-  "lastVerifiedMaster": "2026-09-01T19:45:00-04:00",
+  "lastUpdated": "2026-09-03T16:00:00+00:00",
+  "lastVerifiedMaster": "2026-09-03T12:00:00-04:00",
   "window": {
-    "from": "2026-09-02",
-    "to": "2026-09-15"
+    "from": "2026-09-03",
+    "to": "2026-09-16"
   },
-  "dataStatus": "Rolling 14-day verified calendar. Automatic/live feeds are additive, while the WAIS verified-event master supersedes stale variants of the same logical event. A narrower or failed feed cannot delete unrelated verified events.",
+  "dataStatus": "WAIS verified event master updated after official-source checks. Completed events are retained for the current decision cycle; future-only UI may hide them after the session.",
   "sourceHealth": {
-    "BLS": "DATA GAP · LAST-KNOWN-GOOD PRESERVED"
+    "BLS": "CHECKED VIA OFFICIAL WEB",
+    "ISM": "CHECKED VIA OFFICIAL WEB",
+    "DOL": "CHECKED VIA OFFICIAL RELEASE",
+    "CompanyIR": "CHECKED"
   },
-  "sourceErrors": [
-    "BLS ICS: HTTP Error 403: Forbidden",
-    "BLS HTML: HTTP Error 403: Forbidden"
-  ],
+  "sourceErrors": [],
   "events": [
     {
-      "dateISO": "2026-09-02",
-      "date": "09月02日",
-      "event": "美國 Manufacturers' Shipments, Inventories and Orders",
-      "time": "10:00 ET",
-      "referenceMonth": "2026年7月",
-      "source": "U.S. Census Bureau"
-    },
-    {
-      "dateISO": "2026-09-02",
-      "date": "09月02日",
-      "event": "AVGO Q3 FY2026 業績",
-      "time": "17:00 ET · after close",
-      "referenceMonth": "Fiscal Q3 2026 financial results and business outlook",
-      "source": "Broadcom Investor Relations"
+      "dateISO": "2026-09-03",
+      "date": "09月03日",
+      "event": "美國 Weekly Initial Jobless Claims · REPORTED 206K",
+      "time": "08:30 ET · REPORTED",
+      "referenceMonth": "week ended 2026-08-29",
+      "source": "U.S. Department of Labor / Reuters cross-check"
     },
     {
       "dateISO": "2026-09-03",
       "date": "09月03日",
-      "event": "美國 International Trade in Goods and Services",
-      "time": "08:30 ET",
-      "referenceMonth": "2026年7月",
-      "source": "U.S. Bureau of Economic Analysis / U.S. Census Bureau"
-    },
-    {
-      "dateISO": "2026-09-03",
-      "date": "09月03日",
-      "event": "美國 Productivity and Costs（修訂）",
-      "time": "08:30 ET",
-      "referenceMonth": "2026年第二季",
+      "event": "美國 Productivity and Costs Q2 revised · REPORTED",
+      "time": "08:30 ET · REPORTED",
+      "referenceMonth": "Productivity +1.4%; unit labor costs +1.2% annualized",
       "source": "U.S. Bureau of Labor Statistics"
+    },
+    {
+      "dateISO": "2026-09-03",
+      "date": "09月03日",
+      "event": "ISM Services PMI · REPORTED 55.4",
+      "time": "10:00 ET · REPORTED",
+      "referenceMonth": "2026年8月 · New Orders 60.9 · Prices 72.6 · Employment 47.8",
+      "source": "Institute for Supply Management"
+    },
+    {
+      "dateISO": "2026-09-03",
+      "date": "09月03日",
+      "event": "CIEN Q3 FY2026 · REPORTED",
+      "time": "pre-market · REPORTED",
+      "referenceMonth": "Revenue $1.67B; adjusted EPS $2.11; FY guide raised",
+      "source": "Ciena Investor Relations"
+    },
+    {
+      "dateISO": "2026-09-02",
+      "date": "09月02日",
+      "event": "AVGO Q3 FY2026 · REPORTED",
+      "time": "after close · REPORTED",
+      "referenceMonth": "Q4 total revenue guidance under market expectations",
+      "source": "Broadcom Investor Relations"
     },
     {
       "dateISO": "2026-09-04",
