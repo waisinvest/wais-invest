@@ -1,0 +1,31 @@
+{
+  "version": "2026-09-03-v1",
+  "authority": "WAIS System → WAIS INVEST display",
+  "principles": {
+    "researchCannotBeSkipped": true,
+    "opportunitiesMayBeFastTracked": true,
+    "policyIsDiscoveryNotBuyAuthority": true,
+    "ready1StandardIsNotLowered": true,
+    "waisInvestIsDisplayOnly": true
+  },
+  "researchFlow": ["DISCOVERY", "RESEARCH", "CANDIDATE", "CANDIDATE+", "SUPER A ENTRY", "READY 1"],
+  "stagePermissions": {
+    "RESEARCH": {"formalBuyAllowed": false},
+    "CANDIDATE": {"formalBuyAllowed": false},
+    "CANDIDATE+": {"formalBuyAllowed": true, "allowedAction": "PILOT BUY", "defaultInitialSizePctRange": [10, 25]},
+    "READY 1": {"formalBuyAllowed": true, "allowedActions": ["CORE BUY", "ADD", "PROTECT", "EXIT"]}
+  },
+  "superA": {
+    "role": "Execution and early-entry timing engine; never a substitute for WAIS research.",
+    "visibleActions": ["WAIT", "PILOT BUY", "CORE BUY", "ADD", "PROTECT", "EXIT"],
+    "chartPriority": ["Price Structure", "Volume", "Relative Strength", "Moving averages", "RSI", "MACD"]
+  },
+  "policyFastTrack": {
+    "name": "FAST-TRACK RESEARCH",
+    "rule": "Material policy catalysts may accelerate research priority but may not bypass WAIS evidence gates."
+  },
+  "displayContract": {
+    "minimumUserView": ["Ticker", "Research Status", "Super A Action", "Entry", "Size", "Invalidation/Stop", "Add condition", "TP/Protect rule"],
+    "rule": "WAIS INVEST mirrors only WAIS System-approved output."
+  }
+}
