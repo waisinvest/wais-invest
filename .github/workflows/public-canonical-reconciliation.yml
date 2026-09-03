@@ -5,7 +5,9 @@ on:
   push:
     paths:
       - canonical-universe.json
+      - wais-execution-policy.json
       - scripts/reconcile_public_quote_universe.py
+      - .github/workflows/public-canonical-reconciliation.yml
   schedule:
     - cron: "12,42 * * * 1-5"
 
@@ -20,6 +22,26 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+      - name: Validate sanitised WAIS execution display contract
+        run: |
+          python3 - <<'PY'
+          import json
+          p=json.load(open('wais-execution-policy.json',encoding='utf-8'))
+          expected=['DISCOVERY','RESEARCH','CANDIDATE','CANDIDATE+','READY 1','SUPER A PRE-BREAKOUT','SUPER A ENTRY']
+          assert p.get('authority')=='WAIS System → WAIS INVEST display'
+          assert p.get('researchFlow')==expected, p.get('researchFlow')
+          perms=p.get('stagePermissions',{})
+          assert perms['CANDIDATE+']['formalBuyAllowed'] is False
+          assert perms['READY 1']['formalBuyAllowed'] is False
+          assert perms['SUPER A PRE-BREAKOUT']['formalBuyAllowed'] is False
+          assert perms['SUPER A PRE-BREAKOUT']['allowedAction']=='PRE-WARNING'
+          assert perms['SUPER A ENTRY']['formalBuyAllowed'] is True
+          audit=p.get('mandatoryPreOutputAudit',{})
+          assert audit.get('required') is True and audit.get('failClosed') is True
+          assert audit.get('failureAction')=='WAIT / DATA GAP'
+          assert p.get('principles',{}).get('waisInvestIsDisplayOnly') is True
+          print('WAIS INVEST execution display contract: PASS')
+          PY
       - name: Generate quote universe from WAIS System mirror and fail closed
         run: python3 scripts/reconcile_public_quote_universe.py
       - name: Validate canonical coverage
@@ -35,6 +57,10 @@ jobs:
               for t in names or []: seen.setdefault(t,[]).append(stage)
           dup={t:s for t,s in seen.items() if len(s)>1}
           assert not dup, f"RECONCILIATION FAILED — duplicate stages: {dup}"
+          assert p.get('failedSymbols',[])==[], f"failedSymbols not empty: {p.get('failedSymbols')}"
+          assert p.get('relatedRoutesFailedSymbols',[])==[], (
+              f"relatedRoutesFailedSymbols not empty: {p.get('relatedRoutesFailedSymbols')}"
+          )
           print('WAIS INVEST canonical reconciliation: PASS')
           PY
       - name: Commit public reconciled quote snapshot
