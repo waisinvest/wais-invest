@@ -1,0 +1,27 @@
+{
+  "version": "2026-09-03-v1",
+  "authority": "WAIS System → WAIS INVEST display",
+  "contract": {
+    "statusAuthority": "WAIS System only",
+    "quoteUniverseRule": "Generate from canonical stages plus policy radar; WAIS INVEST cannot create or promote status.",
+    "failClosed": true,
+    "activeStages": ["READY 1", "TECH READY", "CANDIDATE+", "CANDIDATE", "RESEARCH"],
+    "displayRule": "Mirror only."
+  },
+  "stages": {
+    "READY 1": [],
+    "TECH READY": [],
+    "CANDIDATE+": ["NVDA"],
+    "CANDIDATE": ["LITE", "MU", "MRVL", "TSM", "AVGO", "COHR", "TSEM", "RKLB"],
+    "RESEARCH": ["TTMI", "AMBQ", "GNRC", "AEHR", "POWL", "CRDO", "SITM", "FN", "VRT", "CLS", "ALMU", "EROC", "ZYME", "AXTI", "SBE"],
+    "PHASE OUT": ["GFS"]
+  },
+  "policyRadar": ["MP", "UUU", "USAR", "NB", "WWR", "FEAM", "KTOS", "AVAV", "RCAT", "PLTR", "RKLB", "LUNR", "LMT", "NOC", "LEU", "CCJ", "OKLO", "SMR", "CEG", "GNRC", "POWL", "VRT", "ETN", "GEV", "TTMI", "AEHR", "AMKR"],
+  "quoteExceptions": {
+    "SBE": {
+      "monitorQuote": false,
+      "reason": "Research-only pre-listing/quote identity not yet verified; quote coverage is not applicable until a verified listed symbol exists."
+    }
+  },
+  "excludedChatOnlyTests": ["DELL", "TGTX"]
+}
