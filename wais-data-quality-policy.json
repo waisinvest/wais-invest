@@ -54,5 +54,12 @@
       "credentials",
       "private holdings"
     ]
+  },
+  "requiredResearchSources": {
+    "SERENITY": {
+      "required": true,
+      "connectionState": "DATA_GAP",
+      "rule": "Do not substitute another source for Serenity evidence; ingest only through an authorized API, export, feed, or account connection."
+    }
   }
 }
