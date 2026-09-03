@@ -1,13 +1,13 @@
 {
   "version": "WAIS Discovery Public v1",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-03T21:44:51.753890+00:00",
+  "asOf": "2026-09-03T22:59:47Z",
   "health": {
     "status": "PASS_WITH_SEC_FALLBACK",
     "requiredDataGaps": [
       {
         "source": "SERENITY",
-        "reason": "Two newer Serenity posts (NVDA and SIVE) remain only partially visible in the public index; direct X access is HTTP 403, so complete text cannot be verified."
+        "reason": "Three newer Serenity posts remain pending: NVDA, SIVE and an ESMT DDR2/DDR3 research update. Public index text is truncated/direct X is restricted; ESMT exchange ticker also requires verification."
       }
     ],
     "liveSources": 5,
@@ -36,7 +36,7 @@
         "AVGO"
       ],
       "rule": "Discovery/Research evidence only; cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
-      "checkedAt": "2026-09-03T21:44:51.753890+00:00",
+      "checkedAt": "2026-09-03T22:59:47Z",
       "freshness": "Last known good snapshot retained; current cycle obtained fewer than 3 complete verifiable posts.",
       "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095460499769155944",
       "pendingVerification": [
@@ -55,6 +55,16 @@
           ],
           "visibleSnippet": "This is the correct response when looking at $SIVE >100m CW DFB extraordinary capacity disclosure. To give some context, Trendforce July ...",
           "reason": "Search result is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095580088620449880",
+          "publishedAt": "2026-09-03T18:30:01.779Z",
+          "tickers": [],
+          "namedEntities": [
+            "ESMT"
+          ],
+          "visibleSnippet": "Just an update to my DDR2/DDR3 memory idea with ESMT. They reported August revenue (Taiwan sometimes does monthly reporting): June revenue ...",
+          "reason": "Public index text is truncated and the exchange ticker identity is not fully visible; direct X access is restricted. Not counted as verified evidence."
         }
       ]
     },
