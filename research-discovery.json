@@ -4,13 +4,22 @@
   "asOf": "2026-09-03T15:03:52Z",
   "health": {
     "status": "PASS_WITH_SEC_FALLBACK",
-    "requiredDataGaps": [],
+    "requiredDataGaps": [
+      {
+        "source": "SERENITY",
+        "reason": "Two newer public X posts were detected, but the search index exposes only truncated text and direct X access returns HTTP 403; complete visible text is unavailable, so they are excluded from verified evidence."
+      }
+    ],
     "liveSources": 5,
     "fallbackSources": 1,
     "failedThisCycle": [
       {
         "source": "SEC_PRIMARY",
         "reason": "HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "SERENITY",
+        "reason": "New posts detected but full text could not be verified because direct X access returned HTTP 403 and indexed snippets were truncated."
       }
     ]
   },
@@ -27,9 +36,27 @@
         "AVGO"
       ],
       "rule": "Discovery/Research evidence only; cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
-      "checkedAt": "2026-09-03T15:03:52Z",
+      "checkedAt": "2026-09-03T18:04:18Z",
       "freshness": "Current-cycle threshold met with at least 3 verifiable public original-post URLs.",
-      "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095460499769155944"
+      "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095460499769155944",
+      "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095490725412733092",
+          "tickers": [
+            "NVDA"
+          ],
+          "visibleSnippet": "$NVDA acquires hugging face for $12,930,300,000. Jensen stated the reason being: - 18M+ devs use Hugging Face - 3M+ models, 500k+ datasets, ...",
+          "reason": "Search result is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095546138510459218",
+          "tickers": [
+            "SIVE"
+          ],
+          "visibleSnippet": "This is the correct response when looking at $SIVE >100m CW DFB extraordinary capacity disclosure. To give some context, Trendforce July ...",
+          "reason": "Search result is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+        }
+      ]
     },
     "SEC": {
       "status": "ALTERNATE_LIVE",
@@ -51,5 +78,6 @@
     "keys",
     "credentials",
     "private holdings"
-  ]
+  ],
+  "lastChecked": "2026-09-03T18:04:18Z"
 }
