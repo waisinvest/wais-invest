@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-03-v2",
+  "version": "2026-09-03-v3",
   "authority": "WAIS System → WAIS INVEST display",
   "principles": {
     "researchCannotBeSkipped": true,
@@ -41,18 +41,35 @@
     },
     "SUPER A ENTRY": {
       "formalBuyAllowed": true,
-      "allowedActions": ["PILOT BUY", "CORE BUY"],
+      "allowedActions": [
+        "PILOT BUY",
+        "CORE BUY"
+      ],
       "condition": "READY 1 plus passed SUPER A setup and mandatory pre-output audit."
     },
     "POST ENTRY": {
-      "allowedActions": ["ADD", "PROTECT", "TRIM", "EXIT"]
+      "allowedActions": [
+        "ADD",
+        "PROTECT",
+        "TRIM",
+        "EXIT"
+      ]
     }
   },
   "superA": {
     "role": "Execution timing after READY 1; never a substitute for WAIS research.",
     "permanentPreBreakoutStage": "SUPER A PRE-BREAKOUT",
     "preBreakoutMeaning": "Preparation warning only; not a buy signal.",
-    "visibleActions": ["WAIT", "PRE-WARNING", "PILOT BUY", "CORE BUY", "ADD", "PROTECT", "TRIM", "EXIT"],
+    "visibleActions": [
+      "WAIT",
+      "PRE-WARNING",
+      "PILOT BUY",
+      "CORE BUY",
+      "ADD",
+      "PROTECT",
+      "TRIM",
+      "EXIT"
+    ],
     "publicChecks": [
       "Price structure",
       "Volume",
@@ -87,5 +104,24 @@
       "Evidence freshness"
     ],
     "rule": "WAIS INVEST mirrors only WAIS System-approved sanitised output; proprietary weights and private research logic are excluded."
+  },
+  "actionableExecution": {
+    "immediateExecutionRequired": true,
+    "pauseOnlyFor": [
+      "Material strategy change",
+      "Permission or security risk",
+      "Canonical-rule conflict"
+    ],
+    "resultWritebackRequired": true,
+    "publicRule": "Display only formal WAIS System-approved sanitised results."
+  },
+  "automationContract": {
+    "continuousWorkflowPreferredFor": [
+      "Market data",
+      "Prices",
+      "Canonical reconciliation",
+      "Approved schedules"
+    ],
+    "promotionGuard": "Automated refreshes cannot promote Candidate, READY 1 or SUPER A status."
   }
 }
