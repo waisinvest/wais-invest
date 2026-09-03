@@ -1,13 +1,13 @@
 {
   "version": "WAIS Discovery Public v1",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-03T18:04:18Z",
+  "asOf": "2026-09-03T18:43:41.455097+00:00",
   "health": {
     "status": "PASS_WITH_SEC_FALLBACK",
     "requiredDataGaps": [
       {
         "source": "SERENITY",
-        "reason": "Two newer public X posts were detected, but the search index exposes only truncated text and direct X access returns HTTP 403; complete visible text is unavailable, so they are excluded from verified evidence."
+        "reason": "Two newer Serenity posts (NVDA and SIVE) remain only partially visible in the public index; direct X access is HTTP 403, so complete text cannot be verified."
       }
     ],
     "liveSources": 5,
@@ -25,7 +25,7 @@
   },
   "sources": {
     "SERENITY": {
-      "status": "LIVE",
+      "status": "LAST_KNOWN_GOOD",
       "source": "Verified public @aleabitoreddit posts",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "verifiedPostCount": 7,
@@ -36,8 +36,8 @@
         "AVGO"
       ],
       "rule": "Discovery/Research evidence only; cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
-      "checkedAt": "2026-09-03T18:04:18Z",
-      "freshness": "Current-cycle threshold met with at least 3 verifiable public original-post URLs.",
+      "checkedAt": "2026-09-03T18:43:41.455097+00:00",
+      "freshness": "Last known good snapshot retained; current cycle obtained fewer than 3 complete verifiable posts.",
       "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095460499769155944",
       "pendingVerification": [
         {
