@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - "canonical-universe.json"
+      - "wais-execution-policy.json"
       - "scripts/update_public_market_data.py"
       - ".github/workflows/public-data-refresh.yml"
   schedule:
@@ -28,7 +30,18 @@ jobs:
       - name: Refresh genuine public market snapshots
         run: python3 scripts/update_public_market_data.py
 
-      - name: Validate JSON and safety labels
+      - name: Validate required pages and execution renderer
+        run: |
+          test -s index.html
+          test -s discovery-workbench.html
+          test -s fund-dna.html
+          test -s policy-structural-catalysts.html
+          test -s wais-route-intelligence-v2.js
+          test -s wais-super-a-policy-v1.js
+          grep -q "wais-route-intelligence-v2.js" market-data.js
+          grep -q "wais-super-a-policy-v1.js" market-data.js
+
+      - name: Validate JSON, canonical coverage and safety labels
         run: |
           python3 -m json.tool stock-prices.json >/dev/null
           python3 -m json.tool market-indicators.json >/dev/null
@@ -36,8 +49,19 @@ jobs:
           import json
           for path in ("stock-prices.json", "market-indicators.json"):
               data=json.load(open(path, encoding="utf-8"))
-              assert data.get("lastUpdated")
-              assert "NOT exchange real-time" in data.get("dataStatus","")
+              assert data.get("lastUpdated"), f"{path}: missing lastUpdated"
+              assert "NOT exchange real-time" in data.get("dataStatus",""), f"{path}: missing delay disclosure"
+              assert data.get("failedSymbols",[])==[], f"{path}: failedSymbols not empty: {data.get('failedSymbols')}"
+          stocks=json.load(open("stock-prices.json",encoding="utf-8"))
+          assert stocks.get("relatedRoutesFailedSymbols",[])==[], (
+              f"relatedRoutesFailedSymbols not empty: {stocks.get('relatedRoutesFailedSymbols')}"
+          )
+          canonical=stocks.get("canonicalQuoteUniverse",{})
+          assert canonical.get("status")=="PASS", f"canonical reconciliation failed: {canonical}"
+          assert canonical.get("missing",[])==[], f"canonical quotes missing: {canonical.get('missing')}"
+          assert canonical.get("refreshFailures",[])==[], (
+              f"canonical refresh failures: {canonical.get('refreshFailures')}"
+          )
           print("WAIS public data validation: PASS")
           PY
 
@@ -51,4 +75,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add stock-prices.json market-indicators.json
           git commit -m "Auto refresh public market data"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
