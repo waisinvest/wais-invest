@@ -20,10 +20,12 @@
     document.getElementById('waisSuperAAuthorityPanel')?.remove();
 
     const data = window.WAIS_MARKET_DATA || {};
-    const ready = cleanList(data.ready1);
-    const candidatePlus = cleanList(data.candidatePlus);
-    const preBreakout = ready.length ? cleanList(data.superAPreBreakout) : [];
-    const entries = ready.length ? cleanList(data.superAEntry) : [];
+    const pipeline = data.opportunityPipeline || {};
+    const ready = cleanList(pipeline.ready1 ?? data.ready1 ?? data.readyList);
+    const techReady = cleanList(pipeline.techReady ?? data.techReady);
+    const candidatePlus = cleanList(pipeline.candidatePlus ?? data.candidatePlus);
+    const preBreakout = ready.length ? cleanList(pipeline.superAPreBreakout ?? data.superAPreBreakout) : [];
+    const entries = ready.length ? cleanList(pipeline.superAEntry ?? data.superAEntry) : [];
 
     const panel = document.createElement('article');
     panel.id = 'waisSuperAAuthorityPanel';
@@ -64,6 +66,7 @@
 
     grid.append(
       card('Candidate+', candidatePlus.join(', ') || 'NONE', 'High-priority research only; formal buy not allowed.'),
+      card('TECH READY', techReady.join(', ') || 'NONE', 'Technical readiness only; not a WAIS buy approval.'),
       card('READY 1', ready.join(', ') || 'NONE', 'Research approval only; waits for SUPER A timing.'),
       card('SUPER A PRE-BREAKOUT', preBreakout.join(', ') || 'NONE', ready.length ? 'Preparation warning only.' : 'No READY 1 name is eligible for pre-warning.'),
       card('SUPER A ENTRY', entries.join(', ') || 'NONE', entries.length ? 'Approved actionable setup.' : 'No fully audited entry action.')
