@@ -1,15 +1,26 @@
 {
   "version": "WAIS Discovery Public v1",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-03T07:02:52.348Z",
+  "asOf": "2026-09-03T09:55:04.961704+00:00",
   "health": {
-    "status": "PASS",
+    "status": "PASS_WITH_FALLBACK",
     "requiredDataGaps": [],
-    "liveSources": 5
+    "liveSources": 4,
+    "fallbackSources": 1,
+    "failedThisCycle": [
+      {
+        "source": "SEC_PRIMARY",
+        "reason": "HTTP Error 403: Forbidden"
+      },
+      {
+        "source": "SERENITY",
+        "reason": "Public Serenity page yielded 0 usable new posts; retaining 3 previously verified posts."
+      }
+    ]
   },
   "sources": {
     "SERENITY": {
-      "status": "LIVE",
+      "status": "LAST_KNOWN_GOOD",
       "source": "Public @aleabitoreddit posts",
       "lastSuccessAt": "2026-09-03T07:02:52.348Z",
       "verifiedPostCount": 3,
@@ -17,7 +28,10 @@
         "AVGO",
         "NVDA"
       ],
-      "rule": "Research evidence only; cannot auto-promote status."
+      "rule": "Research evidence only; cannot auto-promote status.",
+      "checkedAt": "2026-09-03T09:55:04.961704+00:00",
+      "failureReason": "Public Serenity page yielded 0 usable new posts in the current cycle.",
+      "freshness": "Previously verified snapshot retained; no automatic status promotion."
     },
     "SEC": {
       "status": "ALTERNATE_LIVE",
