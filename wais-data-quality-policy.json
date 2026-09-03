@@ -58,10 +58,12 @@
   "requiredResearchSources": {
     "SERENITY": {
       "required": true,
-      "connectionState": "LIVE",
+      "connectionState": "LAST_KNOWN_GOOD",
       "rule": "Only verifiable public posts with source URL and timestamp are accepted; failure falls back to LAST_KNOWN_GOOD or DATA GAP.",
       "lastSuccessAt": "2026-09-03T07:02:52.348Z",
-      "ingestionPath": "Chat browser public-source fallback"
+      "ingestionPath": "Chat browser public-source fallback",
+      "checkedAt": "2026-09-03T09:55:04.961704+00:00",
+      "lastError": "Public Serenity page yielded 0 usable new posts in the current cycle."
     }
   }
 }
