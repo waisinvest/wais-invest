@@ -16,7 +16,7 @@
     "RESEARCH": ["TTMI", "AMBQ", "GNRC", "AEHR", "POWL", "CRDO", "SITM", "FN", "VRT", "CLS", "ALMU", "EROC", "ZYME", "AXTI", "SBE"],
     "PHASE OUT": ["GFS"]
   },
-  "policyRadar": ["MP", "UUU", "USAR", "NB", "WWR", "FEAM", "KTOS", "AVAV", "RCAT", "PLTR", "RKLB", "LUNR", "LMT", "NOC", "LEU", "CCJ", "OKLO", "SMR", "CEG", "GNRC", "POWL", "VRT", "ETN", "GEV", "TTMI", "AEHR", "AMKR"],
+  "policyRadar": ["MP", "UUUU", "USAR", "NB", "WWR", "FEAM", "KTOS", "AVAV", "RCAT", "PLTR", "RKLB", "LUNR", "LMT", "NOC", "LEU", "CCJ", "OKLO", "SMR", "CEG", "GNRC", "POWL", "VRT", "ETN", "GEV", "TTMI", "AEHR", "AMKR"],
   "quoteExceptions": {
     "SBE": {
       "monitorQuote": false,
