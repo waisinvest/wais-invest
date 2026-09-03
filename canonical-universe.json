@@ -1,12 +1,13 @@
 {
-  "version": "2026-09-03-v1",
+  "version": "2026-09-03-v2",
   "authority": "WAIS System → WAIS INVEST display",
   "contract": {
     "statusAuthority": "WAIS System only",
     "quoteUniverseRule": "Generate from canonical stages plus policy radar; WAIS INVEST cannot create or promote status.",
     "failClosed": true,
     "activeStages": ["READY 1", "TECH READY", "CANDIDATE+", "CANDIDATE", "RESEARCH"],
-    "displayRule": "Mirror only."
+    "displayRule": "Mirror only.",
+    "executionPolicy": "wais-execution-policy.json"
   },
   "stages": {
     "READY 1": [],
