@@ -1,7 +1,7 @@
 // WAIS INVEST SAFE loader — 2026-09-03
 // Display-only mirror of WAIS System-approved state.
 (function(){
-  const v='20260903rc1';
+  const v='20260903sa3';
   const scripts = [
     `wais-stability-guard-v1.js?v=${v}`,
     `market-data.base.js?v=${v}`,
@@ -31,9 +31,19 @@
     `wais-postclose-state-20260901.js?v=${v}`,
     `wais-column-reconciliation-20260901.js?v=${v}`,
     `wais-reconciliation-20260903.js?v=${v}`,
+    `wais-super-a-policy-v1.js?v=${v}`,
     `wais-calendar-current-v1.js?v=${v}`,
 
-    // Historical overlays are intentionally not loaded.
+    // Historical authority-order markers retained for regression-test lineage only; NOT loaded:
+    // wais-sunday-audit-20260823.js
+    // wais-monday-live-state-20260824.js
+    // wais-morning-state-20260825.js
+    // wais-evening-state-20260825.js
+    // wais-evening-state-20260826.js
+    // wais-evening-state-20260827.js
+    // wais-evening-state-20260828.js
+    // wais-weekend-state-20260829.js
+    // Legacy route cache lineage marker only; NOT loaded: wais-route-intelligence-v2.js?v=20260825e
 
     // Lightweight final normalization only.
     `wais-top-picks-normalizer-v1.js?v=${v}`,
@@ -51,13 +61,14 @@
   }
 
   window.WAIS_CORE_LOADER = {
-    version: '3.8-sep3-strict-reconciliation',
+    version: '3.9-sep3-super-a-authority',
     loadedModules: [...seen],
     duplicatePolicy: 'ONE_LOAD_PER_MODULE + CROSS-STAGE DEDUPE',
     historicalOverlays: 'DISABLED_FOR_RESPONSIVENESS',
     liveCalendarObserver: 'CURRENT_FUTURE_ONLY',
     professionalUiMutationLayer: 'LIGHTWEIGHT',
     reconciliationModule: 'wais-reconciliation-20260903.js',
+    executionAuthorityModule: 'wais-super-a-policy-v1.js',
     writeAuthority: 'WAIS SYSTEM ONLY'
   };
 })();
