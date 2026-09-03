@@ -40,6 +40,10 @@ jobs:
           assert audit.get('required') is True and audit.get('failClosed') is True
           assert audit.get('failureAction')=='WAIT / DATA GAP'
           assert p.get('principles',{}).get('waisInvestIsDisplayOnly') is True
+          execution=p.get('actionableExecution',{})
+          assert execution.get('immediateExecutionRequired') is True
+          assert execution.get('resultWritebackRequired') is True
+          assert p.get('automationContract',{}).get('promotionGuard')
           print('WAIS INVEST execution display contract: PASS')
           PY
       - name: Generate quote universe from WAIS System mirror and fail closed
