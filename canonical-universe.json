@@ -1,28 +1,103 @@
 {
-  "version": "2026-09-03-v2",
+  "version": "2026-09-03-v3-1200ET",
   "authority": "WAIS System → WAIS INVEST display",
   "contract": {
     "statusAuthority": "WAIS System only",
     "quoteUniverseRule": "Generate from canonical stages plus policy radar; WAIS INVEST cannot create or promote status.",
     "failClosed": true,
-    "activeStages": ["READY 1", "TECH READY", "CANDIDATE+", "CANDIDATE", "RESEARCH"],
+    "activeStages": [
+      "READY 1",
+      "TECH READY",
+      "CANDIDATE+",
+      "CANDIDATE",
+      "RESEARCH"
+    ],
     "displayRule": "Mirror only.",
     "executionPolicy": "wais-execution-policy.json"
   },
   "stages": {
     "READY 1": [],
-    "TECH READY": [],
-    "CANDIDATE+": ["NVDA"],
-    "CANDIDATE": ["LITE", "MU", "MRVL", "TSM", "AVGO", "COHR", "TSEM", "RKLB"],
-    "RESEARCH": ["TTMI", "AMBQ", "GNRC", "AEHR", "POWL", "CRDO", "SITM", "FN", "VRT", "CLS", "ALMU", "EROC", "ZYME", "AXTI", "SBE"],
-    "PHASE OUT": ["GFS"]
+    "TECH READY": [
+      "NVDA"
+    ],
+    "CANDIDATE+": [
+      "MU",
+      "DELL"
+    ],
+    "CANDIDATE": [
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB"
+    ],
+    "RESEARCH": [
+      "CIEN",
+      "VRT",
+      "MRVL",
+      "COHR",
+      "TSEM",
+      "FN",
+      "CRDO",
+      "KEYS",
+      "CLS",
+      "TTMI",
+      "SITM",
+      "AEHR",
+      "GNRC",
+      "EROC",
+      "POWL",
+      "NVT",
+      "AXTI",
+      "SLB",
+      "HUT",
+      "PANW",
+      "FRVO",
+      "HPE",
+      "AMBQ",
+      "ALMU",
+      "ZYME",
+      "SBE"
+    ],
+    "PHASE OUT": [
+      "GFS"
+    ]
   },
-  "policyRadar": ["MP", "UUUU", "USAR", "NB", "WWR", "FEAM", "KTOS", "AVAV", "RCAT", "PLTR", "RKLB", "LUNR", "LMT", "NOC", "LEU", "CCJ", "OKLO", "SMR", "CEG", "GNRC", "POWL", "VRT", "ETN", "GEV", "TTMI", "AEHR", "AMKR"],
+  "policyRadar": [
+    "MP",
+    "UUUU",
+    "USAR",
+    "NB",
+    "WWR",
+    "FEAM",
+    "KTOS",
+    "AVAV",
+    "RCAT",
+    "PLTR",
+    "RKLB",
+    "LUNR",
+    "LMT",
+    "NOC",
+    "LEU",
+    "CCJ",
+    "OKLO",
+    "SMR",
+    "CEG",
+    "GNRC",
+    "POWL",
+    "VRT",
+    "ETN",
+    "GEV",
+    "TTMI",
+    "AEHR",
+    "AMKR"
+  ],
   "quoteExceptions": {
     "SBE": {
       "monitorQuote": false,
       "reason": "Research-only pre-listing/quote identity not yet verified; quote coverage is not applicable until a verified listed symbol exists."
     }
   },
-  "excludedChatOnlyTests": ["DELL", "TGTX"]
+  "excludedChatOnlyTests": [
+    "TGTX"
+  ]
 }
