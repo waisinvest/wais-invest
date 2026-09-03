@@ -1,37 +1,34 @@
 {
   "version": "WAIS Discovery Public v1",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-03T09:55:04.961704+00:00",
+  "asOf": "2026-09-03T12:03:07Z",
   "health": {
-    "status": "PASS_WITH_FALLBACK",
+    "status": "PASS_WITH_SEC_FALLBACK",
     "requiredDataGaps": [],
-    "liveSources": 4,
+    "liveSources": 5,
     "fallbackSources": 1,
     "failedThisCycle": [
       {
         "source": "SEC_PRIMARY",
         "reason": "HTTP Error 403: Forbidden"
-      },
-      {
-        "source": "SERENITY",
-        "reason": "Public Serenity page yielded 0 usable new posts; retaining 3 previously verified posts."
       }
     ]
   },
   "sources": {
     "SERENITY": {
-      "status": "LAST_KNOWN_GOOD",
-      "source": "Public @aleabitoreddit posts",
-      "lastSuccessAt": "2026-09-03T07:02:52.348Z",
-      "verifiedPostCount": 3,
+      "status": "LIVE",
+      "source": "Verified public @aleabitoreddit posts",
+      "lastSuccessAt": "2026-09-03T12:03:07Z",
+      "verifiedPostCount": 5,
       "tickers": [
-        "AVGO",
-        "NVDA"
+        "SIVE",
+        "NVDA",
+        "AVGO"
       ],
-      "rule": "Research evidence only; cannot auto-promote status.",
-      "checkedAt": "2026-09-03T09:55:04.961704+00:00",
-      "failureReason": "Public Serenity page yielded 0 usable new posts in the current cycle.",
-      "freshness": "Previously verified snapshot retained; no automatic status promotion."
+      "rule": "Discovery/Research evidence only; cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
+      "checkedAt": "2026-09-03T12:03:07Z",
+      "freshness": "Current-cycle threshold met with at least 3 verifiable public posts.",
+      "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095453263613341938"
     },
     "SEC": {
       "status": "ALTERNATE_LIVE",
