@@ -3394,6 +3394,7 @@
     "version": "2026-09-03-v2",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
+      "NVDA",
       "LITE",
       "MU",
       "MRVL",
@@ -3416,7 +3417,6 @@
       "EROC",
       "ZYME",
       "AXTI",
-      "NVDA",
       "MP",
       "UUUU",
       "USAR",
@@ -3443,6 +3443,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-03T05:53:03.650860+00:00"
+    "asOf": "2026-09-03T05:53:20.635042+00:00"
   }
 }
