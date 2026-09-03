@@ -1,7 +1,7 @@
 {
   "version": "WAIS Discovery Public v1",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-03T18:43:41.455097+00:00",
+  "asOf": "2026-09-03T21:44:51.753890+00:00",
   "health": {
     "status": "PASS_WITH_SEC_FALLBACK",
     "requiredDataGaps": [
@@ -36,7 +36,7 @@
         "AVGO"
       ],
       "rule": "Discovery/Research evidence only; cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
-      "checkedAt": "2026-09-03T18:43:41.455097+00:00",
+      "checkedAt": "2026-09-03T21:44:51.753890+00:00",
       "freshness": "Last known good snapshot retained; current cycle obtained fewer than 3 complete verifiable posts.",
       "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095460499769155944",
       "pendingVerification": [
