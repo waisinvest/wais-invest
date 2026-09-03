@@ -1,31 +1,91 @@
 {
-  "version": "2026-09-03-v1",
+  "version": "2026-09-03-v2",
   "authority": "WAIS System → WAIS INVEST display",
   "principles": {
     "researchCannotBeSkipped": true,
-    "opportunitiesMayBeFastTracked": true,
     "policyIsDiscoveryNotBuyAuthority": true,
     "ready1StandardIsNotLowered": true,
+    "ready1IsResearchApprovalNotAutomaticEntry": true,
+    "superANeverPromotesResearchStatus": true,
     "waisInvestIsDisplayOnly": true
   },
-  "researchFlow": ["DISCOVERY", "RESEARCH", "CANDIDATE", "CANDIDATE+", "SUPER A ENTRY", "READY 1"],
+  "researchFlow": [
+    "DISCOVERY",
+    "RESEARCH",
+    "CANDIDATE",
+    "CANDIDATE+",
+    "READY 1",
+    "SUPER A PRE-BREAKOUT",
+    "SUPER A ENTRY"
+  ],
   "stagePermissions": {
-    "RESEARCH": {"formalBuyAllowed": false},
-    "CANDIDATE": {"formalBuyAllowed": false},
-    "CANDIDATE+": {"formalBuyAllowed": true, "allowedAction": "PILOT BUY", "defaultInitialSizePctRange": [10, 25]},
-    "READY 1": {"formalBuyAllowed": true, "allowedActions": ["CORE BUY", "ADD", "PROTECT", "EXIT"]}
+    "RESEARCH": {
+      "formalBuyAllowed": false,
+      "allowedAction": "RESEARCH"
+    },
+    "CANDIDATE": {
+      "formalBuyAllowed": false,
+      "allowedAction": "WAIT"
+    },
+    "CANDIDATE+": {
+      "formalBuyAllowed": false,
+      "allowedAction": "PREPARE"
+    },
+    "READY 1": {
+      "formalBuyAllowed": false,
+      "allowedAction": "WAIT FOR SUPER A"
+    },
+    "SUPER A PRE-BREAKOUT": {
+      "formalBuyAllowed": false,
+      "allowedAction": "PRE-WARNING"
+    },
+    "SUPER A ENTRY": {
+      "formalBuyAllowed": true,
+      "allowedActions": ["PILOT BUY", "CORE BUY"],
+      "condition": "READY 1 plus passed SUPER A setup and mandatory pre-output audit."
+    },
+    "POST ENTRY": {
+      "allowedActions": ["ADD", "PROTECT", "TRIM", "EXIT"]
+    }
   },
   "superA": {
-    "role": "Execution and early-entry timing engine; never a substitute for WAIS research.",
-    "visibleActions": ["WAIT", "PILOT BUY", "CORE BUY", "ADD", "PROTECT", "EXIT"],
-    "chartPriority": ["Price Structure", "Volume", "Relative Strength", "Moving averages", "RSI", "MACD"]
+    "role": "Execution timing after READY 1; never a substitute for WAIS research.",
+    "permanentPreBreakoutStage": "SUPER A PRE-BREAKOUT",
+    "preBreakoutMeaning": "Preparation warning only; not a buy signal.",
+    "visibleActions": ["WAIT", "PRE-WARNING", "PILOT BUY", "CORE BUY", "ADD", "PROTECT", "TRIM", "EXIT"],
+    "publicChecks": [
+      "Price structure",
+      "Volume",
+      "Relative strength",
+      "Catalyst",
+      "Entry edge",
+      "Invalidation",
+      "Chase filter",
+      "Data freshness"
+    ]
+  },
+  "mandatoryPreOutputAudit": {
+    "required": true,
+    "failClosed": true,
+    "failureAction": "WAIT / DATA GAP",
+    "rule": "A failed, contradictory, stale or missing required check blocks READY 1 + SUPER A entry output."
   },
   "policyFastTrack": {
     "name": "FAST-TRACK RESEARCH",
     "rule": "Material policy catalysts may accelerate research priority but may not bypass WAIS evidence gates."
   },
   "displayContract": {
-    "minimumUserView": ["Ticker", "Research Status", "Super A Action", "Entry", "Size", "Invalidation/Stop", "Add condition", "TP/Protect rule"],
-    "rule": "WAIS INVEST mirrors only WAIS System-approved output."
+    "minimumUserView": [
+      "Ticker",
+      "Research Status",
+      "Super A Stage/Action",
+      "Entry",
+      "Size",
+      "Invalidation/Stop",
+      "Add condition",
+      "TP/Protect rule",
+      "Evidence freshness"
+    ],
+    "rule": "WAIS INVEST mirrors only WAIS System-approved sanitised output; proprietary weights and private research logic are excluded."
   }
 }
