@@ -1,0 +1,43 @@
+{
+  "version": "WAIS Discovery Public v1",
+  "authority": "WAIS System → WAIS INVEST display",
+  "asOf": "2026-09-03T07:02:52.348Z",
+  "health": {
+    "status": "PASS",
+    "requiredDataGaps": [],
+    "liveSources": 5
+  },
+  "sources": {
+    "SERENITY": {
+      "status": "LIVE",
+      "source": "Public @aleabitoreddit posts",
+      "lastSuccessAt": "2026-09-03T07:02:52.348Z",
+      "verifiedPostCount": 3,
+      "tickers": [
+        "AVGO",
+        "NVDA"
+      ],
+      "rule": "Research evidence only; cannot auto-promote status."
+    },
+    "SEC": {
+      "status": "ALTERNATE_LIVE",
+      "primaryStatus": "HTTP 403",
+      "fallback": "Official issuer disclosures plus canonical market data"
+    },
+    "SBE": {
+      "status": "LIVE_PRE_IPO",
+      "issuer": "SB Energy, Inc.",
+      "proposedTicker": "SBE",
+      "marketPriceStatus": "NOT_APPLICABLE_PRE_IPO"
+    }
+  },
+  "sanitised": true,
+  "prohibitedContentExcluded": [
+    "proprietary weights",
+    "FABIBOT logic",
+    "unpublished research",
+    "keys",
+    "credentials",
+    "private holdings"
+  ]
+}
