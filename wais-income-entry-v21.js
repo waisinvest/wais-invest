@@ -112,7 +112,7 @@
       const anchor=section.querySelector('.income-controls')||grid;
       anchor.insertAdjacentElement('beforebegin',bar);
     }
-    const ready=(d.incomeEtfs||[]).filter(item=>String(item.status||'').toUpperCase().includes('READY'));
+    const ready=(d.incomeEtfs||[]).filter(item=>/^INCOME READY 1$/.test(String(item.status||'').trim().toUpperCase()));
     if(!ready.length){ bar.innerHTML='<span>INCOME READY 1</span><b>NONE</b>'; return; }
     bar.innerHTML=`<span>INCOME READY 1</span><div>${ready.map(item=>`<button type="button" data-ready-ticker="${esc(String(item.ticker).toUpperCase())}">${esc(String(item.ticker).toUpperCase())} · VIEW</button>`).join('')}</div>`;
     bar.querySelectorAll('button[data-ready-ticker]').forEach(btn=>btn.addEventListener('click',()=>showReadyTicker(btn.dataset.readyTicker)));
@@ -125,7 +125,7 @@
     if(!allOpt){ allOpt=document.createElement('option'); allOpt.value='0'; allOpt.textContent='All'; old.prepend(allOpt); }
     old.value='0'; old.style.display='none';
     const sel=document.createElement('select'); sel.id='income30dFilter'; sel.className=old.className;
-    sel.innerHTML='<option value="all">全部</option><option value="lte3">≤ 3%</option><option value="gte3">≥ 3%</option><option value="gte4">≥ 4%</option><option value="gte5" selected>≥ 5%｜5%+</option>';
+    sel.innerHTML='<option value="all" selected>全部</option><option value="lte3">≤ 3%</option><option value="gte3">≥ 3%</option><option value="gte4">≥ 4%</option><option value="gte5">≥ 5%｜5%+</option>';
     old.insertAdjacentElement('afterend',sel);
     const label=old.closest('label')?.querySelector('span'); if(label) label.textContent='Current 30D Income Rate';
 
