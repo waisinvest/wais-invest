@@ -33,7 +33,7 @@
   }
   function stage(item,current,zone){
     const s=String(item?.status||'RESEARCH').toUpperCase();
-    if(s.includes('READY')) return 'INCOME READY 1';
+    if(/^INCOME READY 1$/.test(s)) return 'INCOME READY 1';
     if(s.includes('CANDIDATE+')) return 'INCOME CANDIDATE+';
     if(s.includes('CANDIDATE')) return 'INCOME CANDIDATE';
     if(s.includes('BELOW 3')) return 'PHASE OUT';
@@ -44,7 +44,7 @@
   function universeAction(item){
     const s=String(item?.status||'').toUpperCase();
     if(s.includes('BELOW 3')) return 'PHASE OUT';
-    if(s.includes('READY')) return 'MANAGE';
+    if(/^INCOME READY 1$/.test(s)) return 'MANAGE';
     if(s.includes('CANDIDATE')) return 'PROMOTION QUEUE';
     if(s.includes('WATCH')||s.includes('WAIT')) return 'ACTIVE WATCH';
     return 'RESEARCH';
