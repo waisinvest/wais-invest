@@ -641,11 +641,13 @@ function renderIncomeEtfs(){
   const filtered=enriched.filter(item=>item._yield!=null && item._yield>=minYield);
   const weekly=filtered.filter(i=>i.track==='WEEKLY');
   const monthly=filtered.filter(i=>i.track==='MONTHLY');
+  const weeklyAll=enriched.filter(i=>i.track==='WEEKLY');
+  const monthlyAll=enriched.filter(i=>i.track==='MONTHLY');
   const tactical=filtered.filter(i=>i.track==='TACTICAL');
 
-  const ready=g=>g.filter(i=>String(i.status).toUpperCase().includes('READY')).length;
-  if($('weeklyIncomeReadyCount'))$('weeklyIncomeReadyCount').textContent=ready(weekly);
-  if($('monthlyIncomeReadyCount'))$('monthlyIncomeReadyCount').textContent=ready(monthly);
+  const ready=g=>g.filter(i=>/^INCOME READY 1$/.test(String(i.status||'').trim().toUpperCase())).length;
+  if($('weeklyIncomeReadyCount'))$('weeklyIncomeReadyCount').textContent=ready(weeklyAll);
+  if($('monthlyIncomeReadyCount'))$('monthlyIncomeReadyCount').textContent=ready(monthlyAll);
   if($('incomeYieldMatchCount'))$('incomeYieldMatchCount').textContent=filtered.length;
 
   const defense=window.WAIS_MARKET_DATA?.incomeDefenseStatus||window.WAIS_MARKET_DATA?.marketMode||'CAUTIOUS';
