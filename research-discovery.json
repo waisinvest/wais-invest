@@ -1,13 +1,13 @@
 {
   "version": "WAIS Discovery Public v1",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-03T22:59:47Z",
+  "asOf": "2026-09-04T01:06:50.404Z",
   "health": {
     "status": "PASS_WITH_SEC_FALLBACK",
     "requiredDataGaps": [
       {
         "source": "SERENITY",
-        "reason": "Three newer Serenity posts remain pending: NVDA, SIVE and an ESMT DDR2/DDR3 research update. Public index text is truncated/direct X is restricted; ESMT exchange ticker also requires verification."
+        "reason": "Three newer Serenity posts remain pending: NVDA, SIVE and ESMT. Public index text is truncated/direct X is restricted; ESMT exchange ticker identity also requires verification."
       }
     ],
     "liveSources": 5,
@@ -19,7 +19,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "New posts detected but full text could not be verified because direct X access returned HTTP 403 and indexed snippets were truncated."
+        "reason": "Fewer than 3 complete verifiable new posts this cycle; LAST_KNOWN_GOOD retained."
       }
     ]
   },
@@ -36,8 +36,8 @@
         "AVGO"
       ],
       "rule": "Discovery/Research evidence only; cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
-      "checkedAt": "2026-09-03T22:59:47Z",
-      "freshness": "Last known good snapshot retained; current cycle obtained fewer than 3 complete verifiable posts.",
+      "checkedAt": "2026-09-04T01:06:50.404Z",
+      "freshness": "Last known good snapshot retained; current cycle obtained fewer than 3 complete verifiable new posts.",
       "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095460499769155944",
       "pendingVerification": [
         {
