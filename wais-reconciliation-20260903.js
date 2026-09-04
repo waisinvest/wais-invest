@@ -10,6 +10,7 @@
   p.version='2026-09-03-1200ET';
   p.asOf='2026-09-03T12:00:00-04:00';
   p.actionNow='WAIT / NO CHASE';
+  p.nextGate='Sep 4 08:30 ET · Employment Situation';
   p.ready1=[];
   p.techReady=['NVDA'];
   p.candidatePlus=['MU','DELL'];
@@ -82,7 +83,7 @@
     reviewRemark:'先外部搜尋，再由WAIS獨立驗證；外部研究不能自動升級。',
     rule:'No source = not researched. Missing evidence = DATA GAP, never “no update”.',
     evidenceOfWork:[
-      {layer:'Serenity / specialist research',status:'CHECKED PARTIAL / DATA GAP',evidence:'Seven earlier public posts remain verified. Two newer posts were detected at 18:04Z but full text was truncated and direct X access returned HTTP 403; excluded from evidence and no auto-promotion.'},
+      {layer:'Serenity / specialist research',status:'CHECKED PARTIAL / DATA GAP',evidence:'Seven earlier public posts remain verified. Three newer posts (NVDA, SIVE and ESMT) remain pending because public index text is truncated and direct X access returned HTTP 403; ESMT exchange ticker identity is also unverified. Excluded from evidence and no auto-promotion.'},
       {layer:'Company IR',status:'CHECKED',evidence:'NVIDIA Hugging Face acquisition and Ciena Q3 release checked against official company materials.'},
       {layer:'SEC / regulatory',status:'PARTIAL CHECKED / DATA GAP',evidence:'Deal regulatory implications reviewed; current transaction filing and full-universe SEC sweep not yet complete.'},
       {layer:'Earnings / guidance / transcripts',status:'CHECKED / TRANSCRIPT PARTIAL',evidence:'AVGO, Ciena, Dell and HPE results/guidance cross-checked; complete Ciena call transcript not independently archived this cycle.'},
