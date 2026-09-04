@@ -6,4 +6,4 @@ fetch('research-workbench.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
  const sources=document.createElement('article');sources.className='card';sources.innerHTML='<div class="bucket">Verified public policy sources</div>'+d.publicSources.map(s=>`<div class="status"><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)}</a></div>`).join('');
  g.appendChild(sources);
 }).catch(()=>document.getElementById('grid').textContent='DATA GAP · public research file unavailable');
-</script></body></html>
+</script><script src="wais-ticker-links-v1.js?v=20260904a"></script></body></html>
