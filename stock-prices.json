@@ -3520,13 +3520,9 @@
     "version": "2026-09-03-v3-1200ET",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB",
-      "NVDA",
       "MU",
       "DELL",
+      "NVDA",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3552,6 +3548,10 @@
       "AMBQ",
       "ALMU",
       "ZYME",
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB",
       "MP",
       "UUUU",
       "USAR",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-07T19:57:31.049104+00:00"
+    "asOf": "2026-09-07T22:50:29.645943+00:00"
   }
 }
