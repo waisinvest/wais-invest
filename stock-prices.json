@@ -3520,9 +3520,9 @@
     "version": "2026-09-03-v3-1200ET",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
+      "NVDA",
       "MU",
       "DELL",
-      "NVDA",
       "TSM",
       "AVGO",
       "LITE",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-07T09:45:52.610379+00:00"
+    "asOf": "2026-09-07T15:51:03.820801+00:00"
   }
 }
