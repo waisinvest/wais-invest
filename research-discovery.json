@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-08T20:04:54Z",
+  "lastChecked": "2026-09-08T22:01:04Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -29,7 +29,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "3 new status URLs found, but 0 complete newly verifiable originals; truncated/subscriber-restricted text."
+        "reason": "Additional status/reply URLs found, but fewer than 3 complete newly verifiable original research posts."
       }
     ]
   },
@@ -42,8 +42,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
-      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
+      "checkedAt": "2026-09-08T21:54:37.300828+00:00",
+      "lastSuccessAt": "2026-09-08T21:54:37.300828+00:00",
       "contentHash": "f8970ae553e466af044f2dd2f72fe14d24829a1173e80b7afeed3461e9689833",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -67,8 +67,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
-      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
+      "checkedAt": "2026-09-08T21:54:37.300828+00:00",
+      "lastSuccessAt": "2026-09-08T21:54:37.300828+00:00",
       "contentHash": "84958a885cc7780ddaccb8d32534995cb69c8ea3ab7923df02d6114a8d960c9d",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -89,7 +89,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
+      "checkedAt": "2026-09-08T21:54:37.300828+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -97,8 +97,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
-      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
+      "checkedAt": "2026-09-08T21:54:37.300828+00:00",
+      "lastSuccessAt": "2026-09-08T21:54:37.300828+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-08T20:04:54Z",
+      "checkedAt": "2026-09-08T22:01:04Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
@@ -198,6 +198,41 @@
       ],
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097313029809709343",
+          "publishedAt": "2026-09-08T13:16:07.155Z",
+          "tickers": [
+            "HOOD"
+          ],
+          "visibleSnippet": "I still hold the same opinion that $HOOD should prioritize international equities and helping retail compound net worth through portfolio diversification.",
+          "reason": "Visible reply text is retained, but full reply-thread context is unavailable; not counted as complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097327653116363127",
+          "publishedAt": "2026-09-08T14:14:13.623Z",
+          "tickers": [
+            "NBIS",
+            "PLTR"
+          ],
+          "visibleSnippet": "$NBIS is back, and coming in hot with a new partnership with $PLTR. Palantir also named Nebius its preferred sovereign AI infrastructure partner ...",
+          "reason": "Public index text is truncated; direct original/thread context unavailable. Not counted as complete verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097328999555059718",
+          "publishedAt": "2026-09-08T14:19:34.639Z",
+          "tickers": [
+            "IREN"
+          ],
+          "visibleSnippet": "My 1 $IREN share is also cooking today.",
+          "reason": "Reply-sized public excerpt lacks the referenced research context; retained for verification and not counted as complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097399066959491480",
+          "publishedAt": "2026-09-08T18:58:00.010Z",
+          "tickers": [],
+          "visibleSnippet": "How",
+          "reason": "Photo post exposes no complete research text in the public index; not counted as verified evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2097365614402969638",
           "publishedAt": "2026-09-08T13:45:00Z",
@@ -333,14 +368,14 @@
           "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
         }
       ],
-      "lastError": "Latest public search index exposed new Serenity status URLs, but full original text remains truncated/restricted; fewer than 3 complete newly verifiable originals this cycle."
+      "lastError": "Latest public index exposed additional Serenity post/reply URLs, but fewer than 3 complete newly verifiable original research posts were available this cycle."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
-      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
+      "checkedAt": "2026-09-08T21:54:37.300828+00:00",
+      "lastSuccessAt": "2026-09-08T21:54:37.300828+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
