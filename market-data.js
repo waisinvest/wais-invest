@@ -1,7 +1,7 @@
-// WAIS INVEST SAFE loader — 2026-09-03
-// Display-only mirror of WAIS System-approved state.
+// WAIS Core SAFE loader — 2026-09-03
+// Mobile-first current profile: responsive, current-session, future-only calendar.
 (function(){
-  const v='20260903wais2000';
+  const v='20260908wais20blueprint1';
   const scripts = [
     `wais-stability-guard-v1.js?v=${v}`,
     `market-data.base.js?v=${v}`,
@@ -68,7 +68,6 @@
     liveCalendarObserver: 'CURRENT_FUTURE_ONLY',
     professionalUiMutationLayer: 'LIGHTWEIGHT',
     reconciliationModule: 'wais-reconciliation-20260903.js',
-    executionAuthorityModule: 'wais-super-a-policy-v1.js',
-    writeAuthority: 'WAIS SYSTEM ONLY'
+    executionAuthorityModule: 'wais-super-a-policy-v1.js'
   };
 })();
