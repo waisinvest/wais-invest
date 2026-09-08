@@ -3517,13 +3517,10 @@
   "relatedRoutesFailedSymbols": [],
   "relatedRouteStockMetricFailures": [],
   "canonicalQuoteUniverse": {
-    "version": "2026-09-03-v3-1200ET",
+    "version": "2026-09-08-v4-list-compression",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB",
+      "NVDA",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3549,7 +3546,10 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "NVDA",
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB",
       "MU",
       "DELL",
       "MP",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-08T06:32:29.144630+00:00"
+    "asOf": "2026-09-08T06:48:31.807434+00:00"
   }
 }
