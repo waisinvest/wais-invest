@@ -1,7 +1,7 @@
 {
   "version": "WAIS Discovery Display v2",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-08T10:08:06.844Z",
+  "asOf": "2026-09-08T10:06:12.079Z",
   "health": {
     "status": "PASS_WITH_DATA_GAPS",
     "requiredDataGaps": [
