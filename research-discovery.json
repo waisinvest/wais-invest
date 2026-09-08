@@ -1,21 +1,27 @@
 {
-  "version": "WAIS Discovery Display v2",
-  "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-08T11:05:02.658Z",
-  "health": {
-    "status": "PASS_WITH_DATA_GAPS",
-    "requiredDataGaps": [
-      {
-        "source": "SEC_PRIMARY",
-        "reason": "HTTP 403 prevents direct SEC adapter access; official issuer fallback remains labelled."
-      },
-      {
-        "source": "SERENITY",
-        "reason": "Direct X remains restricted; latest indexed non-stock post is truncated and other pending posts remain incomplete."
-      }
+  "version": "WAIS Discovery Ingestion v2.0",
+  "lastChecked": "2026-09-08T15:00:46Z",
+  "authority": "WAIS System",
+  "dataQualityPolicy": "wais-data-quality-policy.json",
+  "contract": {
+    "rule": "Every configured adapter retries automatically; required Serenity evidence remains a DATA GAP until an authorized machine-readable source is connected.",
+    "states": [
+      "LIVE",
+      "LIVE_PRE_IPO",
+      "LAST_KNOWN_GOOD",
+      "STALE",
+      "DATA_GAP",
+      "NOT_APPLICABLE",
+      "IDENTITY_UNVERIFIED"
     ],
+    "failureIsolation": true,
+    "promotionRule": "Research and price ingestion cannot promote Candidate, Candidate+, READY 1 or Super A status."
+  },
+  "health": {
     "liveSources": 4,
     "fallbackSources": 1,
+    "notApplicableSources": 0,
+    "requiredDataGaps": [],
     "failedThisCycle": [
       {
         "source": "SEC_PRIMARY",
@@ -23,36 +29,101 @@
       },
       {
         "source": "SERENITY",
-        "reason": "No complete new research post this cycle; latest indexed non-stock post is truncated."
+        "reason": "Two new stock-related posts (HOOD; AMZN/QCOM) were detected, but indexed text is truncated and direct X returned HTTP 403. They remain pending verification."
       }
     ]
   },
   "sources": {
-    "SERENITY": {
-      "status": "LAST_KNOWN_GOOD",
-      "source": "Verified public @aleabitoreddit posts",
-      "lastSuccessAt": "2026-09-03T15:03:52Z",
-      "verifiedPostCount": 9,
-      "tickers": [
-        "INTC",
-        "AXTI",
-        "IQE",
-        "SIVE",
-        "NVDA",
-        "AVGO"
+    "IR:ALMU": {
+      "ticker": "ALMU",
+      "company": "Aeluma, Inc.",
+      "stage": "VALIDATING",
+      "sourceType": "OFFICIAL_IR_PRESS_RELEASES",
+      "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
+      "required": true,
+      "status": "LIVE",
+      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
+      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "contentHash": "f8970ae553e466af044f2dd2f72fe14d24829a1173e80b7afeed3461e9689833",
+      "contentChanged": false,
+      "recentOfficialItems": [
+        "Sep 02, 2026 7:00am EDT Aeluma to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on September 16, 2026 Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Comm",
+        "September 16, 2026 Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate",
+        "Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate U.S. Leadersh",
+        "Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate U.S. Leadership in AI and Advanced Computing Jul 07, 2026 7:00am EDT Aeluma CEO to Chair Optica Advanced Photonic",
+        "Jul 07, 2026 7:00am EDT Aeluma CEO to Chair Optica Advanced Photonics Congress Industry Program on AI and Quantum Jun 23, 2026 7:00am EDT Aeluma Names Brendan Moran Vice President of Engineering May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commerci",
+        "Jun 23, 2026 7:00am EDT Aeluma Names Brendan Moran Vice President of Engineering May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commercialization May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related",
+        "May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commercialization May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related Materials Award May 13, 2026 4:30pm EDT Aeluma Announces Third Quarter Fiscal 202",
+        "May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related Materials Award May 13, 2026 4:30pm EDT Aeluma Announces Third Quarter Fiscal 2026 Financial Results May 12, 2026 6:10pm EDT Aeluma to Participate in Upcoming Investor"
       ],
-      "rule": "Discovery/Research evidence only; cannot auto-promote Candidate+, Super A Watch or Super A Entry.",
-      "checkedAt": "2026-09-08T11:05:02.658Z",
-      "freshness": "No complete new stock-research post verified this cycle; LAST_KNOWN_GOOD retained.",
-      "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2097232588796780856",
-      "recentVerifiedPosts": [
+      "contentPreview": "Press Releases :: Aeluma, Inc. (ALMU) Skip to main content Skip to section navigation Skip to footer Home About Overview Management Team Board of Directors Certification & Compliance Technology News Overview Press Releases Blog In The News Investors Overview News & Events Company Info Financial Info Stock Data SEC Filings Governance Careers Contact Press Releases Investors Investors Overview News & Events Press Releases IR Calendar Company Info Overview Management Team Contacts FAQ Financial Info Overview Financial Results Financial Statements Stock Data Quote Charts Historical Data Analyst Coverage SEC Filings Overview All SEC Filings Annual Reports Quarterly Reports Section 16 Filings Governance Overview Board of Directors Board Committees Governance Documents News & Events Press Releases IR Calendar Year All Years 2026 2025 2024 2023 2022 2021 Category All Releases Financial Releases ",
+      "note": "Official source; evidence input only and never an automatic status promotion."
+    },
+    "IR:AMBQ": {
+      "ticker": "AMBQ",
+      "company": "Ambiq Micro, Inc.",
+      "stage": "VALIDATING",
+      "sourceType": "OFFICIAL_COMPANY_NEWS",
+      "sourceUrl": "https://ambiq.com/news/",
+      "required": true,
+      "status": "LIVE",
+      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
+      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "contentHash": "84958a885cc7780ddaccb8d32534995cb69c8ea3ab7923df02d6114a8d960c9d",
+      "contentChanged": true,
+      "recentOfficialItems": [
+        "September 8, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced expanded support for the open-source Zephyr Project® Real-Time Operating System (RTOS) on its latest Apollo330 Plus and Apollo510 Lite",
+        "August 4, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... heliaPROFILER Apollo AI Jul 30. 26 A Reflection of Ambiq’s First Year as a Public Company One year ago, Ambiq entered a new chapter. On July 30, 2025, we rang the opening bell at the Ne",
+        "July 30, 2025, we rang the opening bell at the New York Stock Exchange and began trading as a public company under the ticker AMBQ. During our first year as a public company, we successfully completed... Jul 29. 26 Ambiq Expands Global Capital Markets Presence Through Sing",
+        "July 30, 2026 – Ambiq Micro, Inc. (NYSE:... Investor Relations AI Edge AI Jul 28. 26 Ambiq Micro to Report Second Quarter 2026 Financial Results AUSTIN, Texas – July 28, 2026 – Ambiq Micro, Inc. (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions f",
+        "July 28, 2026 – Ambiq Micro, Inc. (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced that it will report its second quarter 2026 financial results on Tuesday, August 11, 2026... Investor Relations Jul 27. 26 Ambiq Rele",
+        "August 11, 2026... Investor Relations Jul 27. 26 Ambiq Releases Production-Ready Apollo330 Plus and Apollo510 Lite SoC Series Commercially available SoCs combine ultra-low power performance, scalable edge AI, and new platform enhancements for intelligent devices. AUSTIN, TX,",
+        "July 27, 2026 – Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... Apollo510 Lite Apollo510B Lite Apollo510D Lite Apollo330 Plus Apollo330B Plus apollo330M Plus Edge AI Jun 25. 26 Ambiq Announces Closing of its Upsized Public Offering and Full Exercise",
+        "June 25, 2026 – Ambiq Micro, Inc. (“Ambiq”) (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced the closing of its upsized underwritten public offering of 2,300,000 shares of its... Investor Relations Jun 23. 26 Ambiq A"
+      ],
+      "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Kits harvestKIT ApolloICD AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT turboSPOT Company Co",
+      "note": "Official source; evidence input only and never an automatic status promotion."
+    },
+    "SEC_PRIMARY": {
+      "sourceType": "SEC_CROSS_CHECK",
+      "sourceUrl": "https://data.sec.gov/submissions/",
+      "required": true,
+      "status": "DATA_GAP",
+      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
+      "lastSuccessAt": null,
+      "lastError": "HTTP Error 403: Forbidden",
+      "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
+    },
+    "SEC_ALTERNATE": {
+      "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
+      "status": "LIVE",
+      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
+      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "required": true,
+      "covers": [
+        "ALMU",
+        "AMBQ"
+      ],
+      "note": "Fallback coverage uses official issuer disclosures plus canonical market data while SEC runner access is degraded. It is labelled as fallback and does not claim to be SEC data."
+    },
+    "SERENITY": {
+      "sourceType": "REQUIRED_SPECIALIST_RESEARCH",
+      "sourceUrl": "https://x.com/aleabitoreddit",
+      "required": true,
+      "author": "@aleabitoreddit",
+      "status": "LAST_KNOWN_GOOD",
+      "checkedAt": "2026-09-08T15:00:46Z",
+      "lastSuccessAt": "2026-09-03T15:03:52Z",
+      "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
+      "recentPosts": [
         {
           "url": "https://x.com/aleabitoreddit/status/2097232588796780856",
           "publishedAt": "2026-09-08T07:56:28.523Z",
           "tickers": [
             "INTC"
           ],
-          "text": "So $INTC is raising PC CPU prices by 10% apparently in October per Digitimes, which I think markets might appreciate."
+          "text": "So $INTC is raising PC CPU prices by 10% apparently in October per Digitimes, which I think markets might appreciate.",
+          "visibility": "Complete visible text from the public search index; direct X page returned HTTP 403."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2096906386588504333",
@@ -60,7 +131,8 @@
           "tickers": [
             "AXTI"
           ],
-          "text": "These \"no growth meme stock\" posts about $AXTI did not age well."
+          "text": "These \"no growth meme stock\" posts about $AXTI did not age well.",
+          "visibility": "Complete visible text from the public search index; direct X page returned HTTP 403."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2095460499769155944",
@@ -68,7 +140,8 @@
           "tickers": [
             "IQE"
           ],
-          "text": "$IQE is actually a quantum dot foundry leader believe it or not."
+          "text": "$IQE is actually a quantum dot foundry leader believe it or not.",
+          "visibility": "Complete visible text from the public search index; direct X access may be restricted."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2095454527747178853",
@@ -76,7 +149,8 @@
           "tickers": [
             "SIVE"
           ],
-          "text": "Changed my negative view about their hybrid manufacturing model capex given new capacity targets."
+          "text": "Changed my negative view about their hybrid manufacturing model capex given new capacity targets.",
+          "visibility": "Complete visible text from the public search index; direct X access may be restricted."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2095453263613341938",
@@ -84,7 +158,8 @@
           "tickers": [
             "SIVE"
           ],
-          "text": "$SIVE announced today that it is expanding InP manufacturing in Glasgow. The new capacity target is approximately 100 million CW DFB lasers in annual production."
+          "text": "$SIVE announced today that it is expanding InP manufacturing in Glasgow. The new capacity target is approximately 100 million CW DFB lasers in annual production.",
+          "visibility": "Complete text visible in public search result; direct X page returned HTTP 403."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2095282495730446504",
@@ -93,7 +168,8 @@
             "NVDA",
             "AVGO"
           ],
-          "text": "If you're not capacity constrained and growing 70–100% a year like $NVDA or $AVGO, apparently you'll get sold off on earnings."
+          "text": "If you're not capacity constrained and growing 70–100% a year like $NVDA or $AVGO, apparently you'll get sold off on earnings.",
+          "visibility": "Complete text visible in public search result."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2095279986701951461",
@@ -120,7 +196,27 @@
           "text": "Serenity cites Nvidia demand implying potential revenue growth above 100% year over year if unconstrained, while the stated projection is lower because available supply is the constraint."
         }
       ],
+      "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097321349555306512",
+          "publishedAt": "2026-09-08T13:49:10.737Z",
+          "tickers": [
+            "AMZN",
+            "QCOM"
+          ],
+          "visibleSnippet": "$AMZN signs a new deal with $QCOM, giving Amazon the right to buy a ~$4B stake of Qualcomm through warrants. At this rate...",
+          "reason": "Public index text is truncated and direct X returned HTTP 403. Not counted as verified research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097309699645546763",
+          "publishedAt": "2026-09-08T13:02:53.182Z",
+          "tickers": [
+            "HOOD"
+          ],
+          "visibleSnippet": "Wow, $HOOD has taken minority ownership in Crypto.com. It does feel like the future of the finance industry is slowly consolidating around ... Especially after the successful expansion of Robinhood Chain, Prediction Markets, and Credit Cards/Banking.",
+          "reason": "Public index text is truncated and direct X returned HTTP 403. Not counted as verified research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2097238245470064801",
           "publishedAt": "2026-09-08T08:18:57.179Z",
@@ -208,27 +304,21 @@
           "visibleSnippet": "New report from Bloomberg on $IQE: “indium phosphide ... buildout. Who could have guessed $AXTI would have been a major point of failure?",
           "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
         }
-      ]
+      ],
+      "lastError": "Two new stock-related posts (HOOD; AMZN/QCOM) were detected, but indexed text is truncated and direct X returned HTTP 403. They remain pending verification."
     },
-    "SEC": {
-      "status": "ALTERNATE_LIVE",
-      "primaryStatus": "HTTP 403",
-      "fallback": "Official issuer disclosures plus canonical market data"
-    },
-    "SBE": {
+    "IDENTITY:SBE": {
+      "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
+      "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
+      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
+      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "required": true,
       "issuer": "SB Energy, Inc.",
+      "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
       "proposedTicker": "SBE",
-      "marketPriceStatus": "NOT_APPLICABLE_PRE_IPO"
+      "marketPriceStatus": "NOT_APPLICABLE_PRE_IPO",
+      "note": "Identity is verified from the issuer. Do not attach legacy Switchback Energy prices; start quote monitoring only after an official first trade."
     }
-  },
-  "sanitised": true,
-  "prohibitedContentExcluded": [
-    "proprietary weights",
-    "FABIBOT logic",
-    "unpublished research",
-    "keys",
-    "credentials",
-    "private holdings"
-  ]
+  }
 }
