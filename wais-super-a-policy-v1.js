@@ -20,10 +20,27 @@
     document.getElementById('waisSuperAAuthorityPanel')?.remove();
 
     const data = window.WAIS_MARKET_DATA || {};
-    const ready = cleanList(data.ready1);
-    const candidatePlus = cleanList(data.candidatePlus);
-    const preBreakout = ready.length ? cleanList(data.superAPreBreakout) : [];
-    const entries = ready.length ? cleanList(data.superAEntry) : [];
+    let ready = cleanList(data.ready1);
+    let candidatePlus = cleanList(data.candidatePlus);
+    let preBreakout = ready.length ? cleanList(data.superAPreBreakout) : [];
+    let entries = ready.length ? cleanList(data.superAEntry) : [];
+    let techReady = cleanList(data.techReady || data.techReadyEvidence);
+
+    // Canonical registry is the source of truth. Runtime values are only a
+    // compatibility fallback while the registry request is loading/unavailable.
+    try {
+      const canonicalResponse = await fetch('canonical-universe.json', { cache: 'no-store' });
+      if (!canonicalResponse.ok) throw new Error('HTTP ' + canonicalResponse.status);
+      const canonical = await canonicalResponse.json();
+      if (canonical.authority !== 'WAIS System') throw new Error('Authority mismatch');
+      ready = cleanList(canonical.stages?.['READY 1']);
+      candidatePlus = cleanList(canonical.stages?.['CANDIDATE+']);
+      techReady = cleanList(canonical.timingOverlays?.['TECH_READY_EVIDENCE']);
+      preBreakout = ready.length ? cleanList(canonical.timingOverlays?.['SUPER A PRE-BREAKOUT']) : [];
+      entries = ready.length ? cleanList(canonical.timingOverlays?.['SUPER A ENTRY']) : [];
+    } catch (error) {
+      console.error('Unable to load canonical WAIS registry:', error);
+    }
 
     const panel = document.createElement('article');
     panel.id = 'waisSuperAAuthorityPanel';
@@ -107,7 +124,6 @@
 
       const actionGrid = document.createElement('div');
       actionGrid.className = 'metrics-grid';
-      const techReady = cleanList(data.techReady || data.techReadyEvidence);
       actionGrid.append(
         card('SUPER A ENTRY', entries.join(', ') || 'NONE', actionable ? 'Only listed names are formally actionable.' : 'No fully audited entry has been approved.'),
         card('SUPER A PRE-BREAKOUT', preBreakout.join(', ') || 'NONE', 'Prepare only; this is never a buy instruction.'),
