@@ -1,46 +1,108 @@
 {
-  "version": "2026-09-08-v4-list-compression",
-  "authority": "WAIS System → WAIS INVEST display",
+  "version": "2026-09-08-v5-four-stage-migration",
+  "authority": "WAIS System",
   "contract": {
     "statusAuthority": "WAIS System only",
-    "quoteUniverseRule": "Generate from canonical stages plus policy radar; WAIS INVEST cannot create or promote status.",
+    "quoteUniverseRule": "Generate from canonical stages plus policy radar; never maintain a separate hand-written research quote list.",
     "failClosed": true,
-    "activeStages": ["READY 1", "TECH READY", "CANDIDATE+", "CANDIDATE", "RESEARCH"],
-    "displayRule": "Mirror only.",
+    "activeStages": [
+      "READY 1",
+      "CANDIDATE+",
+      "CANDIDATE",
+      "RESEARCH"
+    ],
+    "displayRule": "WAIS INVEST mirrors this registry and cannot promote status.",
     "executionPolicy": "wais-execution-policy.json",
     "listLimits": {
       "coreActionMaximum": 12,
       "researchQueueMaximum": 25,
       "oneTickerOneCanonicalStage": true,
       "policyRadarCreatesStatus": false
-    }
+    },
+    "stageModel": "DISCOVERY → CANDIDATE → CANDIDATE+ → READY 1; technical readiness and Super A are timing overlays, not research stages."
   },
   "stages": {
     "READY 1": [],
-    "TECH READY": ["NVDA"],
-    "CANDIDATE+": ["MU", "DELL"],
-    "CANDIDATE": ["TSM", "AVGO", "LITE", "RKLB"],
-    "RESEARCH": [
-      "CIEN", "VRT", "MRVL", "COHR", "TSEM", "FN", "CRDO", "KEYS", "CLS",
-      "TTMI", "SITM", "AEHR", "GNRC", "EROC", "POWL", "NVT", "AXTI", "SLB",
-      "HUT", "PANW", "FRVO", "HPE", "AMBQ", "ALMU", "ZYME"
+    "CANDIDATE+": [
+      "NVDA",
+      "MU",
+      "DELL"
     ],
-    "PHASE OUT": ["GFS"]
+    "CANDIDATE": [
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB"
+    ],
+    "RESEARCH": [
+      "CIEN",
+      "VRT",
+      "MRVL",
+      "COHR",
+      "TSEM",
+      "FN",
+      "CRDO",
+      "KEYS",
+      "CLS",
+      "TTMI",
+      "SITM",
+      "AEHR",
+      "GNRC",
+      "EROC",
+      "POWL",
+      "NVT",
+      "AXTI",
+      "SLB",
+      "HUT",
+      "PANW",
+      "FRVO",
+      "HPE",
+      "AMBQ",
+      "ALMU",
+      "ZYME"
+    ],
+    "PHASE OUT": [
+      "GFS"
+    ]
   },
   "nonTradingLabs": {
     "PRE_IPO_LAB": [
       {
         "ticker": "SBE",
         "issuer": "SB Energy, Inc.",
-        "reason": "Pre-listing identity; no verified tradable quote. Kept outside the listed-security Research Queue.",
+        "reason": "Pre-listing identity; no verified tradable quote. Kept outside the 25-name listed-security Research Queue until listing and symbol are verified.",
         "monitorQuote": false
       }
     ]
   },
   "policyRadar": [
-    "MP", "UUUU", "USAR", "NB", "WWR", "FEAM", "KTOS", "AVAV", "RCAT",
-    "PLTR", "RKLB", "LUNR", "LMT", "NOC", "LEU", "CCJ", "OKLO", "SMR",
-    "CEG", "GNRC", "POWL", "VRT", "ETN", "GEV", "TTMI", "AEHR", "AMKR"
+    "MP",
+    "UUUU",
+    "USAR",
+    "NB",
+    "WWR",
+    "FEAM",
+    "KTOS",
+    "AVAV",
+    "RCAT",
+    "PLTR",
+    "RKLB",
+    "LUNR",
+    "LMT",
+    "NOC",
+    "LEU",
+    "CCJ",
+    "OKLO",
+    "SMR",
+    "CEG",
+    "GNRC",
+    "POWL",
+    "VRT",
+    "ETN",
+    "GEV",
+    "TTMI",
+    "AEHR",
+    "AMKR"
   ],
   "quoteExceptions": {
     "SBE": {
@@ -49,13 +111,26 @@
     }
   },
   "migrationNotes": {
-    "asOf": "2026-09-08",
+    "asOf": "2026-09-08T09:00:00-04:00",
     "researchCountBefore": 26,
     "researchCountAfter": 25,
     "promotions": [],
     "downgrades": [],
-    "structuralMoves": ["SBE: RESEARCH -> PRE_IPO_LAB"],
-    "legacyStageDataGap": "TECH READY remains temporarily for NVDA pending evidence audit."
+    "structuralMoves": [
+      "SBE: RESEARCH -> PRE_IPO_LAB",
+      "NVDA: legacy TECH READY stage -> CANDIDATE+ research stage + TECH_READY_EVIDENCE timing attribute"
+    ],
+    "legacyStageDataGap": null,
+    "noPromotionStatement": "This migration changes taxonomy only. NVDA is not READY 1 and no buy action is created."
   },
-  "excludedChatOnlyTests": ["TGTX"]
+  "excludedChatOnlyTests": [
+    "TGTX"
+  ],
+  "timingOverlays": {
+    "TECH_READY_EVIDENCE": [
+      "NVDA"
+    ],
+    "SUPER A PRE-BREAKOUT": [],
+    "SUPER A ENTRY": []
+  }
 }
