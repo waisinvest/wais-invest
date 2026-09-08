@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-08T15:00:46Z",
+  "lastChecked": "2026-09-08T20:04:54Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -29,7 +29,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Two new stock-related posts (HOOD; AMZN/QCOM) were detected, but indexed text is truncated and direct X returned HTTP 403. They remain pending verification."
+        "reason": "3 new status URLs found, but 0 complete newly verifiable originals; truncated/subscriber-restricted text."
       }
     ]
   },
@@ -42,8 +42,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
-      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
+      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
       "contentHash": "f8970ae553e466af044f2dd2f72fe14d24829a1173e80b7afeed3461e9689833",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -67,10 +67,10 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
-      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
+      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
       "contentHash": "84958a885cc7780ddaccb8d32534995cb69c8ea3ab7923df02d6114a8d960c9d",
-      "contentChanged": true,
+      "contentChanged": false,
       "recentOfficialItems": [
         "September 8, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced expanded support for the open-source Zephyr Project® Real-Time Operating System (RTOS) on its latest Apollo330 Plus and Apollo510 Lite",
         "August 4, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... heliaPROFILER Apollo AI Jul 30. 26 A Reflection of Ambiq’s First Year as a Public Company One year ago, Ambiq entered a new chapter. On July 30, 2025, we rang the opening bell at the Ne",
@@ -89,7 +89,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
+      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -97,8 +97,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
-      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
+      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-08T15:00:46Z",
+      "checkedAt": "2026-09-08T20:04:54Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
@@ -198,6 +198,34 @@
       ],
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097365614402969638",
+          "publishedAt": "2026-09-08T13:45:00Z",
+          "tickers": [
+            "NVDA"
+          ],
+          "visibleSnippet": "$148.5 billion (+115% revision) for 2028 for $NVDA Rubin Ultra… More optical content per chip implies more CW lasers and SOI substrates, benefiting optical companies.",
+          "reason": "Public index exposes only a truncated excerpt; full original thread/article text is unavailable. Not counted as complete verified research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097359810950037904",
+          "publishedAt": "2026-09-08T13:22:00Z",
+          "tickers": [
+            "SIVE",
+            "AAOI"
+          ],
+          "visibleSnippet": "Think optical rally today from $SIVE to $AAOI was …",
+          "reason": "Subscriber-only/public index text is truncated; not counted as complete verified research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097348486635368686",
+          "publishedAt": "2026-09-08T12:37:00Z",
+          "tickers": [
+            "SNDK"
+          ],
+          "visibleSnippet": "Okay I know this is US time and this is a Taiwan stock... AI bubble collapse commentary; visible result also references SanDisk.",
+          "reason": "Public search result is truncated and direct original text is not fully visible. Ticker context is incomplete; not counted as verified research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2097321349555306512",
           "publishedAt": "2026-09-08T13:49:10.737Z",
@@ -305,14 +333,14 @@
           "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
         }
       ],
-      "lastError": "Two new stock-related posts (HOOD; AMZN/QCOM) were detected, but indexed text is truncated and direct X returned HTTP 403. They remain pending verification."
+      "lastError": "Latest public search index exposed new Serenity status URLs, but full original text remains truncated/restricted; fewer than 3 complete newly verifiable originals this cycle."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-09-08T14:37:05.012753+00:00",
-      "lastSuccessAt": "2026-09-08T14:37:05.012753+00:00",
+      "checkedAt": "2026-09-08T18:45:12.980951+00:00",
+      "lastSuccessAt": "2026-09-08T18:45:12.980951+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
