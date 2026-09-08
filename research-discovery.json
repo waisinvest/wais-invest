@@ -1,7 +1,7 @@
 {
   "version": "WAIS Discovery Display v2",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-08T10:06:12.079Z",
+  "asOf": "2026-09-08T11:05:02.658Z",
   "health": {
     "status": "PASS_WITH_DATA_GAPS",
     "requiredDataGaps": [
@@ -11,7 +11,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Direct X returns HTTP 403 and indexed results remain incomplete; only one complete new post was verifiable this cycle."
+        "reason": "Direct X remains restricted; latest indexed non-stock post is truncated and other pending posts remain incomplete."
       }
     ],
     "liveSources": 4,
@@ -23,7 +23,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Only 1 complete verifiable new post this cycle; fewer than 3, so LAST_KNOWN_GOOD retained."
+        "reason": "No complete new research post this cycle; latest indexed non-stock post is truncated."
       }
     ]
   },
@@ -42,8 +42,8 @@
         "AVGO"
       ],
       "rule": "Discovery/Research evidence only; cannot auto-promote Candidate+, Super A Watch or Super A Entry.",
-      "checkedAt": "2026-09-08T10:08:06.844Z",
-      "freshness": "One complete new post verified this cycle; fewer than 3, so LAST_KNOWN_GOOD retained.",
+      "checkedAt": "2026-09-08T11:05:02.658Z",
+      "freshness": "No complete new stock-research post verified this cycle; LAST_KNOWN_GOOD retained.",
       "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2097232588796780856",
       "recentVerifiedPosts": [
         {
@@ -121,6 +121,13 @@
         }
       ],
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097238245470064801",
+          "publishedAt": "2026-09-08T08:18:57.179Z",
+          "tickers": [],
+          "visibleSnippet": "If you want to save 3 minutes reading through the drama, here's a ... OpenAI learns about their work; OpenAI reportedly uses their ...",
+          "reason": "Public index text is truncated and direct X is restricted. No stock ticker is visible; not counted as verified research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2095490725412733092",
           "tickers": [
