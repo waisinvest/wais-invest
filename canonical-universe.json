@@ -1,103 +1,61 @@
 {
-  "version": "2026-09-03-v3-1200ET",
+  "version": "2026-09-08-v4-list-compression",
   "authority": "WAIS System → WAIS INVEST display",
   "contract": {
     "statusAuthority": "WAIS System only",
     "quoteUniverseRule": "Generate from canonical stages plus policy radar; WAIS INVEST cannot create or promote status.",
     "failClosed": true,
-    "activeStages": [
-      "READY 1",
-      "TECH READY",
-      "CANDIDATE+",
-      "CANDIDATE",
-      "RESEARCH"
-    ],
+    "activeStages": ["READY 1", "TECH READY", "CANDIDATE+", "CANDIDATE", "RESEARCH"],
     "displayRule": "Mirror only.",
-    "executionPolicy": "wais-execution-policy.json"
+    "executionPolicy": "wais-execution-policy.json",
+    "listLimits": {
+      "coreActionMaximum": 12,
+      "researchQueueMaximum": 25,
+      "oneTickerOneCanonicalStage": true,
+      "policyRadarCreatesStatus": false
+    }
   },
   "stages": {
     "READY 1": [],
-    "TECH READY": [
-      "NVDA"
-    ],
-    "CANDIDATE+": [
-      "MU",
-      "DELL"
-    ],
-    "CANDIDATE": [
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB"
-    ],
+    "TECH READY": ["NVDA"],
+    "CANDIDATE+": ["MU", "DELL"],
+    "CANDIDATE": ["TSM", "AVGO", "LITE", "RKLB"],
     "RESEARCH": [
-      "CIEN",
-      "VRT",
-      "MRVL",
-      "COHR",
-      "TSEM",
-      "FN",
-      "CRDO",
-      "KEYS",
-      "CLS",
-      "TTMI",
-      "SITM",
-      "AEHR",
-      "GNRC",
-      "EROC",
-      "POWL",
-      "NVT",
-      "AXTI",
-      "SLB",
-      "HUT",
-      "PANW",
-      "FRVO",
-      "HPE",
-      "AMBQ",
-      "ALMU",
-      "ZYME",
-      "SBE"
+      "CIEN", "VRT", "MRVL", "COHR", "TSEM", "FN", "CRDO", "KEYS", "CLS",
+      "TTMI", "SITM", "AEHR", "GNRC", "EROC", "POWL", "NVT", "AXTI", "SLB",
+      "HUT", "PANW", "FRVO", "HPE", "AMBQ", "ALMU", "ZYME"
     ],
-    "PHASE OUT": [
-      "GFS"
+    "PHASE OUT": ["GFS"]
+  },
+  "nonTradingLabs": {
+    "PRE_IPO_LAB": [
+      {
+        "ticker": "SBE",
+        "issuer": "SB Energy, Inc.",
+        "reason": "Pre-listing identity; no verified tradable quote. Kept outside the listed-security Research Queue.",
+        "monitorQuote": false
+      }
     ]
   },
   "policyRadar": [
-    "MP",
-    "UUUU",
-    "USAR",
-    "NB",
-    "WWR",
-    "FEAM",
-    "KTOS",
-    "AVAV",
-    "RCAT",
-    "PLTR",
-    "RKLB",
-    "LUNR",
-    "LMT",
-    "NOC",
-    "LEU",
-    "CCJ",
-    "OKLO",
-    "SMR",
-    "CEG",
-    "GNRC",
-    "POWL",
-    "VRT",
-    "ETN",
-    "GEV",
-    "TTMI",
-    "AEHR",
-    "AMKR"
+    "MP", "UUUU", "USAR", "NB", "WWR", "FEAM", "KTOS", "AVAV", "RCAT",
+    "PLTR", "RKLB", "LUNR", "LMT", "NOC", "LEU", "CCJ", "OKLO", "SMR",
+    "CEG", "GNRC", "POWL", "VRT", "ETN", "GEV", "TTMI", "AEHR", "AMKR"
   ],
   "quoteExceptions": {
     "SBE": {
       "monitorQuote": false,
-      "reason": "Research-only pre-listing/quote identity not yet verified; quote coverage is not applicable until a verified listed symbol exists."
+      "reason": "PRE_IPO_LAB; quote coverage is not applicable until a verified listed symbol exists."
     }
   },
-  "excludedChatOnlyTests": [
-    "TGTX"
-  ]
+  "migrationNotes": {
+    "asOf": "2026-09-08",
+    "researchCountBefore": 26,
+    "researchCountAfter": 25,
+    "promotions": [],
+    "downgrades": [],
+    "structuralMoves": ["SBE: RESEARCH -> PRE_IPO_LAB"],
+    "legacyStageDataGap": "TECH READY remains temporarily for NVDA pending evidence audit."
+  },
+  "excludedChatOnlyTests": ["TGTX"]
 }
