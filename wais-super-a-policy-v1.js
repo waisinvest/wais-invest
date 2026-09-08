@@ -20,12 +20,10 @@
     document.getElementById('waisSuperAAuthorityPanel')?.remove();
 
     const data = window.WAIS_MARKET_DATA || {};
-    const pipeline = data.opportunityPipeline || {};
-    const ready = cleanList(pipeline.ready1 ?? data.ready1 ?? data.readyList);
-    const techReady = cleanList(pipeline.techReady ?? data.techReady);
-    const candidatePlus = cleanList(pipeline.candidatePlus ?? data.candidatePlus);
-    const preBreakout = ready.length ? cleanList(pipeline.superAPreBreakout ?? data.superAPreBreakout) : [];
-    const entries = ready.length ? cleanList(pipeline.superAEntry ?? data.superAEntry) : [];
+    const ready = cleanList(data.ready1);
+    const candidatePlus = cleanList(data.candidatePlus);
+    const preBreakout = ready.length ? cleanList(data.superAPreBreakout) : [];
+    const entries = ready.length ? cleanList(data.superAEntry) : [];
 
     const panel = document.createElement('article');
     panel.id = 'waisSuperAAuthorityPanel';
@@ -66,7 +64,6 @@
 
     grid.append(
       card('Candidate+', candidatePlus.join(', ') || 'NONE', 'High-priority research only; formal buy not allowed.'),
-      card('TECH READY', techReady.join(', ') || 'NONE', 'Technical readiness only; not a WAIS buy approval.'),
       card('READY 1', ready.join(', ') || 'NONE', 'Research approval only; waits for SUPER A timing.'),
       card('SUPER A PRE-BREAKOUT', preBreakout.join(', ') || 'NONE', ready.length ? 'Preparation warning only.' : 'No READY 1 name is eligible for pre-warning.'),
       card('SUPER A ENTRY', entries.join(', ') || 'NONE', entries.length ? 'Approved actionable setup.' : 'No fully audited entry action.')
@@ -82,6 +79,54 @@
     const banner = research.querySelector('.section-banner');
     if (banner?.nextSibling) research.insertBefore(panel, banner.nextSibling);
     else research.append(panel);
+
+    // Put the formal action state first on Dashboard. This mirrors WAIS authority;
+    // it never calculates or promotes a ticker in the browser.
+    const dashboard = document.getElementById('dashboard');
+    if (dashboard) {
+      document.getElementById('waisActionNowPanel')?.remove();
+      const actionPanel = document.createElement('article');
+      actionPanel.id = 'waisActionNowPanel';
+      actionPanel.className = 'panel wais-action-now-panel';
+      actionPanel.style.marginBottom = '20px';
+
+      const actionHead = document.createElement('div');
+      actionHead.className = 'panel-head';
+      const actionHeading = document.createElement('div');
+      actionHeading.append(
+        text('span', 'panel-kicker', 'WAIS ACTION NOW · SYSTEM AUTHORITY'),
+        text('h3', '', 'Can I Buy Now?｜現在可否買入')
+      );
+      const actionable = entries.length > 0;
+      const actionBadge = text(
+        'span',
+        actionable ? 'pill green-pill' : 'pill yellow-pill',
+        actionable ? 'ACTIONABLE' : 'WAIT · NO BUY SIGNAL'
+      );
+      actionHead.append(actionHeading, actionBadge);
+
+      const actionGrid = document.createElement('div');
+      actionGrid.className = 'metrics-grid';
+      const techReady = cleanList(data.techReady || data.techReadyEvidence);
+      actionGrid.append(
+        card('SUPER A ENTRY', entries.join(', ') || 'NONE', actionable ? 'Only listed names are formally actionable.' : 'No fully audited entry has been approved.'),
+        card('SUPER A PRE-BREAKOUT', preBreakout.join(', ') || 'NONE', 'Prepare only; this is never a buy instruction.'),
+        card('READY 1', ready.join(', ') || 'NONE', 'Research approved; still requires timing audit.'),
+        card('TECH READY EVIDENCE', techReady.join(', ') || 'NONE', 'Chart evidence only; cannot authorize a purchase.')
+      );
+
+      const actionNote = text(
+        'p',
+        'weekly-risk-note',
+        actionable
+          ? 'ACTION · Follow only the WAIS-approved entry, size, invalidation and protection rules shown for the named ticker.'
+          : 'ACTION · Remain in WAIT. Candidate+ and technical evidence are preparation signals only; do not chase.'
+      );
+      actionPanel.append(actionHead, actionGrid, actionNote);
+      const hero = dashboard.querySelector('.hero');
+      if (hero?.nextSibling) dashboard.insertBefore(actionPanel, hero.nextSibling);
+      else dashboard.prepend(actionPanel);
+    }
 
     try {
       const response = await fetch('wais-execution-policy.json', { cache: 'no-store' });
