@@ -1,4 +1,4 @@
-// WAIS INVEST display reconciliation overlay — 2026-09-03 12:00 ET
+// WAIS INVEST display reconciliation overlay
 // Display-only mirror of WAIS System-approved decisions.
 (function(){
   const d=window.WAIS_MARKET_DATA||(window.WAIS_MARKET_DATA={});
@@ -7,13 +7,13 @@
   const uniq=a=>[...new Set((Array.isArray(a)?a:[]).map(v=>norm(typeof v==='string'?v:v?.ticker)).filter(Boolean))];
 
   // Canonical decision snapshot. Live/delayed prices cannot promote a stage.
-  p.version='2026-09-03-1200ET';
+  p.version='2026-09-08-four-stage-migration';
   p.asOf='2026-09-03T12:00:00-04:00';
   p.actionNow='WAIT / NO CHASE';
   p.nextGate='Sep 4 08:30 ET · Employment Situation';
   p.ready1=[];
   p.techReady=['NVDA'];
-  p.candidatePlus=['MU','DELL'];
+  p.candidatePlus=['NVDA','MU','DELL'];
   p.candidate=['TSM','AVGO','LITE','RKLB'];
   p.research=uniq(['CIEN','VRT','MRVL','COHR','TSEM','FN','CRDO','KEYS','CLS','TTMI','SITM','AEHR','GNRC','EROC','POWL','NVT','AXTI','SLB','HUT','PANW','FRVO','HPE','TTMI','AMBQ','ALMU','ZYME','SBE']);
   p.phaseOut=uniq(['GFS']);
@@ -21,7 +21,8 @@
   p.superAEntry=[];
 
   const higher=new Set();
-  for(const name of ['ready1','techReady','candidatePlus','candidate','research','phaseOut']){
+  // TECH READY is timing evidence, not a fifth research stage.
+  for(const name of ['ready1','candidatePlus','candidate','research','phaseOut']){
     p[name]=uniq(p[name]).filter(t=>!higher.has(t));
     p[name].forEach(t=>higher.add(t));
   }
@@ -35,16 +36,15 @@
   };
   ensure('DELL',{company:'Dell Technologies',category:'AI Servers / Infrastructure',note:'Candidate+ but extended after a two-day surge; no chase. Wait for controlled consolidation or pullback.',currentAction:'WAIT / NO CHASE'});
   ensure('CIEN',{company:'Ciena',category:'Optical Networking',note:'Strong Q3 and raised guidance, but regular-session gap failed and shares fell sharply; Research / post-earnings expectations reset.',currentAction:'RESEARCH / DO NOT CHASE'});
-  ensure('NVDA',{note:'TECH READY retained: held the 219–221 reclaim area and outperformed weak semiconductors; Hugging Face acquisition adds regulatory, integration and capital-allocation review before READY 1.',currentAction:'TECH READY · WAIT FOR ENTRY CONFIRMATION'});
+  ensure('NVDA',{note:'Candidate+ with TECH READY timing evidence retained; this is not READY 1 and not a buy instruction.',currentAction:'CANDIDATE+ · TECH READY EVIDENCE · WAIT'});
 
   const stage={};
   p.ready1.forEach(t=>stage[t]='READY 1');
-  p.techReady.forEach(t=>stage[t]='TECH READY');
   p.candidatePlus.forEach(t=>stage[t]='CANDIDATE+');
   p.candidate.forEach(t=>stage[t]='CANDIDATE');
   p.research.forEach(t=>stage[t]='RESEARCH');
   p.phaseOut.forEach(t=>stage[t]='PHASE OUT');
-  stocks.forEach(s=>{const t=norm(s?.ticker);if(stage[t]){s.executionStage=stage[t];s.waisCanonicalStage=stage[t];s.stance=stage[t];s.rating=stage[t];s.decisionAsOf=p.asOf;}});
+  stocks.forEach(s=>{const t=norm(s?.ticker);if(stage[t]){s.executionStage=stage[t];s.waisCanonicalStage=stage[t];s.stance=stage[t];s.rating=stage[t];s.decisionAsOf=p.asOf;}s.timingOverlays=p.techReady.includes(t)?['TECH READY EVIDENCE']:[];});
 
   d.lastUpdated='2026-09-03';
   d.lastStrategyUpdated=p.asOf;
@@ -99,7 +99,7 @@
   const active=uniq([...p.ready1,...p.techReady,...p.candidatePlus,...p.candidate,...p.research]);
   const missingQuoteCoverage=active.filter(t=>!quoteKeys.has(t));
   d.superAEntryRadar={version:'2026-09-03-1200ET',authority:'DISPLAY OF WAIS ENTRY FILTER ONLY',eligibleFrom:'READY 1',status:'NO ELIGIBLE READY 1 NAMES'};
-  d.reconciliationReport={asOf:p.asOf,authority:'WAIS System → WAIS INVEST display',ready1:p.ready1,techReady:p.techReady,candidatePlus:p.candidatePlus,candidate:p.candidate,research:p.research,phaseOut:p.phaseOut,missingQuoteCoverage,notes:['Price feeds cannot promote status.','No ticker may occupy more than one canonical stage.','READY 1 and both SUPER A stages remain empty.']};
+  d.reconciliationReport={asOf:p.asOf,authority:'WAIS System → WAIS INVEST display',ready1:p.ready1,techReady:p.techReady,candidatePlus:p.candidatePlus,candidate:p.candidate,research:p.research,phaseOut:p.phaseOut,missingQuoteCoverage,notes:['Price feeds cannot promote status.','Four research stages only; TECH READY is timing evidence, not a fifth stage.','No ticker may occupy more than one canonical stage.','READY 1 and both SUPER A stages remain empty.']};
   d.lastReconciled=p.asOf;
   window.WAIS_MARKET_DATA=d;
   try{window.dispatchEvent(new CustomEvent('wais:reconciled',{detail:d.reconciliationReport}));}catch(_e){}
