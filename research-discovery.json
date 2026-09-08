@@ -1,16 +1,20 @@
 {
-  "version": "WAIS Discovery Public v1",
+  "version": "WAIS Discovery Display v2",
   "authority": "WAIS System → WAIS INVEST display",
-  "asOf": "2026-09-04T01:06:50.404Z",
+  "asOf": "2026-09-08T05:12:00Z",
   "health": {
-    "status": "PASS_WITH_SEC_FALLBACK",
+    "status": "PASS_WITH_DATA_GAPS",
     "requiredDataGaps": [
       {
+        "source": "SEC_PRIMARY",
+        "reason": "HTTP 403 prevents direct SEC adapter access; official issuer fallback remains labelled."
+      },
+      {
         "source": "SERENITY",
-        "reason": "Three newer Serenity posts remain pending: NVDA, SIVE and ESMT. Public index text is truncated/direct X is restricted; ESMT exchange ticker identity also requires verification."
+        "reason": "Five newer indexed Serenity items remain truncated/direct X returns HTTP 403; only one complete new post was verifiable this cycle."
       }
     ],
-    "liveSources": 5,
+    "liveSources": 4,
     "fallbackSources": 1,
     "failedThisCycle": [
       {
@@ -19,7 +23,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Fewer than 3 complete verifiable new posts this cycle; LAST_KNOWN_GOOD retained."
+        "reason": "Only 1 complete verifiable new post this cycle; fewer than 3, so LAST_KNOWN_GOOD retained."
       }
     ]
   },
@@ -28,17 +32,85 @@
       "status": "LAST_KNOWN_GOOD",
       "source": "Verified public @aleabitoreddit posts",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
-      "verifiedPostCount": 7,
+      "verifiedPostCount": 8,
       "tickers": [
+        "AXTI",
         "IQE",
         "SIVE",
         "NVDA",
         "AVGO"
       ],
-      "rule": "Discovery/Research evidence only; cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
-      "checkedAt": "2026-09-04T01:06:50.404Z",
+      "rule": "Discovery/Research evidence only; cannot auto-promote Candidate+, Super A Watch or Super A Entry.",
+      "checkedAt": "2026-09-08T05:12:00Z",
       "freshness": "Last known good snapshot retained; current cycle obtained fewer than 3 complete verifiable new posts.",
-      "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2095460499769155944",
+      "latestVerifiedPost": "https://x.com/aleabitoreddit/status/2096906386588504333",
+      "recentVerifiedPosts": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2096906386588504333",
+          "publishedAt": "2026-09-07T10:20:15.856Z",
+          "tickers": [
+            "AXTI"
+          ],
+          "text": "These \"no growth meme stock\" posts about $AXTI did not age well."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095460499769155944",
+          "publishedAt": "2026-09-03T10:34:49.575Z",
+          "tickers": [
+            "IQE"
+          ],
+          "text": "$IQE is actually a quantum dot foundry leader believe it or not."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095454527747178853",
+          "publishedAt": "2026-09-03T10:11:05.734Z",
+          "tickers": [
+            "SIVE"
+          ],
+          "text": "Changed my negative view about their hybrid manufacturing model capex given new capacity targets."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095453263613341938",
+          "publishedAt": "2026-09-03T10:06:04.341Z",
+          "tickers": [
+            "SIVE"
+          ],
+          "text": "$SIVE announced today that it is expanding InP manufacturing in Glasgow. The new capacity target is approximately 100 million CW DFB lasers in annual production."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095282495730446504",
+          "publishedAt": "2026-09-02T22:47:30.105Z",
+          "tickers": [
+            "NVDA",
+            "AVGO"
+          ],
+          "text": "If you're not capacity constrained and growing 70–100% a year like $NVDA or $AVGO, apparently you'll get sold off on earnings."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095279986701951461",
+          "publishedAt": "2026-09-02T22:37:31.906Z",
+          "tickers": [
+            "AVGO"
+          ],
+          "text": "AVGO CEO: demand for EML and CW lasers is far surpassing industry supply even while capacity is being expanded; Serenity treats this as validation for laser suppliers."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095261816767283663",
+          "publishedAt": "2026-09-02T21:25:19.856Z",
+          "tickers": [
+            "AVGO"
+          ],
+          "text": "Serenity cites Broadcom earnings-call clarification and materially higher FY27/FY28 revenue expectations, while noting demand exceeds the outlook and supply remains the constraint."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2095153855818547571",
+          "publishedAt": "2026-09-02T14:16:19.960Z",
+          "tickers": [
+            "NVDA"
+          ],
+          "text": "Serenity cites Nvidia demand implying potential revenue growth above 100% year over year if unconstrained, while the stated projection is lower because available supply is the constraint."
+        }
+      ],
       "pendingVerification": [
         {
           "url": "https://x.com/aleabitoreddit/status/2095490725412733092",
@@ -65,6 +137,60 @@
           ],
           "visibleSnippet": "Just an update to my DDR2/DDR3 memory idea with ESMT. They reported August revenue (Taiwan sometimes does monthly reporting): June revenue ...",
           "reason": "Public index text is truncated and the exchange ticker identity is not fully visible; direct X access is restricted. Not counted as verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2096749796023538032",
+          "publishedAt": "2026-09-06T23:58:01.756Z",
+          "tickers": [
+            "SIVE"
+          ],
+          "namedEntities": [
+            "ESMT"
+          ],
+          "visibleSnippet": "$SIVE also made it there on cnyes too (leading Taiwan financial media)! ... I didn't know my ESMT thesis was making some rounds in Taiwanese media ...",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2096814311306129776",
+          "publishedAt": "2026-09-07T04:14:23.398Z",
+          "tickers": [
+            "SIVE",
+            "CCXI"
+          ],
+          "namedEntities": [
+            "ESMT"
+          ],
+          "visibleSnippet": "Got curious and decided to track which thesis of mine were still up 100%+ ... $SIVE - Photonics ... For H2, my new thesis was on $CCXI for humanoids/downstream physical AI shift and ESMT for DDR2/DDR3/legacy memory.",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2096858276290015563",
+          "publishedAt": "2026-09-07T07:09:05.467Z",
+          "tickers": [
+            "SKHY",
+            "SNDK"
+          ],
+          "visibleSnippet": "Samsung / $SKHY \"stockpiles have fallen to less than 10 days of supply, and a severe shortage could emerge next year, ... $SNDK might be happy for 2027 given demand causing shortages + infra spend share increase.",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2096890295128625153",
+          "publishedAt": "2026-09-07T09:16:19.353Z",
+          "tickers": [
+            "SIVE"
+          ],
+          "visibleSnippet": "... to $SIVE if their recent expansion is able to deliver on $625M-$1.25B of annualized revenue?",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2096904209371427277",
+          "publishedAt": "2026-09-07T10:11:36.767Z",
+          "tickers": [
+            "IQE",
+            "AXTI"
+          ],
+          "visibleSnippet": "New report from Bloomberg on $IQE: “indium phosphide ... buildout. Who could have guessed $AXTI would have been a major point of failure?",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
         }
       ]
     },
