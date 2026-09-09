@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-09T04:50:37.637964+00:00",
+  "lastChecked": "2026-09-09T09:03:45Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -29,7 +29,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "public Serenity page yielded only 0 usable posts"
+        "reason": "public Serenity page yielded only 0 usable complete new posts; one new truncated post retained for verification"
       }
     ]
   },
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-09T04:50:37.637964+00:00",
+      "checkedAt": "2026-09-09T09:03:45Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
@@ -208,6 +208,19 @@
       ],
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097563877273989456",
+          "publishedAt": "2026-09-09T05:52:53.851Z",
+          "tickers": [
+            "SIVE"
+          ],
+          "namedEntities": [
+            "CIOE 2026 Shenzhen",
+            "awodias"
+          ],
+          "visibleSnippet": "Special thank you to awodias for the crowdsourced channel check all the way from CIOE 2026 Shenzhen! - Confirmed that $SIVE is actively engaged with Chinese ...",
+          "reason": "Public index text is truncated and the original X page returned HTTP 403. Not counted as complete verified research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2097313029809709343",
           "publishedAt": "2026-09-08T13:16:07.155Z",
@@ -369,7 +382,7 @@
           "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
         }
       ],
-      "lastError": "public Serenity page yielded only 0 usable posts"
+      "lastError": "public Serenity page yielded only 0 usable complete new posts; one new truncated post retained for verification"
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
