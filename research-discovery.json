@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-09T10:03:06Z",
+  "lastChecked": "2026-09-09T11:05:21Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -29,7 +29,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "public Serenity page yielded only 0 usable complete new posts; two new truncated posts retained for verification"
+        "reason": "public Serenity page yielded only 0 usable complete new posts; three new truncated posts retained for verification"
       }
     ]
   },
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-09T10:03:06Z",
+      "checkedAt": "2026-09-09T11:05:21Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
@@ -208,6 +208,17 @@
       ],
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2097588434189856875",
+          "publishedAt": "2026-09-09T07:30:28.676Z",
+          "tickers": [],
+          "namedEntities": [
+            "OpenAI",
+            "Astra"
+          ],
+          "visibleSnippet": "Demand for Astra is unprecedented to the point OpenAI might pause new Pro subscriptions. If you want a translation: AI buildout ...",
+          "reason": "Public index text is truncated and no complete original/thread context or stock ticker is visible. Not counted as complete verified research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2097601244898775465",
           "publishedAt": "2026-09-09T08:21:22.987Z",
@@ -391,7 +402,7 @@
           "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
         }
       ],
-      "lastError": "public Serenity page yielded only 0 usable complete new posts; two new truncated posts retained for verification"
+      "lastError": "public Serenity page yielded only 0 usable complete new posts; three new truncated posts retained for verification"
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
