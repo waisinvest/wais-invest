@@ -22,11 +22,12 @@ const dom=await JSDOM.fromURL('http://127.0.0.1:4173/',{
     window.scrollTo=()=>{};
   }
 });
-await new Promise(r=>setTimeout(r,2500));
+await new Promise(r=>setTimeout(r,4000));
 const d=dom.window.document;
 const checks={
   commandCenter:dom.window.WAIS_COMMAND_CENTER?.status,
   dashboardCalendar:d.querySelectorAll('#dashboard #economicEventsList .calendar-row').length,
+  dashboardWeeklyPlan:d.querySelectorAll('#dashboard #weeklyPlan').length,
   riskPlan:!!d.querySelector('#risk #weeklyPlan'),
   riskAudit:d.querySelectorAll('#risk .cc-audit-item').length,
   evidenceVault:d.querySelectorAll('#research .cc-source-row').length,
@@ -38,9 +39,12 @@ const checks={
   monthlyIncome:d.querySelectorAll('#monthlyIncomeGrid article').length,
   navLinks:d.querySelectorAll('.cc-nav-link').length
 };
-const required={commandCenter:'READY',dashboardCalendar:5,riskPlan:true,riskAudit:3,evidenceVault:3,watchlist:1,topPicks:1,routes:1,hiddenGems:6,weeklyIncome:1,monthlyIncome:1,navLinks:3};
+const hkIndicators=['hsiValue','hstechValue','hsifValue'].filter(id=>d.getElementById(id)).length;
+checks.hkIndicators=hkIndicators;
+const required={commandCenter:'READY',dashboardCalendar:5,dashboardWeeklyPlan:0,riskPlan:true,riskAudit:3,evidenceVault:3,watchlist:1,topPicks:1,routes:1,hiddenGems:6,weeklyIncome:1,monthlyIncome:1,navLinks:3,hkIndicators:3};
 for(const [k,v] of Object.entries(required)){
   const actual=checks[k];
+  if(k==='dashboardWeeklyPlan'&&actual!==0)errors.push(`${k}: expected 0, got ${actual}`);
   if(typeof v==='number'&&actual<v)errors.push(`${k}: expected >=${v}, got ${actual}`);
   if(typeof v!=='number'&&actual!==v)errors.push(`${k}: expected ${v}, got ${actual}`);
 }

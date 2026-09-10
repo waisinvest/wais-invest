@@ -21,10 +21,11 @@
   }
   function riskWorkspace(research){
     const risk=document.getElementById('risk');if(!risk)return;
-    const plan=[...document.querySelectorAll('#dashboard .panel')].find(x=>x.querySelector('#weeklyPlan'));if(plan)risk.appendChild(plan);
-    const strategy=document.querySelector('#research .weekly-market-notes');if(strategy)risk.appendChild(strategy);
+    const mount=document.getElementById('riskWorkspaceMount')||risk;
+    const plan=[...document.querySelectorAll('#dashboard .panel')].find(x=>x.querySelector('#weeklyPlan'));if(plan)mount.appendChild(plan);
+    const strategy=document.querySelector('#research .weekly-market-notes');if(strategy)mount.appendChild(strategy);
     const health=research.health||{},rows=Object.entries(research.sources||{}).slice(0,9);
-    risk.insertAdjacentHTML('beforeend',`<article class="panel"><div class="panel-head"><div><span class="panel-kicker">WAIS RESEARCH INTEGRITY</span><h3>System Audit + Evidence of Work</h3></div><div class="weekly-review-date">${esc((research.lastChecked||'DATA GAP').replace('T',' ').slice(0,19))}</div></div><div class="cc-audit-grid"><div class="cc-audit-item"><b>LIVE SOURCES · ${Number(health.liveSources||0)}</b><span>Current machine-readable or official evidence inputs.</span></div><div class="cc-audit-item"><b>FALLBACK · ${Number(health.fallbackSources||0)}</b><span>Labelled fallback evidence; never represented as primary data.</span></div><div class="cc-audit-item ${health.failedThisCycle?.length?'gap':''}"><b>CYCLE GAPS · ${health.failedThisCycle?.length||0}</b><span>${esc((health.failedThisCycle||[]).map(x=>x.source).join(', ')||'No reported source failure')}</span></div>${rows.map(([name,s])=>`<div class="cc-audit-item ${/GAP|STALE/.test(s.status)?'gap':''}"><b>${esc(name)} · ${esc(s.status)}</b><span>${esc(s.note||s.sourceType||'Evidence input')}</span></div>`).join('')}</div></article>`);
+    mount.insertAdjacentHTML('beforeend',`<article class="panel"><div class="panel-head"><div><span class="panel-kicker">WAIS RESEARCH INTEGRITY</span><h3>System Audit + Evidence of Work</h3></div><div class="weekly-review-date">${esc((research.lastChecked||'DATA GAP').replace('T',' ').slice(0,19))}</div></div><div class="cc-audit-grid"><div class="cc-audit-item"><b>LIVE SOURCES · ${Number(health.liveSources||0)}</b><span>Current machine-readable or official evidence inputs.</span></div><div class="cc-audit-item"><b>FALLBACK · ${Number(health.fallbackSources||0)}</b><span>Labelled fallback evidence; never represented as primary data.</span></div><div class="cc-audit-item ${health.failedThisCycle?.length?'gap':''}"><b>CYCLE GAPS · ${health.failedThisCycle?.length||0}</b><span>${esc((health.failedThisCycle||[]).map(x=>x.source).join(', ')||'No reported source failure')}</span></div>${rows.map(([name,s])=>`<div class="cc-audit-item ${/GAP|STALE/.test(s.status)?'gap':''}"><b>${esc(name)} · ${esc(s.status)}</b><span>${esc(s.note||s.sourceType||'Evidence input')}</span></div>`).join('')}</div></article>`);
   }
   function researchLibrary(research){
     const root=document.getElementById('research');if(!root)return;
@@ -45,7 +46,7 @@
   }
   async function run(){
     navLinks();
-    try{const [u,prices,research]=await Promise.all([get('canonical-universe.json'),get('stock-prices.json'),get('research-discovery.json')]);cockpit(u,prices);calendarToDashboard();riskWorkspace(research);researchLibrary(research);lists(u,prices);stampSections(u,prices);window.WAIS_COMMAND_CENTER={status:'READY',canonical:u.version,pricesAsOf:prices.lastUpdated,researchAsOf:research.lastChecked};}
+    try{const [u,prices,research]=await Promise.all([get('canonical-universe.json'),get('stock-prices.json'),get('research-discovery.json')]);cockpit(u,prices);calendarToDashboard();riskWorkspace(research);researchLibrary(research);lists(u,prices);stampSections(u,prices);setTimeout(()=>lists(u,prices),1800);window.WAIS_COMMAND_CENTER={status:'READY',canonical:u.version,pricesAsOf:prices.lastUpdated,researchAsOf:research.lastChecked};}
     catch(e){console.error('[WAIS Command Center]',e);window.WAIS_COMMAND_CENTER={status:'DATA GAP',error:String(e)}}
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(run,80),{once:true});else setTimeout(run,80);
