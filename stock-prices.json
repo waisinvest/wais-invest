@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-10T03:02:28.542917+00:00",
+  "lastUpdated": "2026-09-10T04:47:16.901797+00:00",
   "marketStatus": "updated",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
   "incomeMetricsVersion": "WAIS INCOME v1.1 normalized percentages",
@@ -470,7 +470,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 30.065001,
+      "regularClose": 30.07,
       "regularCloseDate": "2026-09-09",
       "sma20": 30.9105,
       "sma50": 31.0988,
@@ -1821,7 +1821,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 23.6127,
+      "regularClose": 23.610001,
       "regularCloseDate": "2026-09-09",
       "sma20": 25.099,
       "sma50": 25.24,
@@ -1949,7 +1949,7 @@
     },
     "NYYY": {
       "price": 44.711399,
-      "regularClose": 44.711399,
+      "regularClose": 44.709999,
       "regularCloseDate": "2026-09-09",
       "asOf": "2026-09-09T17:25:00+00:00",
       "currency": "USD",
