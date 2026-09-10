@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-08-v5-four-stage-migration",
+  "version": "2026-09-10-v6-hidden-gems-reconciliation",
   "authority": "WAIS System",
   "contract": {
     "statusAuthority": "WAIS System only",
@@ -132,5 +132,20 @@
     ],
     "SUPER A PRE-BREAKOUT": [],
     "SUPER A ENTRY": []
+  },
+  "displayViews": {
+    "hiddenGems": {
+      "asOf": "2026-09-10T01:20:00-04:00",
+      "maximum": 6,
+      "rule": "A compact research-priority view drawn only from the canonical RESEARCH stage; it creates no status and no buy authority.",
+      "tickers": [
+        "GNRC",
+        "POWL",
+        "TTMI",
+        "AMBQ",
+        "AEHR",
+        "CRDO"
+      ]
+    }
   }
 }

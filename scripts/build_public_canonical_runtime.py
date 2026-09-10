@@ -40,7 +40,10 @@ def main():
   d.contentSyncReason='Generated directly from the WAIS System public canonical registry; quotes cannot promote status.';
   const map={{}};
   for(const [stage,names] of Object.entries(stages)) for(const ticker of names||[]) map[String(ticker).toUpperCase()]=stage;
-  for(const stock of d.focusStocks||[]){{
+  const stocks=Array.isArray(d.focusStocks)?d.focusStocks:(d.focusStocks=[]);
+  const hidden=[...(registry.displayViews?.hiddenGems?.tickers||[])];
+  const hiddenSet=new Set(hidden);
+  for(const stock of stocks){{
     const ticker=String(stock.ticker||'').toUpperCase();
     if(map[ticker]){{
       stock.executionStage=map[ticker]; stock.waisCanonicalStage=map[ticker];
@@ -50,7 +53,28 @@ def main():
     if(p.techReady.includes(ticker)) stock.timingOverlays.push('TECH READY EVIDENCE');
     if(p.superAPreBreakout.includes(ticker)) stock.timingOverlays.push('SUPER A PRE-BREAKOUT');
     if(p.superAEntry.includes(ticker)) stock.timingOverlays.push('SUPER A ENTRY');
+    if(stock.bucket==='HIDDEN_GEM'&&!hiddenSet.has(ticker)) stock.bucket='RESEARCH';
   }}
+  const profiles={{
+    GNRC:['Generac Holdings','AI Data-Center Power / Grid'],
+    POWL:['Powell Industries','Grid / Switchgear / Data Centers'],
+    TTMI:['TTM Technologies','AI Networking / Defense Electronics'],
+    AMBQ:['Ambiq Micro','Ultra-Low-Power Edge AI'],
+    AEHR:['Aehr Test Systems','Semiconductor Test'],
+    CRDO:['Credo Technology','AI Connectivity']
+  }};
+  hidden.forEach((ticker,index)=>{{
+    let stock=stocks.find(x=>String(x.ticker||'').toUpperCase()===ticker);
+    if(!stock){{
+      const profile=profiles[ticker]||[ticker,'Research'];
+      stock={{ticker,company:profile[0],category:profile[1],risk:'High',rating:'Research',stance:'RESEARCH',showInWatchlist:false}};
+      stocks.push(stock);
+    }}
+    stock.bucket='HIDDEN_GEM'; stock.hiddenGemRank=index+1; stock.researchStage='RESEARCH PRIORITY';
+    stock.showInWatchlist=false; stock.waisCanonicalStage='RESEARCH'; stock.stance='RESEARCH';
+    stock.note='Canonical Hidden Gems research priority · research only, not READY 1 or a buy instruction.';
+  }});
+  d.hiddenGemsReview={{...registry.displayViews?.hiddenGems,names:hidden,status:'CURRENT · CANONICAL RESEARCH ONLY'}};
   window.WAIS_CANONICAL_REGISTRY=registry;
 }})();
 """

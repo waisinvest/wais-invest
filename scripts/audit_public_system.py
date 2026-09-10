@@ -46,6 +46,14 @@ def main():
         fail("generated canonical runtime is not loaded")
     if canonical.get("version") not in generated:
         fail("generated runtime is stale")
+    gems = canonical.get("displayViews", {}).get("hiddenGems", {})
+    gem_names = gems.get("tickers", [])
+    if len(gem_names) > gems.get("maximum", 6):
+        fail("Hidden Gems exceeds its compact-view limit")
+    research = set(canonical.get("stages", {}).get("RESEARCH", []))
+    invalid_gems = sorted(set(gem_names) - research)
+    if invalid_gems:
+        fail("Hidden Gems outside canonical RESEARCH: " + ", ".join(invalid_gems))
     print(f"WAIS ACCEPTANCE AUDIT: PASS · {len(required)} active symbols · canonical {canonical['version']}")
 
 
