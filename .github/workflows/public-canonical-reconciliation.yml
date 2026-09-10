@@ -48,6 +48,10 @@ jobs:
           PY
       - name: Generate quote universe from WAIS System mirror and fail closed
         run: python3 scripts/reconcile_public_quote_universe.py
+      - name: Build single canonical browser runtime
+        run: python3 scripts/build_public_canonical_runtime.py
+      - name: Run end-to-end public acceptance audit
+        run: python3 scripts/audit_public_system.py
       - name: Validate canonical coverage
         run: |
           python3 - <<'PY'
@@ -69,10 +73,10 @@ jobs:
           PY
       - name: Commit public reconciled quote snapshot
         run: |
-          if git diff --quiet -- stock-prices.json; then exit 0; fi
+          if git diff --quiet -- stock-prices.json wais-canonical-generated.js; then exit 0; fi
           git config user.name "wais-data-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stock-prices.json
+          git add stock-prices.json wais-canonical-generated.js
           git commit -m "Reconcile WAIS INVEST canonical quote universe"
           git pull --rebase origin main
           git push origin HEAD:main

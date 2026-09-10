@@ -6,7 +6,6 @@
     `wais-stability-guard-v1.js?v=${v}`,
     `market-data.base.js?v=${v}`,
     `market-data-override.js?v=${v}`,
-    `wais-public-state.js?v=${v}`,
     `wais-research-integrity-v1.js?v=${v}`,
 
     // Income essentials only.
@@ -24,13 +23,7 @@
     `wais-route-registry-v2.js?v=${v}`,
     `wais-route-intelligence-v2.js?v=${v}`,
     `wais-route-selector-safe-v13.js?v=${v}`,
-    `wais-canonical-state-20260820.js?v=${v}`,
-    `wais-cross-section-sync-20260830.js?v=${v}`,
-    `wais-live-session-20260831.js?v=${v}`,
-    `wais-postclose-state-20260831.js?v=${v}`,
-    `wais-postclose-state-20260901.js?v=${v}`,
-    `wais-column-reconciliation-20260901.js?v=${v}`,
-    `wais-reconciliation-20260903.js?v=${v}`,
+    `wais-canonical-generated.js?v=${v}`,
     `wais-super-a-policy-v1.js?v=${v}`,
     `wais-calendar-current-v1.js?v=${v}`,
 
@@ -67,7 +60,7 @@
     historicalOverlays: 'DISABLED_FOR_RESPONSIVENESS',
     liveCalendarObserver: 'CURRENT_FUTURE_ONLY',
     professionalUiMutationLayer: 'LIGHTWEIGHT',
-    reconciliationModule: 'wais-reconciliation-20260903.js',
+    reconciliationModule: 'wais-canonical-generated.js',
     executionAuthorityModule: 'wais-super-a-policy-v1.js'
   };
 })();

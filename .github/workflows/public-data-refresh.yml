@@ -30,6 +30,11 @@ jobs:
       - name: Refresh genuine public market snapshots
         run: python3 scripts/update_public_market_data.py
 
+      - name: Build canonical browser runtime and audit system
+        run: |
+          python3 scripts/build_public_canonical_runtime.py
+          python3 scripts/audit_public_system.py
+
       - name: Validate required pages and execution renderer
         run: |
           test -s index.html
