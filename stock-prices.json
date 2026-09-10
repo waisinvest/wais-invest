@@ -3523,10 +3523,6 @@
       "NVDA",
       "MU",
       "DELL",
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3552,6 +3548,10 @@
       "AMBQ",
       "ALMU",
       "ZYME",
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB",
       "MP",
       "UUUU",
       "USAR",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-09T23:14:16.963147+00:00"
+    "asOf": "2026-09-10T01:00:22.091040+00:00"
   }
 }
