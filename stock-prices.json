@@ -3520,9 +3520,10 @@
     "version": "2026-09-08-v5-four-stage-migration",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
-      "NVDA",
-      "MU",
-      "DELL",
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3548,10 +3549,9 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-10T01:00:22.091040+00:00"
+    "asOf": "2026-09-10T01:28:22.873684+00:00"
   }
 }
