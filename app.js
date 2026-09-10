@@ -631,7 +631,11 @@ function renderIncomeEtfs(){
 
   const filterEl=$('incomeYieldFilter');
   const minYield=Number(filterEl?.value ?? 3);
-  const items=incomeEtfs;
+  // Read the current runtime universe at render time; the safe loader may
+  // append income modules after this file has evaluated.
+  const items=Array.isArray(window.WAIS_MARKET_DATA?.incomeEtfs)
+    ? window.WAIS_MARKET_DATA.incomeEtfs
+    : incomeEtfs;
 
   const enriched=items.map(item=>{
     const key=String(item.priceSymbol||item.ticker||'').toUpperCase();
@@ -762,9 +766,15 @@ function renderIncomeEtfs(){
   // Higher distribution is shown first inside each category only.
   // WAIS Sustainability and status still govern suitability/action.
   const sortYield=(a,b)=>(b._yield??-1)-(a._yield??-1);
-  wg.innerHTML=weekly.length?weekly.sort(sortYield).map(card).join(''):empty(' Weekly Income ');
-  mg.innerHTML=monthly.length?monthly.sort(sortYield).map(card).join(''):empty(' Monthly Income ');
-  tg.innerHTML=tactical.length?tactical.sort(sortYield).map(card).join(''):empty(' Tactical Income ');
+  // Keep the universe visible during a quote-feed gap.  Cards with no verified
+  // T12M yield remain DATA PENDING and are never counted as yield-qualified.
+  const weeklyDisplay=weekly.length?weekly:weeklyAll;
+  const monthlyDisplay=monthly.length?monthly:monthlyAll;
+  const tacticalAll=enriched.filter(i=>i.track==='TACTICAL');
+  const tacticalDisplay=tactical.length?tactical:tacticalAll;
+  wg.innerHTML=weeklyDisplay.length?weeklyDisplay.sort(sortYield).map(card).join(''):empty(' Weekly Income ');
+  mg.innerHTML=monthlyDisplay.length?monthlyDisplay.sort(sortYield).map(card).join(''):empty(' Monthly Income ');
+  tg.innerHTML=tacticalDisplay.length?tacticalDisplay.sort(sortYield).map(card).join(''):empty(' Tactical Income ');
 
   if($('incomeSystemNote')){
     $('incomeSystemNote').textContent=
@@ -1018,3 +1028,9 @@ async function initializeApp() {
   safeRender('technical summary',renderTechnicalSummary);
 }
 initializeApp();
+// The loader intentionally keeps the initial HTML path lightweight and may
+// append income-universe modules after app.js evaluates. Repaint once the
+// runtime modules have settled so Income ETFs never appears falsely empty.
+setTimeout(()=>{
+  try{ renderIncomeEtfs(); } catch(err){ console.error('WAIS income late render failed:',err); }
+}, 900);

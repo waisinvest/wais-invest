@@ -3,7 +3,7 @@
   "lastVerifiedMaster": "2026-09-09T20:45:00-04:00",
   "window": {
     "from": "2026-09-10",
-    "to": "2026-09-16"
+    "to": "2026-09-18"
   },
   "dataStatus": "WAIS verified event master updated after official-source checks. Completed events are retained for the current decision cycle; future-only UI may hide them after the session.",
   "sourceHealth": {
@@ -27,6 +27,38 @@
       "date": "09月11日",
       "event": "美國 Consumer Price Index + Real Earnings",
       "time": "08:30 ET",
+      "referenceMonth": "2026年8月",
+      "source": "U.S. Bureau of Labor Statistics"
+    },
+    {
+      "dateISO": "2026-09-15",
+      "date": "09月15–16日",
+      "event": "FOMC Meeting + Summary of Economic Projections",
+      "time": "Decision 09月16日 · 14:00 ET",
+      "referenceMonth": "Interest-rate decision、SEP及記者會",
+      "source": "Federal Reserve Board official calendar"
+    },
+    {
+      "dateISO": "2026-09-16",
+      "date": "09月16日",
+      "event": "U.S. Import and Export Price Indexes",
+      "time": "08:30 ET",
+      "referenceMonth": "2026年8月",
+      "source": "U.S. Bureau of Labor Statistics"
+    },
+    {
+      "dateISO": "2026-09-16",
+      "date": "09月16日",
+      "event": "ALMU FY2026 Financial Results",
+      "time": "Company scheduled release",
+      "referenceMonth": "Fourth quarter and fiscal year 2026",
+      "source": "Aeluma Investor Relations"
+    },
+    {
+      "dateISO": "2026-09-18",
+      "date": "09月18日",
+      "event": "State Employment and Unemployment",
+      "time": "10:00 ET",
       "referenceMonth": "2026年8月",
       "source": "U.S. Bureau of Labor Statistics"
     }

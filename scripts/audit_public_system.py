@@ -17,6 +17,8 @@ def main():
     policy = json.loads((ROOT / "wais-execution-policy.json").read_text(encoding="utf-8"))
     loader = (ROOT / "market-data.js").read_text(encoding="utf-8")
     generated = (ROOT / "wais-canonical-generated.js").read_text(encoding="utf-8")
+    index = (ROOT / "index.html").read_text(encoding="utf-8")
+    workbench = json.loads((ROOT / "research-workbench.json").read_text(encoding="utf-8"))
 
     active = canonical.get("contract", {}).get("activeStages", [])
     seen = {}
@@ -54,6 +56,13 @@ def main():
     invalid_gems = sorted(set(gem_names) - research)
     if invalid_gems:
         fail("Hidden Gems outside canonical RESEARCH: " + ", ".join(invalid_gems))
+    for asset in ("wais-command-center-v3.css", "wais-command-center-v3.js"):
+        if asset not in index or not (ROOT / asset).is_file():
+            fail(f"Command Center asset missing: {asset}")
+    discovery = [x.get("ticker") for x in workbench.get("discovery", [])]
+    invalid_discovery = sorted(set(discovery) - research)
+    if invalid_discovery:
+        fail("Discovery Workbench priorities outside canonical RESEARCH: " + ", ".join(invalid_discovery))
     print(f"WAIS ACCEPTANCE AUDIT: PASS · {len(required)} active symbols · canonical {canonical['version']}")
 
 

@@ -1,7 +1,7 @@
 // WAIS Core SAFE loader — 2026-09-03
 // Mobile-first current profile: responsive, current-session, future-only calendar.
 (function(){
-  const v='20260908wais20blueprint1';
+  const v='20260910b';
   const scripts = [
     `wais-stability-guard-v1.js?v=${v}`,
     `market-data.base.js?v=${v}`,

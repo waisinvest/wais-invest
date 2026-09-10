@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-02T12:35:00-04:00",
+  "lastUpdated": "2026-09-10T01:20:00-04:00",
   "authority": "WAIS System approved public research output",
   "dataStatus": "RESEARCH ONLY · NOT READY 1 · public evidence required before promotion",
   "ready1": [],
@@ -27,31 +27,31 @@
     },
     {
       "rank": 4,
-      "ticker": "MP",
-      "status": "POLICY RESEARCH",
-      "thesis": "U.S. critical-minerals and rare-earth supply-chain policy exposure.",
-      "risk": "Commodity prices, processing ramp, policy dependency and volatility."
+      "ticker": "AMBQ",
+      "status": "RESEARCH PRIORITY",
+      "thesis": "Ultra-low-power edge-AI platform with current official-company evidence coverage.",
+      "risk": "Early public-company record, execution, liquidity and valuation."
     },
     {
       "rank": 5,
-      "ticker": "KTOS",
-      "status": "POLICY RESEARCH",
-      "thesis": "Autonomy, drones and defense modernization exposure.",
-      "risk": "Program timing, budget awards and valuation."
+      "ticker": "AEHR",
+      "status": "RESEARCH PRIORITY",
+      "thesis": "Semiconductor test exposure with AI and power-device optionality.",
+      "risk": "Customer concentration, order timing, earnings proof and volatility."
     },
     {
       "rank": 6,
-      "ticker": "LEU",
-      "status": "POLICY RESEARCH",
-      "thesis": "Domestic nuclear-fuel and energy-security exposure.",
-      "risk": "Government contracts, supply constraints and extreme volatility."
+      "ticker": "CRDO",
+      "status": "RESEARCH PRIORITY",
+      "thesis": "High-speed AI connectivity and data-center interconnect exposure.",
+      "risk": "High expectations, customer concentration and valuation."
     },
     {
       "rank": 7,
-      "ticker": "RKLB",
-      "status": "POLICY RESEARCH",
-      "thesis": "Space and strategic-infrastructure optionality.",
-      "risk": "Execution, launch timing, losses and valuation."
+      "ticker": "ALMU",
+      "status": "VALIDATING",
+      "thesis": "Advanced photonics and domestic semiconductor optionality with official-source monitoring.",
+      "risk": "Small-cap execution, financing, commercialization and liquidity."
     },
     {
       "rank": 8,
