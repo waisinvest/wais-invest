@@ -1,7 +1,10 @@
 (function(){
   const d = window.WAIS_MARKET_DATA || {};
-  d.lastUpdated = "2026-08-15";
-  d.dataAsOf = "2026-08-15 weekend system audit; market prices remain latest verified snapshots";
+  // Do not overwrite the live market timestamp with an old static audit date.
+  // The public command centre replaces the audit timestamp with the current
+  // research-discovery.json lastChecked value after the canonical fetch.
+  d.lastUpdated = d.lastUpdated || "DATA GAP";
+  d.dataAsOf = d.dataAsOf || "Current verified public snapshot; not exchange real-time";
   d.marketMode = "CAUTIOUS"; d.riskScore = 47; d.recommendedCash = 35;
 
   d.researchIntegrity = {
@@ -35,7 +38,7 @@
   window.WAIS_MARKET_DATA=d;
 
   document.addEventListener('DOMContentLoaded',()=>{
-    const dashboard=document.getElementById('dashboard'); if(!dashboard) return;
+    const mount=document.getElementById('riskWorkspaceMount') || document.getElementById('risk'); if(!mount) return;
     const old=document.getElementById('waisResearchIntegrityPanel'); if(old) old.remove();
     const status=d.researchIntegrity;
     const detailed=Array.isArray(status.evidenceOfWork)&&status.evidenceOfWork.length?status.evidenceOfWork:status.layers;
@@ -48,7 +51,8 @@
       <div class="wais-action-banner" style="margin-top:8px;opacity:.88">${status.rule}</div>
       ${syncReason?`<div class="wais-action-banner" style="margin-top:8px"><strong>SYNC STATUS｜</strong>${syncStatus}<br><span style="opacity:.82;font-weight:500">${syncReason}</span></div>`:''}
       <div class="wais-pipe-grid">${detailed.map(x=>`<div class="wais-pipe-col"><h4>${x.layer||x.name}</h4><b>${x.status}</b><p style="margin:.4rem 0 0;opacity:.75;font-size:.8rem">${x.evidence}</p></div>`).join('')}</div>`;
-    // Audit is deliberately the final dashboard block so research evidence does not interrupt action content.
-    dashboard.appendChild(box);
+    // Integrity evidence belongs in Risk Engine only; Dashboard remains an
+    // action and market overview surface.
+    mount.appendChild(box);
   });
 })();

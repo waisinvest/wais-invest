@@ -29,7 +29,8 @@ const checks={
   dashboardCalendar:d.querySelectorAll('#dashboard #economicEventsList .calendar-row').length,
   dashboardWeeklyPlan:d.querySelectorAll('#dashboard #weeklyPlan').length,
   riskPlan:!!d.querySelector('#risk #weeklyPlan'),
-  riskAudit:d.querySelectorAll('#risk .cc-audit-item').length,
+  riskAudit:d.querySelectorAll('#risk .cc-audit-item, #risk .wais-pipe-col').length,
+  dashboardIntegrity:d.querySelectorAll('#dashboard #waisResearchIntegrityPanel').length,
   evidenceVault:d.querySelectorAll('#research .cc-source-row').length,
   watchlist:d.querySelectorAll('#watchlistCards .watch-card').length,
   topPicks:d.querySelectorAll('#topPicksGrid .watch-card').length,
@@ -41,10 +42,11 @@ const checks={
 };
 const hkIndicators=['hsiValue','hstechValue','hsifValue'].filter(id=>d.getElementById(id)).length;
 checks.hkIndicators=hkIndicators;
-const required={commandCenter:'READY',dashboardCalendar:5,dashboardWeeklyPlan:0,riskPlan:true,riskAudit:3,evidenceVault:3,watchlist:1,topPicks:1,routes:1,hiddenGems:6,weeklyIncome:1,monthlyIncome:1,navLinks:3,hkIndicators:3};
+const required={commandCenter:'READY',dashboardCalendar:5,dashboardWeeklyPlan:0,riskPlan:true,riskAudit:3,dashboardIntegrity:0,evidenceVault:3,watchlist:1,topPicks:1,routes:1,hiddenGems:6,weeklyIncome:1,monthlyIncome:1,navLinks:3,hkIndicators:3};
 for(const [k,v] of Object.entries(required)){
   const actual=checks[k];
   if(k==='dashboardWeeklyPlan'&&actual!==0)errors.push(`${k}: expected 0, got ${actual}`);
+  if(k==='dashboardIntegrity'&&actual!==0)errors.push(`${k}: expected 0, got ${actual}`);
   if(typeof v==='number'&&actual<v)errors.push(`${k}: expected >=${v}, got ${actual}`);
   if(typeof v!=='number'&&actual!==v)errors.push(`${k}: expected ${v}, got ${actual}`);
 }
