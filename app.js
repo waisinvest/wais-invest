@@ -494,13 +494,15 @@ function eventWeekLabel(dateISO){
 }
 function renderEconomicEvents(){
   const fallback=window.WAIS_MARKET_DATA?.weeklyEvents||[];
-  const events=weeklyEventsSnapshot?.events?.length?weeklyEventsSnapshot.events:fallback;
+  const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const sourceEvents=weeklyEventsSnapshot?.events?.length?weeklyEventsSnapshot.events:fallback;
+  const events=sourceEvents.filter(e=>String(e.dateISO||e.date||'')>=today);
   const target=$('economicEventsList'),updated=$('economicEventsUpdated');
   if(!target)return;
   if(updated){
     const raw=weeklyEventsSnapshot?.lastUpdated||window.WAIS_MARKET_DATA?.lastUpdated||'—';
     const shown=raw && raw!=='—' ? new Date(raw).toLocaleString('en-CA') : '—';
-    updated.textContent=`日程資料更新：${shown}｜本週＋下週｜Auto + verified fallback`;
+    updated.textContent=`日程資料更新：${shown}｜只顯示今日及未來已驗證事件`;
   }
   target.innerHTML=events.length?events.map((e,i)=>{
     const week=eventWeekLabel(e.dateISO||'');
@@ -862,6 +864,24 @@ async function loadMarketIndicators() {
     const data = await response.json();
     marketIndicatorsSnapshot = data;
     const indicators = data.indicators || data;
+
+    // Public, deterministic market-risk display. This replaces the dated
+    // hand-written August score; it uses only the refreshed indicator file.
+    const pct=name=>Number(indicators[name]?.changePercent);
+    const value=name=>Number(indicators[name]?.value);
+    let liveRisk=35;
+    for(const name of ['SP500','NASDAQ','DOW']) if(Number.isFinite(pct(name))&&pct(name)<0) liveRisk+=5;
+    if(Number.isFinite(pct('SOX'))) liveRisk+=pct('SOX')<0?8:-2;
+    if(Number.isFinite(value('VIX'))) liveRisk+=value('VIX')>=25?15:value('VIX')>=20?10:value('VIX')>=16?5:0;
+    if(Number.isFinite(value('US10Y'))) liveRisk+=value('US10Y')>=4.75?10:value('US10Y')>=4.5?5:0;
+    liveRisk=Math.max(0,Math.min(100,liveRisk));
+    const liveState=riskState(liveRisk);
+    window.WAIS_MARKET_DATA.riskScore=liveRisk;
+    window.WAIS_MARKET_DATA.recommendedCash=liveState.cash;
+    window.WAIS_MARKET_DATA.marketMode=liveState.mode;
+    window.WAIS_MARKET_DATA.lastUpdated=data.lastUpdated||null;
+    window.WAIS_MARKET_DATA.riskSource='DERIVED FROM CURRENT PUBLIC MARKET INDICATORS';
+    updateRisk(liveRisk,liveState.cash);
 
     const indicatorMap = {
     

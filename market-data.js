@@ -5,7 +5,6 @@
   const scripts = [
     `wais-stability-guard-v1.js?v=${v}`,
     `market-data.base.js?v=${v}`,
-    `market-data-override.js?v=${v}`,
     `wais-research-integrity-v1.js?v=${v}`,
 
     // Income essentials only.
@@ -54,7 +53,7 @@
   }
 
   window.WAIS_CORE_LOADER = {
-    version: '3.9-sep3-super-a-authority',
+    version: '4.0-single-canonical-runtime',
     loadedModules: [...seen],
     duplicatePolicy: 'ONE_LOAD_PER_MODULE + CROSS-STAGE DEDUPE',
     historicalOverlays: 'DISABLED_FOR_RESPONSIVENESS',
