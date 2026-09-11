@@ -3545,13 +3545,13 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "NVDA",
-      "MU",
-      "DELL",
       "TSM",
       "AVGO",
       "LITE",
       "RKLB",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-11T00:09:50.209149+00:00"
+    "asOf": "2026-09-11T04:44:27.302413+00:00"
   }
 }
