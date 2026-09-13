@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-13T21:03:12Z",
+  "lastChecked": "2026-09-13T22:00:05Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-13T21:03:12Z",
+      "checkedAt": "2026-09-13T22:00:05Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
@@ -218,17 +218,19 @@
             "Elon Musk",
             "China"
           ],
-          "visibleSnippet": "Curious what you think of Dario, Sam & Elon all agreeing we need to pace/slow the AI frontier? ... Or have US to slow down and allow China to secretly leapfrog in AI capability.",
+          "visibleSnippet": "@x4tsr Not gonna happen. ... Or have US to slow down and allow China to secretly leapfrog in AI capability.",
           "reason": "The public search index exposes only truncated excerpts and the exact X page returned HTTP 403. Full original text and context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2099126746390139042",
           "publishedAt": "2026-09-13T10:23:00Z",
           "tickers": [
-            "TSLA"
+            "TSLA",
+            "GOOGL",
+            "SPCX"
           ],
           "namedEntities": [],
-          "visibleSnippet": "Tech people in real life: I have shares in “$TSLA ...",
+          "visibleSnippet": "Tech people in real life: I have shares in “$TSLA, $GOOGL, $SPCX. ...",
           "reason": "The public search index truncates the post and includes quoted-post context; the exact X page returned HTTP 403. Full original text and attribution boundaries cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
         },
         {
@@ -239,7 +241,7 @@
             "Anthropic",
             "OpenAI"
           ],
-          "visibleSnippet": "I assign essentially 0% probability that Anthropic or OpenAI will ... What do you think about slowing down AI development, boss?",
+          "visibleSnippet": "I assign essentially 0% probability that Anthropic or OpenAI will slow down frontier development ... What do you think about slowing down AI ...",
           "reason": "The public search index truncates the original post and the exact X page returned HTTP 403. Full original text and thread context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
         },
         {
