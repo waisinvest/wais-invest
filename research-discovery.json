@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-14T05:03:51.299233+00:00",
+  "lastChecked": "2026-09-14T10:02:27Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -29,7 +29,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "public Serenity page yielded only 0 usable posts"
+        "reason": "public Serenity page yielded only 0 usable posts; one newly indexed post remains truncated and unverified"
       }
     ]
   },
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-14T05:03:51.299233+00:00",
+      "checkedAt": "2026-09-14T10:02:27Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
@@ -208,6 +208,17 @@
       ],
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2099411795131924487",
+          "publishedAt": "2026-09-14T08:15:51.801Z",
+          "tickers": [],
+          "namedEntities": [
+            "NOR flash",
+            "SLC NAND"
+          ],
+          "visibleSnippet": "High-density NOR: 90-110% in H2 SLC NAND: ~70–... NOR flash “Severe Supply Shortage” with high density continued increases of 90-110% for H2. I wonder who sells both high density NOR and SLC NAND?",
+          "reason": "The public search index truncates the headline/first line and the exact X page returned HTTP 403. Full original text, cited source, and intended company/ticker cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2099049900571054238",
           "publishedAt": "2026-09-13T05:17:00Z",
