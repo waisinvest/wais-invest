@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-14T20:37:14.895629+00:00",
+  "lastUpdated": "2026-09-14T23:29:57.954443+00:00",
   "marketDates": {
     "US": "2026-09-14",
     "HK": "2026-09-14"
@@ -16,7 +16,7 @@
       "regularCloseDate": "2026-09-14",
       "change": -36.99998,
       "changePercent": -0.4832,
-      "asOf": "2026-09-14T20:20:00+00:00",
+      "asOf": "2026-09-14T20:30:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -28,7 +28,7 @@
       "regularCloseDate": "2026-09-14",
       "change": -146.625062,
       "changePercent": -0.5568,
-      "asOf": "2026-09-14T20:35:00+00:00",
+      "asOf": "2026-09-14T21:15:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -40,7 +40,7 @@
       "regularCloseDate": "2026-09-14",
       "change": -241.281453,
       "changePercent": -0.8216,
-      "asOf": "2026-09-14T20:35:00+00:00",
+      "asOf": "2026-09-14T21:15:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -52,7 +52,7 @@
       "regularCloseDate": "2026-09-14",
       "change": -152.089063,
       "changePercent": -0.2893,
-      "asOf": "2026-09-14T20:20:00+00:00",
+      "asOf": "2026-09-14T20:30:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -64,7 +64,7 @@
       "regularCloseDate": "2026-09-14",
       "change": -692.719,
       "changePercent": -5.8586,
-      "asOf": "2026-09-14T20:35:00+00:00",
+      "asOf": "2026-09-14T21:15:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
