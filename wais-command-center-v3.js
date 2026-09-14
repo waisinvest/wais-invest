@@ -6,8 +6,10 @@
   const q=(prices,t)=>prices?.prices?.[t]||{};
   const card=(ticker,stage,prices,rank)=>{const x=q(prices,ticker);return `<article class="watch-card signal-card"><div class="watch-card-head"><div><span class="signal-chip signal-${stage==='READY 1'?'green':stage==='CANDIDATE+'?'yellow':'blue'}">${esc(stage)}</span><h4>${esc(ticker)}</h4></div>${rank?`<span class="priority-chip">#${rank}</span>`:''}</div><div class="watch-prices"><div><span>Latest public price</span><strong>${money(x.price)}</strong></div><div><span>As of</span><strong>${esc((x.asOf||'DATA GAP').slice(0,16).replace('T',' '))}</strong></div></div><p class="watch-note">${stage==='READY 1'?'Research approved; timing audit still required.':stage==='CANDIDATE+'?'Highest preparation priority; not a buy signal.':'Evidence building; must earn promotion.'}</p></article>`};
   function navLinks(){
-    const nav=document.querySelector('.nav-list');if(!nav||nav.querySelector('.cc-nav-link'))return;
-    [['Discovery Workbench','discovery-workbench.html'],['Fund DNA','fund-dna.html'],['Policy / Catalysts','policy-structural-catalysts.html']].forEach(([n,h])=>nav.insertAdjacentHTML('beforeend',`<a class="nav-item cc-nav-link" href="${h}">${n}</a>`));
+    const nav=document.querySelector('.nav-list');if(!nav)return;
+    // The lightweight UI finalizer owns these direct links.  Remove any legacy
+    // Command Center copies so repeated loaders can never duplicate the menu.
+    nav.querySelectorAll('.cc-nav-link').forEach(link=>link.remove());
   }
   function cockpit(u,prices){
     const d=document.getElementById('dashboard'),hero=d?.querySelector('.hero');if(!hero)return;
