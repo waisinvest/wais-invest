@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-14T16:58:42.560433+00:00",
+  "lastChecked": "2026-09-14T17:09:00Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-14T16:58:42.560433+00:00",
+      "checkedAt": "2026-09-14T17:09:00Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
