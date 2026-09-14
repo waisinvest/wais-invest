@@ -496,13 +496,21 @@ function renderEconomicEvents(){
   const fallback=window.WAIS_MARKET_DATA?.weeklyEvents||[];
   const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   const sourceEvents=weeklyEventsSnapshot?.events?.length?weeklyEventsSnapshot.events:fallback;
-  const events=sourceEvents.filter(e=>String(e.dateISO||e.date||'')>=today);
+  const nowET=new Date(`${today}T12:00:00`);
+  const monday=new Date(nowET);
+  monday.setDate(monday.getDate()-((monday.getDay()+6)%7));
+  const windowEnd=new Date(monday);windowEnd.setDate(windowEnd.getDate()+14);
+  const windowEndISO=windowEnd.toISOString().slice(0,10);
+  const events=sourceEvents.filter(e=>{
+    const date=String(e.dateISO||e.date||'');
+    return date>=today && date<windowEndISO;
+  });
   const target=$('economicEventsList'),updated=$('economicEventsUpdated');
   if(!target)return;
   if(updated){
     const raw=weeklyEventsSnapshot?.lastUpdated||window.WAIS_MARKET_DATA?.lastUpdated||'—';
     const shown=raw && raw!=='—' ? new Date(raw).toLocaleString('en-CA') : '—';
-    updated.textContent=`日程資料更新：${shown}｜只顯示今日及未來已驗證事件`;
+    updated.textContent=`日程資料更新：${shown}｜只顯示本週及下一週尚未發生的已驗證事件`;
   }
   target.innerHTML=events.length?events.map((e,i)=>{
     const week=eventWeekLabel(e.dateISO||'');
