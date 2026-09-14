@@ -38,11 +38,14 @@ const checks={
   hiddenGems:d.querySelectorAll('#hiddenGemsGrid .watch-card').length,
   weeklyIncome:d.querySelectorAll('#weeklyIncomeGrid article').length,
   monthlyIncome:d.querySelectorAll('#monthlyIncomeGrid article').length,
-  navLinks:d.querySelectorAll('.cc-nav-link').length
+  navLinks:d.querySelectorAll('.wais-direct-nav').length,
+  duplicateNavLinks:[...d.querySelectorAll('.nav-list a[href]')]
+    .map(x=>x.getAttribute('href'))
+    .filter((href,index,all)=>all.indexOf(href)!==index).length
 };
 const hkIndicators=['hsiValue','hstechValue','hsifValue'].filter(id=>d.getElementById(id)).length;
 checks.hkIndicators=hkIndicators;
-const required={commandCenter:'READY',dashboardCalendar:5,dashboardWeeklyPlan:0,riskPlan:true,riskAudit:3,dashboardIntegrity:0,evidenceVault:3,watchlist:1,topPicks:1,routes:1,hiddenGems:6,weeklyIncome:1,monthlyIncome:1,navLinks:3,hkIndicators:3};
+const required={commandCenter:'READY',dashboardCalendar:5,dashboardWeeklyPlan:0,riskPlan:true,riskAudit:3,dashboardIntegrity:0,evidenceVault:3,watchlist:1,topPicks:1,routes:1,hiddenGems:6,weeklyIncome:1,monthlyIncome:1,navLinks:3,duplicateNavLinks:0,hkIndicators:3};
 for(const [k,v] of Object.entries(required)){
   const actual=checks[k];
   if(k==='dashboardWeeklyPlan'&&actual!==0)errors.push(`${k}: expected 0, got ${actual}`);
