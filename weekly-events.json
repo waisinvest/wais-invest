@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-09-10T00:45:00+00:00",
-  "lastVerifiedMaster": "2026-09-09T20:45:00-04:00",
+  "lastUpdated": "2026-09-14T02:55:00-04:00",
+  "lastVerifiedMaster": "2026-09-14T02:55:00-04:00",
   "window": {
-    "from": "2026-09-10",
-    "to": "2026-09-18"
+    "from": "2026-09-14",
+    "to": "2026-09-27"
   },
   "dataStatus": "WAIS verified event master updated after official-source checks. Completed events are retained for the current decision cycle; future-only UI may hide them after the session.",
   "sourceHealth": {
@@ -15,20 +15,20 @@
   "sourceErrors": [],
   "events": [
     {
-      "dateISO": "2026-09-10",
-      "date": "09月10日",
-      "event": "美國 Producer Price Index",
-      "time": "08:30 ET",
-      "referenceMonth": "2026年8月",
-      "source": "U.S. Bureau of Labor Statistics"
+      "dateISO": "2026-09-14",
+      "date": "09月14日",
+      "event": "KMTS Q1 FY2027 Financial Results",
+      "time": "16:30 ET conference call",
+      "referenceMonth": "業績後只按價格、成交量及指引確認",
+      "source": "Kestra Medical Technologies Investor Relations"
     },
     {
-      "dateISO": "2026-09-11",
-      "date": "09月11日",
-      "event": "美國 Consumer Price Index + Real Earnings",
-      "time": "08:30 ET",
-      "referenceMonth": "2026年8月",
-      "source": "U.S. Bureau of Labor Statistics"
+      "dateISO": "2026-09-15",
+      "date": "09月15日",
+      "event": "FPS Q4 + FY2026 Financial Results",
+      "time": "開市前公布 · 11:00 ET conference call",
+      "referenceMonth": "監察backlog、bookings、margin、guidance及供應壓力",
+      "source": "Forgent Power Solutions Investor Relations"
     },
     {
       "dateISO": "2026-09-15",
@@ -61,6 +61,30 @@
       "time": "10:00 ET",
       "referenceMonth": "2026年8月",
       "source": "U.S. Bureau of Labor Statistics"
+    },
+    {
+      "dateISO": "2026-09-24",
+      "date": "09月24日",
+      "event": "U.S. Employee Tenure + Job Flexibilities and Work Schedules",
+      "time": "10:00 ET",
+      "referenceMonth": "Biennial 2026 / 2024–2025",
+      "source": "U.S. Bureau of Labor Statistics official calendar"
+    },
+    {
+      "dateISO": "2026-09-25",
+      "date": "09月25日",
+      "event": "U.S. Durable Goods Orders",
+      "time": "08:30 ET",
+      "referenceMonth": "2026年8月",
+      "source": "U.S. Census Bureau official calendar"
+    },
+    {
+      "dateISO": "2026-09-25",
+      "date": "09月25日",
+      "event": "Employee Benefits in the United States",
+      "time": "10:00 ET",
+      "referenceMonth": "2026年3月",
+      "source": "U.S. Bureau of Labor Statistics official calendar"
     }
   ]
 }
