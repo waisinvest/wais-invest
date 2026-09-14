@@ -78,7 +78,16 @@ jobs:
           fi
           git config user.name "wais-data-bot"
           git config user.email "actions@users.noreply.github.com"
+          cp stock-prices.json /tmp/wais-stock-prices.json
+          cp market-indicators.json /tmp/wais-market-indicators.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/wais-stock-prices.json stock-prices.json
+          cp /tmp/wais-market-indicators.json market-indicators.json
           git add stock-prices.json market-indicators.json
+          if git diff --cached --quiet; then
+            echo "No quote changes after rebasing on latest main"
+            exit 0
+          fi
           git commit -m "Auto refresh public market data"
-          git pull --rebase origin main
           git push origin HEAD:main
