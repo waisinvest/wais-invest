@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-15T21:02:41Z",
+  "lastChecked": "2026-09-15T22:00:51Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,21 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-09-15T21:02:41Z",
+      "checkedAt": "2026-09-15T22:00:51Z",
       "ingestionPath": "Exact public X status pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-15T21:02:41Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "publishedAt": "2026-09-15T20:45:20.172Z",
+          "reason": "The exact public X status page exposes only the article teaser and a “Subscribe to unlock” gate. The full article body, evidence, and conclusion cannot be verified, so it remains a DATA GAP and is not treated as complete research evidence.",
+          "tickers": [
+            "CRDO"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2099962794015866924",
+          "visibleSnippet": "$CRDO announced their new 1.6T optical transceiver…"
+        },
         {
           "namedEntities": [
             "Retardlnvestor"
