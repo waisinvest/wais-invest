@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-14T23:54:03.481818+00:00",
+  "lastChecked": "2026-09-15T02:59:41Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -29,7 +29,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "public Serenity page yielded only 0 usable posts"
+        "reason": "2 newly indexed original-post URLs found, but direct X verification remains unavailable and at least one indexed text is truncated"
       }
     ]
   },
@@ -112,7 +112,7 @@
       "required": true,
       "author": "@aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-14T23:54:03.481818+00:00",
+      "checkedAt": "2026-09-15T02:59:41Z",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
       "recentPosts": [
@@ -208,6 +208,32 @@
       ],
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2099674926697545849",
+          "publishedAt": "2026-09-15T01:41:27.255Z",
+          "tickers": [],
+          "namedEntities": [
+            "Team Group",
+            "Gerry Chen"
+          ],
+          "visibleSnippet": "“There is zero risk of memory prices dropping” ... Memory module makers have received notices warning of drastic cuts to their 2027 supply allocations. Some could receive 50% or less of their 2026 allocation.",
+          "reason": "The public search index resolves the exact X status URL but truncates the original text. The exact X page remains unavailable for direct verification, so full wording, cited-source boundaries, and any intended ticker cannot be verified. Retained as a DATA GAP and not counted as a qualifying original post."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2099659874892386678",
+          "publishedAt": "2026-09-15T00:41:38.625Z",
+          "tickers": [
+            "SNDK",
+            "DRAM"
+          ],
+          "namedEntities": [
+            "Jim Cramer",
+            "Leopold",
+            "SK Hynix"
+          ],
+          "visibleSnippet": "I've seen comments from Jim Cramer today supporting hedge funds that short Leopold's “nonsense” $SNDK / $DRAM / SK Hynix type calls.",
+          "reason": "The public search index resolves an exact URL and visible excerpt, but the exact X page remains unavailable for direct verification and surrounding context cannot be confirmed. Retained as a DATA GAP and not counted as a qualifying original post."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2099459235419656373",
           "publishedAt": "2026-09-14T11:24:22.447Z",
