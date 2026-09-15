@@ -31,7 +31,7 @@
     "notApplicableSources": 0,
     "requiredDataGaps": []
   },
-  "lastChecked": "2026-09-15T15:59:57Z",
+  "lastChecked": "2026-09-15T17:02:00Z",
   "sources": {
     "IDENTITY:SBE": {
       "checkedAt": "2026-09-15T15:03:47.881523+00:00",
@@ -120,9 +120,9 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-09-15T15:59:57Z",
+      "checkedAt": "2026-09-15T17:02:00Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
-      "lastError": "Two newly indexed Serenity posts were found, but X returned HTTP 403 and the search index exposed only truncated text; neither can be counted toward the three-verifiable-original-post LIVE threshold.",
+      "lastError": "Only one newly indexed original post has complete visible text; the ByteDance/Seedance original remains indirectly quoted and direct X access returns HTTP 403. The three-verifiable-original-post LIVE threshold is not met.",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
@@ -477,29 +477,27 @@
           "visibleSnippet": "New report from Bloomberg on $IQE: “indium phosphide ... buildout. Who could have guessed $AXTI would have been a major point of failure?"
         },
         {
+          "url": "https://x.com/aleabitoreddit/status/2099784954444210243",
+          "publishedAt": "2026-09-15T05:58:00Z",
+          "tickers": [],
+          "namedEntities": [
+            "ByteDance",
+            "Seedance"
+          ],
+          "visibleSnippet": "哇,中国的AI 视频生成能力可能已经是世界第一了吧？字节跳动的Seedance 也太强了, 强到让我开始担心… 日本的动画师会不会很快就被AI 取代？ 但想象一下你可以随时生成新的剧情,让故事一直延续下去, 想看多久就看多久这还挺酷的",
+          "reason": "A reply search result reproduces a fuller quotation, but the exact original-post result remains truncated and the X page returns HTTP 403. The original text and attachment boundaries cannot yet be independently verified, so this remains a DATA GAP and is not counted as a qualifying original post."
+        }
+      ],
+      "recentPosts": [
+        {
           "url": "https://x.com/aleabitoreddit/status/2099830591663513642",
           "publishedAt": "2026-09-15T09:00:00Z",
           "tickers": [
             "CCXI"
           ],
-          "namedEntities": [
-            "Digit 5"
-          ],
-          "visibleSnippet": "$CCXI releases their Digit 5 next-generation ...",
-          "reason": "The public search index resolves the exact X status URL but truncates the original text. The exact X page returned HTTP 403, so full wording and attachment/context cannot be verified. Retained as a DATA GAP and not counted as a qualifying original post."
+          "text": "$CCXI releases their Digit 5 next-generation humanoid. Thoughts?",
+          "visibility": "Complete visible original text from the public search index; the linked Agility announcement text is treated as quoted attachment context."
         },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2099784954444210243",
-          "publishedAt": "2026-09-15T05:58:00Z",
-          "tickers": [],
-          "namedEntities": [
-            "ByteDance"
-          ],
-          "visibleSnippet": "哇,中国的AI 视频生成能力可能已经是世界第一了吧？字节跳动的 ...",
-          "reason": "The public search index resolves the exact X status URL but truncates the original text. The exact X page returned HTTP 403, so full wording and attachment/context cannot be verified. Retained as a DATA GAP and not counted as a qualifying original post."
-        }
-      ],
-      "recentPosts": [
         {
           "publishedAt": "2026-09-08T12:37:00Z",
           "text": "Okay I know this is US time and this is a Taiwan stock... But I really am starting to think $ESMT (3006) can cook like $SNDK. And I'm excited.",
