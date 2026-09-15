@@ -1,8 +1,9 @@
 {
+  "version": "WAIS Discovery Ingestion v2.0",
+  "lastChecked": "2026-09-15T19:03:27.354325+00:00",
   "authority": "WAIS System",
+  "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
-    "failureIsolation": true,
-    "promotionRule": "Research and price ingestion cannot promote Candidate, Candidate+, READY 1 or Super A status.",
     "rule": "Every configured adapter retries automatically; required Serenity evidence remains a DATA GAP until an authorized machine-readable source is connected.",
     "states": [
       "LIVE",
@@ -12,48 +13,39 @@
       "DATA_GAP",
       "NOT_APPLICABLE",
       "IDENTITY_UNVERIFIED"
-    ]
+    ],
+    "failureIsolation": true,
+    "promotionRule": "Research and price ingestion cannot promote Candidate, Candidate+, READY 1 or Super A status."
   },
-  "dataQualityPolicy": "wais-data-quality-policy.json",
   "health": {
+    "liveSources": 4,
+    "fallbackSources": 1,
+    "notApplicableSources": 0,
+    "requiredDataGaps": [],
     "failedThisCycle": [
       {
-        "reason": "HTTP Error 403: Forbidden",
-        "source": "SEC_PRIMARY"
+        "source": "SEC_PRIMARY",
+        "reason": "HTTP Error 403: Forbidden"
       },
       {
-        "reason": "public Serenity page yielded only 0 usable posts",
-        "source": "SERENITY"
+        "source": "SERENITY",
+        "reason": "public Serenity page yielded only 0 usable posts"
       }
-    ],
-    "fallbackSources": 1,
-    "liveSources": 4,
-    "notApplicableSources": 0,
-    "requiredDataGaps": []
+    ]
   },
-  "lastChecked": "2026-09-15T17:02:00Z",
   "sources": {
-    "IDENTITY:SBE": {
-      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
-      "issuer": "SB Energy, Inc.",
-      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
-      "marketPriceStatus": "NOT_APPLICABLE_PRE_IPO",
-      "note": "Identity is verified from the issuer. Do not attach legacy Switchback Energy prices; start quote monitoring only after an official first trade.",
-      "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
-      "proposedTicker": "SBE",
-      "required": true,
-      "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
-      "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
-      "status": "LIVE_PRE_IPO"
-    },
     "IR:ALMU": {
-      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
+      "ticker": "ALMU",
       "company": "Aeluma, Inc.",
-      "contentChanged": true,
+      "stage": "VALIDATING",
+      "sourceType": "OFFICIAL_IR_PRESS_RELEASES",
+      "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
+      "required": true,
+      "status": "LIVE",
+      "checkedAt": "2026-09-15T19:03:27.354325+00:00",
+      "lastSuccessAt": "2026-09-15T19:03:27.354325+00:00",
       "contentHash": "274e26988a60959c934f503caa239093a2dfc206b6bce12a7555320172ea5ce9",
-      "contentPreview": "Press Releases :: Aeluma, Inc. (ALMU) Skip to main content Skip to section navigation Skip to footer Home About Overview Management Team Board of Directors Certification & Compliance Technology News Overview Press Releases Blog In The News Investors Overview News & Events Company Info Financial Info Stock Data SEC Filings Governance Careers Contact Press Releases Investors Investors Overview News & Events Press Releases IR Calendar Company Info Overview Management Team Contacts FAQ Financial Info Overview Financial Results Financial Statements Stock Data Quote Charts Historical Data Analyst Coverage SEC Filings Overview All SEC Filings Annual Reports Quarterly Reports Section 16 Filings Governance Overview Board of Directors Board Committees Governance Documents News & Events Press Releases IR Calendar Year All Years 2026 2025 2024 2023 2022 2021 Category All Releases Financial Releases ",
-      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
-      "note": "Official source; evidence input only and never an automatic status promotion.",
+      "contentChanged": false,
       "recentOfficialItems": [
         "Sep 15, 2026 7:00am EDT Aeluma Executes Strategic Agreement with Sumitomo Chemical Advanced Technologies for Wafer Production for AI Datacom Sep 02, 2026 7:00am EDT Aeluma to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on September 16, 2026 Aug 04, 2026",
         "Sep 02, 2026 7:00am EDT Aeluma to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on September 16, 2026 Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Comm",
@@ -64,21 +56,21 @@
         "Jun 23, 2026 7:00am EDT Aeluma Names Brendan Moran Vice President of Engineering May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commercialization May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related",
         "May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commercialization May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related Materials Award May 13, 2026 4:30pm EDT Aeluma Announces Third Quarter Fiscal 202"
       ],
-      "required": true,
-      "sourceType": "OFFICIAL_IR_PRESS_RELEASES",
-      "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
-      "stage": "VALIDATING",
-      "status": "LIVE",
-      "ticker": "ALMU"
+      "contentPreview": "Press Releases :: Aeluma, Inc. (ALMU) Skip to main content Skip to section navigation Skip to footer Home About Overview Management Team Board of Directors Certification & Compliance Technology News Overview Press Releases Blog In The News Investors Overview News & Events Company Info Financial Info Stock Data SEC Filings Governance Careers Contact Press Releases Investors Investors Overview News & Events Press Releases IR Calendar Company Info Overview Management Team Contacts FAQ Financial Info Overview Financial Results Financial Statements Stock Data Quote Charts Historical Data Analyst Coverage SEC Filings Overview All SEC Filings Annual Reports Quarterly Reports Section 16 Filings Governance Overview Board of Directors Board Committees Governance Documents News & Events Press Releases IR Calendar Year All Years 2026 2025 2024 2023 2022 2021 Category All Releases Financial Releases ",
+      "note": "Official source; evidence input only and never an automatic status promotion."
     },
     "IR:AMBQ": {
-      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
+      "ticker": "AMBQ",
       "company": "Ambiq Micro, Inc.",
-      "contentChanged": false,
+      "stage": "VALIDATING",
+      "sourceType": "OFFICIAL_COMPANY_NEWS",
+      "sourceUrl": "https://ambiq.com/news/",
+      "required": true,
+      "status": "LIVE",
+      "checkedAt": "2026-09-15T19:03:27.354325+00:00",
+      "lastSuccessAt": "2026-09-15T19:03:27.354325+00:00",
       "contentHash": "f99f0813ecc8398a640c6b87feeb6586051098bab3425c409bfd1797e4677d88",
-      "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Tools harvestKIT ApolloICD AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT turboSPOT Company C",
-      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
-      "note": "Official source; evidence input only and never an automatic status promotion.",
+      "contentChanged": false,
       "recentOfficialItems": [
         "September 8, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced expanded support for the open-source Zephyr Project® Real-Time Operating System (RTOS) on its latest Apollo330 Plus and Apollo510 Lite",
         "August 4, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... heliaPROFILER Apollo AI Jul 30. 26 A Reflection of Ambiq’s First Year as a Public Company One year ago, Ambiq entered a new chapter. On July 30, 2025, we rang the opening bell at the Ne",
@@ -89,40 +81,36 @@
         "July 27, 2026 – Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... Apollo510 Lite Apollo510B Lite Apollo510D Lite Apollo330 Plus Apollo330B Plus apollo330M Plus Edge AI Jun 25. 26 Ambiq Announces Closing of its Upsized Public Offering and Full Exercise",
         "June 25, 2026 – Ambiq Micro, Inc. (“Ambiq”) (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced the closing of its upsized underwritten public offering of 2,300,000 shares of its... Investor Relations Jun 23. 26 Ambiq A"
       ],
+      "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Tools harvestKIT ApolloICD AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT turboSPOT Company C",
+      "note": "Official source; evidence input only and never an automatic status promotion."
+    },
+    "SEC_PRIMARY": {
+      "sourceType": "SEC_CROSS_CHECK",
+      "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
-      "sourceType": "OFFICIAL_COMPANY_NEWS",
-      "sourceUrl": "https://ambiq.com/news/",
-      "stage": "VALIDATING",
-      "status": "LIVE",
-      "ticker": "AMBQ"
+      "status": "DATA_GAP",
+      "checkedAt": "2026-09-15T19:03:27.354325+00:00",
+      "lastSuccessAt": null,
+      "lastError": "HTTP Error 403: Forbidden",
+      "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
     },
     "SEC_ALTERNATE": {
-      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
+      "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
+      "status": "LIVE",
+      "checkedAt": "2026-09-15T19:03:27.354325+00:00",
+      "lastSuccessAt": "2026-09-15T19:03:27.354325+00:00",
+      "required": true,
       "covers": [
         "ALMU",
         "AMBQ"
       ],
-      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
-      "note": "Fallback coverage uses official issuer disclosures plus canonical market data while SEC runner access is degraded. It is labelled as fallback and does not claim to be SEC data.",
-      "required": true,
-      "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
-      "status": "LIVE"
-    },
-    "SEC_PRIMARY": {
-      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
-      "lastError": "HTTP Error 403: Forbidden",
-      "lastSuccessAt": null,
-      "note": "No validated snapshot is available; adapter remains isolated and retries automatically.",
-      "required": true,
-      "sourceType": "SEC_CROSS_CHECK",
-      "sourceUrl": "https://data.sec.gov/submissions/",
-      "status": "DATA_GAP"
+      "note": "Fallback coverage uses official issuer disclosures plus canonical market data while SEC runner access is degraded. It is labelled as fallback and does not claim to be SEC data."
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-09-15T17:02:00Z",
+      "checkedAt": "2026-09-15T19:03:27.354325+00:00",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
-      "lastError": "Only one newly indexed original post has complete visible text; the ByteDance/Seedance original remains indirectly quoted and direct X access returns HTTP 403. The three-verifiable-original-post LIVE threshold is not met.",
+      "lastError": "public Serenity page yielded only 0 usable posts",
       "lastSuccessAt": "2026-09-03T15:03:52Z",
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
@@ -593,7 +581,19 @@
       "sourceUrl": "https://x.com/aleabitoreddit",
       "status": "LAST_KNOWN_GOOD",
       "unresolvedIndexedItems": []
+    },
+    "IDENTITY:SBE": {
+      "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
+      "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
+      "status": "LIVE_PRE_IPO",
+      "checkedAt": "2026-09-15T19:03:27.354325+00:00",
+      "lastSuccessAt": "2026-09-15T19:03:27.354325+00:00",
+      "required": true,
+      "issuer": "SB Energy, Inc.",
+      "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
+      "proposedTicker": "SBE",
+      "marketPriceStatus": "NOT_APPLICABLE_PRE_IPO",
+      "note": "Identity is verified from the issuer. Do not attach legacy Switchback Energy prices; start quote monitoring only after an official first trade."
     }
-  },
-  "version": "WAIS Discovery Ingestion v2.0"
+  }
 }
