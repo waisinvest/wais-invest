@@ -571,7 +571,11 @@
       "sourceType": "REQUIRED_SPECIALIST_RESEARCH",
       "sourceUrl": "https://x.com/aleabitoreddit",
       "status": "LIVE",
-      "unresolvedIndexedItems": []
+      "unresolvedIndexedItems": [],
+      "coverageGaps": [
+        "The public Posts surface and exact status pages are readable and have met the 3-original verification threshold.",
+        "The Replies and Articles profile tabs remain restricted without an authenticated X session; no unverified reply or article is promoted into recentPosts."
+      ]
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
