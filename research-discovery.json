@@ -1,9 +1,8 @@
 {
-  "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-15T10:09:20.791149+00:00",
   "authority": "WAIS System",
-  "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
+    "failureIsolation": true,
+    "promotionRule": "Research and price ingestion cannot promote Candidate, Candidate+, READY 1 or Super A status.",
     "rule": "Every configured adapter retries automatically; required Serenity evidence remains a DATA GAP until an authorized machine-readable source is connected.",
     "states": [
       "LIVE",
@@ -13,64 +12,73 @@
       "DATA_GAP",
       "NOT_APPLICABLE",
       "IDENTITY_UNVERIFIED"
-    ],
-    "failureIsolation": true,
-    "promotionRule": "Research and price ingestion cannot promote Candidate, Candidate+, READY 1 or Super A status."
-  },
-  "health": {
-    "liveSources": 4,
-    "fallbackSources": 1,
-    "notApplicableSources": 0,
-    "requiredDataGaps": [],
-    "failedThisCycle": [
-      {
-        "source": "SEC_PRIMARY",
-        "reason": "HTTP Error 403: Forbidden"
-      },
-      {
-        "source": "SERENITY",
-        "reason": "public Serenity page yielded only 0 usable posts"
-      }
     ]
   },
+  "dataQualityPolicy": "wais-data-quality-policy.json",
+  "health": {
+    "failedThisCycle": [
+      {
+        "reason": "HTTP Error 403: Forbidden",
+        "source": "SEC_PRIMARY"
+      },
+      {
+        "reason": "public Serenity page yielded only 0 usable posts",
+        "source": "SERENITY"
+      }
+    ],
+    "fallbackSources": 1,
+    "liveSources": 4,
+    "notApplicableSources": 0,
+    "requiredDataGaps": []
+  },
+  "lastChecked": "2026-09-15T15:59:57Z",
   "sources": {
-    "IR:ALMU": {
-      "ticker": "ALMU",
-      "company": "Aeluma, Inc.",
-      "stage": "VALIDATING",
-      "sourceType": "OFFICIAL_IR_PRESS_RELEASES",
-      "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
+    "IDENTITY:SBE": {
+      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
+      "issuer": "SB Energy, Inc.",
+      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
+      "marketPriceStatus": "NOT_APPLICABLE_PRE_IPO",
+      "note": "Identity is verified from the issuer. Do not attach legacy Switchback Energy prices; start quote monitoring only after an official first trade.",
+      "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
+      "proposedTicker": "SBE",
       "required": true,
-      "status": "LIVE",
-      "checkedAt": "2026-09-15T10:09:20.791149+00:00",
-      "lastSuccessAt": "2026-09-15T10:09:20.791149+00:00",
-      "contentHash": "f8970ae553e466af044f2dd2f72fe14d24829a1173e80b7afeed3461e9689833",
-      "contentChanged": false,
+      "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
+      "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
+      "status": "LIVE_PRE_IPO"
+    },
+    "IR:ALMU": {
+      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
+      "company": "Aeluma, Inc.",
+      "contentChanged": true,
+      "contentHash": "274e26988a60959c934f503caa239093a2dfc206b6bce12a7555320172ea5ce9",
+      "contentPreview": "Press Releases :: Aeluma, Inc. (ALMU) Skip to main content Skip to section navigation Skip to footer Home About Overview Management Team Board of Directors Certification & Compliance Technology News Overview Press Releases Blog In The News Investors Overview News & Events Company Info Financial Info Stock Data SEC Filings Governance Careers Contact Press Releases Investors Investors Overview News & Events Press Releases IR Calendar Company Info Overview Management Team Contacts FAQ Financial Info Overview Financial Results Financial Statements Stock Data Quote Charts Historical Data Analyst Coverage SEC Filings Overview All SEC Filings Annual Reports Quarterly Reports Section 16 Filings Governance Overview Board of Directors Board Committees Governance Documents News & Events Press Releases IR Calendar Year All Years 2026 2025 2024 2023 2022 2021 Category All Releases Financial Releases ",
+      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
+      "note": "Official source; evidence input only and never an automatic status promotion.",
       "recentOfficialItems": [
+        "Sep 15, 2026 7:00am EDT Aeluma Executes Strategic Agreement with Sumitomo Chemical Advanced Technologies for Wafer Production for AI Datacom Sep 02, 2026 7:00am EDT Aeluma to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on September 16, 2026 Aug 04, 2026",
         "Sep 02, 2026 7:00am EDT Aeluma to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on September 16, 2026 Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Comm",
         "September 16, 2026 Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate",
         "Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate U.S. Leadersh",
         "Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate U.S. Leadership in AI and Advanced Computing Jul 07, 2026 7:00am EDT Aeluma CEO to Chair Optica Advanced Photonic",
         "Jul 07, 2026 7:00am EDT Aeluma CEO to Chair Optica Advanced Photonics Congress Industry Program on AI and Quantum Jun 23, 2026 7:00am EDT Aeluma Names Brendan Moran Vice President of Engineering May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commerci",
         "Jun 23, 2026 7:00am EDT Aeluma Names Brendan Moran Vice President of Engineering May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commercialization May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related",
-        "May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commercialization May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related Materials Award May 13, 2026 4:30pm EDT Aeluma Announces Third Quarter Fiscal 202",
-        "May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related Materials Award May 13, 2026 4:30pm EDT Aeluma Announces Third Quarter Fiscal 2026 Financial Results May 12, 2026 6:10pm EDT Aeluma to Participate in Upcoming Investor"
+        "May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commercialization May 21, 2026 7:00am EDT Aeluma CEO Jonathan Klamkin to Receive Prestigious Indium Phosphide and Related Materials Award May 13, 2026 4:30pm EDT Aeluma Announces Third Quarter Fiscal 202"
       ],
-      "contentPreview": "Press Releases :: Aeluma, Inc. (ALMU) Skip to main content Skip to section navigation Skip to footer Home About Overview Management Team Board of Directors Certification & Compliance Technology News Overview Press Releases Blog In The News Investors Overview News & Events Company Info Financial Info Stock Data SEC Filings Governance Careers Contact Press Releases Investors Investors Overview News & Events Press Releases IR Calendar Company Info Overview Management Team Contacts FAQ Financial Info Overview Financial Results Financial Statements Stock Data Quote Charts Historical Data Analyst Coverage SEC Filings Overview All SEC Filings Annual Reports Quarterly Reports Section 16 Filings Governance Overview Board of Directors Board Committees Governance Documents News & Events Press Releases IR Calendar Year All Years 2026 2025 2024 2023 2022 2021 Category All Releases Financial Releases ",
-      "note": "Official source; evidence input only and never an automatic status promotion."
+      "required": true,
+      "sourceType": "OFFICIAL_IR_PRESS_RELEASES",
+      "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
+      "stage": "VALIDATING",
+      "status": "LIVE",
+      "ticker": "ALMU"
     },
     "IR:AMBQ": {
-      "ticker": "AMBQ",
+      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
       "company": "Ambiq Micro, Inc.",
-      "stage": "VALIDATING",
-      "sourceType": "OFFICIAL_COMPANY_NEWS",
-      "sourceUrl": "https://ambiq.com/news/",
-      "required": true,
-      "status": "LIVE",
-      "checkedAt": "2026-09-15T10:09:20.791149+00:00",
-      "lastSuccessAt": "2026-09-15T10:09:20.791149+00:00",
-      "contentHash": "f99f0813ecc8398a640c6b87feeb6586051098bab3425c409bfd1797e4677d88",
       "contentChanged": false,
+      "contentHash": "f99f0813ecc8398a640c6b87feeb6586051098bab3425c409bfd1797e4677d88",
+      "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Tools harvestKIT ApolloICD AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT turboSPOT Company C",
+      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
+      "note": "Official source; evidence input only and never an automatic status promotion.",
       "recentOfficialItems": [
         "September 8, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced expanded support for the open-source Zephyr Project® Real-Time Operating System (RTOS) on its latest Apollo330 Plus and Apollo510 Lite",
         "August 4, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... heliaPROFILER Apollo AI Jul 30. 26 A Reflection of Ambiq’s First Year as a Public Company One year ago, Ambiq entered a new chapter. On July 30, 2025, we rang the opening bell at the Ne",
@@ -81,499 +89,513 @@
         "July 27, 2026 – Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... Apollo510 Lite Apollo510B Lite Apollo510D Lite Apollo330 Plus Apollo330B Plus apollo330M Plus Edge AI Jun 25. 26 Ambiq Announces Closing of its Upsized Public Offering and Full Exercise",
         "June 25, 2026 – Ambiq Micro, Inc. (“Ambiq”) (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced the closing of its upsized underwritten public offering of 2,300,000 shares of its... Investor Relations Jun 23. 26 Ambiq A"
       ],
-      "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Tools harvestKIT ApolloICD AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT turboSPOT Company C",
-      "note": "Official source; evidence input only and never an automatic status promotion."
-    },
-    "SEC_PRIMARY": {
-      "sourceType": "SEC_CROSS_CHECK",
-      "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
-      "status": "DATA_GAP",
-      "checkedAt": "2026-09-15T10:09:20.791149+00:00",
-      "lastSuccessAt": null,
-      "lastError": "HTTP Error 403: Forbidden",
-      "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
+      "sourceType": "OFFICIAL_COMPANY_NEWS",
+      "sourceUrl": "https://ambiq.com/news/",
+      "stage": "VALIDATING",
+      "status": "LIVE",
+      "ticker": "AMBQ"
     },
     "SEC_ALTERNATE": {
-      "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
-      "status": "LIVE",
-      "checkedAt": "2026-09-15T10:09:20.791149+00:00",
-      "lastSuccessAt": "2026-09-15T10:09:20.791149+00:00",
-      "required": true,
+      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
       "covers": [
         "ALMU",
         "AMBQ"
       ],
-      "note": "Fallback coverage uses official issuer disclosures plus canonical market data while SEC runner access is degraded. It is labelled as fallback and does not claim to be SEC data."
+      "lastSuccessAt": "2026-09-15T15:03:47.881523+00:00",
+      "note": "Fallback coverage uses official issuer disclosures plus canonical market data while SEC runner access is degraded. It is labelled as fallback and does not claim to be SEC data.",
+      "required": true,
+      "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
+      "status": "LIVE"
+    },
+    "SEC_PRIMARY": {
+      "checkedAt": "2026-09-15T15:03:47.881523+00:00",
+      "lastError": "HTTP Error 403: Forbidden",
+      "lastSuccessAt": null,
+      "note": "No validated snapshot is available; adapter remains isolated and retries automatically.",
+      "required": true,
+      "sourceType": "SEC_CROSS_CHECK",
+      "sourceUrl": "https://data.sec.gov/submissions/",
+      "status": "DATA_GAP"
     },
     "SERENITY": {
-      "sourceType": "REQUIRED_SPECIALIST_RESEARCH",
-      "sourceUrl": "https://x.com/aleabitoreddit",
-      "required": true,
       "author": "@aleabitoreddit",
-      "status": "LAST_KNOWN_GOOD",
-      "checkedAt": "2026-09-15T10:09:20.791149+00:00",
-      "lastSuccessAt": "2026-09-03T15:03:52Z",
+      "checkedAt": "2026-09-15T15:59:57Z",
       "ingestionPath": "Public web search index with exact-status URL verification; direct X page may return HTTP 403",
-      "recentPosts": [
-        {
-          "url": "https://x.com/aleabitoreddit/status/2097348486635368686",
-          "publishedAt": "2026-09-08T12:37:00Z",
-          "tickers": [
-            "3006.TW",
-            "SNDK"
-          ],
-          "text": "Okay I know this is US time and this is a Taiwan stock... But I really am starting to think $ESMT (3006) can cook like $SNDK. And I'm excited.",
-          "visibility": "Complete visible text from the public search index; direct X page may remain restricted."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2097232588796780856",
-          "publishedAt": "2026-09-08T07:56:28.523Z",
-          "tickers": [
-            "INTC"
-          ],
-          "text": "So $INTC is raising PC CPU prices by 10% apparently in October per Digitimes, which I think markets might appreciate.",
-          "visibility": "Complete visible text from the public search index; direct X page returned HTTP 403."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2096906386588504333",
-          "publishedAt": "2026-09-07T10:20:15.856Z",
-          "tickers": [
-            "AXTI"
-          ],
-          "text": "These \"no growth meme stock\" posts about $AXTI did not age well.",
-          "visibility": "Complete visible text from the public search index; direct X page returned HTTP 403."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2095460499769155944",
-          "publishedAt": "2026-09-03T10:34:49.575Z",
-          "tickers": [
-            "IQE"
-          ],
-          "text": "$IQE is actually a quantum dot foundry leader believe it or not.",
-          "visibility": "Complete visible text from the public search index; direct X access may be restricted."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2095454527747178853",
-          "publishedAt": "2026-09-03T10:11:05.734Z",
-          "tickers": [
-            "SIVE"
-          ],
-          "text": "Changed my negative view about their hybrid manufacturing model capex given new capacity targets.",
-          "visibility": "Complete visible text from the public search index; direct X access may be restricted."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2095453263613341938",
-          "publishedAt": "2026-09-03T10:06:04.341Z",
-          "tickers": [
-            "SIVE"
-          ],
-          "text": "$SIVE announced today that it is expanding InP manufacturing in Glasgow. The new capacity target is approximately 100 million CW DFB lasers in annual production.",
-          "visibility": "Complete text visible in public search result; direct X page returned HTTP 403."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2095282495730446504",
-          "publishedAt": "2026-09-02T22:47:30.105Z",
-          "tickers": [
-            "NVDA",
-            "AVGO"
-          ],
-          "text": "If you're not capacity constrained and growing 70–100% a year like $NVDA or $AVGO, apparently you'll get sold off on earnings.",
-          "visibility": "Complete text visible in public search result."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2095279986701951461",
-          "publishedAt": "2026-09-02T22:37:31.906Z",
-          "tickers": [
-            "AVGO"
-          ],
-          "text": "AVGO CEO: demand for EML and CW lasers is far surpassing industry supply even while capacity is being expanded; Serenity treats this as validation for laser suppliers."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2095261816767283663",
-          "publishedAt": "2026-09-02T21:25:19.856Z",
-          "tickers": [
-            "AVGO"
-          ],
-          "text": "Serenity cites Broadcom earnings-call clarification and materially higher FY27/FY28 revenue expectations, while noting demand exceeds the outlook and supply remains the constraint."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2095153855818547571",
-          "publishedAt": "2026-09-02T14:16:19.960Z",
-          "tickers": [
-            "NVDA"
-          ],
-          "text": "Serenity cites Nvidia demand implying potential revenue growth above 100% year over year if unconstrained, while the stated projection is lower because available supply is the constraint."
-        }
-      ],
+      "lastError": "Two newly indexed Serenity posts were found, but X returned HTTP 403 and the search index exposed only truncated text; neither can be counted toward the three-verifiable-original-post LIVE threshold.",
+      "lastSuccessAt": "2026-09-03T15:03:52Z",
       "note": "Verified public Serenity posts with source URLs, timestamps, and complete publicly visible text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
         {
-          "url": "https://x.com/aleabitoreddit/status/2099674926697545849",
-          "publishedAt": "2026-09-15T01:41:27.255Z",
-          "tickers": [],
           "namedEntities": [
             "Team Group",
             "Gerry Chen"
           ],
-          "visibleSnippet": "“There is zero risk of memory prices dropping” ... Memory module makers have received notices warning of drastic cuts to their 2027 supply allocations. Some could receive 50% or less of their 2026 allocation.",
-          "reason": "The public search index resolves the exact X status URL but truncates the original text. The exact X page remains unavailable for direct verification, so full wording, cited-source boundaries, and any intended ticker cannot be verified. Retained as a DATA GAP and not counted as a qualifying original post."
+          "publishedAt": "2026-09-15T01:41:27.255Z",
+          "reason": "The public search index resolves the exact X status URL but truncates the original text. The exact X page remains unavailable for direct verification, so full wording, cited-source boundaries, and any intended ticker cannot be verified. Retained as a DATA GAP and not counted as a qualifying original post.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2099674926697545849",
+          "visibleSnippet": "“There is zero risk of memory prices dropping” ... Memory module makers have received notices warning of drastic cuts to their 2027 supply allocations. Some could receive 50% or less of their 2026 allocation."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2099659874892386678",
-          "publishedAt": "2026-09-15T00:41:38.625Z",
-          "tickers": [
-            "SNDK",
-            "DRAM"
-          ],
           "namedEntities": [
             "Jim Cramer",
             "Leopold",
             "SK Hynix"
           ],
-          "visibleSnippet": "I've seen comments from Jim Cramer today supporting hedge funds that short Leopold's “nonsense” $SNDK / $DRAM / SK Hynix type calls.",
-          "reason": "The public search index resolves an exact URL and visible excerpt, but the exact X page remains unavailable for direct verification and surrounding context cannot be confirmed. Retained as a DATA GAP and not counted as a qualifying original post."
+          "publishedAt": "2026-09-15T00:41:38.625Z",
+          "reason": "The public search index resolves an exact URL and visible excerpt, but the exact X page remains unavailable for direct verification and surrounding context cannot be confirmed. Retained as a DATA GAP and not counted as a qualifying original post.",
+          "tickers": [
+            "SNDK",
+            "DRAM"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2099659874892386678",
+          "visibleSnippet": "I've seen comments from Jim Cramer today supporting hedge funds that short Leopold's “nonsense” $SNDK / $DRAM / SK Hynix type calls."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2099459235419656373",
-          "publishedAt": "2026-09-14T11:24:22.447Z",
-          "tickers": [
-            "IREN"
-          ],
           "namedEntities": [
             "Retardlnvestor"
           ],
-          "visibleSnippet": "@Retardlnvestor I now own 2 whole shares of $IREN",
-          "reason": "The public search index now resolves the exact X status URL and complete visible reply text, but the exact X page returns HTTP 403 and the parent reply-thread context remains unavailable. This is a reply, not a qualifying original post, and remains pending verification."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2099458250240618861",
-          "publishedAt": "2026-09-14T11:20:27.562Z",
+          "publishedAt": "2026-09-14T11:24:22.447Z",
+          "reason": "The public search index now resolves the exact X status URL and complete visible reply text, but the exact X page returns HTTP 403 and the parent reply-thread context remains unavailable. This is a reply, not a qualifying original post, and remains pending verification.",
           "tickers": [
             "IREN"
           ],
+          "url": "https://x.com/aleabitoreddit/status/2099459235419656373",
+          "visibleSnippet": "@Retardlnvestor I now own 2 whole shares of $IREN"
+        },
+        {
           "namedEntities": [
             "Anthropic"
           ],
-          "visibleSnippet": "$IREN CEO on Anthropic call for frontier slowdown. Every 6-8 months we get the same movie. Now “pace the frontier.” Then you look at HBM, advanced packaging and 10-year power deals and nothing slowed down.",
-          "reason": "The public search index exposes a visible excerpt, but the exact X page returned HTTP 403 and the quoted/reply context could not be verified. Full original text and attribution boundaries remain unverified, so this is retained as a DATA GAP and is not counted as complete research evidence."
+          "publishedAt": "2026-09-14T11:20:27.562Z",
+          "reason": "The public search index exposes a visible excerpt, but the exact X page returned HTTP 403 and the quoted/reply context could not be verified. Full original text and attribution boundaries remain unverified, so this is retained as a DATA GAP and is not counted as complete research evidence.",
+          "tickers": [
+            "IREN"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2099458250240618861",
+          "visibleSnippet": "$IREN CEO on Anthropic call for frontier slowdown. Every 6-8 months we get the same movie. Now “pace the frontier.” Then you look at HBM, advanced packaging and 10-year power deals and nothing slowed down."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2099411795131924487",
-          "publishedAt": "2026-09-14T08:15:51.801Z",
-          "tickers": [],
           "namedEntities": [
             "NOR flash",
             "SLC NAND"
           ],
-          "visibleSnippet": "High-density NOR: 90-110% in H2 SLC NAND: ~70–... NOR flash “Severe Supply Shortage” with high density continued increases of 90-110% for H2. I wonder who sells both high density NOR and SLC NAND?",
-          "reason": "The public search index truncates the headline/first line and the exact X page returned HTTP 403. Full original text, cited source, and intended company/ticker cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
+          "publishedAt": "2026-09-14T08:15:51.801Z",
+          "reason": "The public search index truncates the headline/first line and the exact X page returned HTTP 403. Full original text, cited source, and intended company/ticker cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2099411795131924487",
+          "visibleSnippet": "High-density NOR: 90-110% in H2 SLC NAND: ~70–... NOR flash “Severe Supply Shortage” with high density continued increases of 90-110% for H2. I wonder who sells both high density NOR and SLC NAND?"
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2099049900571054238",
-          "publishedAt": "2026-09-13T05:17:00Z",
-          "tickers": [],
           "namedEntities": [
             "Dario Amodei",
             "Sam Altman",
             "Elon Musk",
             "China"
           ],
-          "visibleSnippet": "@x4tsr Not gonna happen. ... Or have US to slow down and allow China to secretly leapfrog in AI capability.",
-          "reason": "The public search index exposes only truncated excerpts and the exact X page returned HTTP 403. Full original text and context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
+          "publishedAt": "2026-09-13T05:17:00Z",
+          "reason": "The public search index exposes only truncated excerpts and the exact X page returned HTTP 403. Full original text and context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2099049900571054238",
+          "visibleSnippet": "@x4tsr Not gonna happen. ... Or have US to slow down and allow China to secretly leapfrog in AI capability."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2099126746390139042",
+          "namedEntities": [],
           "publishedAt": "2026-09-13T10:23:00Z",
+          "reason": "The public search index truncates the post and includes quoted-post context; the exact X page returned HTTP 403. Full original text and attribution boundaries cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence.",
           "tickers": [
             "TSLA",
             "GOOGL",
             "SPCX"
           ],
-          "namedEntities": [],
-          "visibleSnippet": "Tech people in real life: I have shares in “$TSLA, $GOOGL, $SPCX. ...",
-          "reason": "The public search index truncates the post and includes quoted-post context; the exact X page returned HTTP 403. Full original text and attribution boundaries cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2099126746390139042",
+          "visibleSnippet": "Tech people in real life: I have shares in “$TSLA, $GOOGL, $SPCX. ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2099229447304122410",
-          "publishedAt": "2026-09-13T17:11:00Z",
-          "tickers": [],
           "namedEntities": [
             "Anthropic",
             "OpenAI"
           ],
-          "visibleSnippet": "I assign essentially 0% probability that Anthropic or OpenAI will slow down frontier development ... What do you think about slowing down AI ...",
-          "reason": "The public search index truncates the original post and the exact X page returned HTTP 403. Full original text and thread context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
+          "publishedAt": "2026-09-13T17:11:00Z",
+          "reason": "The public search index truncates the original post and the exact X page returned HTTP 403. Full original text and thread context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2099229447304122410",
+          "visibleSnippet": "I assign essentially 0% probability that Anthropic or OpenAI will slow down frontier development ... What do you think about slowing down AI ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2099048356345696391",
-          "publishedAt": "2026-09-13T05:11:00Z",
-          "tickers": [
-            "NVDA"
-          ],
           "namedEntities": [
             "Oracle",
             "Neocloud"
           ],
-          "visibleSnippet": "Oracle said all GPU capacity for renewal were resold +20 ... So another L for the Burry's rapid GPU depreciation thesis. And W for $NVDA and the Neocloud party.",
-          "reason": "The public search index truncates the first sentence and the exact X page returned HTTP 403. Full original text and context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2098697148103631117",
-          "publishedAt": "2026-09-12T05:56:00Z",
-          "tickers": [],
-          "namedEntities": [
-            "Serenity Research"
-          ],
-          "visibleSnippet": "I think there's a gap to fill… Since I believe retail deserves the same research and early thematic ideas that institutions access first. ... I'm excited to see what we can cook up together soon chat.",
-          "reason": "The public search index exposes only separated, truncated excerpts and the exact X page returned HTTP 403. Full original text and any attached context cannot be verified, so this is not counted as complete research evidence."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2098470900823916940",
-          "publishedAt": "2026-09-11T14:57:00Z",
-          "tickers": [
-            "BWET"
-          ],
-          "visibleSnippet": "Replying to @aleabitoreddit. You missed the $BWET tanker shipping bottleneck due to ... +11.83%.",
-          "reason": "Public index text is truncated and the original X page returned HTTP 403. Full reply-thread context cannot be verified; not counted as a complete original post or complete research evidence."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2098460337364447442",
-          "publishedAt": "2026-09-11T14:15:00Z",
-          "tickers": [],
-          "visibleSnippet": "Apparently my \"bottleneck thesis\" has made it into a ... Didn't expect to end up in the same paragraph as Trump on a Friday.",
-          "reason": "Public index text is truncated and the original X page returned HTTP 403. Full original/article context cannot be verified; not counted as complete research evidence."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2098383837646725143",
-          "publishedAt": "2026-09-11T09:11:00Z",
-          "tickers": [],
-          "visibleSnippet": "companies pay influencers to comment/quote their posts (now ... Instead of having independent authentic voices.",
-          "reason": "Public index text is truncated and the original X page returned HTTP 403. Full original/thread context cannot be verified; not counted as complete research evidence."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2097660318369697875",
-          "publishedAt": "2026-09-09T12:16:07.200Z",
+          "publishedAt": "2026-09-13T05:11:00Z",
+          "reason": "The public search index truncates the first sentence and the exact X page returned HTTP 403. Full original text and context cannot be verified, so this is retained as a DATA GAP and is not counted as complete research evidence.",
           "tickers": [
             "NVDA"
           ],
+          "url": "https://x.com/aleabitoreddit/status/2099048356345696391",
+          "visibleSnippet": "Oracle said all GPU capacity for renewal were resold +20 ... So another L for the Burry's rapid GPU depreciation thesis. And W for $NVDA and the Neocloud party."
+        },
+        {
+          "namedEntities": [
+            "Serenity Research"
+          ],
+          "publishedAt": "2026-09-12T05:56:00Z",
+          "reason": "The public search index exposes only separated, truncated excerpts and the exact X page returned HTTP 403. Full original text and any attached context cannot be verified, so this is not counted as complete research evidence.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2098697148103631117",
+          "visibleSnippet": "I think there's a gap to fill… Since I believe retail deserves the same research and early thematic ideas that institutions access first. ... I'm excited to see what we can cook up together soon chat."
+        },
+        {
+          "publishedAt": "2026-09-11T14:57:00Z",
+          "reason": "Public index text is truncated and the original X page returned HTTP 403. Full reply-thread context cannot be verified; not counted as a complete original post or complete research evidence.",
+          "tickers": [
+            "BWET"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2098470900823916940",
+          "visibleSnippet": "Replying to @aleabitoreddit. You missed the $BWET tanker shipping bottleneck due to ... +11.83%."
+        },
+        {
+          "publishedAt": "2026-09-11T14:15:00Z",
+          "reason": "Public index text is truncated and the original X page returned HTTP 403. Full original/article context cannot be verified; not counted as complete research evidence.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2098460337364447442",
+          "visibleSnippet": "Apparently my \"bottleneck thesis\" has made it into a ... Didn't expect to end up in the same paragraph as Trump on a Friday."
+        },
+        {
+          "publishedAt": "2026-09-11T09:11:00Z",
+          "reason": "Public index text is truncated and the original X page returned HTTP 403. Full original/thread context cannot be verified; not counted as complete research evidence.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2098383837646725143",
+          "visibleSnippet": "companies pay influencers to comment/quote their posts (now ... Instead of having independent authentic voices."
+        },
+        {
           "namedEntities": [
             "Citi TMT Conference",
             "NPO",
             "CPO"
           ],
-          "visibleSnippet": "Citi TMT Conference commentary: NPO takes the lead; lasers and optical fibers are being positioned as the next HBM, with the visible indexed context also referencing $NVDA Rubin Ultra optical-content estimates.",
-          "reason": "Public index text is incomplete and the original X page returned HTTP 403. Full original/thread context cannot be verified, so this is not counted as complete research evidence."
+          "publishedAt": "2026-09-09T12:16:07.200Z",
+          "reason": "Public index text is incomplete and the original X page returned HTTP 403. Full original/thread context cannot be verified, so this is not counted as complete research evidence.",
+          "tickers": [
+            "NVDA"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2097660318369697875",
+          "visibleSnippet": "Citi TMT Conference commentary: NPO takes the lead; lasers and optical fibers are being positioned as the next HBM, with the visible indexed context also referencing $NVDA Rubin Ultra optical-content estimates."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097588434189856875",
-          "publishedAt": "2026-09-09T07:30:28.676Z",
-          "tickers": [],
           "namedEntities": [
             "OpenAI",
             "Astra"
           ],
-          "visibleSnippet": "Demand for Astra is unprecedented to the point OpenAI might pause new Pro subscriptions. If you want a translation: AI buildout ...",
-          "reason": "Public index text is truncated and no complete original/thread context or stock ticker is visible. Not counted as complete verified research evidence."
+          "publishedAt": "2026-09-09T07:30:28.676Z",
+          "reason": "Public index text is truncated and no complete original/thread context or stock ticker is visible. Not counted as complete verified research evidence.",
+          "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2097588434189856875",
+          "visibleSnippet": "Demand for Astra is unprecedented to the point OpenAI might pause new Pro subscriptions. If you want a translation: AI buildout ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097601244898775465",
           "publishedAt": "2026-09-09T08:21:22.987Z",
+          "reason": "Public index text is truncated and the full original/thread context is unavailable. Not counted as complete verified research evidence.",
           "tickers": [
             "NIKE"
           ],
-          "visibleSnippet": "$NIKE 只需要做一件事，就能挽救自己的品牌形象 ...",
-          "reason": "Public index text is truncated and the full original/thread context is unavailable. Not counted as complete verified research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097601244898775465",
+          "visibleSnippet": "$NIKE 只需要做一件事，就能挽救自己的品牌形象 ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097563877273989456",
-          "publishedAt": "2026-09-09T05:52:53.851Z",
-          "tickers": [
-            "SIVE"
-          ],
           "namedEntities": [
             "CIOE 2026 Shenzhen",
             "awodias"
           ],
-          "visibleSnippet": "Special thank you to awodias for the crowdsourced channel check all the way from CIOE 2026 Shenzhen! - Confirmed that $SIVE is actively engaged with Chinese ...",
-          "reason": "Public index text is truncated and the original X page returned HTTP 403. Not counted as complete verified research evidence."
+          "publishedAt": "2026-09-09T05:52:53.851Z",
+          "reason": "Public index text is truncated and the original X page returned HTTP 403. Not counted as complete verified research evidence.",
+          "tickers": [
+            "SIVE"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2097563877273989456",
+          "visibleSnippet": "Special thank you to awodias for the crowdsourced channel check all the way from CIOE 2026 Shenzhen! - Confirmed that $SIVE is actively engaged with Chinese ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097313029809709343",
           "publishedAt": "2026-09-08T13:16:07.155Z",
+          "reason": "Visible reply text is retained, but full reply-thread context is unavailable; not counted as complete research evidence.",
           "tickers": [
             "HOOD"
           ],
-          "visibleSnippet": "I still hold the same opinion that $HOOD should prioritize international equities and helping retail compound net worth through portfolio diversification.",
-          "reason": "Visible reply text is retained, but full reply-thread context is unavailable; not counted as complete research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097313029809709343",
+          "visibleSnippet": "I still hold the same opinion that $HOOD should prioritize international equities and helping retail compound net worth through portfolio diversification."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097327653116363127",
           "publishedAt": "2026-09-08T14:14:13.623Z",
+          "reason": "Public index text is truncated; direct original/thread context unavailable. Not counted as complete verified evidence.",
           "tickers": [
             "NBIS",
             "PLTR"
           ],
-          "visibleSnippet": "$NBIS is back, and coming in hot with a new partnership with $PLTR. Palantir also named Nebius its preferred sovereign AI infrastructure partner ...",
-          "reason": "Public index text is truncated; direct original/thread context unavailable. Not counted as complete verified evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097327653116363127",
+          "visibleSnippet": "$NBIS is back, and coming in hot with a new partnership with $PLTR. Palantir also named Nebius its preferred sovereign AI infrastructure partner ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097328999555059718",
           "publishedAt": "2026-09-08T14:19:34.639Z",
+          "reason": "Reply-sized public excerpt lacks the referenced research context; retained for verification and not counted as complete research evidence.",
           "tickers": [
             "IREN"
           ],
-          "visibleSnippet": "My 1 $IREN share is also cooking today.",
-          "reason": "Reply-sized public excerpt lacks the referenced research context; retained for verification and not counted as complete research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097328999555059718",
+          "visibleSnippet": "My 1 $IREN share is also cooking today."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097399066959491480",
           "publishedAt": "2026-09-08T18:58:00.010Z",
+          "reason": "Photo post exposes no complete research text in the public index; not counted as verified evidence.",
           "tickers": [],
-          "visibleSnippet": "How",
-          "reason": "Photo post exposes no complete research text in the public index; not counted as verified evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097399066959491480",
+          "visibleSnippet": "How"
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097365614402969638",
           "publishedAt": "2026-09-08T13:45:00Z",
+          "reason": "Public index exposes only a truncated excerpt; full original thread/article text is unavailable. Not counted as complete verified research evidence.",
           "tickers": [
             "NVDA"
           ],
-          "visibleSnippet": "$148.5 billion (+115% revision) for 2028 for $NVDA Rubin Ultra… More optical content per chip implies more CW lasers and SOI substrates, benefiting optical companies.",
-          "reason": "Public index exposes only a truncated excerpt; full original thread/article text is unavailable. Not counted as complete verified research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097365614402969638",
+          "visibleSnippet": "$148.5 billion (+115% revision) for 2028 for $NVDA Rubin Ultra… More optical content per chip implies more CW lasers and SOI substrates, benefiting optical companies."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097359810950037904",
           "publishedAt": "2026-09-08T13:22:00Z",
+          "reason": "Subscriber-only/public index text is truncated; not counted as complete verified research evidence.",
           "tickers": [
             "SIVE",
             "AAOI"
           ],
-          "visibleSnippet": "Think optical rally today from $SIVE to $AAOI was …",
-          "reason": "Subscriber-only/public index text is truncated; not counted as complete verified research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097359810950037904",
+          "visibleSnippet": "Think optical rally today from $SIVE to $AAOI was …"
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097321349555306512",
           "publishedAt": "2026-09-08T13:49:10.737Z",
+          "reason": "Public index text is truncated and direct X returned HTTP 403. Not counted as verified research evidence.",
           "tickers": [
             "AMZN",
             "QCOM"
           ],
-          "visibleSnippet": "$AMZN signs a new deal with $QCOM, giving Amazon the right to buy a ~$4B stake of Qualcomm through warrants. At this rate...",
-          "reason": "Public index text is truncated and direct X returned HTTP 403. Not counted as verified research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097321349555306512",
+          "visibleSnippet": "$AMZN signs a new deal with $QCOM, giving Amazon the right to buy a ~$4B stake of Qualcomm through warrants. At this rate..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097309699645546763",
           "publishedAt": "2026-09-08T13:02:53.182Z",
+          "reason": "Public index text is truncated and direct X returned HTTP 403. Not counted as verified research evidence.",
           "tickers": [
             "HOOD"
           ],
-          "visibleSnippet": "Wow, $HOOD has taken minority ownership in Crypto.com. It does feel like the future of the finance industry is slowly consolidating around ... Especially after the successful expansion of Robinhood Chain, Prediction Markets, and Credit Cards/Banking.",
-          "reason": "Public index text is truncated and direct X returned HTTP 403. Not counted as verified research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097309699645546763",
+          "visibleSnippet": "Wow, $HOOD has taken minority ownership in Crypto.com. It does feel like the future of the finance industry is slowly consolidating around ... Especially after the successful expansion of Robinhood Chain, Prediction Markets, and Credit Cards/Banking."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2097238245470064801",
           "publishedAt": "2026-09-08T08:18:57.179Z",
+          "reason": "Public index text is truncated and direct X is restricted. No stock ticker is visible; not counted as verified research evidence.",
           "tickers": [],
-          "visibleSnippet": "If you want to save 3 minutes reading through the drama, here's a ... OpenAI learns about their work; OpenAI reportedly uses their ...",
-          "reason": "Public index text is truncated and direct X is restricted. No stock ticker is visible; not counted as verified research evidence."
+          "url": "https://x.com/aleabitoreddit/status/2097238245470064801",
+          "visibleSnippet": "If you want to save 3 minutes reading through the drama, here's a ... OpenAI learns about their work; OpenAI reportedly uses their ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2095490725412733092",
+          "reason": "Search result is truncated; direct X returned HTTP 403. Not counted as verified evidence.",
           "tickers": [
             "NVDA"
           ],
-          "visibleSnippet": "$NVDA acquires hugging face for $12,930,300,000. Jensen stated the reason being: - 18M+ devs use Hugging Face - 3M+ models, 500k+ datasets, ...",
-          "reason": "Search result is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+          "url": "https://x.com/aleabitoreddit/status/2095490725412733092",
+          "visibleSnippet": "$NVDA acquires hugging face for $12,930,300,000. Jensen stated the reason being: - 18M+ devs use Hugging Face - 3M+ models, 500k+ datasets, ..."
         },
         {
+          "reason": "Search result is truncated; direct X returned HTTP 403. Not counted as verified evidence.",
+          "tickers": [
+            "SIVE"
+          ],
           "url": "https://x.com/aleabitoreddit/status/2095546138510459218",
-          "tickers": [
-            "SIVE"
-          ],
-          "visibleSnippet": "This is the correct response when looking at $SIVE >100m CW DFB extraordinary capacity disclosure. To give some context, Trendforce July ...",
-          "reason": "Search result is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+          "visibleSnippet": "This is the correct response when looking at $SIVE >100m CW DFB extraordinary capacity disclosure. To give some context, Trendforce July ..."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2095580088620449880",
+          "namedEntities": [
+            "ESMT"
+          ],
           "publishedAt": "2026-09-03T18:30:01.779Z",
+          "reason": "Public index text is truncated and the exchange ticker identity is not fully visible; direct X access is restricted. Not counted as verified evidence.",
           "tickers": [],
+          "url": "https://x.com/aleabitoreddit/status/2095580088620449880",
+          "visibleSnippet": "Just an update to my DDR2/DDR3 memory idea with ESMT. They reported August revenue (Taiwan sometimes does monthly reporting): June revenue ..."
+        },
+        {
           "namedEntities": [
             "ESMT"
           ],
-          "visibleSnippet": "Just an update to my DDR2/DDR3 memory idea with ESMT. They reported August revenue (Taiwan sometimes does monthly reporting): June revenue ...",
-          "reason": "Public index text is truncated and the exchange ticker identity is not fully visible; direct X access is restricted. Not counted as verified evidence."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2096749796023538032",
           "publishedAt": "2026-09-06T23:58:01.756Z",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence.",
           "tickers": [
             "SIVE"
           ],
+          "url": "https://x.com/aleabitoreddit/status/2096749796023538032",
+          "visibleSnippet": "$SIVE also made it there on cnyes too (leading Taiwan financial media)! ... I didn't know my ESMT thesis was making some rounds in Taiwanese media ..."
+        },
+        {
           "namedEntities": [
             "ESMT"
           ],
-          "visibleSnippet": "$SIVE also made it there on cnyes too (leading Taiwan financial media)! ... I didn't know my ESMT thesis was making some rounds in Taiwanese media ...",
-          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2096814311306129776",
           "publishedAt": "2026-09-07T04:14:23.398Z",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence.",
           "tickers": [
             "SIVE",
             "CCXI"
           ],
-          "namedEntities": [
-            "ESMT"
-          ],
-          "visibleSnippet": "Got curious and decided to track which thesis of mine were still up 100%+ ... $SIVE - Photonics ... For H2, my new thesis was on $CCXI for humanoids/downstream physical AI shift and ESMT for DDR2/DDR3/legacy memory.",
-          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+          "url": "https://x.com/aleabitoreddit/status/2096814311306129776",
+          "visibleSnippet": "Got curious and decided to track which thesis of mine were still up 100%+ ... $SIVE - Photonics ... For H2, my new thesis was on $CCXI for humanoids/downstream physical AI shift and ESMT for DDR2/DDR3/legacy memory."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2096858276290015563",
           "publishedAt": "2026-09-07T07:09:05.467Z",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence.",
           "tickers": [
             "SKHY",
             "SNDK"
           ],
-          "visibleSnippet": "Samsung / $SKHY \"stockpiles have fallen to less than 10 days of supply, and a severe shortage could emerge next year, ... $SNDK might be happy for 2027 given demand causing shortages + infra spend share increase.",
-          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+          "url": "https://x.com/aleabitoreddit/status/2096858276290015563",
+          "visibleSnippet": "Samsung / $SKHY \"stockpiles have fallen to less than 10 days of supply, and a severe shortage could emerge next year, ... $SNDK might be happy for 2027 given demand causing shortages + infra spend share increase."
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2096890295128625153",
           "publishedAt": "2026-09-07T09:16:19.353Z",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence.",
           "tickers": [
             "SIVE"
           ],
-          "visibleSnippet": "... to $SIVE if their recent expansion is able to deliver on $625M-$1.25B of annualized revenue?",
-          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+          "url": "https://x.com/aleabitoreddit/status/2096890295128625153",
+          "visibleSnippet": "... to $SIVE if their recent expansion is able to deliver on $625M-$1.25B of annualized revenue?"
         },
         {
-          "url": "https://x.com/aleabitoreddit/status/2096904209371427277",
           "publishedAt": "2026-09-07T10:11:36.767Z",
+          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence.",
           "tickers": [
             "IQE",
             "AXTI"
           ],
-          "visibleSnippet": "New report from Bloomberg on $IQE: “indium phosphide ... buildout. Who could have guessed $AXTI would have been a major point of failure?",
-          "reason": "Public index text is truncated; direct X returned HTTP 403. Not counted as verified evidence."
+          "url": "https://x.com/aleabitoreddit/status/2096904209371427277",
+          "visibleSnippet": "New report from Bloomberg on $IQE: “indium phosphide ... buildout. Who could have guessed $AXTI would have been a major point of failure?"
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2099830591663513642",
+          "publishedAt": "2026-09-15T09:00:00Z",
+          "tickers": [
+            "CCXI"
+          ],
+          "namedEntities": [
+            "Digit 5"
+          ],
+          "visibleSnippet": "$CCXI releases their Digit 5 next-generation ...",
+          "reason": "The public search index resolves the exact X status URL but truncates the original text. The exact X page returned HTTP 403, so full wording and attachment/context cannot be verified. Retained as a DATA GAP and not counted as a qualifying original post."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2099784954444210243",
+          "publishedAt": "2026-09-15T05:58:00Z",
+          "tickers": [],
+          "namedEntities": [
+            "ByteDance"
+          ],
+          "visibleSnippet": "哇,中国的AI 视频生成能力可能已经是世界第一了吧？字节跳动的 ...",
+          "reason": "The public search index resolves the exact X status URL but truncates the original text. The exact X page returned HTTP 403, so full wording and attachment/context cannot be verified. Retained as a DATA GAP and not counted as a qualifying original post."
         }
       ],
-      "lastError": "public Serenity page yielded only 0 usable posts",
-      "unresolvedIndexedItems": []
-    },
-    "IDENTITY:SBE": {
-      "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
-      "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
-      "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-09-15T10:09:20.791149+00:00",
-      "lastSuccessAt": "2026-09-15T10:09:20.791149+00:00",
+      "recentPosts": [
+        {
+          "publishedAt": "2026-09-08T12:37:00Z",
+          "text": "Okay I know this is US time and this is a Taiwan stock... But I really am starting to think $ESMT (3006) can cook like $SNDK. And I'm excited.",
+          "tickers": [
+            "3006.TW",
+            "SNDK"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2097348486635368686",
+          "visibility": "Complete visible text from the public search index; direct X page may remain restricted."
+        },
+        {
+          "publishedAt": "2026-09-08T07:56:28.523Z",
+          "text": "So $INTC is raising PC CPU prices by 10% apparently in October per Digitimes, which I think markets might appreciate.",
+          "tickers": [
+            "INTC"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2097232588796780856",
+          "visibility": "Complete visible text from the public search index; direct X page returned HTTP 403."
+        },
+        {
+          "publishedAt": "2026-09-07T10:20:15.856Z",
+          "text": "These \"no growth meme stock\" posts about $AXTI did not age well.",
+          "tickers": [
+            "AXTI"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2096906386588504333",
+          "visibility": "Complete visible text from the public search index; direct X page returned HTTP 403."
+        },
+        {
+          "publishedAt": "2026-09-03T10:34:49.575Z",
+          "text": "$IQE is actually a quantum dot foundry leader believe it or not.",
+          "tickers": [
+            "IQE"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2095460499769155944",
+          "visibility": "Complete visible text from the public search index; direct X access may be restricted."
+        },
+        {
+          "publishedAt": "2026-09-03T10:11:05.734Z",
+          "text": "Changed my negative view about their hybrid manufacturing model capex given new capacity targets.",
+          "tickers": [
+            "SIVE"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2095454527747178853",
+          "visibility": "Complete visible text from the public search index; direct X access may be restricted."
+        },
+        {
+          "publishedAt": "2026-09-03T10:06:04.341Z",
+          "text": "$SIVE announced today that it is expanding InP manufacturing in Glasgow. The new capacity target is approximately 100 million CW DFB lasers in annual production.",
+          "tickers": [
+            "SIVE"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2095453263613341938",
+          "visibility": "Complete text visible in public search result; direct X page returned HTTP 403."
+        },
+        {
+          "publishedAt": "2026-09-02T22:47:30.105Z",
+          "text": "If you're not capacity constrained and growing 70–100% a year like $NVDA or $AVGO, apparently you'll get sold off on earnings.",
+          "tickers": [
+            "NVDA",
+            "AVGO"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2095282495730446504",
+          "visibility": "Complete text visible in public search result."
+        },
+        {
+          "publishedAt": "2026-09-02T22:37:31.906Z",
+          "text": "AVGO CEO: demand for EML and CW lasers is far surpassing industry supply even while capacity is being expanded; Serenity treats this as validation for laser suppliers.",
+          "tickers": [
+            "AVGO"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2095279986701951461"
+        },
+        {
+          "publishedAt": "2026-09-02T21:25:19.856Z",
+          "text": "Serenity cites Broadcom earnings-call clarification and materially higher FY27/FY28 revenue expectations, while noting demand exceeds the outlook and supply remains the constraint.",
+          "tickers": [
+            "AVGO"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2095261816767283663"
+        },
+        {
+          "publishedAt": "2026-09-02T14:16:19.960Z",
+          "text": "Serenity cites Nvidia demand implying potential revenue growth above 100% year over year if unconstrained, while the stated projection is lower because available supply is the constraint.",
+          "tickers": [
+            "NVDA"
+          ],
+          "url": "https://x.com/aleabitoreddit/status/2095153855818547571"
+        }
+      ],
       "required": true,
-      "issuer": "SB Energy, Inc.",
-      "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
-      "proposedTicker": "SBE",
-      "marketPriceStatus": "NOT_APPLICABLE_PRE_IPO",
-      "note": "Identity is verified from the issuer. Do not attach legacy Switchback Energy prices; start quote monitoring only after an official first trade."
+      "sourceType": "REQUIRED_SPECIALIST_RESEARCH",
+      "sourceUrl": "https://x.com/aleabitoreddit",
+      "status": "LAST_KNOWN_GOOD",
+      "unresolvedIndexedItems": []
     }
-  }
+  },
+  "version": "WAIS Discovery Ingestion v2.0"
 }
