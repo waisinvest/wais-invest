@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-16T22:57:06.451067+00:00",
+  "lastUpdated": "2026-09-17T01:25:36.537676+00:00",
   "marketDates": {
     "US": "2026-09-16",
     "HK": "2026-09-16"
@@ -96,7 +96,7 @@
       "symbol": "^HSI",
       "value": 24713.779297,
       "previousClose": 24667.240234,
-      "regularClose": 24713.78,
+      "regularClose": 24713.779297,
       "regularCloseDate": "2026-09-16",
       "change": 46.539062,
       "changePercent": 0.1887,
