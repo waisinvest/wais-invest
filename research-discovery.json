@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-19T09:04:50Z",
+  "lastChecked": "2026-09-19T10:03:26Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,19 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-09-19T09:04:50Z",
+      "checkedAt": "2026-09-19T10:03:26Z",
       "ingestionPath": "Exact public X status pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-09-19T09:04:50Z",
+      "lastSuccessAt": "2026-09-19T10:03:26Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2100919379622044066",
+          "publishedAt": "2026-09-18T12:06:27.953Z",
+          "tickers": [],
+          "visibleSnippet": "Quantum supply chain list and TLDR on post-quantum…",
+          "reason": "Exact public X status/profile surface exposes only the title and a “Subscribe to unlock” gate. Full article text, evidence, conclusion and tickers cannot be verified; not counted as complete research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2099967132834676760",
           "publishedAt": "2026-09-15T21:02:34.627Z",
@@ -440,6 +447,53 @@
         }
       ],
       "recentPosts": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2101145461797335254",
+          "publishedAt": "2026-09-19T03:04:50.144Z",
+          "tickers": [],
+          "text": "Apparently, we just took over Greenland? Exciting news on a Friday…",
+          "visibility": "Complete original text verified on the exact public X status page; quoted post is context. Non-investment content retained for source coverage only."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2100938001077674262",
+          "publishedAt": "2026-09-18T13:20:27.654Z",
+          "tickers": [
+            "MU",
+            "SKHY",
+            "NVDA",
+            "SMTC",
+            "AAOI",
+            "SIVE"
+          ],
+          "text": "So on optical vs. photonics... Memory like $MU / $SKHY is in it's current supercycle.\n\n-> RBC channel checks for example projects 80-100% HBM ASP hikes for 2027.\n-> Per $NVDA ER, Hyperscaler capex goes up in 2027. Then you have 68% of hyperscaler capex per Trendforce going to DRAM/NAND.\n-> 50-70% for next 3-5 years already allocated toward LTAs.\n\nSo supercycle is here... demand visibility is high and the price hikes are still ongoing.\n\nAs photonics like $SMTC to $AAOI, I expect to cook heavily in 2027 since we're already seeing widespread optical shortages in 2026. Plus, you're going from $67.7B in 2026 (per GS) to $131.4B TAM in 2027 for optical modules...\n\nWhich impacts the DSPs/TIAs/lasers/fiber suppliers before CPO scale up really takes off in 2028.\n\nI don't think we'll ever see the same scale of memory price hikes, but I do think there's a lot room for more for MC growth in optical supply chains (given smaller starting point eg. $1B CW laser supplier vs $1T memory maker).\n\nBut still there's room for price hikes on laser content (eg. $15–$20 for 4 70 mW lasers per GS note) since starting point is really cheap... and one component, like cheap InP substrates can break hundreds of billions worth of supply chains downstream.\n\nWe're already seeing laser price hikes tho from CIOE channel checks confirmed by both Innolight / $SIVE from the Serenity's follower channel checks. So entering uncharted territory.\n\nTLDR: Messy thought but, memory has near term earnings power, midst of current supercycle.\n\nThe next \"memory\" ASP hikes I'm seeing is clearly legacy memory (DDR2/DDR3/SLC NAND) from cascading bottlenecks. It just looks to be an extension of the memory theme. Maybe MLCC looks similar in terms of earlier cycles.\n\nIf we were to track supercycle impact on the supply chain in the space... I'm confident next thematic one looks to be photonics entering 2027.",
+          "visibility": "Complete original text verified on the exact public X status page; quoted reply and image are attachment context. All forecasts and channel-check claims require independent validation."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2100735673561174047",
+          "publishedAt": "2026-09-17T23:56:29.015Z",
+          "tickers": [
+            "INTC",
+            "SNDK",
+            "MU",
+            "GFS",
+            "MRVL",
+            "SIVE",
+            "CIEN",
+            "NVDA",
+            "NBIS",
+            "CRWV",
+            "IREN",
+            "AMZN",
+            "GNRC",
+            "AAOI",
+            "QCOM",
+            "TSEM",
+            "ARM",
+            "AMD"
+          ],
+          "text": "TLDRs of things I found interesting this week:\n\n- $INTC CEO says some memory prices have risen 5-7× and warns the shortage will worsen in 2027. $SNDK / $MU / Samsung bros will be happy to hear this... (from the AI Infra Summit 2026 in Santa Clara)\n\n- $GFS + $MRVL sign extended SiGe capacity agreement for pluggable/NPO/CPO. \"Expected to add significant capacity to support Marvell’s growing requirements.\" I like to keep an eye out on Globalfoundries related updates given $SIVE is their reference laser for SCALE.\n\n- $CIEN expects roughly 30% annual revenue growth, 50% adj. gross margin, 20% FCF margin, through FY2029. The company says component availability, not demand, is limiting growth... Seems common across $NVDA to upstream suppliers that supply is the limiting factor for revenue growth.\n\n- Winbond acquires Infineon's NOR Flash and F-RAM business for $1.12 billion. Very surprised Infineon sold considering NOR Flash ASP + importance just keep going up and up and up, but good for Winbond consolidation.\n\n- Samsung reportedly expands outsourcing of DDR5-module and SSD assembly. I think some local Taiwan reports flag Transcend and Apacer as possible beneficiaries. The report specifically identifies Dreamtech, Hanyang Digitech and SFA Semicon. I've noticed other Korean firms entering new Samsung Electronics contracts for likely legacy memory modules maybe like ~1-2m ago.. So think some media commentary probably missed this too. Maybe too small for them to notice?\n\n- $NBIS raises AI cloud prices for the 2nd time in three months (~17-21%), bullish read through for other Neoclouds like $CRWV to $IREN earnings.\n\n- $AMZN signs $2.4B agreement with $GNRC for generator deliveries throughout 2027-2028... and received warrants tied to as much as $8B of aggregate purchases\n\nGood to keep an eye out on who Amazon signs these warrant agreements with (eg. Alchip, $AAOI, $QCOM, $MRVL, etc) and what type of infra procurement they want.\n\n- $TSEM and NewPhotonics begin volume shipments of laser integrated optical engines. Not familiar with newphotonics, so not going to leave much commentary here. But will do some research today.\n\n- Goldman Sachs reportedly sees the ABF deficit expanding from 14% to 51%. Forecast shortages are 14% in 2H26, 34% in 2027 and 51% in 2028... More substrate bottleneck stuff, not surprising regarding demand imbalances.\n\n- Crusoe raises $3.9B at a $30.9B valuation. Okay this valuation is better than Instinct raising at a bubble $10B valuation off 100k users...\n\n- Japan and the U.S. reportedly discuss a $12.9–19.3B $GFS run fab. That's like half of Globalfoundries marketcap lol. Not much details here.\n\n- $ARM CEO Rene Haas said he is confident that they can secure enough supply to meet $2B in customer demand (for their AGI CPU). There's probably a lot more demand, probably supply constrained growth as usual so good $ARM signaled confidence in securing allocations.\n\n- Supply chain sources said Kioxia has about 50% of its LTA capacity tied up, while SK Hynix/Samsung reserve about 70% of capacity for LTAs for 3-5 years.\n\nNot sure how people are bearish on memory....\n\nI don't like posting updates one-by-one like a news reporter, so hope this saves some time of stuff I like looking at.\n\nOn a side note was surprised markets from $AMD to $INTC rallied today after rate hikes. Think high-beta overshot the selloff the most.",
+          "visibility": "Complete original text verified on the exact public X status page. This is a multi-claim research roundup; every company, pricing, capacity, forecast and transaction claim requires independent primary-source validation."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2100530507549425704",
           "publishedAt": "2026-09-17T10:21:13.626Z",
