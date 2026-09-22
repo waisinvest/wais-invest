@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-22T01:54:32.890697+00:00",
+  "lastUpdated": "2026-09-22T07:42:55.738435+00:00",
   "marketStatus": "updated",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
   "incomeMetricsVersion": "WAIS INCOME v1.1 normalized percentages",
@@ -532,7 +532,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 11.095,
+      "regularClose": 11.1,
       "regularCloseDate": "2026-09-21",
       "sma20": 11.5035,
       "sma50": 11.7598,
@@ -1821,7 +1821,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 25.3262,
+      "regularClose": 25.33,
       "regularCloseDate": "2026-09-21",
       "sma20": 25.099,
       "sma50": 25.24,
@@ -1847,7 +1847,7 @@
     },
     "MUIB": {
       "price": 31.745199,
-      "regularClose": 31.745199,
+      "regularClose": 31.75,
       "regularCloseDate": "2026-09-21",
       "asOf": "2026-09-21T19:05:00+00:00",
       "currency": "USD",
@@ -1948,10 +1948,10 @@
       "changeBaseline": "provider previous completed close"
     },
     "NYYY": {
-      "price": 44.315,
-      "regularClose": 45.249,
-      "regularCloseDate": "2026-09-18",
-      "asOf": "2026-09-18T21:05:00+00:00",
+      "price": 44.314999,
+      "regularClose": 45.25,
+      "regularCloseDate": "2026-09-21",
+      "asOf": "2026-09-21T13:45:00+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1972,9 +1972,9 @@
       "latestAnnualizedDistributionRateProxy": 19.8129,
       "lastDistribution": 0.167,
       "lastDistributionDate": "2026-08-26",
-      "previousClose": 45.25,
-      "change": -0.935,
-      "changePercent": -2.0663,
+      "previousClose": 44.32,
+      "change": -0.005001,
+      "changePercent": -0.0113,
       "changeBaseline": "provider previous completed close"
     },
     "AVGU": {
