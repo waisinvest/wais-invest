@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T01:56:13.310599+00:00",
+  "lastUpdated": "2026-09-25T07:48:31.511774+00:00",
   "marketStatus": "updated",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
   "incomeMetricsVersion": "WAIS INCOME v1.1 normalized percentages",
@@ -1821,7 +1821,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 24.354,
+      "regularClose": 24.35,
       "regularCloseDate": "2026-09-24",
       "sma20": 25.099,
       "sma50": 25.24,
@@ -1847,7 +1847,7 @@
     },
     "MUIB": {
       "price": 32.957401,
-      "regularClose": 32.957401,
+      "regularClose": 32.959999,
       "regularCloseDate": "2026-09-24",
       "asOf": "2026-09-24T14:55:00+00:00",
       "currency": "USD",
@@ -1949,7 +1949,7 @@
     },
     "NYYY": {
       "price": 44.4911,
-      "regularClose": 44.4911,
+      "regularClose": 44.490002,
       "regularCloseDate": "2026-09-24",
       "asOf": "2026-09-24T15:15:00+00:00",
       "currency": "USD",
@@ -2105,7 +2105,7 @@
     },
     "TWSC": {
       "price": 25.2013,
-      "regularClose": 25.2013,
+      "regularClose": 25.200001,
       "regularCloseDate": "2026-09-24",
       "asOf": "2026-09-24T18:05:00+00:00",
       "currency": "USD",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-09-25T07:48:22.015259+00:00"
+    "asOf": "2026-09-24T23:28:17.518245+00:00"
   }
 }
