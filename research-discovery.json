@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-27T12:10:42.536237+00:00",
+  "lastChecked": "2026-09-27T14:01:46.000000+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,60 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-09-27T12:10:42.536237+00:00",
+      "checkedAt": "2026-09-27T14:01:46.000000+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
-      "lastError": null,
+      "lastError": "Five newer public-index items dated 2026-09-24 to 2026-09-25 were discovered, but each exact X status page returned HTTP 403 and only third-party summaries were visible; complete original text could not be verified.",
       "lastSuccessAt": "2026-09-19T12:03:45Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2103490181525631382",
+          "publishedAt": "2026-09-25T14:21:54.890Z",
+          "tickers": [
+            "SPY"
+          ],
+          "visibleSnippet": "Rethinking Long-Term Investment Strategies — inflation and higher everyday costs are contrasted with long-term equity exposure such as $SPY.",
+          "reason": "A public third-party index exposes only a summary; the exact X status page returned HTTP 403. Complete original author text and context cannot be verified, so this remains pending and is not counted as complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2103350532777943281",
+          "publishedAt": "2026-09-25T05:07:00.034Z",
+          "tickers": [],
+          "visibleSnippet": "Reflecting on a Vast Fandom — gratitude for a large audience and a Mid-Autumn Festival greeting.",
+          "reason": "A public third-party index exposes only a summary; the exact X status page returned HTTP 403. Complete original author text and context cannot be verified, so this remains pending and is not counted as complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2103232350348001701",
+          "publishedAt": "2026-09-24T21:17:23.147Z",
+          "tickers": [],
+          "namedEntities": [
+            "Akamai Technologies",
+            "Anthropic"
+          ],
+          "visibleSnippet": "Akamai's Major Deal with Anthropic — indexed summary references an $11.6B agreement and CPU workload demand.",
+          "reason": "A public third-party index exposes only a summary; the exact X status page returned HTTP 403. Complete original author text, cited evidence and ticker usage cannot be verified, so this remains pending and is not counted as complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2103161145934963178",
+          "publishedAt": "2026-09-24T16:34:26.692Z",
+          "tickers": [],
+          "namedEntities": [
+            "United States",
+            "Iran",
+            "Strait of Hormuz"
+          ],
+          "visibleSnippet": "US-Iran Talks Could Impact Oil Prices — indexed summary discusses reopening the Strait of Hormuz and possible fuel-price effects.",
+          "reason": "A public third-party index exposes only a summary; the exact X status page returned HTTP 403. Complete original author text and context cannot be verified, so this remains pending and is not counted as complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2103151990146801812",
+          "publishedAt": "2026-09-24T15:58:03.782Z",
+          "tickers": [
+            "AAOI"
+          ],
+          "visibleSnippet": "AAOI's Financial Strategy Faces Criticism — indexed summary discusses repeated ATM offerings versus a bullish 2027 operating outlook.",
+          "reason": "A public third-party index exposes only a summary; the exact X status page returned HTTP 403. Complete original author text and context cannot be verified, so this remains pending and is not counted as complete research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2100919379622044066",
           "publishedAt": "2026-09-18T12:06:27.953Z",
@@ -678,7 +726,7 @@
         "The public Posts surface and exact status pages are readable and have met the 3-original verification threshold.",
         "The Replies and Articles profile tabs remain restricted without an authenticated X session; no unverified reply or article is promoted into recentPosts."
       ],
-      "coverageNote": "Current public fetch yielded 0 usable posts; preserved 21 previously verified originals. A transient empty fetch is not evidence loss and must not downgrade LIVE."
+      "coverageNote": "Preserved 21 previously verified originals and LIVE last-known-good coverage. Five newer indexed items were added to pendingVerification; exact X status pages returned HTTP 403, so they are a current item-level DATA GAP and are not counted as complete research evidence."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
