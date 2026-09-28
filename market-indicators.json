@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28T05:23:44.692279+00:00",
+  "lastUpdated": "2026-09-28T12:00:35.627879+00:00",
   "marketDates": {
     "US": "2026-09-25",
     "HK": "2026-09-28"
@@ -70,13 +70,13 @@
     },
     "VIX": {
       "symbol": "^VIX",
-      "value": 14.87,
-      "previousClose": 15.67,
-      "regularClose": 14.87,
-      "regularCloseDate": "2026-09-25",
-      "change": -0.8,
-      "changePercent": -5.1053,
-      "asOf": "2026-09-25T20:10:00+00:00",
+      "value": 16.26,
+      "previousClose": 14.87,
+      "regularClose": 16.26,
+      "regularCloseDate": "2026-09-28",
+      "change": 1.39,
+      "changePercent": 9.3477,
+      "asOf": "2026-09-28T11:45:31+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -94,25 +94,25 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 24666.630859,
+      "value": 24642.509766,
       "previousClose": 24510.089844,
-      "regularClose": 24666.630859,
+      "regularClose": 24642.509766,
       "regularCloseDate": "2026-09-28",
-      "change": 156.541016,
-      "changePercent": 0.6387,
-      "asOf": "2026-09-28T05:08:42+00:00",
+      "change": 132.419922,
+      "changePercent": 0.5403,
+      "asOf": "2026-09-28T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "HSTECH": {
       "symbol": "HSTECH.HK",
-      "value": 4294.959961,
-      "previousClose": 4294.959961,
-      "regularClose": 4294.96,
+      "value": 4296.0,
+      "previousClose": 4296.0,
+      "regularClose": 4296.0,
       "regularCloseDate": "2026-09-28",
       "change": 0.0,
       "changePercent": 0.0,
-      "asOf": "2026-09-28T05:08:42+00:00",
+      "asOf": "2026-09-28T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
