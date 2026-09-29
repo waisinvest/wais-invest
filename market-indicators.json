@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-29T05:44:01.055054+00:00",
+  "lastUpdated": "2026-09-29T11:36:03.281527+00:00",
   "marketDates": {
     "US": "2026-09-28",
     "HK": "2026-09-29"
@@ -70,13 +70,13 @@
     },
     "VIX": {
       "symbol": "^VIX",
-      "value": 16.07,
-      "previousClose": 14.87,
-      "regularClose": 16.07,
-      "regularCloseDate": "2026-09-28",
-      "change": 1.2,
-      "changePercent": 8.0699,
-      "asOf": "2026-09-28T20:10:00+00:00",
+      "value": 15.87,
+      "previousClose": 16.07,
+      "regularClose": 15.87,
+      "regularCloseDate": "2026-09-29",
+      "change": -0.2,
+      "changePercent": -1.2446,
+      "asOf": "2026-09-29T11:20:46+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -94,25 +94,25 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 24491.919922,
+      "value": 24523.570312,
       "previousClose": 24642.509766,
-      "regularClose": 24491.919922,
+      "regularClose": 24523.570312,
       "regularCloseDate": "2026-09-29",
-      "change": -150.589844,
-      "changePercent": -0.6111,
-      "asOf": "2026-09-29T05:28:58+00:00",
+      "change": -118.939453,
+      "changePercent": -0.4827,
+      "asOf": "2026-09-29T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "HSTECH": {
       "symbol": "HSTECH.HK",
-      "value": 4229.720215,
-      "previousClose": 4229.720215,
-      "regularClose": 4229.72,
+      "value": 4249.620117,
+      "previousClose": 4249.620117,
+      "regularClose": 4249.62,
       "regularCloseDate": "2026-09-29",
       "change": 0.0,
       "changePercent": 0.0,
-      "asOf": "2026-09-29T05:28:58+00:00",
+      "asOf": "2026-09-29T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
