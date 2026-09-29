@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-29T14:07:36.122572+00:00",
+  "lastChecked": "2026-09-29T16:01:31.984Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,29 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-09-29T14:07:36.122572+00:00",
+      "checkedAt": "2026-09-29T16:01:31.984Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-19T12:03:45Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2104698369591706069",
+          "publishedAt": "2026-09-28T22:22:49.000Z",
+          "tickers": [
+            "NVDA",
+            "LITE",
+            "AMD"
+          ],
+          "namedEntities": [
+            "Nvidia",
+            "Lumentum",
+            "Greensboro",
+            "World Labs"
+          ],
+          "visibleSnippet": "Nvidia Laser Capacity Claim Draws Industry Scrutiny — indexed summary cites channel checks about Nvidia securing half of Lumentum’s Greensboro high-power laser capacity, with a possible option for more, and references AMD’s reported $8.2B World Labs acquisition.",
+          "reason": "A public third-party index exposes only a summary; the exact X status page was not reachable from the controlled network. Complete original author text, cited evidence and context cannot be verified, so this remains pending and is not counted as complete research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2103490181525631382",
           "publishedAt": "2026-09-25T14:21:54.890Z",
