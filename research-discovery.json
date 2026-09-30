@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-09-30T12:43:09.798580+00:00",
+  "lastChecked": "2026-09-30T15:01:00.000000+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,7 +104,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-09-30T12:43:09.798580+00:00",
+      "checkedAt": "2026-09-30T15:01:00.000000+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-19T12:03:45Z",
@@ -509,6 +509,27 @@
           ],
           "url": "https://x.com/aleabitoreddit/status/2096904209371427277",
           "visibleSnippet": "New report from Bloomberg on $IQE: “indium phosphide ... buildout. Who could have guessed $AXTI would have been a major point of failure?"
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2105151002760679706",
+          "publishedAt": "2026-09-30T04:21:25.000Z",
+          "tickers": [
+            "AMZN",
+            "NVDA",
+            "AAOI",
+            "MRVL",
+            "ALAB",
+            "CRDO",
+            "JBL"
+          ],
+          "namedEntities": [
+            "Amazon",
+            "Gold Circuit Electronics",
+            "Alchip",
+            "Celestial"
+          ],
+          "visibleSnippet": "Bro, $AMZN semi ETF portfolio is probably going to end up more compelling than what $NVDA owns... Today Amazon signed a $49.8M private placement into PCB maker Gold Circuit Electronics (2368). So now Amazon has ownership/warrants in: $AAOI, Alchip, $MRVL (Celestial), $ALAB, $CRDO, $JBL …",
+          "reason": "The exact X status page is reachable but exposes only truncated title/meta-description text without the complete original post body; the third-party public index also provides only a summary. Complete original author text and full context cannot be verified, so this remains pending and is not counted as complete research evidence."
         }
       ],
       "recentPosts": [
