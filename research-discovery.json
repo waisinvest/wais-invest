@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-01T16:04:57.000Z",
+  "lastChecked": "2026-10-01T18:00:56.000Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -38,8 +38,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-01T09:02:14.606004+00:00",
-      "lastSuccessAt": "2026-10-01T09:02:14.606004+00:00",
+      "checkedAt": "2026-10-01T16:34:52.294985+00:00",
+      "lastSuccessAt": "2026-10-01T16:34:52.294985+00:00",
       "contentHash": "15fdd03279766c1155d9a5b19b491e4c94d964438f1c53941e4710e44de68c7e",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -63,8 +63,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-01T09:02:14.606004+00:00",
-      "lastSuccessAt": "2026-10-01T09:02:14.606004+00:00",
+      "checkedAt": "2026-10-01T16:34:52.294985+00:00",
+      "lastSuccessAt": "2026-10-01T16:34:52.294985+00:00",
       "contentHash": "c2959150a8b4cafddf695771bf1a57b8859b6a29d7156931090d553f5f571182",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -85,7 +85,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-01T09:02:14.606004+00:00",
+      "checkedAt": "2026-10-01T16:34:52.294985+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -93,8 +93,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-01T09:02:14.606004+00:00",
-      "lastSuccessAt": "2026-10-01T09:02:14.606004+00:00",
+      "checkedAt": "2026-10-01T16:34:52.294985+00:00",
+      "lastSuccessAt": "2026-10-01T16:34:52.294985+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -104,12 +104,29 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-01T16:04:57.000Z",
+      "checkedAt": "2026-10-01T18:00:56.000Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-19T12:03:45Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2105709782854435274",
+          "publishedAt": "2026-10-01T17:21:49.085Z",
+          "tickers": [
+            "LITE",
+            "AAOI",
+            "COHR",
+            "SIVE"
+          ],
+          "namedEntities": [
+            "Morgan Stanley",
+            "Washington",
+            "FCC"
+          ],
+          "visibleSnippet": "\"Potential FCC rules on optical transceivers more likely to come at 3.2T\" - $LITE, $AAOI, $COHR, $SIVE. Morgan Stanley met with Washington ...",
+          "reason": "The official X search result exposes only a truncated snippet; the exact status page returned HTTP 403. Complete original author text, cited evidence and full context cannot be verified, so this remains pending and is not counted as complete research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2105397070681248021",
           "publishedAt": "2026-09-30T20:39:12.693Z",
@@ -786,14 +803,14 @@
         "The public Posts surface and exact status pages are readable and have met the 3-original verification threshold.",
         "The Replies and Articles profile tabs remain restricted without an authenticated X session; no unverified reply or article is promoted into recentPosts."
       ],
-      "coverageNote": "Public search found 1 additional indexed original since the prior snapshot, but the exact X page returned HTTP 403 and only a truncated snippet was available. Preserved 21 previously verified originals; SERENITY remains LIVE on last-known-good evidence, and the new item is pending verification."
+      "coverageNote": "Public search found 1 new indexed original since the prior snapshot, but the exact X page returned HTTP 403 and only a truncated snippet was available. Preserved 21 previously verified originals; SERENITY remains LIVE on last-known-good evidence, and the new item is pending verification."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-01T09:02:14.606004+00:00",
-      "lastSuccessAt": "2026-10-01T09:02:14.606004+00:00",
+      "checkedAt": "2026-10-01T16:34:52.294985+00:00",
+      "lastSuccessAt": "2026-10-01T16:34:52.294985+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
