@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-01T02:12:19.762770+00:00",
+  "lastChecked": "2026-10-01T15:05:35.000Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,7 +104,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-01T02:12:19.762770+00:00",
+      "checkedAt": "2026-10-01T15:05:35.000Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-19T12:03:45Z",
@@ -764,7 +764,7 @@
         "The public Posts surface and exact status pages are readable and have met the 3-original verification threshold.",
         "The Replies and Articles profile tabs remain restricted without an authenticated X session; no unverified reply or article is promoted into recentPosts."
       ],
-      "coverageNote": "Current public fetch yielded 0 usable posts; preserved 21 previously verified originals. A transient empty fetch is not evidence loss and must not downgrade LIVE."
+      "coverageNote": "Public search found 1 new indexed original since the prior snapshot, but the exact X page returned HTTP 403 and only a truncated snippet was available. Preserved 21 previously verified originals; SERENITY remains LIVE on last-known-good evidence, and the new item is pending verification."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
