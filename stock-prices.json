@@ -3119,17 +3119,17 @@
       "changeBaseline": "provider previous completed close"
     },
     "MP": {
-      "price": 46.0,
+      "price": 46.07,
       "currency": "USD",
-      "asOf": "2026-10-01T23:58:07+00:00",
+      "asOf": "2026-10-01T23:59:57+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 46.09,
       "regularCloseDate": "2026-10-01",
       "previousClose": 47.290001,
-      "change": -1.290001,
-      "changePercent": -2.7279,
+      "change": -1.220001,
+      "changePercent": -2.5798,
       "changeBaseline": "provider previous completed close"
     },
     "TTMI": {
@@ -3524,9 +3524,6 @@
       "AVGO",
       "LITE",
       "RKLB",
-      "NVDA",
-      "MU",
-      "DELL",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3552,6 +3549,9 @@
       "AMBQ",
       "ALMU",
       "ZYME",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-10-01T21:25:02.474160+00:00"
+    "asOf": "2026-10-02T01:05:07.940402+00:00"
   }
 }
