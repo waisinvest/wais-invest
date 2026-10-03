@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02T21:20:23.334900+00:00",
+  "lastUpdated": "2026-10-03T00:45:10.847453+00:00",
   "marketDates": {
     "US": "2026-10-02",
     "HK": "2026-10-02"
@@ -64,7 +64,7 @@
       "regularCloseDate": "2026-10-02",
       "change": 307.675,
       "changePercent": 2.3983,
-      "asOf": "2026-10-02T21:10:00+00:00",
+      "asOf": "2026-10-02T21:15:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
