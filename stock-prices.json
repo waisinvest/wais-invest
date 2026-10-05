@@ -3524,9 +3524,6 @@
       "AVGO",
       "LITE",
       "RKLB",
-      "NVDA",
-      "MU",
-      "DELL",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3552,6 +3549,9 @@
       "AMBQ",
       "ALMU",
       "ZYME",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-10-03T02:19:41.809291+00:00"
+    "asOf": "2026-10-05T05:38:32.789370+00:00"
   }
 }
