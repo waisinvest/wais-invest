@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-09T01:16:59.944003+00:00",
+  "lastChecked": "2026-10-09T05:57:24.000Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,47 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-09T01:16:59.944003+00:00",
+      "checkedAt": "2026-10-09T05:57:24.000Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
-      "lastError": null,
+      "lastError": "Latest exact X status pages returned HTTP 403; 4 newly indexed links have incomplete visible text and remain pending verification. LAST_KNOWN_GOOD originals preserve LIVE.",
       "lastSuccessAt": "2026-09-19T12:03:45Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2108275499772649882",
+          "publishedAt": "2026-10-08T19:17:03.667Z",
+          "tickers": [
+            "AAOI"
+          ],
+          "visibleSnippet": "Real bubble is in VC land with private companies like Instinct ... $10B valuations off 100k users … $AAOI and others are very ...",
+          "reason": "A current public search index exposes the exact URL and only partial visible text; the exact official X status page returned HTTP 403 in this run. Complete original author text and context cannot be verified, so this remains pending verification and is not counted as new complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2108277973598232851",
+          "publishedAt": "2026-10-08T19:26:53.473Z",
+          "tickers": [
+            "AMZN",
+            "GOOGL"
+          ],
+          "visibleSnippet": "Hyperscalers are the ones ultimately funding the AI buildout. As seen with $AMZN to $GOOGL earnings commentary, the ROI is seen as wildly attractive. raised like $168B recently. ...",
+          "reason": "A current public search index exposes the exact URL and only partial visible text; the exact official X status page returned HTTP 403 in this run. Complete original author text and context cannot be verified, so this remains pending verification and is not counted as new complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2108329503428895094",
+          "publishedAt": "2026-10-08T22:51:39.142Z",
+          "tickers": [
+            "GOOGL"
+          ],
+          "visibleSnippet": "Having coffee with a $GOOGL TPU designer rn A… Subscribe to unlock.",
+          "reason": "A current public search index exposes the exact URL and only partial visible text; the exact official X status page returned HTTP 403 in this run. Complete original author text and context cannot be verified, so this remains pending verification and is not counted as new complete research evidence."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2108272287908860377",
+          "publishedAt": "2026-10-08T19:04:17.899Z",
+          "tickers": [],
+          "visibleSnippet": "Can someone explain how media headlines about OpenAI's ~$50B ARR… (vs. ~$70B ...",
+          "reason": "A current public search index exposes the exact URL and only partial visible text; the exact official X status page returned HTTP 403 in this run. Complete original author text and context cannot be verified, so this remains pending verification and is not counted as new complete research evidence."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2107534129780920682",
           "publishedAt": "2026-10-06T18:11:07.287Z",
@@ -852,10 +887,11 @@
       "status": "LIVE",
       "unresolvedIndexedItems": [],
       "coverageGaps": [
+        "Four newly indexed Oct 8 Serenity links are pending because exact X pages returned HTTP 403 and complete visible text could not be verified.",
         "The public Posts surface and exact status pages are readable and have met the 3-original verification threshold.",
         "The Replies and Articles profile tabs remain restricted without an authenticated X session; no unverified reply or article is promoted into recentPosts."
       ],
-      "coverageNote": "Current public fetch yielded 0 usable posts; preserved 21 previously verified originals. A transient empty fetch is not evidence loss and must not downgrade LIVE."
+      "coverageNote": "Current public search discovered 4 new indexed links, but exact status pages returned HTTP 403 and full author text could not be verified. Preserved previously verified originals; LIVE is retained under LAST_KNOWN_GOOD logic."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
