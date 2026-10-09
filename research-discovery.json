@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-09T15:21:00.229740+00:00",
+  "lastChecked": "2026-10-09T18:01:32.000Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,24 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-09T15:21:00.229740+00:00",
+      "checkedAt": "2026-10-09T18:01:32.000Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-19T12:03:45Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2108416144428421459",
+          "publishedAt": "2026-10-09T04:35:55.966Z",
+          "tickers": [
+            "LITE"
+          ],
+          "namedEntities": [
+            "Lumentum"
+          ],
+          "visibleSnippet": "Markets often miss second order implications until it shows up in direct statements. - If $LITE is completely sold out.",
+          "reason": "A current public search index exposes the exact URL and only truncated text; the exact official X status page is not available for complete-text verification in this run. It remains pending verification and cannot be used for automatic tier promotion."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2108412203514925165",
           "publishedAt": "2026-10-09T04:20:16.379Z",
@@ -900,7 +912,7 @@
       "status": "LIVE",
       "unresolvedIndexedItems": [],
       "coverageGaps": [
-        "Five newly indexed Oct 8–9 Serenity links are pending because complete author text or exact X pages could not be verified.",
+        "Six newly indexed Oct 8–9 Serenity links are pending because complete author text or exact X pages could not be verified.",
         "The public Posts surface and exact status pages are readable and have met the 3-original verification threshold.",
         "The Replies and Articles profile tabs remain restricted without an authenticated X session; no unverified reply or article is promoted into recentPosts."
       ],
