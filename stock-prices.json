@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-10T02:23:53.427886+00:00",
+  "lastUpdated": "2026-10-12T05:57:58.276858+00:00",
   "marketStatus": "updated",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
   "incomeMetricsVersion": "WAIS INCOME v1.1 normalized percentages",
@@ -1847,7 +1847,7 @@
     },
     "MUIB": {
       "price": 31.1759,
-      "regularClose": 31.1759,
+      "regularClose": 31.18,
       "regularCloseDate": "2026-10-09",
       "asOf": "2026-10-09T16:45:00+00:00",
       "currency": "USD",
@@ -1949,7 +1949,7 @@
     },
     "NYYY": {
       "price": 45.287102,
-      "regularClose": 45.287102,
+      "regularClose": 45.290001,
       "regularCloseDate": "2026-10-09",
       "asOf": "2026-10-09T19:00:00+00:00",
       "currency": "USD",
