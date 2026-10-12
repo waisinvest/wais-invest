@@ -28,7 +28,7 @@
       "routeStockMetricsStatus": "Completed daily activity metrics for Route Intelligence; stock READY remains independent."
     },
     "TSM": {
-      "price": 453.295,
+      "price": 453.3,
       "currency": "USD",
       "asOf": "2026-10-09T23:59:42+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
@@ -39,8 +39,8 @@
       "sma20": 419.477,
       "sma50": 421.423,
       "previousClose": 457.98999,
-      "change": -4.69499,
-      "changePercent": -1.0251,
+      "change": -4.68999,
+      "changePercent": -1.024,
       "priceReturnPeriodPct": 12.1617,
       "changeBaseline": "provider previous completed close",
       "avgVolume20d": 9545050,
@@ -3520,13 +3520,13 @@
     "version": "2026-09-10-v6-hidden-gems-reconciliation",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
-      "NVDA",
-      "MU",
-      "DELL",
       "TSM",
       "AVGO",
       "LITE",
       "RKLB",
+      "NVDA",
+      "MU",
+      "DELL",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-10-10T00:02:16.370571+00:00"
+    "asOf": "2026-10-12T05:56:19.112869+00:00"
   }
 }
