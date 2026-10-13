@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-12T23:02:31.325172+00:00",
+  "lastChecked": "2026-10-13T03:00:25.840Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,51 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-12T23:02:31.325172+00:00",
+      "checkedAt": "2026-10-13T03:00:25.840Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-19T12:03:45Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2109798495838425208",
+          "publishedAt": "2026-10-13T00:08:54.225Z",
+          "tickers": [
+            "LITE"
+          ],
+          "namedEntities": [
+            "Lumentum",
+            "Chinese pluggable optical transceivers"
+          ],
+          "visibleSnippet": "What oversupply? Even in the lower end ranges that they're focusing on, Chinese pluggable ... $LITE lasers are sold out into 2029 and they're starting negotiations into 2030.",
+          "reason": "A current public search index exposes the exact status URL and partial visible original-post text. The exact official X status page returned HTTP 403, so complete text and attachment/context could not be independently verified. It remains pending verification and cannot be used for automatic tier promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2109789664622322081",
+          "publishedAt": "2026-10-12T23:33:48.699Z",
+          "tickers": [
+            "MU"
+          ],
+          "namedEntities": [
+            "Micron",
+            "Samsung",
+            "SK Hynix"
+          ],
+          "visibleSnippet": "Demand visibility on $MU / Samsung / SK Hynix extend into 2030-2031. Samsung has LTAs covering 70% of their capacity into 2031 (likely with SK ...",
+          "reason": "A current public search index exposes the exact status URL and only truncated visible original-post text. The exact official X status page returned HTTP 403, so complete text and context could not be independently verified. It remains pending verification and cannot be used for automatic tier promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2109747793313304579",
+          "publishedAt": "2026-10-12T20:47:25.801Z",
+          "tickers": [
+            "SIVE"
+          ],
+          "namedEntities": [
+            "Sivers Semiconductors"
+          ],
+          "visibleSnippet": "@SiversSemicond Good news, communication to western audiences needs to be a lot better.",
+          "reason": "A current public search index exposes the exact status URL and complete visible reply text. The exact official X reply page returned HTTP 403, and this is a reply rather than a qualifying original post. It remains pending verification and is not counted toward LIVE evidence or automatic tier promotion."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2108896030326682074",
           "publishedAt": "2026-10-10T12:22:49.680Z",
