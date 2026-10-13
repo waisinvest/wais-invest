@@ -3520,6 +3520,10 @@
     "version": "2026-09-10-v6-hidden-gems-reconciliation",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3545,10 +3549,6 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB",
       "NVDA",
       "MU",
       "DELL",
@@ -3578,6 +3578,6 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-10-12T23:07:26.391576+00:00"
+    "asOf": "2026-10-13T04:00:54.517798+00:00"
   }
 }
