@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-14T13:47:52.389575+00:00",
+  "lastChecked": "2026-10-14T18:06:32.000Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,12 +104,71 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-14T13:47:52.389575+00:00",
+      "checkedAt": "2026-10-14T18:06:32.000Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-09-19T12:03:45Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2110333876144881903",
+          "publishedAt": "2026-10-14T11:36:18.837Z",
+          "tickers": [],
+          "namedEntities": [
+            "MicroLED",
+            "multimode fiber",
+            "AUO",
+            "co-packaged optics"
+          ],
+          "visibleSnippet": "The question was whether microled + multimode fiber architectures proposed by AUO and others could break into CPO: The response regarding ...",
+          "reason": "Current public search index exposes the exact official status URL and truncated visible original-post text. The official X page returned HTTP 403, so complete text, attachments and context could not be independently verified. Pending verification only; no automatic tier promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2110146513766900019",
+          "publishedAt": "2026-10-13T23:11:48.165Z",
+          "tickers": [
+            "TSLA"
+          ],
+          "namedEntities": [
+            "Elon Musk",
+            "Tesla",
+            "xAI",
+            "memory"
+          ],
+          "visibleSnippet": "Guess like we found out why Elon has been going on a crusade against memory in his recent posts. cheap memory for Tesla and xAI's own buildout",
+          "reason": "Current public search index exposes the exact official status URL and visible indexed text, but the official X page returned HTTP 403. Full punctuation, attachments and thread context could not be independently verified. Pending verification only; no automatic tier promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2110142633716965836",
+          "publishedAt": "2026-10-13T22:56:23.089Z",
+          "tickers": [
+            "AGLT",
+            "CCXI"
+          ],
+          "namedEntities": [
+            "Agility Robotics",
+            "Churchill Capital Corp XI",
+            "SEC"
+          ],
+          "visibleSnippet": "$AGLT (Agility Robotics) has cleared SEC review for public listing through $CCXI … is expected to close in November 2026. Expected ticker: AGLT ...",
+          "reason": "Current public search index exposes the exact official status URL and truncated visible original-post text. The official X page returned HTTP 403, so complete text, attachments and context could not be independently verified. Pending verification only; no automatic tier promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2109942749168619780",
+          "publishedAt": "2026-10-13T09:42:06.899Z",
+          "tickers": [
+            "TSLA"
+          ],
+          "namedEntities": [
+            "Elon Musk",
+            "Tesla",
+            "EVs",
+            "reusable rockets",
+            "humanoids"
+          ],
+          "visibleSnippet": "Elon has a pretty remarkable track record of identifying and leading commercialization of major shifts like EVs to reusable rockets (and now humanoids).",
+          "reason": "Current public search index exposes the exact official status URL and visible indexed text, but the official X page returned HTTP 403. Full attachment and thread context could not be independently verified. Pending verification only; no automatic tier promotion."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2109939928717308203",
           "publishedAt": "2026-10-13T09:30:54.451Z",
