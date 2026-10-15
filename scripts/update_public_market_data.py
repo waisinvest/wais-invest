@@ -12,6 +12,7 @@ import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -127,6 +128,31 @@ def update_quote(existing, symbol):
     })
     return updated
 
+def mark_futures_fallback(quote, now=None):
+    """Make retained futures data explicitly stale; never report age 0 by default."""
+    now = now or datetime.now(timezone.utc)
+    quote["freshness"] = "SOURCE GAP"
+    quote["marketOpen"] = None
+    quote["freshnessReason"] = "Retained fallback, not a live quote; age measured from original source timestamp"
+    try:
+        stamp = datetime.fromisoformat(str(quote["asOf"]).replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            raise ValueError("timezone missing")
+        quote["ageMinutes"] = max(0, int((now - stamp.astimezone(timezone.utc)).total_seconds() // 60))
+    except (ValueError, TypeError, KeyError):
+        quote["ageMinutes"] = None
+    try:
+        expiry = datetime.strptime(str(quote["expiryDate"]), "%d/%m/%Y").date()
+        hk_today = now.astimezone(ZoneInfo("Asia/Hong_Kong")).date()
+        quote["contractStatus"] = "EXPIRED" if expiry < hk_today else "UNVERIFIED"
+    except (ValueError, TypeError, KeyError):
+        quote["contractStatus"] = "UNKNOWN"
+    quote["dataStatus"] = (
+        "Retained fallback only; NOT current, NOT exchange real-time; "
+        "contract status and age based on source timestamps"
+    )
+    return quote
+
 def main():
     stocks = json.loads(STOCK_PATH.read_text(encoding="utf-8"))
     failures = []
@@ -168,15 +194,9 @@ def main():
             market_failures.append(str(exc))
         time.sleep(0.15)
 
-    # HSI futures is retained only as a dated fallback until a reliable public
-    # source adapter succeeds; never keep an old snapshot labelled LIVE.
+    # Retain futures only as explicitly stale fallback until an adapter succeeds.
     if "HSIF" in market["indicators"]:
-        market["indicators"]["HSIF"]["freshness"] = "SOURCE GAP"
-        market["indicators"]["HSIF"]["marketOpen"] = None
-        market["indicators"]["HSIF"]["dataStatus"] = (
-            "Last verified public-display snapshot retained; automatic source unavailable; "
-            "NOT current and NOT exchange real-time"
-        )
+        mark_futures_fallback(market["indicators"]["HSIF"])
 
     market["lastUpdated"] = now_iso()
     market["marketStatus"] = "updated" if not market_failures else "partial"
