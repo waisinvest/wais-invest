@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-15T04:58:56Z",
+  "lastChecked": "2026-10-15T06:02:00Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -38,8 +38,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-15T00:35:45.732710+00:00",
-      "lastSuccessAt": "2026-10-15T00:35:45.732710+00:00",
+      "checkedAt": "2026-10-15T05:56:38.323673+00:00",
+      "lastSuccessAt": "2026-10-15T05:56:38.323673+00:00",
       "contentHash": "15fdd03279766c1155d9a5b19b491e4c94d964438f1c53941e4710e44de68c7e",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -63,8 +63,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-15T00:35:45.732710+00:00",
-      "lastSuccessAt": "2026-10-15T00:35:45.732710+00:00",
+      "checkedAt": "2026-10-15T05:56:38.323673+00:00",
+      "lastSuccessAt": "2026-10-15T05:56:38.323673+00:00",
       "contentHash": "367f32c2fa4984f1dad0038e29fb1821446a3fd1d88fe46c9d057b93ad2f9ac7",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -85,7 +85,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-15T00:35:45.732710+00:00",
+      "checkedAt": "2026-10-15T05:56:38.323673+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -93,8 +93,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-15T00:35:45.732710+00:00",
-      "lastSuccessAt": "2026-10-15T00:35:45.732710+00:00",
+      "checkedAt": "2026-10-15T05:56:38.323673+00:00",
+      "lastSuccessAt": "2026-10-15T05:56:38.323673+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -104,42 +104,12 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-15T04:58:56Z",
+      "checkedAt": "2026-10-15T06:02:00Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-10-15T04:58:56Z",
+      "lastSuccessAt": "2026-10-15T06:02:00Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
-        {
-          "url": "https://x.com/aleabitoreddit/status/2110146513766900019",
-          "publishedAt": "2026-10-13T23:11:48.165Z",
-          "tickers": [
-            "TSLA"
-          ],
-          "namedEntities": [
-            "Elon Musk",
-            "Tesla",
-            "xAI",
-            "memory"
-          ],
-          "visibleSnippet": "Guess like we found out why Elon has been going on a crusade against memory in his recent posts. cheap memory for Tesla and xAI's own buildout",
-          "reason": "Current public search index exposes the exact official status URL and visible indexed text, but the official X page returned HTTP 403. Full punctuation, attachments and thread context could not be independently verified. Pending verification only; no automatic tier promotion."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2110142633716965836",
-          "publishedAt": "2026-10-13T22:56:23.089Z",
-          "tickers": [
-            "AGLT",
-            "CCXI"
-          ],
-          "namedEntities": [
-            "Agility Robotics",
-            "Churchill Capital Corp XI",
-            "SEC"
-          ],
-          "visibleSnippet": "$AGLT (Agility Robotics) has cleared SEC review for public listing through $CCXI … is expected to close in November 2026. Expected ticker: AGLT ...",
-          "reason": "Current public search index exposes the exact official status URL and truncated visible original-post text. The official X page returned HTTP 403, so complete text, attachments and context could not be independently verified. Pending verification only; no automatic tier promotion."
-        },
         {
           "url": "https://x.com/aleabitoreddit/status/2109942749168619780",
           "publishedAt": "2026-10-13T09:42:06.899Z",
@@ -169,35 +139,6 @@
           ],
           "visibleSnippet": "Market doesn't even care about Datacentre stocks 90% lease rental margins in 2027, or your favourite $AAOI revenue ramp in 2027. Extremely short term market ...",
           "reason": "Current public search indexes expose the exact status URL and truncated visible original-post text. The exact official X status page returned HTTP 403, so complete author text, attachments, and context could not be independently verified. It remains pending verification and cannot be used for automatic tier promotion."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2109937773440577755",
-          "publishedAt": "2026-10-13T09:22:20.593Z",
-          "tickers": [
-            "NVDA",
-            "TSLA"
-          ],
-          "namedEntities": [
-            "NVIDIA",
-            "Tesla",
-            "Unitree",
-            "GPT-6",
-            "humanoids",
-            "physical AI"
-          ],
-          "visibleSnippet": "Physical AI + Humanoids are the next progression of AI. $NVDA CES 2025 projections and Elon's prediction on $TSLA + 1 Billion humanoids in the next decade, seems to be speeding up. New statement from Unitree CEO after testing GPT-6 on their humanoid ...",
-          "reason": "Current public search indexes expose the exact status URL and truncated visible original-post text. The complete official X status text and attachment/context could not be independently verified in this run, so it remains pending verification and cannot be used for automatic tier promotion."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2109852646484201736",
-          "publishedAt": "2026-10-13T03:44:04.745Z",
-          "tickers": [],
-          "namedEntities": [
-            "enterprise AI",
-            "AI investors"
-          ],
-          "visibleSnippet": "Calling AI investors gamblers and saying enterprise AI isn't delivering ROI.",
-          "reason": "A current public search index exposes the exact status URL and only a summary/truncated visible snippet. The exact official X status page returned HTTP 403, so complete author text, attachments, and context could not be independently verified. It remains pending verification and cannot be used for automatic tier promotion."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2109798495838425208",
@@ -835,6 +776,85 @@
           "visibility": "Complete reply text, exact status URL and timestamp verified on the official public X page; parent post and third-party replies are context only. Discovery/Research evidence only; no automatic tier promotion."
         },
         {
+          "url": "https://x.com/aleabitoreddit/status/2110146513766900019",
+          "publishedAt": "2026-10-13T23:11:48.165Z",
+          "tickers": [
+            "SKHY"
+          ],
+          "text": "Guess like we found out why Elon has been going on a crusade against memory in his recent posts.\n\n$SKHY and Samsung have been price hiking memory too much?",
+          "visibility": "Complete original text, exact URL and timestamp verified on the official public X status page; image is attachment context.",
+          "researchThemes": [
+            "memory pricing",
+            "AI infrastructure procurement"
+          ],
+          "analysisNote": "Discovery evidence suggests supplier pricing power is being contrasted with hyperscaler demand, but the post is rhetorical and requires independent pricing and contract validation."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2110142633716965836",
+          "publishedAt": "2026-10-13T22:56:23.089Z",
+          "tickers": [
+            "AGLT",
+            "CCXI"
+          ],
+          "text": "$AGLT (Agility Robotics) has cleared SEC review for public listing through $CCXI\n\nIf you want an estimate timeline:\n\n~Oct 13 (today): SEC S-4 declared effective\n\n~Nov 2nd (shareholder vote): for merger approval\n\n~November: Merger closing and ticker goes live for trading. \n\nCompany’s official statement was:\n\n“The business combination remains subject to approval by Churchill XI shareholders and other customary closing conditions, and is expected to close in November 2026.”\n\nSo likely less than a month away for the first pure play US humanoid company to go live!",
+          "visibility": "Complete original text, exact URL and timestamp verified on the official public X status page; quoted Agility Robotics post and image are attachment context.",
+          "researchThemes": [
+            "humanoid robotics",
+            "SPAC merger",
+            "pre-listing catalyst"
+          ],
+          "analysisNote": "Time-bound listing catalyst identified, but shareholder approval and closing conditions remain unresolved; Discovery/Research only and not a tradable-tier promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2109937773440577755",
+          "publishedAt": "2026-10-13T09:22:20.593Z",
+          "tickers": [
+            "NVDA",
+            "TSLA"
+          ],
+          "text": "Physical AI + Humanoids are the next progression of AI.\n\n$NVDA CES 2025 projections and Elon's prediction on $TSLA + 1 Billion humanoids in the next decade, seems to be speeding up. \n\nNew statement from Unitree CEO after testing GPT-6 on their humanoid program was that:\n\n- In August, before GPT-6's release, Wang said the industry could take two to three years at its fastest pace, or as long as a decade, to reach its \"ChatGPT moment\"\n\n- Now, OpenAI's GPT-6 model prompted expectations that a breakthrough could happen \"within 1 or 2 years\"\n\n- He defined that moment as robots being able to complete around 80 per cent of tasks in 80 per cent of unfamiliar environments using voice or text commands.\n\n- \"It's possible that, say, a GPT-7 model released next year could directly crack the problems of embodied intelligence\"\n\n- \"The whole embodied intelligence industry has been shaken up after the release of GPT-6\"\n\nJust looking at some benchmarks on robotic hand manipulation, \"On the bowl task Astra placed the block in 19 of 20 trials, against Fable 5.1's 8 of 20\".\n\nBut for the puzzle task \"Astra completed the insertion 2 times in 20 against Fable 5.1's 2 in 20\"\".. so we're getting there. \n\nBut going from 2-3 years (potentially to a decade), and compressing that down to 1 or 2 years (to achieve 80%+ of tasks in unfamiliar environemnts) is a significant change in outlook.",
+          "visibility": "Complete original text, exact URL and timestamp verified on the official public X status page; three images are attachment context.",
+          "researchThemes": [
+            "physical AI",
+            "humanoid robotics",
+            "foundation models"
+          ],
+          "analysisNote": "The thesis is a potential acceleration in embodied-AI capability timelines. The quoted benchmarks and executive statements remain author-supplied claims requiring primary-source validation."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2109900353349300590",
+          "publishedAt": "2026-10-13T06:53:38.948Z",
+          "tickers": [
+            "AVGO",
+            "INTC"
+          ],
+          "text": "So spent some more time to look at more DBS conference material:\n\n- \"Two semiconductor giants, $AVGO and $INTC, both stated that breakthroughs in AI will keep demand for chip investment elevated for at least another 2 years. As current supply is insufficient to meet market demand.\"\n\n- \"Current chip production capacity is already far from sufficient to meet demand, and $AVGO CEO expects the shortage to become even more severe in the future.\" (HKEJ)\n\n- \"Regarding OpenAI, Hock Tan stated that the market had misinterpreted the company because its underlying fundamentals remained strong.\n\nHe argued that investors who sell based on a single short-term data point [$50B ARR] are \"essentially no different from people gambling in a casino.\" (eg. Hong Kong Economic Journal):\n\n- Commenting on investors' disappointment in OpenAI’s latest revenue forecast: \"by itself, not that bad\" on their $50B ARR. (Business Times)\n\nAnd connected investors' disappointment to a failure to understand the business and excessive expectations like a casino.\n\n- Tan rejected the proposition that OpenAI was overvalued. It quotes him saying:\n\n\"It’s almost like they are in a casino gambling\" in regards to investors' unrealistic expectations and lack of understanding on OpenAI.\n\n- Hock Tan if OpenAI and Anthropic achieve widespread market adoption: their attractiveness would substantially strengthen their bargaining power when raising capital.\n\nBut cautioned elevated global interest rates could make capital requirements a constraint for future growth.\n\n- The real driver, he said, is whether frontier AI companies can create models that generate enough value and returns to justify the buildout. (which is fair)\n\n- Most companies are wasting money on tokens. He also warned that most companies just waste money spending tokens like kids in a video arcade.\n\nThis part was the most badly worded by Hock Tan given he's running $AVGO.\n\nBut Western media commentary narrowed this down to:\n- \"Shortage of capital now, AI Investors are gamblers\".\n\nIn the conference, Broadcom's CEO was actually defending frontier lab valuations and giving cautiously bullish statements about AI infrastructure demand.\n\nWhile citing rising interest rates as a potential constraint that larger revenue or adoption could overcome.\n\nCherry picking quotes out of context disorts the actual messaging.\n\nTLDR:\n\n- Large and elevated AI semi demand, semi supply insufficient to meet market demand. At least another 2 years of elevated spend\n\n- OpenAI valuations defensible, people who sell based on extreme expectations for the company are like casino gamblers.\n\n- Tan stated markets had misinterpreted OpenAI's ARR because its underlying fundamentals remained strong.\n\n- Frontier labs if they achieve widespread adoption / revenue would strengthen capital raising, which overpower headwinds from raising interest rates.\n\nLot of $AVGO CEO remarks looks heavily nuanced, which Western media coverage distored.",
+          "visibility": "Complete original text, exact URL and timestamp verified on the official public X status page; two images and the quoted prior Serenity post are attachment context.",
+          "researchThemes": [
+            "AI semiconductor demand",
+            "capacity constraints",
+            "frontier AI economics",
+            "media interpretation"
+          ],
+          "analysisNote": "This is the strongest new research item in the reviewed set: it separates structural semiconductor demand and supply constraints from media framing of Hock Tan’s comments. All conference quotations and the two-year demand horizon still require independent primary-source validation."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2109852646484201736",
+          "publishedAt": "2026-10-13T03:44:04.745Z",
+          "tickers": [
+            "SKHY",
+            "AVGO"
+          ],
+          "text": "Wow this is sad to see Korean markets with $SKHY / Samsung crash like this.\n\nSpecial thanks to $AVGO CEO adding fuel the fire… \n\nCalling AI investors gamblers and saying enterprise AI isn’t delivering ROI.",
+          "visibility": "Complete original text, exact URL and timestamp verified on the official public X status page; image is attachment context.",
+          "researchThemes": [
+            "AI sentiment",
+            "memory equities",
+            "media interpretation"
+          ],
+          "analysisNote": "This post is primarily sentiment/context rather than standalone fundamental evidence; later Serenity research reframed the CEO remarks as more nuanced."
+        },
+        {
           "url": "https://x.com/aleabitoreddit/status/2101145461797335254",
           "publishedAt": "2026-09-19T03:04:50.144Z",
           "tickers": [],
@@ -1062,18 +1082,18 @@
       "status": "LIVE",
       "unresolvedIndexedItems": [],
       "coverageGaps": [
-        "Seven newly indexed Oct 8–10 Serenity links are pending because exact X pages, attachment context, or complete author text could not be independently verified.",
-        "The public Posts surface and exact status pages are readable and have met the 3-original verification threshold.",
-        "The Replies and Articles profile tabs remain restricted without an authenticated X session; no unverified reply or article is promoted into recentPosts."
+        "Remaining pending indexed Serenity links have not yet been individually verified on their exact official X pages.",
+        "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
+        "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Current public fetch yielded 0 usable posts; preserved 21 previously verified originals. A transient empty fetch is not evidence loss and must not downgrade LIVE."
+      "coverageNote": "Official public Posts and exact status pages were reviewed directly. 26 qualifying original posts plus 1 verified reply are preserved; remaining pending items require direct-page review. Replies and Articles profile tabs still require authentication for full coverage."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-15T00:35:45.732710+00:00",
-      "lastSuccessAt": "2026-10-15T00:35:45.732710+00:00",
+      "checkedAt": "2026-10-15T05:56:38.323673+00:00",
+      "lastSuccessAt": "2026-10-15T05:56:38.323673+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
