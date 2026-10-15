@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-15T00:35:45.732710+00:00",
+  "lastChecked": "2026-10-15T04:58:56Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,25 +104,12 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-15T00:35:45.732710+00:00",
+      "checkedAt": "2026-10-15T04:58:56Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-09-19T12:03:45Z",
+      "lastSuccessAt": "2026-10-15T04:58:56Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
-        {
-          "url": "https://x.com/aleabitoreddit/status/2110333876144881903",
-          "publishedAt": "2026-10-14T11:36:18.837Z",
-          "tickers": [],
-          "namedEntities": [
-            "MicroLED",
-            "multimode fiber",
-            "AUO",
-            "co-packaged optics"
-          ],
-          "visibleSnippet": "The question was whether microled + multimode fiber architectures proposed by AUO and others could break into CPO: The response regarding ...",
-          "reason": "Current public search index exposes the exact official status URL and truncated visible original-post text. The official X page returned HTTP 403, so complete text, attachments and context could not be independently verified. Pending verification only; no automatic tier promotion."
-        },
         {
           "url": "https://x.com/aleabitoreddit/status/2110146513766900019",
           "publishedAt": "2026-10-13T23:11:48.165Z",
@@ -840,6 +827,13 @@
         }
       ],
       "recentPosts": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2110333876144881903",
+          "publishedAt": "2026-10-14T11:36:18.837Z",
+          "tickers": [],
+          "text": "Okay just a clarification, this post was more about CPO  but wrote it too quickly... don't want to imply everything as a whole like cables/pluggables. \n\nThe question was whether microled + multimode fiber architectures proposed by AUO and others could break into CPO:\n\nThe response regarding microled architecture skepticism for CPO is actually a lot more supportive for CW lasers. \n\nI assumed VCSEL when I made this post, but they share the multimode fiber approach Largan's chairman is criticizing so it's probably less so. \n\n\"However, CEO Lin En-ping poured cold water on the widely discussed approach of pairing MicroLEDs with multimode optical fiber, stating bluntly that he personally believes the MicroLED approach is “unlikely” to materialize. \n\n He added that no customers currently genuinely consider the architecture commercially viable.\"",
+          "visibility": "Complete reply text, exact status URL and timestamp verified on the official public X page; parent post and third-party replies are context only. Discovery/Research evidence only; no automatic tier promotion."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2101145461797335254",
           "publishedAt": "2026-09-19T03:04:50.144Z",
