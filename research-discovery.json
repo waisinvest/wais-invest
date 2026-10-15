@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-15T12:03:09Z",
+  "lastChecked": "2026-10-15T17:06:56.940946+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -38,8 +38,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-15T11:38:21.435257+00:00",
-      "lastSuccessAt": "2026-10-15T11:38:21.435257+00:00",
+      "checkedAt": "2026-10-15T17:06:56.940946+00:00",
+      "lastSuccessAt": "2026-10-15T17:06:56.940946+00:00",
       "contentHash": "15fdd03279766c1155d9a5b19b491e4c94d964438f1c53941e4710e44de68c7e",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -63,10 +63,10 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-15T11:38:21.435257+00:00",
-      "lastSuccessAt": "2026-10-15T11:38:21.435257+00:00",
-      "contentHash": "367f32c2fa4984f1dad0038e29fb1821446a3fd1d88fe46c9d057b93ad2f9ac7",
-      "contentChanged": false,
+      "checkedAt": "2026-10-15T17:06:56.940946+00:00",
+      "lastSuccessAt": "2026-10-15T17:06:56.940946+00:00",
+      "contentHash": "7223a3c6b59159b6133560d5c09f7b530d244c364c8e4553c4340eb4bf137cc5",
+      "contentChanged": true,
       "recentOfficialItems": [
         "September 8, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced expanded support for the open-source Zephyr Project® Real-Time Operating System (RTOS) on its latest Apollo330 Plus and Apollo510 Lite",
         "August 4, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... heliaPROFILER Apollo AI Jul 30. 26 A Reflection of Ambiq’s First Year as a Public Company One year ago, Ambiq entered a new chapter. On July 30, 2025, we rang the opening bell at the Ne",
@@ -77,7 +77,7 @@
         "July 27, 2026 – Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... Apollo510 Lite Apollo510B Lite Apollo510D Lite Apollo330 Plus Apollo330B Plus apollo330M Plus Edge AI Jun 25. 26 Ambiq Announces Closing of its Upsized Public Offering and Full Exercise",
         "June 25, 2026 – Ambiq Micro, Inc. (“Ambiq”) (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced the closing of its upsized underwritten public offering of 2,300,000 shares of its... Investor Relations Jun 23. 26 Ambiq A"
       ],
-      "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Tools harvestKIT ApolloICD Audio Add-On Card AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT t",
+      "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Tools harvestKIT ApolloICD Audio Add-On Board AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT ",
       "note": "Official source; evidence input only and never an automatic status promotion."
     },
     "SEC_PRIMARY": {
@@ -85,7 +85,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-15T11:38:21.435257+00:00",
+      "checkedAt": "2026-10-15T17:06:56.940946+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -93,8 +93,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-15T11:38:21.435257+00:00",
-      "lastSuccessAt": "2026-10-15T11:38:21.435257+00:00",
+      "checkedAt": "2026-10-15T17:06:56.940946+00:00",
+      "lastSuccessAt": "2026-10-15T17:06:56.940946+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -104,7 +104,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-15T12:03:09Z",
+      "checkedAt": "2026-10-15T17:06:56.940946+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-10-15T09:03:00Z",
@@ -1133,14 +1133,14 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Official public Posts surface was checked again. No post newer than the already-recorded subscriber-only item was visible. The automated public fetch returned 0 usable items, so WAIS preserved the 28 verified original posts plus 1 verified reply; a transient empty fetch is not evidence loss and does not downgrade LIVE."
+      "coverageNote": "Current public fetch yielded 0 usable posts; preserved 29 previously verified originals. A transient empty fetch is not evidence loss and must not downgrade LIVE."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-15T11:38:21.435257+00:00",
-      "lastSuccessAt": "2026-10-15T11:38:21.435257+00:00",
+      "checkedAt": "2026-10-15T17:06:56.940946+00:00",
+      "lastSuccessAt": "2026-10-15T17:06:56.940946+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
