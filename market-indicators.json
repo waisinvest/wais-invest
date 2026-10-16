@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T05:02:11.428917+00:00",
+  "lastUpdated": "2026-10-16T09:49:47.930761+00:00",
   "marketDates": {
     "US": "2026-10-15",
     "HK": "2026-10-16"
@@ -70,13 +70,13 @@
     },
     "VIX": {
       "symbol": "^VIX",
-      "value": 16.459999,
-      "previousClose": 16.870001,
-      "regularClose": 16.459999,
-      "regularCloseDate": "2026-10-15",
-      "change": -0.410002,
-      "changePercent": -2.4304,
-      "asOf": "2026-10-15T20:10:00+00:00",
+      "value": 16.01,
+      "previousClose": 16.459999,
+      "regularClose": 16.01,
+      "regularCloseDate": "2026-10-16",
+      "change": -0.449999,
+      "changePercent": -2.7339,
+      "asOf": "2026-10-16T09:34:31+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -94,25 +94,25 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 24353.689453,
+      "value": 24186.830078,
       "previousClose": 24062.720703,
-      "regularClose": 24353.689453,
+      "regularClose": 24186.830078,
       "regularCloseDate": "2026-10-16",
-      "change": 290.96875,
-      "changePercent": 1.2092,
-      "asOf": "2026-10-16T04:05:00+00:00",
+      "change": 124.109375,
+      "changePercent": 0.5158,
+      "asOf": "2026-10-16T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "HSTECH": {
       "symbol": "HSTECH.HK",
-      "value": 4145.910156,
-      "previousClose": 4145.910156,
-      "regularClose": 4145.91,
+      "value": 4108.240234,
+      "previousClose": 4108.240234,
+      "regularClose": 4108.24,
       "regularCloseDate": "2026-10-16",
       "change": 0.0,
       "changePercent": 0.0,
-      "asOf": "2026-10-16T04:05:00+00:00",
+      "asOf": "2026-10-16T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
