@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-17T00:29:37.071820+00:00",
+  "lastUpdated": "2026-10-19T04:40:33.591095+00:00",
   "marketDates": {
     "US": "2026-10-16",
     "HK": "2026-10-16"
@@ -24,7 +24,7 @@
       "symbol": "^IXIC",
       "value": 26140.033,
       "previousClose": 26713.029297,
-      "regularClose": 26140.033203,
+      "regularClose": 26140.029297,
       "regularCloseDate": "2026-10-16",
       "change": -572.996297,
       "changePercent": -2.145,
@@ -36,7 +36,7 @@
       "symbol": "^NDX",
       "value": 29187.549,
       "previousClose": 29935.599609,
-      "regularClose": 29187.548828,
+      "regularClose": 29187.550781,
       "regularCloseDate": "2026-10-16",
       "change": -748.050609,
       "changePercent": -2.4989,
@@ -60,7 +60,7 @@
       "symbol": "^SOX",
       "value": 11137.287,
       "previousClose": 11581.209961,
-      "regularClose": 11137.287109,
+      "regularClose": 11137.290039,
       "regularCloseDate": "2026-10-16",
       "change": -443.922961,
       "changePercent": -3.8331,
@@ -96,7 +96,7 @@
       "symbol": "^HSI",
       "value": 24186.830078,
       "previousClose": 24062.720703,
-      "regularClose": 24186.83,
+      "regularClose": 24186.830078,
       "regularCloseDate": "2026-10-16",
       "change": 124.109375,
       "changePercent": 0.5158,
