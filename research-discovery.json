@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-20T07:41:11.789741+00:00",
+  "lastChecked": "2026-10-20T13:37:00.733319+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -38,8 +38,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-20T07:41:11.789741+00:00",
-      "lastSuccessAt": "2026-10-20T07:41:11.789741+00:00",
+      "checkedAt": "2026-10-20T13:37:00.733319+00:00",
+      "lastSuccessAt": "2026-10-20T13:37:00.733319+00:00",
       "contentHash": "15fdd03279766c1155d9a5b19b491e4c94d964438f1c53941e4710e44de68c7e",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -63,19 +63,19 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-20T07:41:11.789741+00:00",
-      "lastSuccessAt": "2026-10-20T07:41:11.789741+00:00",
-      "contentHash": "7223a3c6b59159b6133560d5c09f7b530d244c364c8e4553c4340eb4bf137cc5",
-      "contentChanged": false,
+      "checkedAt": "2026-10-20T13:37:00.733319+00:00",
+      "lastSuccessAt": "2026-10-20T13:37:00.733319+00:00",
+      "contentHash": "db6fdcf4e9bcf10b0b41e5529e15d7ba1f39173c97e8478695fe14db55a4c62a",
+      "contentChanged": true,
       "recentOfficialItems": [
-        "September 8, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced expanded support for the open-source Zephyr Project® Real-Time Operating System (RTOS) on its latest Apollo330 Plus and Apollo510 Lite",
+        "October 20, 2026 – Ambiq Micro, Inc. (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced that it will report its third quarter 2026 financial results on Tuesday, November 10, 2026 before the market opens. The Company will",
+        "November 10, 2026 before the market opens. The Company will host a conference call at 7:30 a.m. Central Time Investor Relations Ambiq Latest News Sep 08. 26 Ambiq Expands Zephyr Support to New Apollo330 Plus and Apollo510 Lite SoCs Ambiq Expands Zephyr Support to New Apollo330",
+        "September 8, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced expanded support... heliaPROFILER heliaCORE heliaRT heliaAOT Technologies Apollo510 Lite Apollo510B Lite Apollo510D Lite Apollo330 Plus",
         "August 4, 2026 — Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... heliaPROFILER Apollo AI Jul 30. 26 A Reflection of Ambiq’s First Year as a Public Company One year ago, Ambiq entered a new chapter. On July 30, 2025, we rang the opening bell at the Ne",
         "July 30, 2025, we rang the opening bell at the New York Stock Exchange and began trading as a public company under the ticker AMBQ. During our first year as a public company, we successfully completed... Jul 29. 26 Ambiq Expands Global Capital Markets Presence Through Sing",
         "July 30, 2026 – Ambiq Micro, Inc. (NYSE:... Investor Relations AI Edge AI Jul 28. 26 Ambiq Micro to Report Second Quarter 2026 Financial Results AUSTIN, Texas – July 28, 2026 – Ambiq Micro, Inc. (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions f",
         "July 28, 2026 – Ambiq Micro, Inc. (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced that it will report its second quarter 2026 financial results on Tuesday, August 11, 2026... Investor Relations Jul 27. 26 Ambiq Rele",
-        "August 11, 2026... Investor Relations Jul 27. 26 Ambiq Releases Production-Ready Apollo330 Plus and Apollo510 Lite SoC Series Commercially available SoCs combine ultra-low power performance, scalable edge AI, and new platform enhancements for intelligent devices. AUSTIN, TX,",
-        "July 27, 2026 – Ambiq Micro, Inc. (“Ambiq®”), a technology leader in ultra-low power... Apollo510 Lite Apollo510B Lite Apollo510D Lite Apollo330 Plus Apollo330B Plus apollo330M Plus Edge AI Jun 25. 26 Ambiq Announces Closing of its Upsized Public Offering and Full Exercise",
-        "June 25, 2026 – Ambiq Micro, Inc. (“Ambiq”) (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced the closing of its upsized underwritten public offering of 2,300,000 shares of its... Investor Relations Jun 23. 26 Ambiq A"
+        "August 11, 2026... Investor Relations Jul 27. 26 Ambiq Releases Production-Ready Apollo330 Plus and Apollo510 Lite SoC Series Commercially available SoCs combine ultra-low power performance, scalable edge AI, and new platform enhancements for intelligent devices. AUSTIN, TX,"
       ],
       "contentPreview": "﻿ News | Ambiq Back to Menu English EN EN - English CN - 简体中文 TW - 繁體中文 JP - 日本語 Products Products SoC SoC Atomiq Atomiq Apollo5 Apollo510 Lite SoC Series Apollo510 Apollo510B Apollo4 Apollo4 Blue Plus Apollo4 Blue Lite Apollo4 Blue Apollo4 Plus Apollo4 Lite Apollo4 Apollo3 Apollo330 Plus SoC Series Apollo3 Blue Plus Apollo3 Blue Apollo3 Blue Thin Apollo3 Apollo2 Apollo2 Thin Apollo2 Apollo Apollo RTC RTC Artasie AM1815 Artasie AM1805 Artasie AM0815 Artasie AM0805 Development Tools harvestKIT ApolloICD Audio Add-On Board AI AI Foundations AI Runtimes heliaAOT heliaCORE heliaRT heliaPROFILER SDK neuralSPOT SDK Solutions AI Developer Kits heartKIT soundKIT compressionKIT sleepKIT AI Demos Applications Applications Healthcare Industrial Edge Smart Remotes Smart Home and Buildings Smartcards Wearables Gaming Hearables Technologies Technologies blueSPOT graphiqSPOT neuralSPOT secureSPOT SPOT ",
       "note": "Official source; evidence input only and never an automatic status promotion."
@@ -85,7 +85,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-20T07:41:11.789741+00:00",
+      "checkedAt": "2026-10-20T13:37:00.733319+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -93,8 +93,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-20T07:41:11.789741+00:00",
-      "lastSuccessAt": "2026-10-20T07:41:11.789741+00:00",
+      "checkedAt": "2026-10-20T13:37:00.733319+00:00",
+      "lastSuccessAt": "2026-10-20T13:37:00.733319+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -104,7 +104,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-20T08:06:49.504Z",
+      "checkedAt": "2026-10-20T14:06:46.589Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-10-20T07:02:57.235Z",
@@ -1273,8 +1273,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-20T07:41:11.789741+00:00",
-      "lastSuccessAt": "2026-10-20T07:41:11.789741+00:00",
+      "checkedAt": "2026-10-20T13:37:00.733319+00:00",
+      "lastSuccessAt": "2026-10-20T13:37:00.733319+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
