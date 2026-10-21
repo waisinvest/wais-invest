@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T20:39:00.730274+00:00",
+  "lastUpdated": "2026-10-21T23:39:57.089989+00:00",
   "marketDates": {
     "US": "2026-10-21",
     "HK": "2026-10-21"
@@ -10,61 +10,61 @@
   "indicators": {
     "SP500": {
       "symbol": "^GSPC",
-      "value": 7757.17,
+      "value": 7757.169922,
       "previousClose": 7712.569824,
       "regularClose": 7757.169922,
       "regularCloseDate": "2026-10-21",
-      "change": 44.600176,
+      "change": 44.600098,
       "changePercent": 0.5783,
-      "asOf": "2026-10-21T20:20:00+00:00",
+      "asOf": "2026-10-21T20:00:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "NASDAQ": {
       "symbol": "^IXIC",
-      "value": 26702.857,
+      "value": 26702.857422,
       "previousClose": 26424.820312,
       "regularClose": 26702.857422,
       "regularCloseDate": "2026-10-21",
-      "change": 278.036687,
+      "change": 278.037109,
       "changePercent": 1.0522,
-      "asOf": "2026-10-21T20:35:00+00:00",
+      "asOf": "2026-10-21T20:00:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "NASDAQ100": {
       "symbol": "^NDX",
-      "value": 29822.518,
+      "value": 29822.517578,
       "previousClose": 29490.279297,
       "regularClose": 29822.517578,
       "regularCloseDate": "2026-10-21",
-      "change": 332.238703,
+      "change": 332.238281,
       "changePercent": 1.1266,
-      "asOf": "2026-10-21T20:35:00+00:00",
+      "asOf": "2026-10-21T20:00:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "DOW": {
       "symbol": "^DJI",
-      "value": 52856.09,
+      "value": 52856.089844,
       "previousClose": 52495.878906,
       "regularClose": 52856.089844,
       "regularCloseDate": "2026-10-21",
-      "change": 360.211094,
+      "change": 360.210938,
       "changePercent": 0.6862,
-      "asOf": "2026-10-21T20:20:00+00:00",
+      "asOf": "2026-10-21T20:00:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "SOX": {
       "symbol": "^SOX",
-      "value": 11505.556,
+      "value": 11505.555664,
       "previousClose": 11283.80957,
       "regularClose": 11505.555664,
       "regularCloseDate": "2026-10-21",
-      "change": 221.74643,
+      "change": 221.746094,
       "changePercent": 1.9652,
-      "asOf": "2026-10-21T20:35:00+00:00",
+      "asOf": "2026-10-21T20:00:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -76,7 +76,7 @@
       "regularCloseDate": "2026-10-21",
       "change": -0.629999,
       "changePercent": -3.6395,
-      "asOf": "2026-10-21T20:10:00+00:00",
+      "asOf": "2026-10-21T20:15:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
