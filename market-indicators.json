@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T06:02:20.989978+00:00",
+  "lastUpdated": "2026-10-21T11:48:30.297832+00:00",
   "marketDates": {
     "US": "2026-10-20",
     "HK": "2026-10-21"
@@ -70,13 +70,13 @@
     },
     "VIX": {
       "symbol": "^VIX",
-      "value": 17.309999,
-      "previousClose": 18.440001,
-      "regularClose": 17.309999,
-      "regularCloseDate": "2026-10-20",
-      "change": -1.130001,
-      "changePercent": -6.128,
-      "asOf": "2026-10-20T20:10:00+00:00",
+      "value": 17.299999,
+      "previousClose": 17.309999,
+      "regularClose": 17.299999,
+      "regularCloseDate": "2026-10-21",
+      "change": -0.01,
+      "changePercent": -0.0578,
+      "asOf": "2026-10-21T11:33:16+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -94,25 +94,25 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 23741.900391,
+      "value": 23651.869141,
       "previousClose": 23867.740234,
-      "regularClose": 23741.900391,
+      "regularClose": 23651.869141,
       "regularCloseDate": "2026-10-21",
-      "change": -125.839844,
-      "changePercent": -0.5272,
-      "asOf": "2026-10-21T05:47:18+00:00",
+      "change": -215.871094,
+      "changePercent": -0.9044,
+      "asOf": "2026-10-21T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "HSTECH": {
       "symbol": "HSTECH.HK",
-      "value": 4020.780029,
-      "previousClose": 4020.780029,
-      "regularClose": 4020.78,
+      "value": 3994.77002,
+      "previousClose": 3994.77002,
+      "regularClose": 3994.77,
       "regularCloseDate": "2026-10-21",
       "change": 0.0,
       "changePercent": 0.0,
-      "asOf": "2026-10-21T05:47:18+00:00",
+      "asOf": "2026-10-21T08:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
