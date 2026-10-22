@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-22T15:01:14.000000+00:00",
+  "lastChecked": "2026-10-22T17:01:10.000000+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,7 +104,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-22T15:01:14.000000+00:00",
+      "checkedAt": "2026-10-22T17:01:10.000000+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-10-22T14:00:50.228Z",
@@ -789,6 +789,18 @@
           "analysisNote": "Serenity shares personal drawdowns for transparency during October volatility. This is qualitative sentiment and personal-performance context, not verified company fundamentals or a WAIS status signal. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
         },
         {
+          "url": "https://x.com/aleabitoreddit/status/2113253354986144171",
+          "publishedAt": "2026-10-22T12:57:16.834Z",
+          "postType": "REPLY",
+          "tickers": [
+            "SIVE"
+          ],
+          "text": "@tsazeng $SIVE is directly engaged with hyperscalers and from CIOE channel checks they’re now starting work with larger pluggable makers in China…\n\nSo there’s a lot of surprising ways they can cook in the next 2 earnings calls. I’m just personally waiting for new disclosures.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author reply text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. This is a reply and does not count toward the original-post LIVE threshold.",
+          "analysisNote": "Discovery/Research evidence only. The hyperscaler, CIOE channel-check and China pluggable-maker claims require independent primary-source validation and cannot automatically promote Candidate, Candidate+, READY 1 or Super A."
+        },
+        {
           "url": "https://x.com/aleabitoreddit/status/2113246620712370367",
           "publishedAt": "2026-10-22T12:30:31.258Z",
           "postType": "REPLY",
@@ -799,18 +811,6 @@
           "textIsComplete": true,
           "visibility": "Complete visible author reply text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. This is a reply and does not count toward the original-post LIVE threshold.",
           "analysisNote": "Serenity uses AMD as a historical example of weak sentiment preceding a large valuation rally, emphasizing time horizon and conviction. The stated valuation is author commentary and requires independent market-data validation. Discovery/Research only; no automatic tier promotion."
-        },
-        {
-          "url": "https://x.com/aleabitoreddit/status/2113191492067983849",
-          "publishedAt": "2026-10-22T08:51:27.565Z",
-          "postType": "ORIGINAL",
-          "tickers": [
-            "GOOGL"
-          ],
-          "text": "AI names are backed by actual earnings and contractual demand.\n\nMemory names are under <3x fwd P/E, with LTAs extending 5-10 years from your richest companies in the world like $GOOGL.\n\nOptical names are compressing to <10x fwd P/E despite 500-1000%+ growth next year\n\nBack in the day companies like Cisco/Yahoo were in 100x-600x+ earnings range.",
-          "textIsComplete": true,
-          "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID.",
-          "analysisNote": "Serenity contrasts current AI, memory and optical valuations with dot-com-era multiples, citing contractual demand, long-term agreements and projected optical growth. All valuation multiples, LTA durations and growth forecasts are author claims requiring independent primary-source and market-data validation. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2113240389813780923",
@@ -827,6 +827,18 @@
           "textIsComplete": true,
           "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. One image attachment and the quoted third-party post were visible but are not treated as Serenity-authored evidence. Exact UTC timestamp derived from the X status ID.",
           "analysisNote": "Serenity argues that rapid capitulation after price declines often reflects weak thesis discipline, citing earlier drawdowns in RKLB, HOOD and NBIS before later recoveries. The post explicitly states no ASTS ownership and is qualitative market psychology, not verified company fundamentals or a WAIS status signal. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2113191492067983849",
+          "publishedAt": "2026-10-22T08:51:27.565Z",
+          "postType": "ORIGINAL",
+          "tickers": [
+            "GOOGL"
+          ],
+          "text": "AI names are backed by actual earnings and contractual demand.\n\nMemory names are under <3x fwd P/E, with LTAs extending 5-10 years from your richest companies in the world like $GOOGL.\n\nOptical names are compressing to <10x fwd P/E despite 500-1000%+ growth next year\n\nBack in the day companies like Cisco/Yahoo were in 100x-600x+ earnings range.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID.",
+          "analysisNote": "Serenity contrasts current AI, memory and optical valuations with dot-com-era multiples, citing contractual demand, long-term agreements and projected optical growth. All valuation multiples, LTA durations and growth forecasts are author claims requiring independent primary-source and market-data validation. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
         },
         {
           "url": "https://x.com/aleabitoreddit/status/2113094859439690104",
@@ -1381,7 +1393,7 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Current official public X profile/status surface yielded 2 new complete original posts and 1 new complete reply; preserved 43 prior verified evidence records for 46 total. Evidence classifications remain Discovery/Research only."
+      "coverageNote": "Current official public X status surface yielded 1 new complete reply; preserved 46 prior verified evidence records for 47 total. The reply does not count toward the original-post LIVE threshold. Evidence classifications remain Discovery/Research only."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
