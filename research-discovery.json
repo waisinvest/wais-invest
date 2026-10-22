@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-22T17:01:10.000000+00:00",
+  "lastChecked": "2026-10-22T19:02:46.000000+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,7 +104,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-22T17:01:10.000000+00:00",
+      "checkedAt": "2026-10-22T19:02:46.000000+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-10-22T14:00:50.228Z",
@@ -813,6 +813,16 @@
           "analysisNote": "Serenity uses AMD as a historical example of weak sentiment preceding a large valuation rally, emphasizing time horizon and conviction. The stated valuation is author commentary and requires independent market-data validation. Discovery/Research only; no automatic tier promotion."
         },
         {
+          "url": "https://x.com/aleabitoreddit/status/2113241907673571746",
+          "publishedAt": "2026-10-22T12:11:47.582Z",
+          "postType": "REPLY",
+          "tickers": [],
+          "text": "@valustok X should probably do investigations on bot accounts like these trying to influence sentiment",
+          "textIsComplete": true,
+          "visibility": "Complete visible author reply text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. The parent post mentions ASTS, but that third-party context is not treated as a Serenity-authored ticker. This is a reply and does not count toward the original-post LIVE threshold.",
+          "analysisNote": "Serenity asks X to investigate bot accounts that may be attempting to influence market sentiment. This is qualitative market-integrity context, not verified company fundamentals or a WAIS status signal. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
+        {
           "url": "https://x.com/aleabitoreddit/status/2113240389813780923",
           "publishedAt": "2026-10-22T12:05:45.696Z",
           "postType": "ORIGINAL_QUOTE_POST",
@@ -1393,7 +1403,7 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Current official public X status surface yielded 1 new complete reply; preserved 46 prior verified evidence records for 47 total. The reply does not count toward the original-post LIVE threshold. Evidence classifications remain Discovery/Research only."
+      "coverageNote": "Current official public X status surface yielded 1 newly recovered complete reply; preserved 47 prior verified evidence records for 48 total. The reply does not count toward the original-post LIVE threshold. Evidence classifications remain Discovery/Research only."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
