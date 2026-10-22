@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-22T04:57:56.216294+00:00",
+  "lastChecked": "2026-10-22T10:17:48.987339+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -38,8 +38,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-22T04:57:56.216294+00:00",
-      "lastSuccessAt": "2026-10-22T04:57:56.216294+00:00",
+      "checkedAt": "2026-10-22T10:17:48.987339+00:00",
+      "lastSuccessAt": "2026-10-22T10:17:48.987339+00:00",
       "contentHash": "1a87223709be467606fe1e2ecb8af0f2ecc9328905fd0182a3a0c26a27994ec5",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -63,8 +63,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-22T04:57:56.216294+00:00",
-      "lastSuccessAt": "2026-10-22T04:57:56.216294+00:00",
+      "checkedAt": "2026-10-22T10:17:48.987339+00:00",
+      "lastSuccessAt": "2026-10-22T10:17:48.987339+00:00",
       "contentHash": "db6fdcf4e9bcf10b0b41e5529e15d7ba1f39173c97e8478695fe14db55a4c62a",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -85,7 +85,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-22T04:57:56.216294+00:00",
+      "checkedAt": "2026-10-22T10:17:48.987339+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -93,8 +93,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-22T04:57:56.216294+00:00",
-      "lastSuccessAt": "2026-10-22T04:57:56.216294+00:00",
+      "checkedAt": "2026-10-22T10:17:48.987339+00:00",
+      "lastSuccessAt": "2026-10-22T10:17:48.987339+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -104,7 +104,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-22T04:57:56.216294+00:00",
+      "checkedAt": "2026-10-22T10:17:48.987339+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-10-22T02:27:28.551Z",
@@ -1337,8 +1337,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-22T04:57:56.216294+00:00",
-      "lastSuccessAt": "2026-10-22T04:57:56.216294+00:00",
+      "checkedAt": "2026-10-22T10:17:48.987339+00:00",
+      "lastSuccessAt": "2026-10-22T10:17:48.987339+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
