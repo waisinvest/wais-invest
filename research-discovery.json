@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-22T12:06:58.000000+00:00",
+  "lastChecked": "2026-10-22T15:01:14.000000+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,10 +104,10 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-22T12:06:58.000000+00:00",
+      "checkedAt": "2026-10-22T15:01:14.000000+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-10-22T12:05:45.696Z",
+      "lastSuccessAt": "2026-10-22T14:00:50.228Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
         {
@@ -779,6 +779,40 @@
       ],
       "recentPosts": [
         {
+          "url": "https://x.com/aleabitoreddit/status/2113269349519954203",
+          "publishedAt": "2026-10-22T14:00:50.228Z",
+          "postType": "ORIGINAL_QUOTE_POST",
+          "tickers": [],
+          "text": "Yeah… minor volatility in October.\n\nFigured I’d share some personal drawdowns too for transparency.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. One image attachment and the quoted third-party reply were visible but are not treated as Serenity-authored evidence. Exact UTC timestamp derived from the X status ID.",
+          "analysisNote": "Serenity shares personal drawdowns for transparency during October volatility. This is qualitative sentiment and personal-performance context, not verified company fundamentals or a WAIS status signal. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2113246620712370367",
+          "publishedAt": "2026-10-22T12:30:31.258Z",
+          "postType": "REPLY",
+          "tickers": [
+            "AMD"
+          ],
+          "text": "Yeah $AMD is a great example you gave. It even got the popular nickname “Advanced Money Destroyer” for awhile…\n\nThen it had that massive rally to a $1T valuation, but lot of people didn’t give it time to play out.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author reply text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. This is a reply and does not count toward the original-post LIVE threshold.",
+          "analysisNote": "Serenity uses AMD as a historical example of weak sentiment preceding a large valuation rally, emphasizing time horizon and conviction. The stated valuation is author commentary and requires independent market-data validation. Discovery/Research only; no automatic tier promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2113191492067983849",
+          "publishedAt": "2026-10-22T08:51:27.565Z",
+          "postType": "ORIGINAL",
+          "tickers": [
+            "GOOGL"
+          ],
+          "text": "AI names are backed by actual earnings and contractual demand.\n\nMemory names are under <3x fwd P/E, with LTAs extending 5-10 years from your richest companies in the world like $GOOGL.\n\nOptical names are compressing to <10x fwd P/E despite 500-1000%+ growth next year\n\nBack in the day companies like Cisco/Yahoo were in 100x-600x+ earnings range.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID.",
+          "analysisNote": "Serenity contrasts current AI, memory and optical valuations with dot-com-era multiples, citing contractual demand, long-term agreements and projected optical growth. All valuation multiples, LTA durations and growth forecasts are author claims requiring independent primary-source and market-data validation. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
+        {
           "url": "https://x.com/aleabitoreddit/status/2113240389813780923",
           "publishedAt": "2026-10-22T12:05:45.696Z",
           "postType": "ORIGINAL_QUOTE_POST",
@@ -1347,7 +1381,7 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Current official public X profile/status surface yielded 1 new complete original quote-post; preserved 42 prior verified evidence records and added this item for 43 total. Evidence classifications remain unchanged."
+      "coverageNote": "Current official public X profile/status surface yielded 2 new complete original posts and 1 new complete reply; preserved 43 prior verified evidence records for 46 total. Evidence classifications remain Discovery/Research only."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
