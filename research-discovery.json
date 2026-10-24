@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-24T20:06:44.108Z",
+  "lastChecked": "2026-10-24T21:02:42.353Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -38,8 +38,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-24T16:02:30.939387+00:00",
-      "lastSuccessAt": "2026-10-24T16:02:30.939387+00:00",
+      "checkedAt": "2026-10-24T20:56:27.204738+00:00",
+      "lastSuccessAt": "2026-10-24T20:56:27.204738+00:00",
       "contentHash": "1a87223709be467606fe1e2ecb8af0f2ecc9328905fd0182a3a0c26a27994ec5",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -63,8 +63,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-24T16:02:30.939387+00:00",
-      "lastSuccessAt": "2026-10-24T16:02:30.939387+00:00",
+      "checkedAt": "2026-10-24T20:56:27.204738+00:00",
+      "lastSuccessAt": "2026-10-24T20:56:27.204738+00:00",
       "contentHash": "db6fdcf4e9bcf10b0b41e5529e15d7ba1f39173c97e8478695fe14db55a4c62a",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -85,7 +85,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-24T16:02:30.939387+00:00",
+      "checkedAt": "2026-10-24T20:56:27.204738+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -93,8 +93,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-24T16:02:30.939387+00:00",
-      "lastSuccessAt": "2026-10-24T16:02:30.939387+00:00",
+      "checkedAt": "2026-10-24T20:56:27.204738+00:00",
+      "lastSuccessAt": "2026-10-24T20:56:27.204738+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -104,10 +104,10 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-24T20:06:44.108Z",
+      "checkedAt": "2026-10-24T21:02:42.353Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-10-24T20:06:44.108Z",
+      "lastSuccessAt": "2026-10-24T21:02:42.353Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
         {
@@ -778,6 +778,36 @@
         }
       ],
       "recentPosts": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2114051018510287340",
+          "publishedAt": "2026-10-24T17:46:54.638Z",
+          "postType": "ORIGINAL",
+          "tickers": [
+            "NBIS",
+            "AMZN",
+            "MU",
+            "META",
+            "AAPL"
+          ],
+          "text": "So back on your Neoclouds like $NBIS + memory read through... From $AMZN CEO + A16z interview. \n\nQ: On memory shortages (eg. $MU / SK Hynix / Samsung):\n\nA: \"There's only so much memory, and I don't think that that shortage ends in 2027.\"                                                           \n\nQ: On AWS capacity: \n\nA: \"A good chunk of 28 is sold out\", \"largely sold out through 2027.\"\n\nQ: On capex ROI:\n\nA: Amazon had ​said it would spend about $220 billion in capex for 2026. But Jassy said the company \"could invest a lot more ​and it wouldn't be a bad use of ​capital\"\n\nThis is probably validating economics of Neoclouds model since this comes from a pretty stingy hyperscaler like Amazon... that only serves free bananas to their employees. \n\nUnlike trusting $META / Zuck where you the guy throws all you can eat cruise ship type buffets at every employee. \n\n- AWS claims approximately 30-40% better price-performance than comparable AI accelerators.\n\nThen went on to say Annapurna was \"one of the very best acquisitions we've done in Amazon and the history of the company, if not the best.\" \"We spun out a separate team in Annapurna to build an AI accelerator\"\n\nJust to give a bump to your AI custom silicon type private companies (since others like $AAPL were likely going on shopping sprees). \n\nTLDR: \n- Not really too much groundbreaking, just incremental validation of what was said previous earnings. \n- Broader shortages (like memory) won't end in 2027\n- Always positive to hear from $AMZN on insatiable demand + ROI given atrocious Neocloud sentiment right now",
+          "textIsComplete": true,
+          "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. One image attachment was visible but is not transcribed as author text.",
+          "analysisNote": "Serenity treats Andy Jassy's comments on memory shortages, sold-out AWS capacity, capital returns and Annapurna as incremental support for memory demand, custom silicon and neocloud economics. The quoted interview statements, capex amount, sold-out capacity and price-performance claims require independent verification against the source interview and Amazon disclosures. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2114030117416755494",
+          "publishedAt": "2026-10-24T16:23:51.429Z",
+          "postType": "REPLY",
+          "tickers": [
+            "LITE",
+            "COHR",
+            "AAOI"
+          ],
+          "text": "I guess what I've seen from Chinese laser capacity expansion: \n\n1. Dongshan/Source Photonics (索尔思): 9M/month capacity -> 22M/month Q4 ->  300m/year in 2027 (mostly EML, but blended)\n\nClaims of 1B/year \"target\" for laser chips with no deadline, but I'd take this as a grain of salt. \n\n2. Shijia (仕佳): 72M/year for 100mW CW, 2-3 year project (mainly 2029 full capacity online)\n\n3. Yunling (云岭): 18.75M/year 70/100mW CW, 3 year schedule (mainly 2029 full capacity online)\n\n4. Ligent (纳真), some reports stated 170M target for total capacity (also blended, lot of which is 200G EML)\n\n5. Yuanjie: ~10M/year currently, expanding for early 2027 and 2028, but no quantities. \n\n6. Hongchen: I think this was the perfect example of flooding H2 2026 arguments. With some some optical bears claiming 60-70M capacity...\n\nBut this turned out to completely wrong... Their actual statements were \"70/100 mW products are entering small-volume production\". \n\n7. Dingxin Optoelectronics - Targeting 15M/year blended (with 70/100mW CW and 100G EML lines)\n\nObviously mapped many others like Everbright/Accelink and did some guesses around laser mixes, but only included public disclosures. \n\nFrom your pluggable vendor channel checks: \n\n- 70mW/100mW lasers are actually a bottleneck right now per Innolight/Cambridge channel checks, laser ASPs actually increasing. \n\nLasers are tighter than they were a few months ago. \n\nI don't think there's a giant moat here, Chinese players are already competitive. But a bottleneck is a bottleneck, and anyone with capacity to monetize that will benefit, since it's a volume game. \n\nIn terms of what the larger pluggable makers are actually doing: \n\n- Innolight September disclosure: actively introducing new suppliers and are planning to sign 2-3 year-long contracts to lock upstream capacity for lasers (still actively securing supply for 1.6T pluggables)\n\nSo there's some game theory over who can lock up qualified capacity among all your players. \n\nEven if there's some over-ordering, laser BOM is cheap, so they'd probably want to lock up capacity with more suppliers than lose billions in downstream revenue. (also kinda hurts competitors) \n\n- High end lines (for CPO), non-competitive with Western players like $LITE / $COHR as of next few years. But Chinese players would eventually develop the technology. \n\n- $AAOI CEO: Chinese suppliers several years behind on high-power CPO/DWDM laser production \"not in the next 2,3 years\"\n\n- $LITE CEO questioned whether claimed Chinese manufacturing capacity was translating into commercial output. \"At least at the moment, we see no impact from any Chinese laser supply.\"\n\nThis is despite Shijia, Everbright, Yuanjie and others stating 400mW capabilities and capacity expansion targets from Chinese companies. Although Western CEOs might be disputing their reliability and capability to scale these lines. \n\nI see lower end range bottleneck for pluggable will gradually ease as more capacity comes online 2028. But all evidence points against near-term overflooding. \n\nThe 100mW range for example, someone cited 2 years of equipment investment. Higher ranges were 3 years for equipment investment? So even some Chinese players take years for capacity to come online. \n\nThe multi year laser shortage statements from laser company executives seems to be true... especially among higher end ranges, since buildout takes a lot of time. \n\nLegitimate competition coming from China, but as of now there's a scramble for CW LTAs among the industry in 2026-2027. \n\nLot of capacity is probably allocated toward higher spec lasers or EML, as seen with EML bottlenecking $LITE for the longest time (they have more supply now) that they had to buy CW off the market instead of supplying it themselves. \n\nThis is while tail end for 800G demand for example, might continue much much longer than expected with sovereign DC buildouts. So there might be some surprising dynamics for duration, we'll see.\n\nIn the end I do think supply chains will be bifurcated: \n\n- Chinese players will prioritize domestic capabilities but heavily sources globally. \n\n- Western players (now) prioritize Western supply chains unless China comes online with cheap enough supply (which don't see happening near-term). \n\nTLDR: \n-> Multi-year shortage definitely seems accurate for higher end specs\n-> Lot of China capacity overflooding claims earlier from H1 turned out to be completely false. People keep making them for some reason across memory to photonics. \n-> Chinese laser players are competitive for 70mW/100MW, meaningful expansion Y/Y, but nothing showing overflooding, given laser demand increasing, probably gradual easing into 2028. \n\nWe'll see, supply chain evolves month after month, just my current opinion from what I'm seeing.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author reply text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. Parent question is not imported. This is a reply and does not count toward the original-post LIVE threshold.",
+          "analysisNote": "Serenity maps publicly stated Chinese laser-capacity plans and argues that lower-power supply may gradually ease into 2028, while higher-power specifications remain in multi-year shortage and suppliers compete for CW laser capacity agreements. Capacity, product mix, ASP, qualification, contract and competitive-position claims require independent primary-source validation. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2113974563809943849",
           "publishedAt": "2026-10-24T12:43:06.417Z",
@@ -1577,14 +1607,14 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Current public verification added 1 new evidence record; 62 verified records are retained. Serenity remains LIVE because the existing verified-original threshold is satisfied."
+      "coverageNote": "Current public verification added 2 new evidence records; 64 verified records are retained. Serenity remains LIVE because the existing verified-original threshold is satisfied."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-24T16:02:30.939387+00:00",
-      "lastSuccessAt": "2026-10-24T16:02:30.939387+00:00",
+      "checkedAt": "2026-10-24T20:56:27.204738+00:00",
+      "lastSuccessAt": "2026-10-24T20:56:27.204738+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
