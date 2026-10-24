@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-24T16:02:30.939387+00:00",
+  "lastChecked": "2026-10-24T19:04:54.320Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -104,10 +104,10 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-24T16:02:30.939387+00:00",
+      "checkedAt": "2026-10-24T19:04:54.320Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-10-24T11:05:39.773Z",
+      "lastSuccessAt": "2026-10-24T19:04:54.320Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
         {
@@ -778,6 +778,32 @@
         }
       ],
       "recentPosts": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2113958295325319387",
+          "publishedAt": "2026-10-24T11:38:27.708Z",
+          "postType": "REPLY",
+          "tickers": [
+            "AMD",
+            "GFS",
+            "SIVE"
+          ],
+          "text": "$AMD was negotiating CW laser capacity LTAs from Trendforce. And are working with Ayar / $GFS for CPO deployments, (where $SIVE is upstream as the laser supplier/reference design)\n\nSo there's strong overlap in photonics. \n\nHowever, AMD on Sivers website currently is likely baseband related from cellular + Xilinx.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author reply text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. Parent-thread text and attachments are not imported. This is a reply and does not count toward the original-post LIVE threshold.",
+          "analysisNote": "Serenity links AMD's reported CW-laser capacity negotiations and work with Ayar/GFS on CPO to possible upstream Sivers exposure, while cautioning that the AMD logo on Sivers' website may instead reflect cellular/Xilinx baseband work. These supply-chain relationships and program attributions require independent first-party verification. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2113954878393561487",
+          "publishedAt": "2026-10-24T11:24:53.048Z",
+          "postType": "ORIGINAL",
+          "tickers": [
+            "AAOI"
+          ],
+          "text": "I'll let this revenue projection graph I made for $AAOI do the talking. Price at $70 I find genuinely riduclous if they deliver on their projections. \n\nRate hikes/macro trims a lot of forward valuations. But the selloff way overshot, which I'd argue is amplified by hedge fund risk/forced deleveraging before month end reporting.\n\nRather than something individually wrong with the company.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. One image attachment was visible but is not transcribed as author text.",
+          "analysisNote": "Serenity argues AAOI's selloff overshot fundamentals if the company delivers on projections, attributing part of the decline to macro/rate pressure and hedge-fund deleveraging rather than a company-specific impairment. The revenue graph, valuation judgment and causal attribution require independent primary-source and market-data validation. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2113950041207607453",
           "publishedAt": "2026-10-24T11:05:39.773Z",
@@ -1538,7 +1564,7 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Current public fetch yielded 0 usable posts; preserved 59 previously verified evidence records (original posts and replies retain their existing classification). A transient empty fetch is not evidence loss and must not downgrade LIVE."
+      "coverageNote": "Current public verification added 2 new evidence records; 61 verified records are retained. Serenity remains LIVE because the existing verified-original threshold is satisfied."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
