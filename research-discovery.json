@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-25T04:52:27.732531+00:00",
+  "lastChecked": "2026-10-25T06:59:21.000Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -38,7 +38,7 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-25T04:52:27.732531+00:00",
+      "checkedAt": "2026-10-25T06:59:21.000Z",
       "lastSuccessAt": "2026-10-25T04:52:27.732531+00:00",
       "contentHash": "1a87223709be467606fe1e2ecb8af0f2ecc9328905fd0182a3a0c26a27994ec5",
       "contentChanged": false,
@@ -63,7 +63,7 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-25T04:52:27.732531+00:00",
+      "checkedAt": "2026-10-25T06:59:21.000Z",
       "lastSuccessAt": "2026-10-25T04:52:27.732531+00:00",
       "contentHash": "db6fdcf4e9bcf10b0b41e5529e15d7ba1f39173c97e8478695fe14db55a4c62a",
       "contentChanged": false,
@@ -85,7 +85,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-25T04:52:27.732531+00:00",
+      "checkedAt": "2026-10-25T06:59:21.000Z",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -93,7 +93,7 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-25T04:52:27.732531+00:00",
+      "checkedAt": "2026-10-25T06:59:21.000Z",
       "lastSuccessAt": "2026-10-25T04:52:27.732531+00:00",
       "required": true,
       "covers": [
@@ -104,10 +104,10 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-25T04:52:27.732531+00:00",
+      "checkedAt": "2026-10-25T06:59:21.000Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-10-25T00:02:58.000Z",
+      "lastSuccessAt": "2026-10-25T04:50:06.137Z",
       "note": "At least 3 recent original posts were verified with exact URLs, timestamps derived from X status IDs, and complete visible author text. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
         {
@@ -778,6 +778,33 @@
         }
       ],
       "recentPosts": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2114217916153373049",
+          "publishedAt": "2026-10-25T04:50:06.137Z",
+          "postType": "REPLY",
+          "tickers": [
+            "AAOI",
+            "SIVE"
+          ],
+          "text": "$AAOI is the perfect example. They're expanding laser manufacturing at 350%. \n\nBut they said they can't produce enough lasers to even meet their own pluggable transceiver demand. So they had to turn away hyperscalers for CPO lasers. \n\nTBH if I were AOI, I'd reallocate toward CPO lasers and then buy lasers off merchant players like $SIVE.\n\nBut I guess they want to be end-to-end vertically integrated.",
+          "textIsComplete": true,
+          "visibility": "Complete visible author reply text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. Parent question is not imported. This is a reply and does not count toward the original-post LIVE threshold.",
+          "analysisNote": "Serenity uses AAOI as an example of constrained laser supply despite a stated 350% manufacturing expansion, and suggests a hypothetical allocation toward CPO lasers plus merchant sourcing from SIVE. Capacity, demand, customer-turnaway and product-allocation claims require independent primary-source validation. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
+        {
+          "url": "https://x.com/aleabitoreddit/status/2114213351060554010",
+          "publishedAt": "2026-10-25T04:31:57.734Z",
+          "postType": "ORIGINAL",
+          "tickers": [
+            "NVDA",
+            "LITE",
+            "COHR"
+          ],
+          "text": "$NVDA Jensen Huang on photonics: adding scale-up to optical domain, “is going to be, well, 15x” to aggregate volume.\n\nRelating to $LITE, $COHR, and laser companies.. \n\n“I'm fairly certain the amount of optics that we need in the future will be several orders of magnitude” Huang added.\n\nWe’re already in a CW laser bottleneck, but given the time/rate for capacity expansion, I definitely don’t see it meeting the scale Jensen envisions…\n\nYour leading merchant suppliers focusing new capacity toward UHP CPO lasers might also unintentionally make shortages around lower end ranges more severe…\n\nSince even if you don’t reallocate capacity (which Coherent implied they’d do to maximize margins), the demand for lower end ranges increase too as pluggable demand grows.\n\nAnyway, you’re gonna need a lot of lasers and given low BOM cost… this might trigger some fun game theory allocation wars + price hikes for supply",
+          "textIsComplete": true,
+          "visibility": "Complete visible author text, exact URL and displayed publication time verified on the official public X status page. Exact UTC timestamp derived from the X status ID. One image attachment was visible but is not transcribed as author text.",
+          "analysisNote": "Serenity interprets Jensen Huang's photonics comments as support for much higher optical scale and continued CW-laser constraints, with possible capacity-allocation competition and price increases across UHP CPO and lower-power ranges. The quoted statements, 15x scale, bottleneck, supplier allocation and pricing claims require independent primary-source validation. Discovery/Research only; no automatic Candidate, Candidate+, READY 1 or Super A promotion."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2114055113732182110",
           "publishedAt": "2026-10-24T18:03:11.015Z",
@@ -1619,13 +1646,13 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Current public fetch yielded 0 usable posts; preserved 65 previously verified evidence records (original posts and replies retain their existing classification). A transient empty fetch is not evidence loss and must not downgrade LIVE."
+      "coverageNote": "Current public X verification added 2 new evidence records; preserved 67 total verified records (original posts and replies retain their existing classification)."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-25T04:52:27.732531+00:00",
+      "checkedAt": "2026-10-25T06:59:21.000Z",
       "lastSuccessAt": "2026-10-25T04:52:27.732531+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
