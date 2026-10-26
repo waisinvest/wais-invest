@@ -13,6 +13,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 ROOT = Path(__file__).resolve().parents[1]
 STOCK_PATH = ROOT / "stock-prices.json"
@@ -70,9 +71,24 @@ def fetch_chart(symbol, attempts=3, interval="5m", range_="5d", prepost=True):
 def iso_at(ts, tz_offset=0):
     return datetime.fromtimestamp(ts, timezone.utc).isoformat()
 
+def exchange_date(ts, meta):
+    """Return an exchange-local trading date, not the UTC calendar date.
+
+    Yahoo daily candles for Asia/Hong_Kong can begin on the preceding UTC day.
+    Comparing UTC dates silently treats the current partial daily bar as
+    yesterday's close, causing false 0.00% intraday changes.
+    """
+    name = meta.get("exchangeTimezoneName") or "UTC"
+    try:
+        zone = ZoneInfo(name)
+    except (ZoneInfoNotFoundError, ValueError):
+        zone = timezone.utc
+    return datetime.fromtimestamp(ts, timezone.utc).astimezone(zone).date()
+
+
 def regular_date(meta):
     ts = meta.get("regularMarketTime")
-    return datetime.fromtimestamp(ts, timezone.utc).date().isoformat() if ts else None
+    return exchange_date(ts, meta).isoformat() if ts else None
 
 def daily_closes(symbol):
     encoded = urllib.parse.quote(symbol, safe="")
@@ -91,13 +107,13 @@ def daily_closes(symbol):
 def update_quote(existing, symbol):
     meta, ts, price = fetch_chart(symbol)
     daily = daily_closes(symbol)
-    latest_day = datetime.fromtimestamp(ts, timezone.utc).date()
-    last_daily_day = datetime.fromtimestamp(daily[-1][0], timezone.utc).date() if daily else None
+    latest_day = exchange_date(ts, meta)
+    last_daily_day = exchange_date(daily[-1][0], meta) if daily else None
     if len(daily) >= 2 and last_daily_day == latest_day:
         prior = daily[-2][1]
         regular = daily[-1][1]
         regular_ts = daily[-1][0]
-    elif daily:
+    elif daily and last_daily_day != latest_day:
         prior = daily[-1][1]
         regular = meta.get("regularMarketPrice") or daily[-1][1]
         regular_ts = meta.get("regularMarketTime") or daily[-1][0]
@@ -117,7 +133,7 @@ def update_quote(existing, symbol):
         "dataStatus": STATUS,
         "regularClose": round(float(regular), 6) if regular is not None else updated.get("regularClose"),
         "regularCloseDate": (
-            datetime.fromtimestamp(regular_ts, timezone.utc).date().isoformat()
+            exchange_date(regular_ts, meta).isoformat()
             if regular_ts else regular_date(meta) or updated.get("regularCloseDate")
         ),
         "previousClose": round(float(prior), 6) if prior is not None else updated.get("previousClose"),
