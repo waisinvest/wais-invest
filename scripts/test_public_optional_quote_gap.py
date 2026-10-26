@@ -7,6 +7,7 @@ import importlib.util
 import json
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
 
@@ -65,6 +66,20 @@ class OptionalQuoteFailureTests(unittest.TestCase):
         self.assertEqual(stocks["marketStatus"], "partial")
         self.assertIn("DATA GAP", stocks["dataStatus"])
         self.assertEqual(market["indicators"]["SP500"]["value"], 20)
+
+    def test_successful_refetch_clears_prior_source_gap(self):
+        ts = int(datetime(2026, 10, 26, 17, tzinfo=timezone.utc).timestamp())
+        meta = {"currency": "USD", "exchangeTimezoneName": "America/New_York",
+                "regularMarketTime": ts, "previousClose": 19}
+        with patch.object(quotes, "fetch_chart", return_value=(meta, ts, 20.0)), \
+             patch.object(quotes, "daily_closes", return_value=[]):
+            fresh = quotes.update_quote(
+                {"price": 13.19, "freshness": "SOURCE GAP",
+                 "dataStatus": "DATA GAP: last-known-good"}, "TSEU"
+            )
+        self.assertNotIn("freshness", fresh)
+        self.assertEqual(fresh["dataStatus"], quotes.STATUS)
+        self.assertEqual(fresh["price"], 20.0)
 
     def test_canonical_failure_remains_blocking(self):
         stocks, _ = self.run_snapshot("CORE")
