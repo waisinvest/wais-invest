@@ -784,10 +784,7 @@
           "url": "https://x.com/aleabitoreddit/status/2114671620711465417",
           "publishedAt": "2026-10-26T10:52:57.733Z",
           "postType": "REPLY",
-          "tickers": [
-            "SPCX",
-            "TSLA"
-          ],
+          "tickers": [],
           "text": "@elvermo Thanks for spotlighting it! I don't think Elon is necessarily wrong, but using his reach to hurt smaller competitors might set an unhealthy precedent.",
           "textIsComplete": true,
           "visibility": "Complete visible author reply text, exact URL and displayed publication time were exposed by the current public X search index. The direct official X status page returned HTTP 403 in this run. Exact UTC timestamp derived from the X status ID. This is a reply and does not count toward the original-post LIVE threshold.",
