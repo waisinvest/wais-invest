@@ -124,6 +124,8 @@ def update_quote(existing, symbol):
     change = price - float(prior) if prior not in (None, 0) else None
     pct = change / float(prior) * 100 if change is not None and prior else None
     updated = dict(existing or {})
+    # A recovered quote must not inherit SOURCE GAP from its prior failed run.
+    updated.pop("freshness", None)
     updated.update({
         "price": round(price, 6),
         "currency": meta.get("currency") or updated.get("currency"),
