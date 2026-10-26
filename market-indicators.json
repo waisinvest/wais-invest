@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-26T06:12:40.095156+00:00",
+  "lastUpdated": "2026-10-26T06:15:00.938523+00:00",
   "marketDates": {
     "US": "2026-10-23",
     "HK": "2026-10-26"
@@ -94,25 +94,25 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 23193.080078,
+      "value": 23214.130859,
       "previousClose": 23093.369141,
-      "regularClose": 23194.490234,
+      "regularClose": 23214.130859,
       "regularCloseDate": "2026-10-26",
-      "change": 99.710938,
-      "changePercent": 0.4318,
-      "asOf": "2026-10-26T05:57:36+00:00",
+      "change": 120.761719,
+      "changePercent": 0.5229,
+      "asOf": "2026-10-26T05:59:58+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
     "HSTECH": {
       "symbol": "HSTECH.HK",
-      "value": 3860.830078,
-      "previousClose": 3860.830078,
-      "regularClose": 3860.83,
+      "value": 3863.310059,
+      "previousClose": 3871.66,
+      "regularClose": 3863.31,
       "regularCloseDate": "2026-10-26",
-      "change": 0.0,
-      "changePercent": 0.0,
-      "asOf": "2026-10-26T05:57:38+00:00",
+      "change": -8.349941,
+      "changePercent": -0.2157,
+      "asOf": "2026-10-26T05:59:58+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
