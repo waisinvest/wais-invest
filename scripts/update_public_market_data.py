@@ -146,6 +146,13 @@ def update_quote(existing, symbol):
 def main():
     stocks = json.loads(STOCK_PATH.read_text(encoding="utf-8"))
     failures = []
+    optional_failures = []
+    # Only WAIS System's reconciled required universe can block official
+    # quote publication. Experimental/leveraged route gaps stay visible
+    # without suppressing otherwise valid market snapshots.
+    required = set(stocks.get("canonicalQuoteUniverse", {}).get("required") or [])
+    if not required:
+        raise RuntimeError("canonical required quote universe missing; fail closed")
     stocks.setdefault("prices", {})
     for symbol in PUBLIC_RESEARCH_SYMBOLS:
         stocks["prices"].setdefault(symbol, {})
@@ -153,12 +160,30 @@ def main():
         try:
             stocks["prices"][symbol] = update_quote(old, symbol)
         except Exception as exc:
-            failures.append(str(exc))
+            error = f"{symbol}: {exc}"
+            # Preserve price/asOf, but never represent the failed quote as
+            # fresh. An optional route failure must not masquerade as a
+            # canonical quote failure (or hide a canonical one).
+            old_quote = dict(stocks["prices"].get(symbol) or {})
+            old_quote["freshness"] = "SOURCE GAP"
+            old_quote["dataStatus"] = (
+                "DATA GAP: refresh failed; LAST-KNOWN-GOOD only; "
+                "NOT current and NOT exchange real-time"
+            )
+            stocks["prices"][symbol] = old_quote
+            if symbol in required:
+                failures.append(error)
+            else:
+                optional_failures.append(error)
         time.sleep(0.15)
     stocks["lastUpdated"] = now_iso()
-    stocks["marketStatus"] = "updated" if not failures else "partial"
-    stocks["dataStatus"] = STATUS
+    stocks["marketStatus"] = "updated" if not (failures or optional_failures) else "partial"
+    stocks["dataStatus"] = STATUS + (
+        f"; {len(optional_failures)} optional quote(s) STALE / DATA GAP"
+        if optional_failures else ""
+    )
     stocks["failedSymbols"] = failures
+    stocks["optionalQuoteFailures"] = optional_failures
     STOCK_PATH.write_text(json.dumps(stocks, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     market = json.loads(MARKET_PATH.read_text(encoding="utf-8"))
