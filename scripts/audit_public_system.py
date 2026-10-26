@@ -39,6 +39,18 @@ def main():
         fail("missing canonical quotes: " + ", ".join(missing))
     if prices.get("failedSymbols") or prices.get("canonicalQuoteUniverse", {}).get("status") != "PASS":
         fail("quote refresh/reconciliation is not PASS")
+    # Optional routes may be stale without invalidating canonical coverage,
+    # but they must be explicitly marked DATA GAP in their own quote.
+    required_symbols = set(prices.get("canonicalQuoteUniverse", {}).get("required") or [])
+    for error in prices.get("optionalQuoteFailures", []):
+        symbol = error.split(":", 1)[0]
+        if symbol in required_symbols:
+            fail("canonical symbol incorrectly classified as optional: " + symbol)
+        quote = prices.get("prices", {}).get(symbol, {})
+        if quote.get("freshness") != "SOURCE GAP" or "DATA GAP" not in quote.get("dataStatus", ""):
+            fail("optional quote gap not disclosed: " + symbol)
+    if prices.get("optionalQuoteFailures"):
+        print(f"WAIS OPTIONAL QUOTE DATA GAP: {len(prices['optionalQuoteFailures'])} route(s) remain stale")
     if policy.get("automationContract", {}).get("promotionGuard") is None:
         fail("automatic-promotion guard missing")
     dated = re.findall(r"wais-(?:canonical-state|cross-section-sync|live-session|postclose-state|column-reconciliation|reconciliation)-\d+\.js", loader)
