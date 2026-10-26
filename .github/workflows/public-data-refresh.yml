@@ -3,6 +3,8 @@ name: WAIS Public Data Auto Refresh
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - "canonical-universe.json"
       - "wais-execution-policy.json"
@@ -21,6 +23,7 @@ concurrency:
 
 jobs:
   refresh:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
