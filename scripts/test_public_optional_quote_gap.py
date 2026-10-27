@@ -72,10 +72,15 @@ class OptionalQuoteFailureTests(unittest.TestCase):
         meta = {"currency": "USD", "exchangeTimezoneName": "America/New_York",
                 "regularMarketTime": ts, "previousClose": 19}
         with patch.object(quotes, "fetch_chart", return_value=(meta, ts, 20.0)), \
-             patch.object(quotes, "daily_closes", return_value=[]):
+             patch.object(quotes, "daily_closes", return_value=[
+                 (int(datetime(2026, 10, 22, 13, 30, tzinfo=timezone.utc).timestamp()), 18.0),
+                 (int(datetime(2026, 10, 23, 13, 30, tzinfo=timezone.utc).timestamp()), 19.0),
+                 (int(datetime(2026, 10, 26, 13, 30, tzinfo=timezone.utc).timestamp()), 20.0),
+             ]):
             fresh = quotes.update_quote(
                 {"price": 13.19, "freshness": "SOURCE GAP",
-                 "dataStatus": "DATA GAP: last-known-good"}, "TSEU"
+                 "dataStatus": "DATA GAP: last-known-good"}, "TSEU",
+                observed_at=datetime(2026, 10, 26, 17, tzinfo=timezone.utc)
             )
         self.assertNotIn("freshness", fresh)
         self.assertEqual(fresh["dataStatus"], quotes.STATUS)
