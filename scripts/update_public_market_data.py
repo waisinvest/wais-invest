@@ -180,9 +180,17 @@ def update_quote(existing, symbol):
         "changePercent": round(pct, 4) if pct is not None else None,
         "changeBaseline": "provider previous completed close",
     })
-    # Never carry an older derived metric forward with a newer quote.
-    for key in ("sma20", "sma50", "priceReturnPeriodPct"):
+    # Never carry historical-series metrics forward with a newer quote.
+    # Liquidity and realized volatility require separate validated volume/history.
+    stale_fields = ("sma20", "sma50", "priceReturnPeriodPct",
+                    "avgVolume20d", "avgDollarVolume20d",
+                    "realizedVol60dAnnualizedPct")
+    invalidated = [key for key in stale_fields if key in updated]
+    for key in invalidated:
         updated.pop(key, None)
+    updated["derivedMetricsInvalidated"] = invalidated
+    if any(key in invalidated for key in ("avgVolume20d", "avgDollarVolume20d", "realizedVol60dAnnualizedPct")):
+        updated["routeStockMetricsStatus"] = "DATA GAP: stale historical liquidity/volatility metrics invalidated; recompute required"
     try:
         day_text = updated.get("regularCloseDate")
         if not day_text:
