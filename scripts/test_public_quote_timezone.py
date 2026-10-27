@@ -29,7 +29,8 @@ class ExchangeCloseBaselineTests(unittest.TestCase):
             (stamp("2026-10-25T16:00:00+00:00"), 3857.45),
         ]
         with patch.object(quotes, "fetch_chart", return_value=(meta, intraday, 3857.45)), \
-             patch.object(quotes, "daily_closes", return_value=daily):
+             patch.object(quotes, "daily_closes", return_value=daily), \
+             patch.object(quotes, "verified_daily_metrics", side_effect=ValueError("history fixture unavailable")):
             result = quotes.update_quote({}, "HSTECH.HK")
         self.assertEqual(result["regularCloseDate"], "2026-10-26")
         self.assertAlmostEqual(result["previousClose"], 3871.6599, places=3)
@@ -43,7 +44,8 @@ class ExchangeCloseBaselineTests(unittest.TestCase):
             (stamp("2026-10-23T04:00:00+00:00"), 105.0),
         ]
         with patch.object(quotes, "fetch_chart", return_value=(meta, stamp("2026-10-23T20:00:00+00:00"), 105.0)), \
-             patch.object(quotes, "daily_closes", return_value=daily):
+             patch.object(quotes, "daily_closes", return_value=daily), \
+             patch.object(quotes, "verified_daily_metrics", side_effect=ValueError("history fixture unavailable")):
             result = quotes.update_quote({}, "TEST")
         self.assertEqual(result["regularCloseDate"], "2026-10-23")
         self.assertEqual(result["previousClose"], 100.0)
@@ -58,7 +60,8 @@ class ExchangeCloseBaselineTests(unittest.TestCase):
         }
         daily = [(stamp("2026-10-25T16:00:00+00:00"), 3857.45)]
         with patch.object(quotes, "fetch_chart", return_value=(meta, stamp("2026-10-26T04:05:00+00:00"), 3857.45)), \
-             patch.object(quotes, "daily_closes", return_value=daily):
+             patch.object(quotes, "daily_closes", return_value=daily), \
+             patch.object(quotes, "verified_daily_metrics", side_effect=ValueError("history fixture unavailable")):
             result = quotes.update_quote({}, "HSTECH.HK")
         self.assertAlmostEqual(result["previousClose"], 3871.6599, places=3)
         self.assertAlmostEqual(result["changePercent"], -0.367, places=3)

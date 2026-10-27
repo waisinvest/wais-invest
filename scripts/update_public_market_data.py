@@ -104,6 +104,45 @@ def daily_closes(symbol):
     closes = (result.get("indicators", {}).get("quote") or [{}])[0].get("close") or []
     return [(int(ts), float(px)) for ts, px in zip(stamps, closes) if px is not None]
 
+def verified_daily_metrics(symbol, meta, expected_day, quote_ts):
+    """Recompute SMA20/SMA50 from one consistent unadjusted daily-close series.
+
+    A same-day candle is never accepted until 16:20 exchange-local time;
+    early-close sessions are conservatively delayed. Missing or mismatched
+    history fails closed instead of retaining old indicator values.
+    """
+    from datetime import time as dt_time
+    name = meta.get("exchangeTimezoneName") or "UTC"
+    zone = ZoneInfo(name)
+    quote_local = datetime.fromtimestamp(quote_ts, timezone.utc).astimezone(zone)
+    if quote_local.date() == expected_day and quote_local.time() < dt_time(16, 20):
+        raise ValueError("current daily candle not confirmed complete before 16:20 exchange-local")
+    encoded = urllib.parse.quote(symbol, safe="")
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{encoded}"
+           "?range=3mo&interval=1d&includePrePost=false&events=div%2Csplits")
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=20) as response:
+        result = json.load(response)["chart"]["result"][0]
+    stamps = result.get("timestamp") or []
+    closes = (result.get("indicators", {}).get("quote") or [{}])[0].get("close") or []
+    by_day = {}
+    for ts, px in zip(stamps, closes):
+        if px is None or float(px) <= 0:
+            continue
+        day = exchange_date(int(ts), meta)
+        if day <= expected_day:
+            by_day[day] = float(px)
+    days = sorted(by_day)
+    if len(days) < 20 or days[-1] != expected_day:
+        raise ValueError(f"history gap: {len(days)} sessions; last={days[-1] if days else None}; expected={expected_day}")
+    values = [by_day[d] for d in days]
+    return {
+        "sma20": round(sum(values[-20:]) / 20, 6),
+        "sma50": round(sum(values[-50:]) / 50, 6) if len(values) >= 50 else None,
+        "historyLastClose": values[-1],
+        "historySessionCount": len(values),
+    }
+
 def update_quote(existing, symbol):
     meta, ts, price = fetch_chart(symbol)
     daily = daily_closes(symbol)
@@ -141,6 +180,42 @@ def update_quote(existing, symbol):
         "changePercent": round(pct, 4) if pct is not None else None,
         "changeBaseline": "provider previous completed close",
     })
+    # Never carry historical-series metrics forward with a newer quote.
+    # Liquidity and realized volatility require separate validated volume/history.
+    stale_fields = ("sma20", "sma50", "priceReturnPeriodPct",
+                    "avgVolume20d", "avgDollarVolume20d",
+                    "realizedVol60dAnnualizedPct")
+    invalidated = [key for key in stale_fields if key in updated]
+    for key in invalidated:
+        updated.pop(key, None)
+    updated["derivedMetricsInvalidated"] = invalidated
+    if any(key in invalidated for key in ("avgVolume20d", "avgDollarVolume20d", "realizedVol60dAnnualizedPct")):
+        updated["routeStockMetricsStatus"] = "DATA GAP: stale historical liquidity/volatility metrics invalidated; recompute required"
+    try:
+        day_text = updated.get("regularCloseDate")
+        if not day_text:
+            raise ValueError("missing regular close date")
+        from datetime import date
+        day = date.fromisoformat(day_text)
+        metrics = verified_daily_metrics(symbol, meta, day, ts)
+        if regular is None or abs(metrics["historyLastClose"] - float(regular)) > max(0.02, 0.0005 * float(regular)):
+            raise ValueError("regular close mismatch between snapshot and daily history")
+        updated["sma20"] = metrics["sma20"]
+        updated["sma50"] = metrics["sma50"]
+        updated["sma20AsOf"] = day_text
+        updated["sma50AsOf"] = day_text if metrics["sma50"] is not None else None
+        updated["sma20MethodVersion"] = "WAIS-SMA-v2-unadjusted-completed-daily-closes"
+        updated["derivedMetricsStatus"] = ("SMA20/SMA50 VERIFIED; period return DATA GAP"
+            if metrics["sma50"] is not None else "SMA20 VERIFIED; SMA50 insufficient history; period return DATA GAP")
+        updated.pop("derivedMetricsGapReason", None)
+    except Exception as exc:
+        updated["sma20"] = None
+        updated["sma50"] = None
+        updated["sma20AsOf"] = None
+        updated["sma50AsOf"] = None
+        updated["sma20MethodVersion"] = "WAIS-SMA-v2-unadjusted-completed-daily-closes"
+        updated["derivedMetricsStatus"] = "DATA GAP"
+        updated["derivedMetricsGapReason"] = str(exc)
     return updated
 
 def main():
