@@ -5,6 +5,8 @@ on:
     paths:
       - "scripts/update_public_market_data.py"
       - "scripts/test_public_quote_timezone.py"
+      - "scripts/test_public_optional_quote_gap.py"
+      - "scripts/audit_public_system.py"
       - ".github/workflows/test-public-quote-timezone.yml"
   workflow_dispatch:
 
@@ -22,4 +24,4 @@ jobs:
         with:
           python-version: "3.11"
       - name: Run deterministic offline baseline tests
-        run: python -m unittest discover -s scripts -p 'test_public_quote_timezone.py' -v
+        run: python -m unittest discover -s scripts -p 'test_public_*.py' -v
