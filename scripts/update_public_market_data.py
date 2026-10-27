@@ -104,6 +104,29 @@ def daily_closes(symbol):
     closes = (result.get("indicators", {}).get("quote") or [{}])[0].get("close") or []
     return [(int(ts), float(px)) for ts, px in zip(stamps, closes) if px is not None]
 
+def verified_sma20(symbol, meta, expected_day):
+    """SMA20 from exactly 20 completed, unadjusted daily closes.
+    Excludes a current session daily candle before the US regular close.
+    Returns an explicit data gap when the daily history is unavailable or stale.
+    """
+    encoded = urllib.parse.quote(symbol, safe="")
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{encoded}"
+           "?range=3mo&interval=1d&includePrePost=false&events=div%2Csplits")
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=20) as response:
+        result = json.load(response)["chart"]["result"][0]
+    stamps = result.get("timestamp") or []
+    closes = (result.get("indicators", {}).get("quote") or [{}])[0].get("close") or []
+    rows = [(exchange_date(int(ts), meta), float(px)) for ts, px in zip(stamps, closes)
+            if px is not None and float(px) > 0]
+    # No future/incomplete candles; one observation per trading session.
+    by_day = {day: close for day, close in rows if day <= expected_day}
+    days = sorted(by_day)
+    if len(days) < 20 or days[-1] != expected_day:
+        raise ValueError(f"SMA20 history gap: {len(days)} sessions; last={days[-1] if days else None}; expected={expected_day}")
+    return round(sum(by_day[d] for d in days[-20:]) / 20, 6)
+
+
 def update_quote(existing, symbol):
     meta, ts, price = fetch_chart(symbol)
     daily = daily_closes(symbol)
@@ -141,6 +164,25 @@ def update_quote(existing, symbol):
         "changePercent": round(pct, 4) if pct is not None else None,
         "changeBaseline": "provider previous completed close",
     })
+    # Never carry an older derived metric forward with a newer quote.
+    for key in ("sma20", "sma50", "priceReturnPeriodPct"):
+        updated.pop(key, None)
+    try:
+        day_text = updated.get("regularCloseDate")
+        if not day_text:
+            raise ValueError("missing regular close date")
+        from datetime import date
+        day = date.fromisoformat(day_text)
+        updated["sma20"] = verified_sma20(symbol, meta, day)
+        updated["sma20AsOf"] = day_text
+        updated["sma20MethodVersion"] = "WAIS-SMA20-v2-20-completed-unadjusted-daily-closes"
+        updated["derivedMetricsStatus"] = "SMA20 VERIFIED; other derived metrics DATA GAP"
+    except Exception as exc:
+        updated["sma20"] = None
+        updated["sma20AsOf"] = None
+        updated["sma20MethodVersion"] = "WAIS-SMA20-v2-20-completed-unadjusted-daily-closes"
+        updated["derivedMetricsStatus"] = "DATA GAP"
+        updated["derivedMetricsGapReason"] = str(exc)
     return updated
 
 def main():
