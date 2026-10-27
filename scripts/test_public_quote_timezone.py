@@ -64,5 +64,45 @@ class ExchangeCloseBaselineTests(unittest.TestCase):
         self.assertAlmostEqual(result["changePercent"], -0.367, places=3)
 
 
+class HistoricalMetricFreshnessTests(unittest.TestCase):
+    def test_refresh_invalidates_stale_technical_and_liquidity_metrics(self):
+        meta = {"exchangeTimezoneName": "America/New_York", "currency": "USD"}
+        intraday = stamp("2026-10-26T23:55:00+00:00")
+        daily = [
+            (stamp("2026-10-23T04:00:00+00:00"), 210.96),
+            (stamp("2026-10-26T04:00:00+00:00"), 216.00),
+        ]
+        old = {
+            "price": 210.96, "asOf": "2026-10-23T20:00:00+00:00",
+            "sma20": 225.54, "sma50": 222.48,
+            "priceReturnPeriodPct": -2.61,
+            "avgVolume20d": 1000000, "avgDollarVolume20d": 200000000,
+            "realizedVol60dAnnualizedPct": 35.62,
+            "routeUnderlying": "TEST",
+        }
+        with patch.object(quotes, "fetch_chart", return_value=(meta, intraday, 216.5)), \
+             patch.object(quotes, "daily_closes", return_value=daily):
+            result = quotes.update_quote(old, "TEST")
+        for key in ("sma20", "sma50", "priceReturnPeriodPct",
+                    "avgVolume20d", "avgDollarVolume20d",
+                    "realizedVol60dAnnualizedPct"):
+            self.assertNotIn(key, result)
+        self.assertEqual(result["routeUnderlying"], "TEST")
+        self.assertIn("DATA GAP", result["derivedMetricsStatus"])
+        self.assertEqual(result["price"], 216.5)
+
+    def test_no_false_metric_status_without_existing_historical_metrics(self):
+        meta = {"exchangeTimezoneName": "America/New_York", "currency": "USD"}
+        intraday = stamp("2026-10-26T23:55:00+00:00")
+        daily = [(stamp("2026-10-23T04:00:00+00:00"), 210.96),
+                 (stamp("2026-10-26T04:00:00+00:00"), 216.00)]
+        with patch.object(quotes, "fetch_chart", return_value=(meta, intraday, 216.5)), \
+             patch.object(quotes, "daily_closes", return_value=daily):
+            result = quotes.update_quote({"routeUnderlying": "TEST"}, "TEST")
+        self.assertNotIn("derivedMetricsInvalidated", result)
+        self.assertNotIn("sma20", result)
+        self.assertEqual(result["routeUnderlying"], "TEST")
+
+
 if __name__ == "__main__":
     unittest.main()
