@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-27T07:58:05.602490+00:00",
+  "lastChecked": "2026-10-27T16:20:28.298460+00:00",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -40,19 +40,19 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-27T07:58:05.602490+00:00",
-      "lastSuccessAt": "2026-10-27T07:58:05.602490+00:00",
-      "contentHash": "1a87223709be467606fe1e2ecb8af0f2ecc9328905fd0182a3a0c26a27994ec5",
+      "checkedAt": "2026-10-27T16:20:28.298460+00:00",
+      "lastSuccessAt": "2026-10-27T16:20:28.298460+00:00",
+      "contentHash": "35b84938fea96cb4e45d72674df9c077c66e52f6cba91cae9f37cb28617ac151",
       "contentChanged": false,
       "recentOfficialItems": [
+        "Oct 27, 2026 7:00am EDT Aeluma to Participate in Upcoming Investor Conferences Oct 21, 2026 7:00am EDT Aeluma Announces Primit Parikh as Strategic Advisor Sep 16, 2026 4:30pm EDT Aeluma Announces Fourth Quarter and Full Fiscal Year 2026 Financial Results Sep 15, 2026 7:00",
         "Oct 21, 2026 7:00am EDT Aeluma Announces Primit Parikh as Strategic Advisor Sep 16, 2026 4:30pm EDT Aeluma Announces Fourth Quarter and Full Fiscal Year 2026 Financial Results Sep 15, 2026 7:00am EDT Aeluma Executes Strategic Agreement with Sumitomo Chemical Advanced Tech",
         "Sep 16, 2026 4:30pm EDT Aeluma Announces Fourth Quarter and Full Fiscal Year 2026 Financial Results Sep 15, 2026 7:00am EDT Aeluma Executes Strategic Agreement with Sumitomo Chemical Advanced Technologies for Wafer Production for AI Datacom Sep 02, 2026 7:00am EDT Aeluma",
         "Sep 15, 2026 7:00am EDT Aeluma Executes Strategic Agreement with Sumitomo Chemical Advanced Technologies for Wafer Production for AI Datacom Sep 02, 2026 7:00am EDT Aeluma to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on September 16, 2026 Aug 04, 2026",
         "Sep 02, 2026 7:00am EDT Aeluma to Announce Fourth Quarter and Fiscal Year 2026 Financial Results on September 16, 2026 Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Comm",
         "September 16, 2026 Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate",
         "Aug 04, 2026 7:00am EDT Aeluma Names Jason Taylor Senior Director of Program and Project Management Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate U.S. Leadersh",
-        "Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate U.S. Leadership in AI and Advanced Computing Jul 07, 2026 7:00am EDT Aeluma CEO to Chair Optica Advanced Photonic",
-        "Jul 07, 2026 7:00am EDT Aeluma CEO to Chair Optica Advanced Photonics Congress Industry Program on AI and Quantum Jun 23, 2026 7:00am EDT Aeluma Names Brendan Moran Vice President of Engineering May 28, 2026 7:00am EDT Aeluma Sees Accelerated Timeline for Quantum Commerci"
+        "Jul 29, 2026 6:38am EDT Aeluma and Department of Commerce Sign CHIPS Research & Development Office (CRDO) Letter of Intent for up to $30 Million to Accelerate U.S. Leadership in AI and Advanced Computing Jul 07, 2026 7:00am EDT Aeluma CEO to Chair Optica Advanced Photonic"
       ],
       "contentPreview": "Press Releases :: Aeluma, Inc. (ALMU) Skip to main content Skip to section navigation Skip to footer Home About Overview Management Team Board of Directors Certification & Compliance Technology News Overview Press Releases Blog In The News Investors Overview News & Events Company Info Financial Info Stock Data SEC Filings Governance Careers Contact Press Releases Investors Investors Overview News & Events Press Releases IR Calendar Company Info Overview Management Team Contacts FAQ Financial Info Overview Financial Results Financial Statements Stock Data Quote Charts Historical Data Analyst Coverage SEC Filings Overview All SEC Filings Annual Reports Quarterly Reports Section 16 Filings Governance Overview Board of Directors Board Committees Governance Documents News & Events Press Releases IR Calendar Year All Years 2026 2025 2024 2023 2022 2021 Category All Releases Financial Releases ",
       "note": "Official source; evidence input only and never an automatic status promotion."
@@ -65,8 +65,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-27T07:58:05.602490+00:00",
-      "lastSuccessAt": "2026-10-27T07:58:05.602490+00:00",
+      "checkedAt": "2026-10-27T16:20:28.298460+00:00",
+      "lastSuccessAt": "2026-10-27T16:20:28.298460+00:00",
       "contentHash": "cd5ce3c6525a0cfc24d89f372466e4cdbd9d62e028712c6da416b98bf361b0b6",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -87,7 +87,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-27T07:58:05.602490+00:00",
+      "checkedAt": "2026-10-27T16:20:28.298460+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -95,8 +95,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-27T07:58:05.602490+00:00",
-      "lastSuccessAt": "2026-10-27T07:58:05.602490+00:00",
+      "checkedAt": "2026-10-27T16:20:28.298460+00:00",
+      "lastSuccessAt": "2026-10-27T16:20:28.298460+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -106,7 +106,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-27T07:58:05.602490+00:00",
+      "checkedAt": "2026-10-27T16:20:28.298460+00:00",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-10-26T16:14:18.349Z",
@@ -1754,8 +1754,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-27T07:58:05.602490+00:00",
-      "lastSuccessAt": "2026-10-27T07:58:05.602490+00:00",
+      "checkedAt": "2026-10-27T16:20:28.298460+00:00",
+      "lastSuccessAt": "2026-10-27T16:20:28.298460+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
