@@ -79,7 +79,7 @@ class PublicSmaTests(unittest.TestCase):
         latest = days[-1]
         candles = [(unix(days[-2]), 100.0), (unix(latest), 110.0)]
         old = {"sma20": 999.0, "sma50": 888.0, "priceReturnPeriodPct": 400.0}
-        with patch.object(quotes, "fetch_chart", return_value=(META, unix(latest, 21), 111.0)), \\
+        with patch.object(quotes, "fetch_chart", return_value=(META, unix(latest, 21), 111.0)), \
              patch.object(quotes, "daily_closes", return_value=candles), \\
              patch.object(quotes, "verified_daily_metrics", return_value={
                  "sma20": 105.0, "sma50": 104.0, "historyLastClose": 110.0, "historySessionCount": 60}):
@@ -93,7 +93,7 @@ class PublicSmaTests(unittest.TestCase):
         days = sessions(60)
         latest = days[-1]
         candles = [(unix(days[-2]), 100.0), (unix(latest), 110.0)]
-        with patch.object(quotes, "fetch_chart", return_value=(META, unix(latest, 21), 111.0)), \\
+        with patch.object(quotes, "fetch_chart", return_value=(META, unix(latest, 21), 111.0)), \
              patch.object(quotes, "daily_closes", return_value=candles), \\
              patch.object(quotes, "verified_daily_metrics", return_value={
                  "sma20": 105.0, "sma50": 104.0, "historyLastClose": 130.0, "historySessionCount": 60}):
