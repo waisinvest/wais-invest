@@ -1,0 +1,25 @@
+name: Public market optional-gap offline regression
+on:
+  pull_request:
+    paths:
+      - 'scripts/validate_public_market_gaps.py'
+      - 'scripts/test_public_market_gap_policy.py'
+      - '.github/workflows/public-data-refresh.yml'
+      - '.github/workflows/test-public-market-gap-policy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  optional-gap-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test optional HSTECH isolation and required-feed fail-closed
+        run: python3 -m unittest discover -s scripts -p 'test_public_market_gap_policy.py' -v
+      - name: Compile validator
+        run: python3 -m py_compile scripts/validate_public_market_gaps.py

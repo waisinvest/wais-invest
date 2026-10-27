@@ -9,6 +9,8 @@ on:
       - "canonical-universe.json"
       - "wais-execution-policy.json"
       - "scripts/update_public_market_data.py"
+      - "scripts/validate_public_market_gaps.py"
+      - "scripts/test_public_market_gap_policy.py"
       - ".github/workflows/public-data-refresh.yml"
   schedule:
     # Every 30 minutes on weekdays, offset from the busiest top-of-hour queue.
@@ -29,6 +31,9 @@ jobs:
     steps:
       - name: Checkout public output
         uses: actions/checkout@v4
+
+      - name: Test optional market-gap isolation offline
+        run: python3 -m unittest discover -s scripts -p 'test_public_market_gap_policy.py' -v
 
       - name: Refresh genuine public market snapshots
         run: python3 scripts/update_public_market_data.py
@@ -59,7 +64,8 @@ jobs:
               data=json.load(open(path, encoding="utf-8"))
               assert data.get("lastUpdated"), f"{path}: missing lastUpdated"
               assert "NOT exchange real-time" in data.get("dataStatus",""), f"{path}: missing delay disclosure"
-              assert data.get("failedSymbols",[])==[], f"{path}: failedSymbols not empty: {data.get('failedSymbols')}"
+              if path == "stock-prices.json":
+                  assert data.get("failedSymbols",[])==[], f"{path}: failedSymbols not empty: {data.get('failedSymbols')}"
           stocks=json.load(open("stock-prices.json",encoding="utf-8"))
           assert stocks.get("relatedRoutesFailedSymbols",[])==[], (
               f"relatedRoutesFailedSymbols not empty: {stocks.get('relatedRoutesFailedSymbols')}"
@@ -72,6 +78,7 @@ jobs:
           )
           print("WAIS public data validation: PASS")
           PY
+          python3 scripts/validate_public_market_gaps.py
 
       - name: Commit changed snapshots
         run: |
