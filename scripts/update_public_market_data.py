@@ -104,23 +104,44 @@ def daily_closes(symbol):
     closes = (result.get("indicators", {}).get("quote") or [{}])[0].get("close") or []
     return [(int(ts), float(px)) for ts, px in zip(stamps, closes) if px is not None]
 
-def update_quote(existing, symbol):
+def completed_daily_closes(rows, meta, observed_at=None):
+    """Use exchange-local COMPLETED daily candles, never a partial same-day bar.
+
+    16:20 is deliberately conservative (early closes are delayed, not advanced).
+    No timezone -> fail closed; never turn a partial VIX/US10Y candle into a
+    regularCloseDate.  Keep current intraday value/asOf separately.
+    """
+    from datetime import time as dt_time
+    name = meta.get("exchangeTimezoneName")
+    if not name:
+        raise ValueError("missing exchange timezone for daily-close validation")
+    zone = ZoneInfo(name)
+    current = (observed_at or datetime.now(timezone.utc)).astimezone(zone)
+    by_day = {}
+    for ts, price in rows:
+        day = exchange_date(ts, meta)
+        if day > current.date():
+            continue
+        if day == current.date() and current.time() < dt_time(16, 20):
+            continue
+        by_day[day] = (ts, price)
+    return [by_day[day] for day in sorted(by_day)]
+
+
+def update_quote(existing, symbol, observed_at=None):
     meta, ts, price = fetch_chart(symbol)
-    daily = daily_closes(symbol)
+    daily = completed_daily_closes(daily_closes(symbol), meta, observed_at)
+    if len(daily) < 2:
+        raise ValueError(f"{symbol}: fewer than two verified completed daily closes")
     latest_day = exchange_date(ts, meta)
-    last_daily_day = exchange_date(daily[-1][0], meta) if daily else None
-    if len(daily) >= 2 and last_daily_day == latest_day:
-        prior = daily[-2][1]
-        regular = daily[-1][1]
-        regular_ts = daily[-1][0]
-    elif daily and last_daily_day != latest_day:
-        prior = daily[-1][1]
-        regular = meta.get("regularMarketPrice") or daily[-1][1]
-        regular_ts = meta.get("regularMarketTime") or daily[-1][0]
-    else:
-        prior = meta.get("chartPreviousClose") or meta.get("previousClose")
-        regular = meta.get("regularMarketPrice")
-        regular_ts = meta.get("regularMarketTime")
+    last_daily_day = exchange_date(daily[-1][0], meta)
+    if latest_day < last_daily_day:
+        raise ValueError(f"{symbol}: intraday quote predates completed daily history")
+    # The latest value may be premarket/intraday, but regularClose and its
+    # date always come from the last COMPLETED daily bar, not provider meta.
+    prior = daily[-2][1] if latest_day == last_daily_day else daily[-1][1]
+    regular = daily[-1][1]
+    regular_ts = daily[-1][0]
     change = price - float(prior) if prior not in (None, 0) else None
     pct = change / float(prior) * 100 if change is not None and prior else None
     updated = dict(existing or {})
@@ -141,7 +162,7 @@ def update_quote(existing, symbol):
         "previousClose": round(float(prior), 6) if prior is not None else updated.get("previousClose"),
         "change": round(change, 6) if change is not None else None,
         "changePercent": round(pct, 4) if pct is not None else None,
-        "changeBaseline": "provider previous completed close",
+        "changeBaseline": "verified completed daily close",
     })
     return updated
 
@@ -208,7 +229,12 @@ def main():
                 "dataStatus": STATUS,
             }
         except Exception as exc:
-            market_failures.append(str(exc))
+            market_failures.append(f"{key}: {exc}")
+            # Preserve last-known-good values but make the failure visible.
+            stale = dict(market["indicators"].get(key) or {})
+            stale["freshness"] = "SOURCE GAP"
+            stale["dataStatus"] = "DATA GAP: refresh failed; LAST-KNOWN-GOOD only"
+            market["indicators"][key] = stale
         time.sleep(0.15)
 
     # HSI futures is retained only as a dated fallback until a reliable public
