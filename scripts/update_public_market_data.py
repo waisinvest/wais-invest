@@ -124,6 +124,24 @@ def update_quote(existing, symbol):
     change = price - float(prior) if prior not in (None, 0) else None
     pct = change / float(prior) * 100 if change is not None and prior else None
     updated = dict(existing or {})
+    # Canonical quote reconciliation fetches only intraday/daily closes, not
+    # the full verified historical series used to calculate these indicators.
+    # A fresh price must not silently inherit stale or method-incompatible
+    # technical/liquidity metrics from an older snapshot (P1 Issue #47).
+    historical_fields = (
+        "sma20", "sma50", "priceReturnPeriodPct",
+        "avgVolume20d", "avgDollarVolume20d",
+        "realizedVol60dAnnualizedPct",
+    )
+    invalidated = [field for field in historical_fields if field in updated]
+    for field in invalidated:
+        updated.pop(field, None)
+    if invalidated:
+        updated["derivedMetricsStatus"] = (
+            "DATA GAP: historical-series metrics invalidated on quote refresh; "
+            "recompute from a verified matching series before using signals"
+        )
+        updated["derivedMetricsInvalidated"] = invalidated
     updated.update({
         "price": round(price, 6),
         "currency": meta.get("currency") or updated.get("currency"),
