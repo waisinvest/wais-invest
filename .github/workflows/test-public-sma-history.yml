@@ -1,0 +1,23 @@
+name: Public SMA history offline regression
+on:
+  pull_request:
+    paths:
+      - 'scripts/update_public_market_data.py'
+      - 'scripts/test_public_sma_history.py'
+      - 'scripts/test_public_quote_timezone.py'
+      - '.github/workflows/test-public-sma-history.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run deterministic SMA and timezone tests (no live data)
+        run: python -m unittest discover -s scripts -p 'test_public_*py' -v
