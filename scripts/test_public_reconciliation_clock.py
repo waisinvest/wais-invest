@@ -62,6 +62,24 @@ class ReconciliationClockTests(unittest.TestCase):
         self.assertEqual(result["prices"]["OPTIONAL"]["asOf"], "2026-10-27T19:00:00+00:00")
         self.assertEqual(result["canonicalQuoteUniverse"]["status"], "PASS")
 
+    def test_future_quote_fails_closed_without_overwriting_previous_price(self):
+        def update(old, ticker):
+            return {**old, "price": 99, "asOf": "2099-01-01T00:00:00+00:00"}
+
+        result = self.run_reconciliation(update)
+        self.assertEqual(result["canonicalQuoteUniverse"]["status"], "RECONCILIATION FAILED")
+        self.assertIn("future-dated", result["canonicalQuoteUniverse"]["refreshFailures"][0])
+        self.assertEqual(result["prices"]["TEST"]["price"], 10)
+
+    def test_naive_quote_timestamp_fails_closed(self):
+        def update(old, ticker):
+            return {**old, "price": 99, "asOf": "2026-10-28T21:03:12"}
+
+        result = self.run_reconciliation(update)
+        self.assertEqual(result["canonicalQuoteUniverse"]["status"], "RECONCILIATION FAILED")
+        self.assertIn("lacks timezone", result["canonicalQuoteUniverse"]["refreshFailures"][0])
+        self.assertEqual(result["prices"]["TEST"]["price"], 10)
+
     def test_failed_quote_does_not_claim_reconciliation_pass(self):
         def fail(old, ticker):
             raise RuntimeError("provider gap")
