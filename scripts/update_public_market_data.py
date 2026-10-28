@@ -130,7 +130,13 @@ def completed_daily_closes(rows, meta, observed_at=None):
 
 def update_quote(existing, symbol, observed_at=None):
     meta, ts, price = fetch_chart(symbol)
-    daily = completed_daily_closes(daily_closes(symbol), meta, observed_at)
+    # Provider timestamps are evidence, not authority over the observation clock.
+    # Reject future bars before promoting any quote to a current snapshot.
+    # Allow only two minutes of benign clock skew; the caller marks SOURCE GAP.
+    observed = observed_at or datetime.now(timezone.utc)
+    if ts > observed.timestamp() + 120:
+        raise ValueError(f"{symbol}: future quote timestamp exceeds observation clock")
+    daily = completed_daily_closes(daily_closes(symbol), meta, observed)
     if len(daily) < 2:
         raise ValueError(f"{symbol}: fewer than two verified completed daily closes")
     latest_day = exchange_date(ts, meta)

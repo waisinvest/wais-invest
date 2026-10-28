@@ -91,6 +91,23 @@ class CompletedCloseTests(unittest.TestCase):
                 [row("2026-10-27T13:30:00+00:00", 17.9)],
                 "2026-10-27T14:33:00+00:00")
 
+    def test_future_provider_quote_fails_closed(self):
+        meta = {"exchangeTimezoneName": "America/New_York"}
+        with self.assertRaisesRegex(ValueError, "future quote timestamp"):
+            self.run_quote(meta, "2026-10-27T16:01:00+00:00", 110,
+                [row("2026-10-23T13:30:00+00:00", 99),
+                 row("2026-10-26T13:30:00+00:00", 100)],
+                "2026-10-27T14:31:00+00:00")
+
+    def test_small_clock_skew_does_not_block_quote(self):
+        meta = {"exchangeTimezoneName": "America/New_York"}
+        result = self.run_quote(meta, "2026-10-27T14:32:00+00:00", 110,
+            [row("2026-10-23T13:30:00+00:00", 99),
+             row("2026-10-26T13:30:00+00:00", 100)],
+            "2026-10-27T14:31:00+00:00")
+        self.assertEqual(result["regularCloseDate"], "2026-10-26")
+        self.assertEqual(result["price"], 110)
+
     def test_missing_exchange_timezone_fails_closed(self):
         with self.assertRaisesRegex(ValueError, "missing exchange timezone"):
             self.run_quote({}, "2026-10-27T14:20:00+00:00", 100,
