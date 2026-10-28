@@ -31,11 +31,18 @@ def main():
         try: prices[t]=pub.update_quote(prices.get(t,{}),t)
         except Exception as exc: failures.append(f'{t}: {exc}')
     missing=[t for t in req if not prices.get(t,{}).get('price')]
+    # Preserve the provenance of the last full-market refresh separately.
+    # A canonical-only reconciliation must not imply that optional symbols
+    # and other market fields were refreshed at the same time.
+    completed_at = datetime.now(timezone.utc).isoformat()
+    data.setdefault('lastFullRefreshAt', data.get('lastUpdated'))
+    data['lastReconciledAt'] = completed_at
+    data['lastUpdated'] = completed_at
     data['canonicalQuoteUniverse']={
         'version':reg.get('version'),'authority':'WAIS System → WAIS INVEST display',
         'required':req,'requiredCount':len(req),'missing':missing,'refreshFailures':failures,
         'status':'PASS' if not missing and not failures else 'RECONCILIATION FAILED',
-        'asOf':datetime.now(timezone.utc).isoformat()
+        'asOf':completed_at
     }
     STOCKS.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     if missing or failures:
