@@ -37,8 +37,8 @@ class ReconciliationClockTests(unittest.TestCase):
                     "OPTIONAL": {"price": 20, "asOf": "2026-10-27T19:00:00+00:00"},
                 },
             }), encoding="utf-8")
-            with patch.object(recon, "CANONICAL", canonical), \\
-                 patch.object(recon, "STOCKS", stocks), \\
+            with patch.object(recon, "CANONICAL", canonical), \
+                 patch.object(recon, "STOCKS", stocks), \
                  patch.object(recon.pub, "update_quote", side_effect=quote_update):
                 try:
                     recon.main()
