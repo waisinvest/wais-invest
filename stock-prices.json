@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-28T01:45:07.930548+00:00",
+  "lastUpdated": "2026-10-28T07:29:23.709160+00:00",
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time; 1 optional quote(s) STALE / DATA GAP",
   "incomeMetricsVersion": "WAIS INCOME v1.1 normalized percentages",
@@ -1949,7 +1949,7 @@
     },
     "NYYY": {
       "price": 42.061199,
-      "regularClose": 42.061199,
+      "regularClose": 42.060001,
       "regularCloseDate": "2026-10-27",
       "asOf": "2026-10-27T16:35:00+00:00",
       "currency": "USD",
