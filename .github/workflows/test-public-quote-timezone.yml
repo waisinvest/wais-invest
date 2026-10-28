@@ -3,6 +3,8 @@ name: Test public quote exchange-local baselines
 on:
   pull_request:
     paths:
+      - "scripts/reconcile_public_quote_universe.py"
+      - "scripts/test_public_reconciliation_clock.py"
       - "scripts/update_public_market_data.py"
       - "scripts/test_public_quote_timezone.py"
       - "scripts/test_public_optional_quote_gap.py"
