@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 import update_public_market_data as pub
 
@@ -28,8 +28,21 @@ def main():
     data=json.loads(STOCKS.read_text(encoding='utf-8')); prices=data.setdefault('prices',{})
     req=required(reg); failures=[]
     for t in req:
-        try: prices[t]=pub.update_quote(prices.get(t,{}),t)
-        except Exception as exc: failures.append(f'{t}: {exc}')
+        try:
+            candidate = pub.update_quote(prices.get(t, {}), t)
+            # Fail closed: an invalid/future-dated provider timestamp is not
+            # evidence of a fresh quote, even if price is present.
+            observed = candidate.get('asOf')
+            if not observed:
+                raise ValueError('missing quote observation time')
+            observed_at = datetime.fromisoformat(str(observed).replace('Z', '+00:00'))
+            if observed_at.tzinfo is None:
+                raise ValueError('quote observation time lacks timezone')
+            if observed_at.astimezone(timezone.utc) > datetime.now(timezone.utc) + timedelta(minutes=2):
+                raise ValueError('future-dated quote observation time')
+            prices[t] = candidate
+        except Exception as exc:
+            failures.append(f'{t}: {exc}')
     missing=[t for t in req if not prices.get(t,{}).get('price')]
     # Preserve the provenance of the last full-market refresh separately.
     # A canonical-only reconciliation must not imply that optional symbols
