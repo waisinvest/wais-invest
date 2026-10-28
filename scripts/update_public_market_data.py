@@ -199,7 +199,9 @@ def main():
             else:
                 optional_failures.append(error)
         time.sleep(0.15)
-    stocks["lastUpdated"] = now_iso()
+    full_refresh_at = now_iso()
+    stocks["lastUpdated"] = full_refresh_at
+    stocks["lastFullRefreshAt"] = full_refresh_at
     stocks["marketStatus"] = "updated" if not (failures or optional_failures) else "partial"
     stocks["dataStatus"] = STATUS + (
         f"; {len(optional_failures)} optional quote(s) STALE / DATA GAP"
