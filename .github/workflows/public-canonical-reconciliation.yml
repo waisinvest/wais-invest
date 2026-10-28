@@ -3,6 +3,8 @@ name: WAIS INVEST Canonical Reconciliation
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - canonical-universe.json
       - wais-execution-policy.json
@@ -16,6 +18,8 @@ permissions:
 
 jobs:
   reconcile:
+    # Never let a draft branch or PR push trigger a write to production main.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
