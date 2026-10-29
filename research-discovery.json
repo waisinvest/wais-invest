@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-10-29T17:07:26.745Z",
+  "lastChecked": "2026-10-29T22:06:56.631Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -40,10 +40,10 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-29T16:57:57.441245+00:00",
-      "lastSuccessAt": "2026-10-29T16:57:57.441245+00:00",
+      "checkedAt": "2026-10-29T21:51:22.157171+00:00",
+      "lastSuccessAt": "2026-10-29T21:51:22.157171+00:00",
       "contentHash": "5e38987c5cc567b6140ac198853a7022f7eb43a115008b92607d19cdca26396d",
-      "contentChanged": true,
+      "contentChanged": false,
       "recentOfficialItems": [
         "Oct 29, 2026 7:00am EDT Aeluma to Announce First Quarter Fiscal Year 2027 Financial Results on November 12, 2026 Oct 27, 2026 7:00am EDT Aeluma to Participate in Upcoming Investor Conferences Oct 21, 2026 7:00am EDT Aeluma Announces Primit Parikh as Strategic Advisor Sep",
         "November 12, 2026 Oct 27, 2026 7:00am EDT Aeluma to Participate in Upcoming Investor Conferences Oct 21, 2026 7:00am EDT Aeluma Announces Primit Parikh as Strategic Advisor Sep 16, 2026 4:30pm EDT Aeluma Announces Fourth Quarter and Full Fiscal Year 2026 Financial Results Sep",
@@ -65,8 +65,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-10-29T16:57:57.441245+00:00",
-      "lastSuccessAt": "2026-10-29T16:57:57.441245+00:00",
+      "checkedAt": "2026-10-29T21:51:22.157171+00:00",
+      "lastSuccessAt": "2026-10-29T21:51:22.157171+00:00",
       "contentHash": "cd5ce3c6525a0cfc24d89f372466e4cdbd9d62e028712c6da416b98bf361b0b6",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -87,7 +87,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-10-29T16:57:57.441245+00:00",
+      "checkedAt": "2026-10-29T21:51:22.157171+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -95,8 +95,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-10-29T16:57:57.441245+00:00",
-      "lastSuccessAt": "2026-10-29T16:57:57.441245+00:00",
+      "checkedAt": "2026-10-29T21:51:22.157171+00:00",
+      "lastSuccessAt": "2026-10-29T21:51:22.157171+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -106,7 +106,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-10-29T17:07:26.745Z",
+      "checkedAt": "2026-10-29T22:06:56.631Z",
       "ingestionPath": "Exact public X status/profile pages verified in the controlled browser; public search index used only for discovery.",
       "lastError": null,
       "lastSuccessAt": "2026-10-29T02:00:41.240Z",
@@ -1832,8 +1832,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-10-29T16:57:57.441245+00:00",
-      "lastSuccessAt": "2026-10-29T16:57:57.441245+00:00",
+      "checkedAt": "2026-10-29T21:51:22.157171+00:00",
+      "lastSuccessAt": "2026-10-29T21:51:22.157171+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
