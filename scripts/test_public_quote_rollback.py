@@ -75,12 +75,12 @@ class CompletedCloseRollbackTests(unittest.TestCase):
             market.write_text(json.dumps({
                 "indicators": {}, "marketDates": {}
             }), encoding="utf-8")
-            with patch.object(quotes, "STOCK_PATH", stock), \\
-                 patch.object(quotes, "MARKET_PATH", market), \\
-                 patch.object(quotes, "PUBLIC_RESEARCH_SYMBOLS", set()), \\
-                 patch.object(quotes, "INDICATORS", {}), \\
+            with patch.object(quotes, "STOCK_PATH", stock), \
+                 patch.object(quotes, "MARKET_PATH", market), \
+                 patch.object(quotes, "PUBLIC_RESEARCH_SYMBOLS", set()), \
+                 patch.object(quotes, "INDICATORS", {}), \
                  patch.object(quotes, "update_quote",
-                              side_effect=ValueError("REGULAR_CLOSE_ROLLBACK")), \\
+                              side_effect=ValueError("REGULAR_CLOSE_ROLLBACK")), \
                  patch.object(quotes.time, "sleep", return_value=None):
                 quotes.main()
             saved = json.loads(stock.read_text(encoding="utf-8"))
