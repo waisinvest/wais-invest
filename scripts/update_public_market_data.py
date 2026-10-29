@@ -142,6 +142,20 @@ def update_quote(existing, symbol, observed_at=None):
     prior = daily[-2][1] if latest_day == last_daily_day else daily[-1][1]
     regular = daily[-1][1]
     regular_ts = daily[-1][0]
+    # Provider daily history can regress to yesterday after a newer close was
+    # already verified. Never silently overwrite a newer completed session.
+    old_completed = (existing or {}).get("regularCloseDate")
+    if old_completed:
+        from datetime import date
+        try:
+            old_day = date.fromisoformat(str(old_completed))
+        except ValueError as exc:
+            raise ValueError(f"{symbol}: invalid prior completed-close date") from exc
+        if last_daily_day < old_day:
+            raise ValueError(
+                f"{symbol}: REGULAR_CLOSE_ROLLBACK "
+                f"{last_daily_day.isoformat()} < {old_day.isoformat()}"
+            )
     change = price - float(prior) if prior not in (None, 0) else None
     pct = change / float(prior) * 100 if change is not None and prior else None
     updated = dict(existing or {})
@@ -207,6 +221,13 @@ def main():
     )
     stocks["failedSymbols"] = failures
     stocks["optionalQuoteFailures"] = optional_failures
+    # A required quote failure must invalidate a previously cached PASS.
+    # Do not declare PASS on a full-refresh alone; only reconciliation can.
+    if failures:
+        registry = stocks.setdefault("canonicalQuoteUniverse", {})
+        registry["status"] = "RECONCILIATION FAILED"
+        registry["refreshFailures"] = failures
+        registry["asOf"] = now_iso()
     STOCK_PATH.write_text(json.dumps(stocks, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     market = json.loads(MARKET_PATH.read_text(encoding="utf-8"))
