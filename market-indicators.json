@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-02T23:30:17.465123+00:00",
+  "lastUpdated": "2026-11-03T04:03:16.421616+00:00",
   "marketDates": {
     "US": "2026-11-02",
-    "HK": "2026-10-30"
+    "HK": "2026-11-02"
   },
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -96,13 +96,13 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 23393.320312,
-      "previousClose": 23294.419922,
-      "regularClose": 23294.419922,
-      "regularCloseDate": "2026-10-30",
-      "change": 98.900391,
-      "changePercent": 0.4246,
-      "asOf": "2026-11-02T08:05:00+00:00",
+      "value": 23520.109375,
+      "previousClose": 23393.320312,
+      "regularClose": 23393.320312,
+      "regularCloseDate": "2026-11-02",
+      "change": 126.789062,
+      "changePercent": 0.542,
+      "asOf": "2026-11-03T03:48:14+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
