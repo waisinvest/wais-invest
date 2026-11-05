@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-04T21:21:13.774502+00:00",
+  "lastUpdated": "2026-11-05T01:49:52.142354+00:00",
   "marketDates": {
     "US": "2026-11-04",
     "HK": "2026-11-03"
@@ -72,13 +72,13 @@
     },
     "VIX": {
       "symbol": "^VIX",
-      "value": 16.77,
+      "value": 16.610001,
       "previousClose": 20.83,
-      "regularClose": 20.83,
-      "regularCloseDate": "2026-11-03",
-      "change": -4.059999,
-      "changePercent": -19.4911,
-      "asOf": "2026-11-04T21:05:00+00:00",
+      "regularClose": 16.610001,
+      "regularCloseDate": "2026-11-04",
+      "change": -4.219999,
+      "changePercent": -20.2592,
+      "asOf": "2026-11-04T21:15:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -86,8 +86,8 @@
       "symbol": "^TNX",
       "value": 4.894,
       "previousClose": 4.952,
-      "regularClose": 4.952,
-      "regularCloseDate": "2026-11-03",
+      "regularClose": 4.894,
+      "regularCloseDate": "2026-11-04",
       "change": -0.058,
       "changePercent": -1.1712,
       "asOf": "2026-11-04T19:55:00+00:00",
@@ -96,13 +96,13 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 23919.5,
+      "value": 24364.75,
       "previousClose": 23525.970703,
       "regularClose": 23525.970703,
       "regularCloseDate": "2026-11-03",
-      "change": 393.529297,
-      "changePercent": 1.6727,
-      "asOf": "2026-11-04T08:05:00+00:00",
+      "change": 838.779297,
+      "changePercent": 3.5653,
+      "asOf": "2026-11-05T01:34:48+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
