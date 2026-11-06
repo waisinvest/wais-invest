@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-05T22:06:45Z",
+  "lastChecked": "2026-11-06T02:59:13Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -40,10 +40,10 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-05T22:04:52.604913+00:00",
-      "lastSuccessAt": "2026-11-05T22:04:52.604913+00:00",
+      "checkedAt": "2026-11-06T02:31:34.046387+00:00",
+      "lastSuccessAt": "2026-11-06T02:31:34.046387+00:00",
       "contentHash": "495828ee0cabbe9b08944ca2666b4eadb11a458fbad6ad3933b7001d0e7b9f31",
-      "contentChanged": true,
+      "contentChanged": false,
       "recentOfficialItems": [
         "Nov 05, 2026 4:05pm EST Aeluma to Participate in 2026 Stifel Deep Tech Summit Oct 29, 2026 7:00am EDT Aeluma to Announce First Quarter Fiscal Year 2027 Financial Results on November 12, 2026 Oct 27, 2026 7:00am EDT Aeluma to Participate in Upcoming Investor Conferences Oc",
         "Oct 29, 2026 7:00am EDT Aeluma to Announce First Quarter Fiscal Year 2027 Financial Results on November 12, 2026 Oct 27, 2026 7:00am EDT Aeluma to Participate in Upcoming Investor Conferences Oct 21, 2026 7:00am EDT Aeluma Announces Primit Parikh as Strategic Advisor Sep",
@@ -65,10 +65,10 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-05T22:04:52.604913+00:00",
-      "lastSuccessAt": "2026-11-05T22:04:52.604913+00:00",
+      "checkedAt": "2026-11-06T02:31:34.046387+00:00",
+      "lastSuccessAt": "2026-11-06T02:31:34.046387+00:00",
       "contentHash": "eb0f44923a33ef209562d3b13fc34a6d9b0018de06227494a43f4d95af3a086f",
-      "contentChanged": true,
+      "contentChanged": false,
       "recentOfficialItems": [
         "October 26, 2026, Ambiq Micro, Inc. (“Ambiq®”) (NYSE: AMBQ), a technology leader in ultra-low power semiconductor solutions for edge AI, and Tapestry OS today announced that Tapestry’s open-source software for... Ambiq Latest News Oct 20. 26 Ambiq Micro to Report Third Quarte",
         "October 20, 2026 – Ambiq Micro, Inc. (NYSE: AMBQ), a technology leader in ultra-low-power semiconductor solutions for edge AI, today announced that it will report its third quarter 2026 financial results on Tuesday, November 10, 2026... Investor Relations Sep 08. 26 Ambiq Exp",
@@ -87,7 +87,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-11-05T22:04:52.604913+00:00",
+      "checkedAt": "2026-11-06T02:31:34.046387+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -95,8 +95,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-11-05T22:04:52.604913+00:00",
-      "lastSuccessAt": "2026-11-05T22:04:52.604913+00:00",
+      "checkedAt": "2026-11-06T02:31:34.046387+00:00",
+      "lastSuccessAt": "2026-11-06T02:31:34.046387+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -106,10 +106,10 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-05T22:06:45Z",
+      "checkedAt": "2026-11-06T02:59:13Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-11-05T22:06:45Z",
+      "lastSuccessAt": "2026-11-06T02:59:13Z",
       "note": "At least 3 original posts were verified with exact official URLs and publication times. Record-level textFormat distinguishes complete visible author text from explicitly labelled summaries. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
         {
@@ -2203,8 +2203,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-11-05T22:04:52.604913+00:00",
-      "lastSuccessAt": "2026-11-05T22:04:52.604913+00:00",
+      "checkedAt": "2026-11-06T02:31:34.046387+00:00",
+      "lastSuccessAt": "2026-11-06T02:31:34.046387+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
