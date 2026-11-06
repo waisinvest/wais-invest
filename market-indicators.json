@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-06T22:06:10.550467+00:00",
+  "lastUpdated": "2026-11-06T23:31:49.060644+00:00",
   "marketDates": {
     "US": "2026-11-06",
     "HK": "2026-11-05"
@@ -74,8 +74,8 @@
       "symbol": "^VIX",
       "value": 25.639999,
       "previousClose": 28.18,
-      "regularClose": 28.18,
-      "regularCloseDate": "2026-11-05",
+      "regularClose": 25.639999,
+      "regularCloseDate": "2026-11-06",
       "change": -2.540001,
       "changePercent": -9.0135,
       "asOf": "2026-11-06T21:15:00+00:00",
@@ -86,8 +86,8 @@
       "symbol": "^TNX",
       "value": 4.859,
       "previousClose": 4.837,
-      "regularClose": 4.837,
-      "regularCloseDate": "2026-11-05",
+      "regularClose": 4.859,
+      "regularCloseDate": "2026-11-06",
       "change": 0.022,
       "changePercent": 0.4548,
       "asOf": "2026-11-06T19:55:00+00:00",
