@@ -3521,9 +3521,6 @@
     "version": "2026-09-10-v6-hidden-gems-reconciliation",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
-      "NVDA",
-      "MU",
-      "DELL",
       "TSM",
       "AVGO",
       "LITE",
@@ -3553,6 +3550,9 @@
       "AMBQ",
       "ALMU",
       "ZYME",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3579,7 +3579,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-07T17:00:57.625592+00:00"
+    "asOf": "2026-11-07T20:06:47.196848+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points"
