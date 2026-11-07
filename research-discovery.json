@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-07T14:04:14Z",
+  "lastChecked": "2026-11-07T15:06:44Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -106,10 +106,10 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-07T14:04:14Z",
+      "checkedAt": "2026-11-07T15:06:44Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
       "lastError": null,
-      "lastSuccessAt": "2026-11-07T14:04:14Z",
+      "lastSuccessAt": "2026-11-07T15:06:44Z",
       "note": "At least 3 original posts were verified with exact official URLs and publication times. Record-level textFormat distinguishes complete visible author text from explicitly labelled summaries. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
         {
@@ -780,6 +780,27 @@
         }
       ],
       "recentPosts": [
+        {
+          "url": "https://x.com/aleabitoreddit/status/2119077473107472729",
+          "publishedAt": "2026-11-07T14:40:14.801Z",
+          "postType": "ORIGINAL",
+          "tickers": [
+            "NBIS",
+            "SPCX",
+            "GOOGL",
+            "AMZN",
+            "MSFT",
+            "META",
+            "NVDA",
+            "CRWV",
+            "IREN"
+          ],
+          "text": "Serenity argues that lower neocloud valuations may obscure an advantage for established operators with GPU allocations, permits, contracted capacity, creditworthy customers and manageable funding costs. The post cites IREN’s customer prepayments and H100 repricing, points to NBIS project execution, and flags CoreWeave’s financing costs. The author reasons that tighter capital and permitting may hinder new entrants more than established providers. These are attributed claims and opinions, not independently confirmed catalysts.",
+          "summary": "Serenity argues that lower neocloud valuations may obscure an advantage for established operators with GPU allocations, permits, contracted capacity, creditworthy customers and manageable funding costs. The post cites IREN’s customer prepayments and H100 repricing, points to NBIS project execution, and flags CoreWeave’s financing costs. The author reasons that tighter capital and permitting may hinder new entrants more than established providers. These are attributed claims and opinions, not independently confirmed catalysts.",
+          "textFormat": "SUMMARY_NOT_VERBATIM",
+          "visibility": "Official X profile and exact public status page agree on author, body, and publication time. Millisecond precision derived from the X status ID. The expanded author text was reviewed and recorded as a labelled summary.",
+          "analysisNote": "Discovery/Research only. Verify contracts, GPU pricing, financing, permits and project timelines against primary disclosures. SPCX is recorded as the literal symbol used by the author; no instrument identity or tier change is inferred."
+        },
         {
           "url": "https://x.com/aleabitoreddit/status/2119038604819468364",
           "publishedAt": "2026-11-07T12:05:47.879Z",
@@ -2299,7 +2320,7 @@
         "The public Posts surface and exact status pages are readable and exceed the 3-original verification threshold.",
         "The full Replies and Articles profile surfaces redirect to login without an authenticated X session; individually known reply URLs can still be verified when publicly accessible."
       ],
-      "coverageNote": "Official X public profile rechecked. All five visible status URLs are already recorded; three are verified originals. Preserved 111 deduplicated evidence records. Replies and Articles tabs did not return verifiable items. Discovery/Research only; no tier changes."
+      "coverageNote": "Official X public profile and exact status verified. One new original and four previously recorded links were visible; four verified originals meet the LIVE threshold. Canonical retains 112 deduplicated evidence records. Replies and Articles tabs did not return verifiable items. Discovery/Research only."
     },
     "IDENTITY:SBE": {
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
