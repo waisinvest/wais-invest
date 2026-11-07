@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-06T23:31:49.060644+00:00",
+  "lastUpdated": "2026-11-07T03:13:56.287314+00:00",
   "marketDates": {
     "US": "2026-11-06",
-    "HK": "2026-11-05"
+    "HK": "2026-11-06"
   },
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -98,8 +98,8 @@
       "symbol": "^HSI",
       "value": 24481.859375,
       "previousClose": 24796.980469,
-      "regularClose": 24796.980469,
-      "regularCloseDate": "2026-11-05",
+      "regularClose": 24481.859375,
+      "regularCloseDate": "2026-11-06",
       "change": -315.121094,
       "changePercent": -1.2708,
       "asOf": "2026-11-06T08:05:00+00:00",
