@@ -8,7 +8,7 @@
     "NVDA": {
       "price": 170.4829,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:59+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -30,7 +30,7 @@
     "TSM": {
       "price": 402.59,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:47+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -52,7 +52,7 @@
     "AVGO": {
       "price": 339.48,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:56+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -74,7 +74,7 @@
     "MRVL": {
       "price": 157.99,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:57+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -96,7 +96,7 @@
     "MU": {
       "price": 736.0013,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:54+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -118,7 +118,7 @@
     "COHR": {
       "price": 220.95,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:49+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -140,7 +140,7 @@
     "LITE": {
       "price": 601.35,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:48+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -162,7 +162,7 @@
     "AXTI": {
       "price": 40.25,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:42+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -184,7 +184,7 @@
     "TSEM": {
       "price": 147.6,
       "currency": "USD",
-      "asOf": "2026-11-11T00:19:09+00:00",
+      "asOf": "2026-11-11T00:15:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -245,7 +245,7 @@
     "POWL": {
       "price": 138.21,
       "currency": "USD",
-      "asOf": "2026-11-10T21:00:33+00:00",
+      "asOf": "2026-11-10T21:00:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -333,7 +333,7 @@
     "AEHR": {
       "price": 61.3,
       "currency": "USD",
-      "asOf": "2026-11-11T00:58:53+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -745,7 +745,7 @@
     "VRT": {
       "price": 199.02,
       "currency": "USD",
-      "asOf": "2026-11-11T00:58:06+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -1348,7 +1348,7 @@
     "ALMU": {
       "price": 7.21,
       "currency": "USD",
-      "asOf": "2026-11-10T21:19:33+00:00",
+      "asOf": "2026-11-10T21:15:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -1365,7 +1365,7 @@
     "AMBQ": {
       "price": 45.6,
       "currency": "USD",
-      "asOf": "2026-11-10T23:54:34+00:00",
+      "asOf": "2026-11-10T23:50:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -1382,7 +1382,7 @@
     "RKLB": {
       "price": 61.842,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:56+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -2982,7 +2982,7 @@
     "KTOS": {
       "price": 37.0999,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:52+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -2996,7 +2996,7 @@
     "CEG": {
       "price": 268.8001,
       "currency": "USD",
-      "asOf": "2026-11-11T00:57:59+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3010,7 +3010,7 @@
     "AMKR": {
       "price": 35.0,
       "currency": "USD",
-      "asOf": "2026-11-11T00:57:51+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3024,7 +3024,7 @@
     "FEAM": {
       "price": 1.81,
       "currency": "USD",
-      "asOf": "2026-11-10T21:00:27+00:00",
+      "asOf": "2026-11-10T21:00:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3038,7 +3038,7 @@
     "USAR": {
       "price": 8.0095,
       "currency": "USD",
-      "asOf": "2026-11-11T00:56:01+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3052,7 +3052,7 @@
     "AVAV": {
       "price": 123.9512,
       "currency": "USD",
-      "asOf": "2026-11-10T23:53:49+00:00",
+      "asOf": "2026-11-10T23:50:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3066,7 +3066,7 @@
     "WWR": {
       "price": 0.4144,
       "currency": "USD",
-      "asOf": "2026-11-11T00:28:20+00:00",
+      "asOf": "2026-11-11T00:25:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3080,7 +3080,7 @@
     "CCJ": {
       "price": 73.4,
       "currency": "USD",
-      "asOf": "2026-11-11T00:36:29+00:00",
+      "asOf": "2026-11-11T00:35:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3094,7 +3094,7 @@
     "OKLO": {
       "price": 25.33,
       "currency": "USD",
-      "asOf": "2026-11-11T00:58:16+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3108,7 +3108,7 @@
     "NOC": {
       "price": 548.61,
       "currency": "USD",
-      "asOf": "2026-11-10T21:52:12+00:00",
+      "asOf": "2026-11-10T21:50:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3122,7 +3122,7 @@
     "MP": {
       "price": 36.95,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:28+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3136,7 +3136,7 @@
     "TTMI": {
       "price": 73.4,
       "currency": "USD",
-      "asOf": "2026-11-11T00:15:52+00:00",
+      "asOf": "2026-11-11T00:15:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3150,7 +3150,7 @@
     "GEV": {
       "price": 807.6258,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:53+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3164,7 +3164,7 @@
     "UUUU": {
       "price": 6.8539,
       "currency": "USD",
-      "asOf": "2026-11-11T00:58:17+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3178,7 +3178,7 @@
     "LUNR": {
       "price": 11.8498,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:37+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3192,7 +3192,7 @@
     "NB": {
       "price": 3.1188,
       "currency": "USD",
-      "asOf": "2026-11-11T00:04:24+00:00",
+      "asOf": "2026-11-11T00:00:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3206,7 +3206,7 @@
     "LMT": {
       "price": 602.5,
       "currency": "USD",
-      "asOf": "2026-11-11T00:17:59+00:00",
+      "asOf": "2026-11-11T00:15:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3220,7 +3220,7 @@
     "LEU": {
       "price": 109.87,
       "currency": "USD",
-      "asOf": "2026-11-10T21:00:45+00:00",
+      "asOf": "2026-11-10T21:00:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3248,7 +3248,7 @@
     "ETN": {
       "price": 357.9,
       "currency": "USD",
-      "asOf": "2026-11-11T00:51:15+00:00",
+      "asOf": "2026-11-11T00:50:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3262,7 +3262,7 @@
     "PLTR": {
       "price": 170.43,
       "currency": "USD",
-      "asOf": "2026-11-11T00:53:59+00:00",
+      "asOf": "2026-11-11T00:50:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3276,7 +3276,7 @@
     "RCAT": {
       "price": 4.2169,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:24+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3290,7 +3290,7 @@
     "SMR": {
       "price": 5.2457,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:19+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3304,7 +3304,7 @@
     "CRDO": {
       "price": 133.5127,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:24+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3318,7 +3318,7 @@
     "SITM": {
       "price": 453.2,
       "currency": "USD",
-      "asOf": "2026-11-10T23:56:54+00:00",
+      "asOf": "2026-11-10T23:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3332,7 +3332,7 @@
     "FN": {
       "price": 351.15,
       "currency": "USD",
-      "asOf": "2026-11-11T00:17:51+00:00",
+      "asOf": "2026-11-11T00:15:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3344,23 +3344,23 @@
       "changeBaseline": "verified completed daily close"
     },
     "CLS": {
-      "price": 229.146,
+      "price": 229.1464,
       "currency": "USD",
-      "asOf": "2026-11-11T00:58:30+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 223.889999,
       "regularCloseDate": "2026-11-10",
       "previousClose": 222.919998,
-      "change": 6.226002,
-      "changePercent": 2.7929,
+      "change": 6.226402,
+      "changePercent": 2.7931,
       "changeBaseline": "verified completed daily close"
     },
     "EROC": {
       "price": 7.86,
       "currency": "USD",
-      "asOf": "2026-11-10T22:05:50+00:00",
+      "asOf": "2026-11-10T22:05:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3374,7 +3374,7 @@
     "ZYME": {
       "price": 31.46,
       "currency": "USD",
-      "asOf": "2026-11-10T22:31:33+00:00",
+      "asOf": "2026-11-10T22:30:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3390,7 +3390,7 @@
       "previousClose": 346.309998,
       "change": -2.809998,
       "changePercent": -0.8114,
-      "asOf": "2026-11-11T00:59:59+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -3404,7 +3404,7 @@
       "previousClose": 269.329987,
       "change": 8.170013,
       "changePercent": 3.0335,
-      "asOf": "2026-11-11T00:55:50+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -3416,7 +3416,7 @@
     "KEYS": {
       "price": 296.3202,
       "currency": "USD",
-      "asOf": "2026-11-10T23:42:03+00:00",
+      "asOf": "2026-11-10T23:40:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3430,7 +3430,7 @@
     "NVT": {
       "price": 113.25,
       "currency": "USD",
-      "asOf": "2026-11-11T00:34:24+00:00",
+      "asOf": "2026-11-11T00:30:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3444,7 +3444,7 @@
     "SLB": {
       "price": 50.0,
       "currency": "USD",
-      "asOf": "2026-11-10T23:42:52+00:00",
+      "asOf": "2026-11-10T23:40:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3458,7 +3458,7 @@
     "HUT": {
       "price": 57.5,
       "currency": "USD",
-      "asOf": "2026-11-10T23:54:41+00:00",
+      "asOf": "2026-11-10T23:50:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3472,7 +3472,7 @@
     "PANW": {
       "price": 328.75,
       "currency": "USD",
-      "asOf": "2026-11-11T00:57:08+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3486,7 +3486,7 @@
     "FRVO": {
       "price": 11.3001,
       "currency": "USD",
-      "asOf": "2026-11-11T00:20:56+00:00",
+      "asOf": "2026-11-11T00:20:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3500,7 +3500,7 @@
     "HPE": {
       "price": 48.61,
       "currency": "USD",
-      "asOf": "2026-11-11T00:59:02+00:00",
+      "asOf": "2026-11-11T00:55:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3521,6 +3521,10 @@
     "version": "2026-09-10-v6-hidden-gems-reconciliation",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3546,10 +3550,6 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB",
       "NVDA",
       "MU",
       "DELL",
@@ -3579,7 +3579,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-11T08:06:10.312202+00:00"
+    "asOf": "2026-11-11T09:06:22.583611+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points"
