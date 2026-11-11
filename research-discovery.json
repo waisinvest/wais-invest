@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-11T07:03:33Z",
+  "lastChecked": "2026-11-11T08:05:40Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -31,7 +31,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Official X profile, Replies, Articles and previously indexed status returned HTTP 403. New public index lead https://x.com/aleabitoreddit/status/2120391635737649423 could not be verified via X or its official embed. No originals verified; 118 prior records remain historical last known good."
+        "reason": "Official X profile, Replies, Articles and the previously indexed status (https://x.com/aleabitoreddit/status/2120391635737649423) returned HTTP 403. No originals verified; 118 prior records remain historical last known good."
       }
     ]
   },
@@ -110,9 +110,9 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-11T07:03:33Z",
+      "checkedAt": "2026-11-11T08:05:40Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
-      "lastError": "Official X profile, Replies, Articles and previously indexed status returned HTTP 403. New public index lead https://x.com/aleabitoreddit/status/2120391635737649423 could not be verified via X or its official embed. No originals verified; 118 prior records remain historical last known good.",
+      "lastError": "Official X profile, Replies, Articles and the previously indexed status (https://x.com/aleabitoreddit/status/2120391635737649423) returned HTTP 403. No originals verified; 118 prior records remain historical last known good.",
       "lastSuccessAt": "2026-11-09T08:18:27Z",
       "note": "At least 3 original posts were verified with exact official URLs and publication times. Record-level textFormat distinguishes complete visible author text from explicitly labelled summaries. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
