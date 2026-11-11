@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-10T23:04:13Z",
+  "lastChecked": "2026-11-11T00:02:12Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -44,8 +44,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-10T17:55:26.124724+00:00",
-      "lastSuccessAt": "2026-11-10T17:55:26.124724+00:00",
+      "checkedAt": "2026-11-10T23:28:03.813549+00:00",
+      "lastSuccessAt": "2026-11-10T23:28:03.813549+00:00",
       "contentHash": "495828ee0cabbe9b08944ca2666b4eadb11a458fbad6ad3933b7001d0e7b9f31",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -69,10 +69,10 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-10T17:55:26.124724+00:00",
-      "lastSuccessAt": "2026-11-10T17:55:26.124724+00:00",
+      "checkedAt": "2026-11-10T23:28:03.813549+00:00",
+      "lastSuccessAt": "2026-11-10T23:28:03.813549+00:00",
       "contentHash": "d9f7d93ada51b8b86d46445a047175b623df48a65e732c806a3b2c76b184eb69",
-      "contentChanged": true,
+      "contentChanged": false,
       "recentOfficialItems": [
         "November 10, 2026 — Ambiq Micro, Inc. (“Ambiq”) (NYSE: AMBQ), Ambiq Latest News Nov 09. 26 Ambiq Launches heliaAOT™ 1.0 Delivering Up to 76% Lower Edge AI Inference Latency Up to 72% lower energy per inference and broader model support help customers bring more capable AI to A",
         "November 9, 2026 – Ambiq® Micro, Inc. (“Ambiq”), a technology leader... AI heliaAOT Edge AI Energy Efficiency Oct 26. 26 Ambiq and Tapestry OS Bring Ultra-Low Power Coordination to Physical AI Zephyr-based integration enables Apollo510 and Apollo330M Plus devices to support c",
@@ -91,7 +91,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-11-10T17:55:26.124724+00:00",
+      "checkedAt": "2026-11-10T23:28:03.813549+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -99,8 +99,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-11-10T17:55:26.124724+00:00",
-      "lastSuccessAt": "2026-11-10T17:55:26.124724+00:00",
+      "checkedAt": "2026-11-10T23:28:03.813549+00:00",
+      "lastSuccessAt": "2026-11-10T23:28:03.813549+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -110,7 +110,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-10T23:04:13Z",
+      "checkedAt": "2026-11-11T00:02:12Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
       "lastError": "Official X profile, Replies, Articles and the previously indexed status (https://x.com/aleabitoreddit/status/2120198265346081174) returned HTTP 403. No originals verified; 118 prior records remain historical last known good.",
       "lastSuccessAt": "2026-11-09T08:18:27Z",
@@ -2425,8 +2425,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-11-10T17:55:26.124724+00:00",
-      "lastSuccessAt": "2026-11-10T17:55:26.124724+00:00",
+      "checkedAt": "2026-11-10T23:28:03.813549+00:00",
+      "lastSuccessAt": "2026-11-10T23:28:03.813549+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
