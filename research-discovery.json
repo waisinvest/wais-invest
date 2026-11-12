@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-12T03:05:26Z",
+  "lastChecked": "2026-11-12T04:05:35Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -31,7 +31,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Official X profile, Replies, Articles and indexed status https://x.com/aleabitoreddit/status/2120658071274013137 returned HTTP 403; the official embed was inaccessible. No originals verified; 118 prior records remain historical last known good."
+        "reason": "Official X profile, Replies, Articles and known indexed status https://x.com/aleabitoreddit/status/2120658071274013137 returned HTTP 403. The public index offered no newer lead. No originals verified; 118 prior records remain historical last known good."
       }
     ]
   },
@@ -44,8 +44,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-11T22:01:51.628082+00:00",
-      "lastSuccessAt": "2026-11-11T22:01:51.628082+00:00",
+      "checkedAt": "2026-11-12T03:06:05.689218+00:00",
+      "lastSuccessAt": "2026-11-12T03:06:05.689218+00:00",
       "contentHash": "495828ee0cabbe9b08944ca2666b4eadb11a458fbad6ad3933b7001d0e7b9f31",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -69,8 +69,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-11T22:01:51.628082+00:00",
-      "lastSuccessAt": "2026-11-11T22:01:51.628082+00:00",
+      "checkedAt": "2026-11-12T03:06:05.689218+00:00",
+      "lastSuccessAt": "2026-11-12T03:06:05.689218+00:00",
       "contentHash": "d9f7d93ada51b8b86d46445a047175b623df48a65e732c806a3b2c76b184eb69",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -91,7 +91,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-11-11T22:01:51.628082+00:00",
+      "checkedAt": "2026-11-12T03:06:05.689218+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -99,8 +99,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-11-11T22:01:51.628082+00:00",
-      "lastSuccessAt": "2026-11-11T22:01:51.628082+00:00",
+      "checkedAt": "2026-11-12T03:06:05.689218+00:00",
+      "lastSuccessAt": "2026-11-12T03:06:05.689218+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -110,9 +110,9 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-12T03:05:26Z",
+      "checkedAt": "2026-11-12T04:05:35Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
-      "lastError": "Official X profile, Replies, Articles and indexed status https://x.com/aleabitoreddit/status/2120658071274013137 returned HTTP 403; the official embed was inaccessible. No originals verified; 118 prior records remain historical last known good.",
+      "lastError": "Official X profile, Replies, Articles and known indexed status https://x.com/aleabitoreddit/status/2120658071274013137 returned HTTP 403. The public index offered no newer lead. No originals verified; 118 prior records remain historical last known good.",
       "lastSuccessAt": "2026-11-09T08:18:27Z",
       "note": "At least 3 original posts were verified with exact official URLs and publication times. Record-level textFormat distinguishes complete visible author text from explicitly labelled summaries. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
@@ -2425,8 +2425,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-11-11T22:01:51.628082+00:00",
-      "lastSuccessAt": "2026-11-11T22:01:51.628082+00:00",
+      "checkedAt": "2026-11-12T03:06:05.689218+00:00",
+      "lastSuccessAt": "2026-11-12T03:06:05.689218+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
