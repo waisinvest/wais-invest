@@ -3092,17 +3092,17 @@
       "changeBaseline": "verified completed daily close"
     },
     "OKLO": {
-      "price": 25.48,
+      "price": 25.42,
       "currency": "USD",
-      "asOf": "2026-11-12T00:52:36+00:00",
+      "asOf": "2026-11-12T00:55:12+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 25.09,
       "regularCloseDate": "2026-11-10",
       "previousClose": 25.09,
-      "change": 0.39,
-      "changePercent": 1.5544,
+      "change": 0.33,
+      "changePercent": 1.3153,
       "changeBaseline": "verified completed daily close"
     },
     "NOC": {
@@ -3232,17 +3232,17 @@
       "changeBaseline": "verified completed daily close"
     },
     "GNRC": {
-      "price": 189.542,
+      "price": 189.5425,
       "currency": "USD",
-      "asOf": "2026-11-12T00:54:51+00:00",
+      "asOf": "2026-11-12T00:55:06+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 181.779999,
       "regularCloseDate": "2026-11-10",
       "previousClose": 181.779999,
-      "change": 7.762001,
-      "changePercent": 4.27,
+      "change": 7.762501,
+      "changePercent": 4.2703,
       "changeBaseline": "verified completed daily close"
     },
     "ETN": {
@@ -3360,7 +3360,7 @@
     "EROC": {
       "price": 8.57,
       "currency": "USD",
-      "asOf": "2026-11-12T00:45:56+00:00",
+      "asOf": "2026-11-12T00:56:31+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -3386,11 +3386,11 @@
       "changeBaseline": "verified completed daily close"
     },
     "DELL": {
-      "price": 360.815,
+      "price": 360.05,
       "previousClose": 334.380005,
-      "change": 26.434995,
-      "changePercent": 7.9057,
-      "asOf": "2026-11-12T00:59:40+00:00",
+      "change": 25.669995,
+      "changePercent": 7.6769,
+      "asOf": "2026-11-12T00:59:54+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -3404,7 +3404,7 @@
       "previousClose": 272.100006,
       "change": 17.899994,
       "changePercent": 6.5785,
-      "asOf": "2026-11-12T00:44:04+00:00",
+      "asOf": "2026-11-12T00:58:00+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -3498,17 +3498,17 @@
       "changeBaseline": "verified completed daily close"
     },
     "HPE": {
-      "price": 49.1387,
+      "price": 49.3,
       "currency": "USD",
-      "asOf": "2026-11-12T00:51:20+00:00",
+      "asOf": "2026-11-12T00:57:37+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 47.93,
       "regularCloseDate": "2026-11-10",
       "previousClose": 47.93,
-      "change": 1.2087,
-      "changePercent": 2.5218,
+      "change": 1.37,
+      "changePercent": 2.8583,
       "changeBaseline": "verified completed daily close"
     }
   },
@@ -3579,7 +3579,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-12T01:01:34.787443+00:00"
+    "asOf": "2026-11-12T02:01:32.995407+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points"
