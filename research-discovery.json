@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-13T14:03:18Z",
+  "lastChecked": "2026-11-13T15:02:13Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -31,7 +31,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Official X profile, Replies, Articles and 13 sampled Serenity status URLs returned HTTP 403. Zero originals verified; 7 new index-only URLs kept separate as unverified leads. 118 prior records retained as historical last known good."
+        "reason": "Official X profile, Replies, Articles and 13 sampled Serenity status URLs returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good."
       }
     ]
   },
@@ -110,9 +110,9 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-13T14:03:18Z",
+      "checkedAt": "2026-11-13T15:02:13Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
-      "lastError": "Official X profile, Replies, Articles and 13 sampled Serenity status URLs returned HTTP 403. Zero originals verified; 7 new index-only URLs kept separate as unverified leads. 118 prior records retained as historical last known good.",
+      "lastError": "Official X profile, Replies, Articles and 13 sampled Serenity status URLs returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good.",
       "lastSuccessAt": "2026-11-09T08:18:27Z",
       "note": "At least 3 original posts were verified with exact official URLs and publication times. Record-level textFormat distinguishes complete visible author text from explicitly labelled summaries. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
