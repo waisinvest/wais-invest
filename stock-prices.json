@@ -3521,6 +3521,10 @@
     "version": "2026-09-10-v6-hidden-gems-reconciliation",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
+      "TSM",
+      "AVGO",
+      "LITE",
+      "RKLB",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3549,10 +3553,6 @@
       "NVDA",
       "MU",
       "DELL",
-      "TSM",
-      "AVGO",
-      "LITE",
-      "RKLB",
       "MP",
       "UUUU",
       "USAR",
@@ -3579,7 +3579,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-14T21:00:12.989894+00:00"
+    "asOf": "2026-11-14T22:07:48.090595+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points"
