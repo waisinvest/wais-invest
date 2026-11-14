@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-14T15:08:57Z",
+  "lastChecked": "2026-11-14T16:07:40Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -31,7 +31,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Official X profile, Replies, Articles and 14 sampled status URLs (10 from Serenity, 4 from other accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good."
+        "reason": "Official X profile, Replies, Articles and 20 sampled status URLs (14 from Serenity; others from accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good."
       }
     ]
   },
@@ -44,8 +44,8 @@
       "sourceUrl": "https://www.aeluma.com/investors/news-events/press-releases",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-14T06:37:51.314314+00:00",
-      "lastSuccessAt": "2026-11-14T06:37:51.314314+00:00",
+      "checkedAt": "2026-11-14T15:52:03.629756+00:00",
+      "lastSuccessAt": "2026-11-14T15:52:03.629756+00:00",
       "contentHash": "228041b9c306cb7056d11d7006e35bc4fe050cd8bc87c8bf20c92bd0dc33878c",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -69,8 +69,8 @@
       "sourceUrl": "https://ambiq.com/news/",
       "required": true,
       "status": "LIVE",
-      "checkedAt": "2026-11-14T06:37:51.314314+00:00",
-      "lastSuccessAt": "2026-11-14T06:37:51.314314+00:00",
+      "checkedAt": "2026-11-14T15:52:03.629756+00:00",
+      "lastSuccessAt": "2026-11-14T15:52:03.629756+00:00",
       "contentHash": "c46814d12344dc66420066708c9d55108feddfad16d32a52b9c23d855bbec5f9",
       "contentChanged": false,
       "recentOfficialItems": [
@@ -91,7 +91,7 @@
       "sourceUrl": "https://data.sec.gov/submissions/",
       "required": true,
       "status": "DATA_GAP",
-      "checkedAt": "2026-11-14T06:37:51.314314+00:00",
+      "checkedAt": "2026-11-14T15:52:03.629756+00:00",
       "lastSuccessAt": null,
       "lastError": "HTTP Error 403: Forbidden",
       "note": "No validated snapshot is available; adapter remains isolated and retries automatically."
@@ -99,8 +99,8 @@
     "SEC_ALTERNATE": {
       "sourceType": "OFFICIAL_ISSUER_AND_MARKET_FALLBACK",
       "status": "LIVE",
-      "checkedAt": "2026-11-14T06:37:51.314314+00:00",
-      "lastSuccessAt": "2026-11-14T06:37:51.314314+00:00",
+      "checkedAt": "2026-11-14T15:52:03.629756+00:00",
+      "lastSuccessAt": "2026-11-14T15:52:03.629756+00:00",
       "required": true,
       "covers": [
         "ALMU",
@@ -110,9 +110,9 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-14T15:08:57Z",
+      "checkedAt": "2026-11-14T16:07:40Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
-      "lastError": "Official X profile, Replies, Articles and 14 sampled status URLs (10 from Serenity, 4 from other accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good.",
+      "lastError": "Official X profile, Replies, Articles and 20 sampled status URLs (14 from Serenity; others from accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good.",
       "lastSuccessAt": "2026-11-09T08:18:27Z",
       "note": "At least 3 original posts were verified with exact official URLs and publication times. Record-level textFormat distinguishes complete visible author text from explicitly labelled summaries. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
@@ -2425,8 +2425,8 @@
       "sourceType": "OFFICIAL_ISSUER_PRE_IPO",
       "sourceUrl": "https://sbenergy.com/sb-energy-publicly-files-registration-statement-proposed-ipo/",
       "status": "LIVE_PRE_IPO",
-      "checkedAt": "2026-11-14T06:37:51.314314+00:00",
-      "lastSuccessAt": "2026-11-14T06:37:51.314314+00:00",
+      "checkedAt": "2026-11-14T15:52:03.629756+00:00",
+      "lastSuccessAt": "2026-11-14T15:52:03.629756+00:00",
       "required": true,
       "issuer": "SB Energy, Inc.",
       "proposedExchange": "Nasdaq Global Select Market / Nasdaq Texas",
