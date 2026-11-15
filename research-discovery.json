@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-15T18:06:40Z",
+  "lastChecked": "2026-11-15T19:07:39Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -31,7 +31,7 @@
       },
       {
         "source": "SERENITY",
-        "reason": "Official X profile, Replies, Articles and 19 sampled status URLs (14 from Serenity; others from accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good."
+        "reason": "Official X profile, Replies, Articles and 20 sampled status URLs (15 from Serenity; others from accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good."
       }
     ]
   },
@@ -110,9 +110,9 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-15T18:06:40Z",
+      "checkedAt": "2026-11-15T19:07:39Z",
       "ingestionPath": "Exact official public X profile and status HTML verified; public search indexes used only for discovery.",
-      "lastError": "Official X profile, Replies, Articles and 19 sampled status URLs (14 from Serenity; others from accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good.",
+      "lastError": "Official X profile, Replies, Articles and 20 sampled status URLs (15 from Serenity; others from accounts in indexed threads) returned HTTP 403. Zero originals verified; no new index-only URLs after deduplication. 118 prior records retained as historical last known good.",
       "lastSuccessAt": "2026-11-09T08:18:27Z",
       "note": "At least 3 original posts were verified with exact official URLs and publication times. Record-level textFormat distinguishes complete visible author text from explicitly labelled summaries. Evidence input only; claims require independent WAIS validation and cannot auto-promote Candidate, Candidate+, READY 1 or Super A.",
       "pendingVerification": [
