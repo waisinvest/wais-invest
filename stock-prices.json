@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T03:14:34.605624+00:00",
+  "lastUpdated": "2026-11-16T06:27:42.171521+00:00",
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time; 1 optional quote(s) STALE / DATA GAP",
   "incomeMetricsVersion": "WAIS INCOME v1.1 normalized percentages",
@@ -1847,7 +1847,7 @@
     },
     "MUIB": {
       "price": 22.3361,
-      "regularClose": 22.3361,
+      "regularClose": 22.34,
       "regularCloseDate": "2026-11-13",
       "asOf": "2026-11-13T19:15:00+00:00",
       "currency": "USD",
@@ -1949,7 +1949,7 @@
     },
     "NYYY": {
       "price": 30.573601,
-      "regularClose": 30.573601,
+      "regularClose": 30.57,
       "regularCloseDate": "2026-11-13",
       "asOf": "2026-11-13T18:40:00+00:00",
       "currency": "USD",
@@ -3546,13 +3546,13 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "NVDA",
-      "MU",
-      "DELL",
       "TSM",
       "AVGO",
       "LITE",
       "RKLB",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3579,7 +3579,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-16T06:26:49.929325+00:00"
+    "asOf": "2026-11-16T06:04:54.969398+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points"

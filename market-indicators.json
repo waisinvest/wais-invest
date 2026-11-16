@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T03:14:37.386882+00:00",
+  "lastUpdated": "2026-11-16T06:27:44.932395+00:00",
   "marketDates": {
     "US": "2026-11-13",
     "HK": "2026-11-13"
@@ -26,7 +26,7 @@
       "symbol": "^IXIC",
       "value": 25136.273438,
       "previousClose": 25366.089844,
-      "regularClose": 25136.273438,
+      "regularClose": 25136.269531,
       "regularCloseDate": "2026-11-13",
       "change": -229.816406,
       "changePercent": -0.906,
@@ -38,7 +38,7 @@
       "symbol": "^NDX",
       "value": 27943.736328,
       "previousClose": 28289.189453,
-      "regularClose": 27943.736328,
+      "regularClose": 27943.740234,
       "regularCloseDate": "2026-11-13",
       "change": -345.453125,
       "changePercent": -1.2211,
@@ -62,7 +62,7 @@
       "symbol": "^SOX",
       "value": 10146.323242,
       "previousClose": 10506.669922,
-      "regularClose": 10146.323242,
+      "regularClose": 10146.320312,
       "regularCloseDate": "2026-11-13",
       "change": -360.34668,
       "changePercent": -3.4297,
@@ -78,7 +78,7 @@
       "regularCloseDate": "2026-11-13",
       "change": 0.599998,
       "changePercent": 3.2085,
-      "asOf": "2026-11-13T21:00:00+00:00",
+      "asOf": "2026-11-13T21:15:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -96,13 +96,13 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 23637.599609,
-      "previousClose": 24008.550781,
+      "value": 23769.939453,
+      "previousClose": 23637.599609,
       "regularClose": 23637.599609,
       "regularCloseDate": "2026-11-13",
-      "change": -370.951172,
-      "changePercent": -1.5451,
-      "asOf": "2026-11-13T08:05:00+00:00",
+      "change": 132.339844,
+      "changePercent": 0.5599,
+      "asOf": "2026-11-16T06:12:42+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
