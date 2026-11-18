@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T00:57:55.782308+00:00",
+  "lastUpdated": "2026-11-18T08:32:57.179162+00:00",
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time; 3 optional quote(s) STALE / DATA GAP",
   "incomeMetricsVersion": "WAIS INCOME v1.1 normalized percentages",
@@ -204,9 +204,9 @@
       "routeStockMetricsStatus": "Completed daily activity metrics for Route Intelligence; stock READY remains independent."
     },
     "POET": {
-      "price": 4.58,
+      "price": 4.59,
       "currency": "USD",
-      "asOf": "2026-11-18T00:55:56+00:00",
+      "asOf": "2026-11-18T00:59:22+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -215,8 +215,8 @@
       "sma20": 8.352,
       "sma50": 8.3574,
       "previousClose": 4.66,
-      "change": -0.08,
-      "changePercent": -1.7167,
+      "change": -0.07,
+      "changePercent": -1.5021,
       "priceReturnPeriodPct": 2.7496,
       "changeBaseline": "verified completed daily close"
     },
@@ -265,9 +265,9 @@
       "routeStockMetricsStatus": "Completed daily activity metrics for Route Intelligence; stock READY remains independent."
     },
     "MOD": {
-      "price": 133.1012,
+      "price": 133.223,
       "currency": "USD",
-      "asOf": "2026-11-18T00:05:00+00:00",
+      "asOf": "2026-11-18T00:59:43+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -276,8 +276,8 @@
       "sma20": 194.8305,
       "sma50": 221.005,
       "previousClose": 130.550003,
-      "change": 2.551197,
-      "changePercent": 1.9542,
+      "change": 2.672997,
+      "changePercent": 2.0475,
       "priceReturnPeriodPct": -24.1467,
       "changeBaseline": "verified completed daily close",
       "avgVolume20d": 1239155,
@@ -287,9 +287,9 @@
       "routeStockMetricsStatus": "Completed daily activity metrics for Route Intelligence; stock READY remains independent."
     },
     "GOOGL": {
-      "price": 283.53,
+      "price": 283.6738,
       "currency": "USD",
-      "asOf": "2026-11-18T00:56:55+00:00",
+      "asOf": "2026-11-18T00:59:59+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -298,8 +298,8 @@
       "sma20": 346.432,
       "sma50": 348.9108,
       "previousClose": 283.720001,
-      "change": -0.190001,
-      "changePercent": -0.067,
+      "change": -0.046201,
+      "changePercent": -0.0163,
       "priceReturnPeriodPct": 9.2979,
       "changeBaseline": "verified completed daily close",
       "avgVolume20d": 23519855,
@@ -309,9 +309,9 @@
       "routeStockMetricsStatus": "Completed daily activity metrics for Route Intelligence; stock READY remains independent."
     },
     "AAOI": {
-      "price": 41.21,
+      "price": 41.3,
       "currency": "USD",
-      "asOf": "2026-11-18T00:57:01+00:00",
+      "asOf": "2026-11-18T00:59:58+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -320,8 +320,8 @@
       "sma20": 125.0765,
       "sma50": 120.1102,
       "previousClose": 45.16,
-      "change": -3.95,
-      "changePercent": -8.7467,
+      "change": -3.86,
+      "changePercent": -8.5474,
       "priceReturnPeriodPct": 0.8585,
       "changeBaseline": "verified completed daily close",
       "avgVolume20d": 11479365,
@@ -367,7 +367,7 @@
     "MXL": {
       "price": 54.5,
       "currency": "USD",
-      "asOf": "2026-11-18T00:30:00+00:00",
+      "asOf": "2026-11-18T00:53:26+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -382,9 +382,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "NVTS": {
-      "price": 8.0908,
+      "price": 8.1099,
       "currency": "USD",
-      "asOf": "2026-11-18T00:56:11+00:00",
+      "asOf": "2026-11-18T00:59:48+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -393,8 +393,8 @@
       "sma20": 12.892,
       "sma50": 13.3821,
       "previousClose": 7.88,
-      "change": 0.2108,
-      "changePercent": 2.6751,
+      "change": 0.2299,
+      "changePercent": 2.9175,
       "priceReturnPeriodPct": 14.555,
       "changeBaseline": "verified completed daily close"
     },
@@ -557,9 +557,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "JEPI": {
-      "price": 56.9501,
+      "price": 56.93,
       "currency": "USD",
-      "asOf": "2026-11-18T00:49:58+00:00",
+      "asOf": "2026-11-18T00:57:50+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -568,8 +568,8 @@
       "sma20": 57.7595,
       "sma50": 57.0906,
       "previousClose": 57.189999,
-      "change": -0.239899,
-      "changePercent": -0.4195,
+      "change": -0.259999,
+      "changePercent": -0.4546,
       "priceReturnPeriodPct": 0.6178,
       "lastDistribution": 0.371,
       "lastDistributionDate": "2026-09-01",
@@ -619,9 +619,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "QYLD": {
-      "price": 17.34,
+      "price": 17.3349,
       "currency": "USD",
-      "asOf": "2026-11-18T00:56:06+00:00",
+      "asOf": "2026-11-18T00:59:40+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -630,8 +630,8 @@
       "sma20": 18.175,
       "sma50": 18.053,
       "previousClose": 17.25,
-      "change": 0.09,
-      "changePercent": 0.5217,
+      "change": 0.0849,
+      "changePercent": 0.4922,
       "priceReturnPeriodPct": 9.656,
       "lastDistribution": 0.183,
       "lastDistributionDate": "2026-08-24",
@@ -681,9 +681,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "QDTE": {
-      "price": 26.13,
+      "price": 26.1474,
       "currency": "USD",
-      "asOf": "2026-11-17T23:22:55+00:00",
+      "asOf": "2026-11-18T00:59:28+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -692,8 +692,8 @@
       "sma20": 29.3187,
       "sma50": 29.5824,
       "previousClose": 25.83,
-      "change": 0.3,
-      "changePercent": 1.1614,
+      "change": 0.3174,
+      "changePercent": 1.2288,
       "priceReturnPeriodPct": -17.0961,
       "lastDistribution": 0.121,
       "lastDistributionDate": "2026-08-27",
@@ -760,9 +760,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "QQQI": {
-      "price": 50.2397,
+      "price": 50.25,
       "currency": "USD",
-      "asOf": "2026-11-18T00:57:00+00:00",
+      "asOf": "2026-11-18T00:59:38+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -771,8 +771,8 @@
       "sma20": 54.804,
       "sma50": 54.7592,
       "previousClose": 49.91,
-      "change": 0.3297,
-      "changePercent": 0.6606,
+      "change": 0.34,
+      "changePercent": 0.6812,
       "priceReturnPeriodPct": 2.995,
       "lastDistribution": 0.652,
       "lastDistributionDate": "2026-08-19",
@@ -791,9 +791,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "SPYI": {
-      "price": 51.6,
+      "price": 51.59,
       "currency": "USD",
-      "asOf": "2026-11-18T00:56:45+00:00",
+      "asOf": "2026-11-18T00:59:37+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -802,8 +802,8 @@
       "sma20": 53.869,
       "sma50": 53.2856,
       "previousClose": 51.639999,
-      "change": -0.039999,
-      "changePercent": -0.0775,
+      "change": -0.049999,
+      "changePercent": -0.0968,
       "priceReturnPeriodPct": 4.3002,
       "lastDistribution": 0.542,
       "lastDistributionDate": "2026-08-19",
@@ -946,7 +946,7 @@
     },
     "TMYY": {
       "price": 18.1603,
-      "regularClose": 18.160299,
+      "regularClose": 18.16,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T21:00:00+00:00",
       "currency": "USD",
@@ -1038,7 +1038,7 @@
     "IWMI": {
       "price": 47.71,
       "currency": "USD",
-      "asOf": "2026-11-17T23:44:28+00:00",
+      "asOf": "2026-11-18T00:56:02+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -1104,7 +1104,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 45.6903,
+      "regularClose": 45.689999,
       "regularCloseDate": "2026-11-17",
       "sma20": 50.1755,
       "sma50": 49.5228,
@@ -1135,7 +1135,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 24.946301,
+      "regularClose": 24.945999,
       "regularCloseDate": "2026-11-17",
       "sma20": 31.365,
       "sma50": 32.0163,
@@ -1166,7 +1166,7 @@
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
-      "regularClose": 14.4863,
+      "regularClose": 14.486,
       "regularCloseDate": "2026-11-17",
       "sma20": 14.993,
       "sma50": 14.9594,
@@ -1402,10 +1402,10 @@
       "routeStockMetricsStatus": "Completed daily activity metrics for Route Intelligence; stock READY remains independent."
     },
     "NVDL": {
-      "price": 17.72,
+      "price": 17.7416,
       "regularClose": 16.219999,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:15+00:00",
+      "asOf": "2026-11-18T00:59:59+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1418,15 +1418,15 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.164,
       "previousClose": 16.35,
-      "change": 1.37,
-      "changePercent": 8.3792,
+      "change": 1.3916,
+      "changePercent": 8.5113,
       "changeBaseline": "verified completed daily close"
     },
     "NVDU": {
-      "price": 70.34,
+      "price": 70.6,
       "regularClose": 64.660004,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:55:40+00:00",
+      "asOf": "2026-11-18T00:59:49+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1439,8 +1439,8 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.2035,
       "previousClose": 65.07,
-      "change": 5.27,
-      "changePercent": 8.099,
+      "change": 5.53,
+      "changePercent": 8.4985,
       "changeBaseline": "verified completed daily close"
     },
     "GGLL": {
@@ -1466,7 +1466,7 @@
     },
     "GOU": {
       "price": 16.67,
-      "regularClose": 15.9222,
+      "regularClose": 15.922,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T23:54:52+00:00",
       "currency": "USD",
@@ -1507,10 +1507,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "MUU": {
-      "price": 15.6001,
+      "price": 15.62,
       "regularClose": 14.21,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:19+00:00",
+      "asOf": "2026-11-18T00:59:53+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1523,15 +1523,15 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.3202,
       "previousClose": 14.56,
-      "change": 1.0401,
-      "changePercent": 7.1435,
+      "change": 1.06,
+      "changePercent": 7.2802,
       "changeBaseline": "verified completed daily close"
     },
     "MULL": {
-      "price": 10.82,
+      "price": 10.8945,
       "regularClose": 9.92,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:55:59+00:00",
+      "asOf": "2026-11-18T00:59:51+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1544,8 +1544,8 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.2646,
       "previousClose": 10.11,
-      "change": 0.71,
-      "changePercent": 7.0228,
+      "change": 0.7845,
+      "changePercent": 7.7596,
       "changeBaseline": "verified completed daily close"
     },
     "MIC": {
@@ -1591,10 +1591,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "TSMX": {
-      "price": 58.39,
+      "price": 57.71,
       "regularClose": 52.830002,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:20+00:00",
+      "asOf": "2026-11-18T00:59:27+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1607,8 +1607,8 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.1625,
       "previousClose": 57.139999,
-      "change": 1.250001,
-      "changePercent": 2.1876,
+      "change": 0.570001,
+      "changePercent": 0.9976,
       "changeBaseline": "verified completed daily close"
     },
     "MRVU": {
@@ -1633,9 +1633,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "NVDW": {
-      "price": 23.121,
+      "price": 23.44,
       "currency": "USD",
-      "asOf": "2026-11-18T00:02:55+00:00",
+      "asOf": "2026-11-18T00:51:46+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -1644,8 +1644,8 @@
       "sma20": 37.2313,
       "sma50": 36.1624,
       "previousClose": 22.27,
-      "change": 0.851,
-      "changePercent": 3.8213,
+      "change": 1.17,
+      "changePercent": 5.2537,
       "priceReturnPeriodPct": -21.7007,
       "lastDistribution": 0.19,
       "lastDistributionDate": "2026-08-31",
@@ -1664,10 +1664,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "NVDY": {
-      "price": 8.89,
+      "price": 8.94,
       "regularClose": 8.51,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:05+00:00",
+      "asOf": "2026-11-18T00:58:50+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1689,8 +1689,8 @@
       "lastDistribution": 0.093,
       "lastDistributionDate": "2026-08-27",
       "previousClose": 8.54,
-      "change": 0.35,
-      "changePercent": 4.0984,
+      "change": 0.4,
+      "changePercent": 4.6838,
       "changeBaseline": "verified completed daily close"
     },
     "NVII": {
@@ -1755,10 +1755,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "GOOY": {
-      "price": 9.6479,
+      "price": 9.64,
       "regularClose": 9.51,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:10:50+00:00",
+      "asOf": "2026-11-18T00:49:18+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1780,8 +1780,8 @@
       "lastDistribution": 0.08,
       "lastDistributionDate": "2026-08-27",
       "previousClose": 9.63,
-      "change": 0.0179,
-      "changePercent": 0.1859,
+      "change": 0.01,
+      "changePercent": 0.1038,
       "changeBaseline": "verified completed daily close"
     },
     "GOOP": {
@@ -1847,7 +1847,7 @@
     },
     "MUIB": {
       "price": 20.1584,
-      "regularClose": 20.1584,
+      "regularClose": 20.16,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T20:50:00+00:00",
       "currency": "USD",
@@ -1906,10 +1906,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "NVDX": {
-      "price": 9.9395,
+      "price": 9.9657,
       "regularClose": 9.09,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:56:57+00:00",
+      "asOf": "2026-11-18T00:59:56+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1922,15 +1922,15 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.1959,
       "previousClose": 9.19,
-      "change": 0.7495,
-      "changePercent": 8.1556,
+      "change": 0.7757,
+      "changePercent": 8.4407,
       "changeBaseline": "verified completed daily close"
     },
     "NVDB": {
       "price": 16.2,
       "regularClose": 15.0,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:40:30+00:00",
+      "asOf": "2026-11-18T00:40:31+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -1949,7 +1949,7 @@
     },
     "NYYY": {
       "price": 29.039801,
-      "regularClose": 29.039801,
+      "regularClose": 29.040001,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T16:15:00+00:00",
       "currency": "USD",
@@ -2021,7 +2021,7 @@
     },
     "AVGG": {
       "price": 20.6235,
-      "regularClose": 19.3764,
+      "regularClose": 19.375999,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-18T00:09:55+00:00",
       "currency": "USD",
@@ -2042,7 +2042,7 @@
     },
     "AVGC": {
       "price": 18.200399,
-      "regularClose": 18.200399,
+      "regularClose": 18.200001,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T16:55:00+00:00",
       "currency": "USD",
@@ -2084,7 +2084,7 @@
     },
     "TSMG": {
       "price": 28.25,
-      "regularClose": 25.705299,
+      "regularClose": 25.705,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T23:55:24+00:00",
       "currency": "USD",
@@ -2105,7 +2105,7 @@
     },
     "TWSC": {
       "price": 15.2119,
-      "regularClose": 15.2119,
+      "regularClose": 15.21,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T17:05:00+00:00",
       "currency": "USD",
@@ -2125,10 +2125,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "TSMY": {
-      "price": 12.7947,
+      "price": 12.66,
       "regularClose": 12.06,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:42:37+00:00",
+      "asOf": "2026-11-18T00:45:02+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2150,8 +2150,8 @@
       "lastDistribution": 0.096,
       "lastDistributionDate": "2026-08-27",
       "previousClose": 12.52,
-      "change": 0.2747,
-      "changePercent": 2.1941,
+      "change": 0.14,
+      "changePercent": 1.1182,
       "changeBaseline": "verified completed daily close"
     },
     "RKLX": {
@@ -2176,10 +2176,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "TSEG": {
-      "price": 2.2,
+      "price": 2.3814,
       "regularClose": 2.12,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-17T22:50:00+00:00",
+      "asOf": "2026-11-18T00:56:00+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2192,8 +2192,8 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.7109,
       "previousClose": 2.03,
-      "change": 0.17,
-      "changePercent": 8.3744,
+      "change": 0.3514,
+      "changePercent": 17.3103,
       "changeBaseline": "verified completed daily close"
     },
     "TSEU": {
@@ -2219,10 +2219,10 @@
       "freshness": "SOURCE GAP"
     },
     "AXTX": {
-      "price": 6.1648,
+      "price": 6.18,
       "regularClose": 5.43,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:11+00:00",
+      "asOf": "2026-11-18T00:59:42+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2235,8 +2235,8 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.4073,
       "previousClose": 6.06,
-      "change": 0.1048,
-      "changePercent": 1.7294,
+      "change": 0.12,
+      "changePercent": 1.9802,
       "changeBaseline": "verified completed daily close"
     },
     "AXTU": {
@@ -2261,10 +2261,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "AXTL": {
-      "price": 0.6,
-      "regularClose": 0.5284,
+      "price": 0.59,
+      "regularClose": 0.53,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:55:34+00:00",
+      "asOf": "2026-11-18T00:59:22+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2277,8 +2277,8 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.5151,
       "previousClose": 0.59,
-      "change": 0.01,
-      "changePercent": 1.6949,
+      "change": 0.0,
+      "changePercent": 0.0,
       "changeBaseline": "verified completed daily close"
     },
     "AXTC": {
@@ -2345,10 +2345,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "COHH": {
-      "price": 2.7751,
+      "price": 2.79,
       "regularClose": 2.45,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:52:05+00:00",
+      "asOf": "2026-11-18T00:59:54+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2361,15 +2361,15 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.3074,
       "previousClose": 2.26,
-      "change": 0.5151,
-      "changePercent": 22.792,
+      "change": 0.53,
+      "changePercent": 23.4513,
       "changeBaseline": "verified completed daily close"
     },
     "LITX": {
-      "price": 9.9209,
+      "price": 9.93,
       "regularClose": 8.79,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:33+00:00",
+      "asOf": "2026-11-18T00:59:27+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2382,15 +2382,15 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.2787,
       "previousClose": 8.38,
-      "change": 1.5409,
-      "changePercent": 18.3878,
+      "change": 1.55,
+      "changePercent": 18.4964,
       "changeBaseline": "verified completed daily close"
     },
     "AAOG": {
-      "price": 0.2501,
-      "regularClose": 0.3087,
+      "price": 0.26,
+      "regularClose": 0.31,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:55:39+00:00",
+      "asOf": "2026-11-18T00:59:16+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2403,15 +2403,15 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.3624,
       "previousClose": 0.3,
-      "change": -0.0499,
-      "changePercent": -16.6333,
+      "change": -0.04,
+      "changePercent": -13.3333,
       "changeBaseline": "verified completed daily close"
     },
     "AAOX": {
-      "price": 1.1401,
-      "regularClose": 1.395,
+      "price": 1.1599,
+      "regularClose": 1.4,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:33+00:00",
+      "asOf": "2026-11-18T00:59:59+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2424,13 +2424,13 @@
       "targetDailyMultiple": 2,
       "trackingErrorMeanAbs60dPct": 0.4629,
       "previousClose": 1.4,
-      "change": -0.2599,
-      "changePercent": -18.5643,
+      "change": -0.2401,
+      "changePercent": -17.15,
       "changeBaseline": "verified completed daily close"
     },
     "RKX": {
       "price": 5.889,
-      "regularClose": 5.889,
+      "regularClose": 5.89,
       "regularCloseDate": "2026-11-17",
       "asOf": "2026-11-17T20:45:00+00:00",
       "currency": "USD",
@@ -2450,10 +2450,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "NVD": {
-      "price": 6.57,
+      "price": 6.5757,
       "regularClose": 7.26,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:35+00:00",
+      "asOf": "2026-11-18T00:59:57+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2466,8 +2466,8 @@
       "targetDailyMultiple": -2,
       "trackingErrorMeanAbs60dPct": 0.1829,
       "previousClose": 7.2,
-      "change": -0.63,
-      "changePercent": -8.75,
+      "change": -0.6243,
+      "changePercent": -8.6708,
       "changeBaseline": "verified completed daily close"
     },
     "NVDD": {
@@ -2513,10 +2513,10 @@
       "changeBaseline": "verified completed daily close"
     },
     "MUD": {
-      "price": 11.88,
+      "price": 11.83,
       "regularClose": 12.44,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:30:00+00:00",
+      "asOf": "2026-11-18T00:55:48+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2529,15 +2529,15 @@
       "targetDailyMultiple": -1,
       "trackingErrorMeanAbs60dPct": 0.1462,
       "previousClose": 12.33,
-      "change": -0.45,
-      "changePercent": -3.6496,
+      "change": -0.5,
+      "changePercent": -4.0551,
       "changeBaseline": "verified completed daily close"
     },
     "MUZ": {
-      "price": 10.17,
+      "price": 10.171,
       "regularClose": 11.27,
       "regularCloseDate": "2026-11-17",
-      "asOf": "2026-11-18T00:57:01+00:00",
+      "asOf": "2026-11-18T00:58:24+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -2550,8 +2550,8 @@
       "targetDailyMultiple": -2,
       "trackingErrorMeanAbs60dPct": 0.4362,
       "previousClose": 11.02,
-      "change": -0.85,
-      "changePercent": -7.7133,
+      "change": -0.849,
+      "changePercent": -7.7042,
       "changeBaseline": "verified completed daily close"
     },
     "AVS": {
@@ -2643,7 +2643,7 @@
     "SGOV": {
       "price": 100.58,
       "currency": "USD",
-      "asOf": "2026-11-18T00:57:19+00:00",
+      "asOf": "2026-11-18T00:58:58+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -2674,7 +2674,7 @@
     "USFR": {
       "price": 50.51,
       "currency": "USD",
-      "asOf": "2026-11-18T00:25:00+00:00",
+      "asOf": "2026-11-18T00:57:15+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -2736,7 +2736,7 @@
     "BIL": {
       "price": 91.55,
       "currency": "USD",
-      "asOf": "2026-11-18T00:55:16+00:00",
+      "asOf": "2026-11-18T00:59:14+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -2765,9 +2765,9 @@
       "changeBaseline": "verified completed daily close"
     },
     "FLOT": {
-      "price": 50.9104,
+      "price": 50.92,
       "currency": "USD",
-      "asOf": "2026-11-18T00:27:43+00:00",
+      "asOf": "2026-11-18T00:56:54+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -2776,8 +2776,8 @@
       "sma20": 50.965,
       "sma50": 50.984,
       "previousClose": 50.91,
-      "change": 0.0004,
-      "changePercent": 0.0008,
+      "change": 0.01,
+      "changePercent": 0.0196,
       "priceReturnPeriodPct": 0.0197,
       "lastDistribution": 0.181,
       "lastDistributionDate": "2026-09-01",
@@ -3523,6 +3523,9 @@
     "version": "2026-09-10-v6-hidden-gems-reconciliation",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
+      "NVDA",
+      "MU",
+      "DELL",
       "TSM",
       "AVGO",
       "LITE",
@@ -3552,9 +3555,6 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "NVDA",
-      "MU",
-      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3581,7 +3581,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-18T08:31:49.685750+00:00"
+    "asOf": "2026-11-18T00:56:55.076773+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points",
