@@ -3094,17 +3094,17 @@
       "changeBaseline": "verified completed daily close"
     },
     "OKLO": {
-      "price": 22.0999,
+      "price": 22.07,
       "currency": "USD",
-      "asOf": "2026-11-19T00:59:27+00:00",
+      "asOf": "2026-11-19T00:59:31+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 22.370001,
       "regularCloseDate": "2026-11-17",
       "previousClose": 22.370001,
-      "change": -0.270101,
-      "changePercent": -1.2074,
+      "change": -0.300001,
+      "changePercent": -1.3411,
       "changeBaseline": "verified completed daily close"
     },
     "NOC": {
@@ -3248,17 +3248,17 @@
       "changeBaseline": "verified completed daily close"
     },
     "ETN": {
-      "price": 341.02,
+      "price": 342.0,
       "currency": "USD",
-      "asOf": "2026-11-19T00:49:58+00:00",
+      "asOf": "2026-11-19T00:51:00+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 337.109985,
       "regularCloseDate": "2026-11-17",
       "previousClose": 337.109985,
-      "change": 3.910015,
-      "changePercent": 1.1599,
+      "change": 4.890015,
+      "changePercent": 1.4506,
       "changeBaseline": "verified completed daily close"
     },
     "PLTR": {
@@ -3402,11 +3402,11 @@
       "changeBaseline": "verified completed daily close"
     },
     "CIEN": {
-      "price": 271.01,
+      "price": 270.6,
       "previousClose": 264.820007,
-      "change": 6.189993,
-      "changePercent": 2.3374,
-      "asOf": "2026-11-19T00:56:55+00:00",
+      "change": 5.779993,
+      "changePercent": 2.1826,
+      "asOf": "2026-11-19T00:59:43+00:00",
       "currency": "USD",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
@@ -3416,31 +3416,31 @@
       "changeBaseline": "verified completed daily close"
     },
     "KEYS": {
-      "price": 287.24,
+      "price": 291.06,
       "currency": "USD",
-      "asOf": "2026-11-18T23:38:21+00:00",
+      "asOf": "2026-11-19T00:56:10+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 284.450012,
       "regularCloseDate": "2026-11-17",
       "previousClose": 284.450012,
-      "change": 2.789988,
-      "changePercent": 0.9808,
+      "change": 6.609988,
+      "changePercent": 2.3238,
       "changeBaseline": "verified completed daily close"
     },
     "NVT": {
-      "price": 109.6,
+      "price": 111.8,
       "currency": "USD",
-      "asOf": "2026-11-18T21:10:20+00:00",
+      "asOf": "2026-11-19T00:57:50+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 109.190002,
       "regularCloseDate": "2026-11-17",
       "previousClose": 109.190002,
-      "change": 0.409998,
-      "changePercent": 0.3755,
+      "change": 2.609998,
+      "changePercent": 2.3903,
       "changeBaseline": "verified completed daily close"
     },
     "SLB": {
@@ -3527,6 +3527,9 @@
       "AVGO",
       "LITE",
       "RKLB",
+      "NVDA",
+      "MU",
+      "DELL",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3552,9 +3555,6 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "NVDA",
-      "MU",
-      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3581,7 +3581,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-19T01:05:33.531482+00:00"
+    "asOf": "2026-11-19T02:00:51.838630+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points",
