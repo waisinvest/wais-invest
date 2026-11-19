@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-18T23:36:40.430383+00:00",
+  "lastUpdated": "2026-11-19T04:32:28.650935+00:00",
   "marketDates": {
     "US": "2026-11-18",
-    "HK": "2026-11-17"
+    "HK": "2026-11-18"
   },
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -48,11 +48,11 @@
     },
     "DOW": {
       "symbol": "^DJI",
-      "value": 50198.171875,
+      "value": 50198.199219,
       "previousClose": 50759.421875,
-      "regularClose": 50198.171875,
+      "regularClose": 50198.199219,
       "regularCloseDate": "2026-11-18",
-      "change": -561.25,
+      "change": -561.222656,
       "changePercent": -1.1057,
       "asOf": "2026-11-18T21:00:00+00:00",
       "source": "Yahoo Finance public chart",
@@ -96,13 +96,13 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 23294.75,
-      "previousClose": 23508.169922,
-      "regularClose": 23508.169922,
-      "regularCloseDate": "2026-11-17",
-      "change": -213.419922,
-      "changePercent": -0.9079,
-      "asOf": "2026-11-18T08:05:00+00:00",
+      "value": 22855.460938,
+      "previousClose": 23294.75,
+      "regularClose": 23294.75,
+      "regularCloseDate": "2026-11-18",
+      "change": -439.289062,
+      "changePercent": -1.8858,
+      "asOf": "2026-11-19T04:05:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
