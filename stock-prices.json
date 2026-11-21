@@ -3548,13 +3548,13 @@
       "AMBQ",
       "ALMU",
       "ZYME",
-      "NVDA",
-      "MU",
-      "DELL",
       "TSM",
       "AVGO",
       "LITE",
       "RKLB",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3581,7 +3581,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-21T05:07:30.051926+00:00"
+    "asOf": "2026-11-21T06:02:22.678322+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points",
