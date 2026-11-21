@@ -30,7 +30,7 @@
     "TSM": {
       "price": 328.6,
       "currency": "USD",
-      "asOf": "2026-11-21T00:59:43+00:00",
+      "asOf": "2026-11-21T00:59:45+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -116,9 +116,9 @@
       "routeStockMetricsStatus": "Completed daily activity metrics for Route Intelligence; stock READY remains independent."
     },
     "COHR": {
-      "price": 193.51,
+      "price": 193.56,
       "currency": "USD",
-      "asOf": "2026-11-21T00:59:53+00:00",
+      "asOf": "2026-11-21T00:59:54+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -127,8 +127,8 @@
       "sma20": 310.5555,
       "sma50": 314.4398,
       "previousClose": 214.940002,
-      "change": -21.430002,
-      "changePercent": -9.9702,
+      "change": -21.380002,
+      "changePercent": -9.947,
       "priceReturnPeriodPct": -8.9927,
       "changeBaseline": "verified completed daily close",
       "avgVolume20d": 7410015,
@@ -3066,17 +3066,17 @@
       "changeBaseline": "verified completed daily close"
     },
     "WWR": {
-      "price": 0.353,
+      "price": 0.3366,
       "currency": "USD",
-      "asOf": "2026-11-21T00:43:07+00:00",
+      "asOf": "2026-11-21T00:56:33+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 0.37,
       "regularCloseDate": "2026-11-19",
       "previousClose": 0.37,
-      "change": -0.017,
-      "changePercent": -4.5946,
+      "change": -0.0334,
+      "changePercent": -9.027,
       "changeBaseline": "verified completed daily close"
     },
     "CCJ": {
@@ -3164,17 +3164,17 @@
       "changeBaseline": "verified completed daily close"
     },
     "UUUU": {
-      "price": 5.085,
+      "price": 5.09,
       "currency": "USD",
-      "asOf": "2026-11-21T00:53:37+00:00",
+      "asOf": "2026-11-21T00:58:37+00:00",
       "session": "LATEST PUBLIC SNAPSHOT",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
       "regularClose": 5.48,
       "regularCloseDate": "2026-11-19",
       "previousClose": 5.48,
-      "change": -0.395,
-      "changePercent": -7.208,
+      "change": -0.39,
+      "changePercent": -7.1168,
       "changeBaseline": "verified completed daily close"
     },
     "LUNR": {
@@ -3523,9 +3523,6 @@
     "version": "2026-09-10-v6-hidden-gems-reconciliation",
     "authority": "WAIS System → WAIS INVEST display",
     "required": [
-      "NVDA",
-      "MU",
-      "DELL",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3555,6 +3552,9 @@
       "AVGO",
       "LITE",
       "RKLB",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3581,7 +3581,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-21T01:04:33.069388+00:00"
+    "asOf": "2026-11-21T01:45:22.545911+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points",
