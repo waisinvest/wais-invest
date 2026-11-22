@@ -1,6 +1,6 @@
 {
   "version": "WAIS Discovery Ingestion v2.0",
-  "lastChecked": "2026-11-22T08:59:40Z",
+  "lastChecked": "2026-11-22T09:59:21Z",
   "authority": "WAIS System",
   "dataQualityPolicy": "wais-data-quality-policy.json",
   "contract": {
@@ -110,7 +110,7 @@
     },
     "SERENITY": {
       "author": "@aleabitoreddit",
-      "checkedAt": "2026-11-22T08:59:40Z",
+      "checkedAt": "2026-11-22T09:59:21Z",
       "ingestionPath": "Official X profile, replies, articles and linked status URLs checked; public indexes used only for unverified discovery leads.",
       "lastError": "Official X profile, Replies, Articles and 9 sampled Serenity status URLs returned HTTP 403. Zero originals verified; 0 new index-only URLs after canonical deduplication. 118 prior records retained as historical last known good.",
       "lastSuccessAt": "2026-11-09T08:18:27Z",
