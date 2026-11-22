@@ -3527,9 +3527,6 @@
       "AVGO",
       "LITE",
       "RKLB",
-      "NVDA",
-      "MU",
-      "DELL",
       "CIEN",
       "VRT",
       "MRVL",
@@ -3555,6 +3552,9 @@
       "AMBQ",
       "ALMU",
       "ZYME",
+      "NVDA",
+      "MU",
+      "DELL",
       "MP",
       "UUUU",
       "USAR",
@@ -3581,7 +3581,7 @@
     "missing": [],
     "refreshFailures": [],
     "status": "PASS",
-    "asOf": "2026-11-22T05:07:42.434847+00:00"
+    "asOf": "2026-11-22T06:05:34.117323+00:00"
   },
   "optionalQuoteFailures": [
     "TSEU: TSEU: no usable quote points",
