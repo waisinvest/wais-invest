@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-21T00:49:58.408778+00:00",
+  "lastUpdated": "2026-11-23T07:37:05.151080+00:00",
   "marketDates": {
     "US": "2026-11-20",
-    "HK": "2026-11-19"
+    "HK": "2026-11-20"
   },
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -26,7 +26,7 @@
       "symbol": "^IXIC",
       "value": 22617.732422,
       "previousClose": 23879.199219,
-      "regularClose": 22617.732422,
+      "regularClose": 22617.730469,
       "regularCloseDate": "2026-11-20",
       "change": -1261.466797,
       "changePercent": -5.2827,
@@ -38,7 +38,7 @@
       "symbol": "^NDX",
       "value": 25028.982422,
       "previousClose": 26517.050781,
-      "regularClose": 25028.982422,
+      "regularClose": 25028.980469,
       "regularCloseDate": "2026-11-20",
       "change": -1488.068359,
       "changePercent": -5.6117,
@@ -62,7 +62,7 @@
       "symbol": "^SOX",
       "value": 8408.59082,
       "previousClose": 9419.719727,
-      "regularClose": 8408.59082,
+      "regularClose": 8408.589844,
       "regularCloseDate": "2026-11-20",
       "change": -1011.128906,
       "changePercent": -10.7342,
@@ -78,7 +78,7 @@
       "regularCloseDate": "2026-11-20",
       "change": 7.449999,
       "changePercent": 26.1955,
-      "asOf": "2026-11-20T21:15:00+00:00",
+      "asOf": "2026-11-20T21:00:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -96,13 +96,13 @@
     },
     "HSI": {
       "symbol": "^HSI",
-      "value": 22410.800781,
-      "previousClose": 22841.619141,
-      "regularClose": 22841.619141,
-      "regularCloseDate": "2026-11-19",
-      "change": -430.818359,
-      "changePercent": -1.8861,
-      "asOf": "2026-11-20T08:05:00+00:00",
+      "value": 22399.019531,
+      "previousClose": 22410.800781,
+      "regularClose": 22410.800781,
+      "regularCloseDate": "2026-11-20",
+      "change": -11.78125,
+      "changePercent": -0.0526,
+      "asOf": "2026-11-23T07:22:02+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
