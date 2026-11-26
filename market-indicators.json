@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-26T10:53:44.640874+00:00",
+  "lastUpdated": "2026-11-26T20:11:07.552737+00:00",
   "marketDates": {
     "US": "2026-11-25",
-    "HK": "2026-11-26"
+    "HK": "2026-11-25"
   },
   "marketStatus": "partial",
   "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time",
@@ -72,13 +72,13 @@
     },
     "VIX": {
       "symbol": "^VIX",
-      "value": 27.209999,
+      "value": 26.799999,
       "previousClose": 28.290001,
       "regularClose": 28.290001,
       "regularCloseDate": "2026-11-25",
-      "change": -1.080002,
-      "changePercent": -3.8176,
-      "asOf": "2026-11-26T10:38:31+00:00",
+      "change": -1.490002,
+      "changePercent": -5.2669,
+      "asOf": "2026-11-26T16:30:00+00:00",
       "source": "Yahoo Finance public chart",
       "dataStatus": "Latest available public snapshot; may be delayed; NOT exchange real-time"
     },
@@ -98,8 +98,8 @@
       "symbol": "^HSI",
       "value": 22226.880859,
       "previousClose": 21966.009766,
-      "regularClose": 22226.880859,
-      "regularCloseDate": "2026-11-26",
+      "regularClose": 21966.009766,
+      "regularCloseDate": "2026-11-25",
       "change": 260.871094,
       "changePercent": 1.1876,
       "asOf": "2026-11-26T08:05:00+00:00",
